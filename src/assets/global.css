@@ -1,5 +1,9 @@
+/* Google Fonts
+1. Satisfy 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 /* ---------- General ---------- */
-html { /* disable copy/paste */
+html { 
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -13,18 +17,15 @@ html { /* disable copy/paste */
   padding: 0;
   box-sizing: border-box;
 }
-/* h1 {
-  color: #f2ffef;
-  font-family: 'Satisfy', 'cursive';
+body {
+  background-color: hsl(0, 0%, 92%);
+}
+h1 {
   font-size: 7.5vw;
-  text-align: center;
-} */
-/* h2 {
-  color: #f2ffef;
-  font-family: 'Satisfy', 'cursive';
+}
+h2 {
   font-size: 3.5vw;
-  text-align: center;
-} */
+}
 /* h3 { 
   color: rgb(2, 2, 2);
   font-family: 'Georgia', sans-serif;
@@ -44,20 +45,18 @@ html { /* disable copy/paste */
   color: inherit;
 } */
 /* ---------- Navbar ---------- */
-.navbar {
-  background-color: hsl(0, 0%, 92%);
-}
 .navbar-brand, .nav-link, .dropdown-item {
-  color:rgb(2, 2, 2)!important;
+  color: rgb(2, 2, 2);
   font-family: "Georgia", sans-serif;
-  font-size: 1.3vw;
-  font-weight: 400;
+  font-size: 1.5vw;
 }
 .navbar-brand {
-  font-size: 1.8vw;
   font-family: 'Playball', cursive;
+  font-size: 2vw;
   font-weight: 500;
-  padding-top: 1.3vh;
+}
+.nav-link {
+  margin-left: 1vw;
 }
 
 
@@ -67,20 +66,42 @@ html { /* disable copy/paste */
 
 
 
-
-
-
-/* ---------- Jumbotron ---------- */
-.hero-image {
-  /* background-image: url('/img/pat-sin-leng-01.jpeg'); */
+/* ---------- Home ---------- */
+.bg-img {
+  background-image: url('/src/assets/img/pat-sin-leng-01.jpeg');
   width: 100%;
-  height: 100vh;
+  height: 91.5vh;
   /* overlay effect */
   background-color: rgba(0,0,0,0.6);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100vw 100vh;
 }
+.bg-headings {
+  font-family: 'Satisfy', 'cursive';
+  text-align: center;
+  color: #f2ffef;
+  position: absolute;
+  text-align: center;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero-text { /* Place text in the middle of the image */
   position: absolute;
   text-align: center;

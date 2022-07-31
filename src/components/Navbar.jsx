@@ -1,28 +1,50 @@
+import { useState } from 'react';
+import { NavLink } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const NavigationBar = () => {
+  const [show, setShow] = useState(false);
+  const showDropdown = e => {
+    setShow(!show);
+  }
+  const hideDropdown = e => {
+    setShow(false);
+  }
+
   return (
     <>
-    <Navbar bg="light" expand="lg" fixed="top" className="navbar nav-link">
-      <Container className="navbar-nav">
-        <Navbar.Brand href="#home" className="navbar-brand">DeineLieblingsJasmin</Navbar.Brand>
+    <Navbar expand="lg">
+      <Container>
+        <Navbar.Brand as={NavLink} to="/" className="navbar-brand">
+          DeineLieblingsJasmin
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link class="nav-link nav-link" href="#about-me">About Me</Nav.Link>
-            <Nav.Link href="#link" className="nav-link">Hiking</Nav.Link>
-            <Nav.Link href="#link" className="nav-link">Others</Nav.Link>
-            <Nav.Link href="#link" className="nav-link">Contact</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1" className="dropdown-item">
-                Placeholder
+          <Nav className="ms-auto">
+            <Nav.Link as={NavLink} to="about" className="nav-link">
+              About
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="hiking" className="nav-link">
+              Hiking
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="others" className="nav-link">
+              Others
+            </Nav.Link>
+            <NavDropdown 
+              title="User" 
+              id="basic-nav-dropdown"
+              show={show}
+              onMouseEnter={showDropdown}
+              onMouseLeave={hideDropdown}
+            >
+              <NavDropdown.Item as={NavLink} to="login" className="dropdown-item">
+                Log In
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4" className="dropdown-item">
-                Separated link
+              <NavDropdown.Item as={NavLink} to="signup" className="dropdown-item">
+                Sign Up
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
