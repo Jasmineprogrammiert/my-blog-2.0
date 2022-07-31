@@ -24,18 +24,19 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="about" className="nav-link">
+            <Nav.Link as={NavLink} to="about" className="navbar-link">
               About
             </Nav.Link>
-            <Nav.Link as={NavLink} to="hiking" className="nav-link">
+            <Nav.Link as={NavLink} to="hiking" className="navbar-link">
               Hiking
             </Nav.Link>
-            <Nav.Link as={NavLink} to="others" className="nav-link">
+            <Nav.Link as={NavLink} to="others" className="navbar-link">
               Others
             </Nav.Link>
             <NavDropdown 
               title="User" 
               id="basic-nav-dropdown"
+              className="navbar-link"
               show={show}
               onMouseEnter={showDropdown}
               onMouseLeave={hideDropdown}
