@@ -30,8 +30,6 @@ function App() {
         </Routes>
       </Suspense>
     </Router>
-
-    <Home />
     </>
   );
 }
