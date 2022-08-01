@@ -8,6 +8,7 @@ import Others from './pages/Others';
 import LogIn from './auth/LogIn';
 import SignUp from './auth/SignUp';
 // styles
+import 'aos/dist/aos.css';
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/global.css';

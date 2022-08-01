@@ -3,6 +3,7 @@
 2. 
 */
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 /* ---------- General ---------- */
 html { 
   -webkit-user-select: none;
@@ -65,32 +66,48 @@ body {
   margin-left: 2vw;
 }
 /* ---------- About ---------- */
+.about-page {
+  height: 100vh;
+}
 .headings {
   font-family: 'Satisfy', 'cursive';
   text-align: center;
 }
 .headings h1 {
   font-size: 7vw;
-  padding-top: 10vh;
+  margin-bottom: 3vh;
 }
 .headings h2 {
   font-size: 4vw;
-  margin-top: 3vh;
 }
 .deco-img {
   height: auto;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.65;
 }
 .deco-img-01 {
-  width: 40vw;
-  float: left;
-  margin: 18% 0 -3% -47.4%;
-  transform: rotate(70deg);
+  width: 44vw;
+  margin: -7vh 0 -4vh -7.5vw;
+  transform: rotate(73deg);
 }
 .deco-img-02 {
-  width: 26vw;
-  float: right;
-  margin: -20% -35% 0 0;
+  width: 28vw;
+  margin: -25vh 0 0 72.1vw;
   transform: rotate(10deg);
+}
+.about-page-02 {
+  margin: 0 4.5vw 0 4.5vw;
+}
+.jasmine-img {
+  width: 27vw;
+  height: auto;
+  border-radius: 50%;
+  /* margin-left: 8vw; */
+  float: left;
+}
+.headings p {
+  font-size: 2.5vw;
+  font-family: 'Georgia', sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
 }
