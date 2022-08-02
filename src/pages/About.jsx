@@ -6,19 +6,27 @@ import floral_1 from '../assets/img/floral-01.png';
 import floral_2 from '../assets/img/floral-02.png';
 import jasmine from '../assets/img/sunset-peak-01.jpg';
 import mountain_1 from '../assets/img/mountain-01.png';
+import hk_1 from '../assets/img/hk-01.png';
 
 const About = () => {
   const FadeUp = batch(Fade(), Sticky(), MoveOut(0, -680));
 
   useEffect(() => {
-    AOS.init({ 
-      duration: 1800, 
-      easing: 'ease-in-out' 
+    window.addEventListener('load', () => { 
+      AOS.init({ 
+        duration: 1800, 
+        easing: 'ease-in-out' 
+      });
     });
+    // AOS.init({ 
+    //   duration: 1800, 
+    //   easing: 'ease-in-out' 
+    // });
   }, [])
   
   return (
     <>
+    {/* ---------- Page 1 ---------- */}
     <ScrollContainer>
       <ScrollPage>
         <Animator animation={FadeUp}>
@@ -50,8 +58,11 @@ const About = () => {
         </Animator>
       </ScrollPage>
     </ScrollContainer>
-    
-    <div className="about-page2 row" data-aos="slide-up">
+    {/* ---------- Page 2 ---------- */}
+    <div 
+      className="about-page2 row" 
+      data-aos="slide-up"
+    >
       <div className="column-l-p2">
         <img
           src={jasmine} alt="Jasmine at Sunset Peak, Lantau Island, Hong Kong, 2021. Photo by Tsz Kwan Chiang" 
@@ -59,64 +70,51 @@ const About = () => {
         />
       </div>
       <div className="column-r-p2">
-        <h2 className="about-txt-p2">
+        <h2 className="about-txt">
           Hello, my name is <i><strong>Jasmine</strong></i>.
           <br />
-          I'm a Hong-Kong-based marketing undergrad with a passion for web development, language learning, hiking and history. 
+          I'm a Hong-Kong-based marketing undergrad with a passion for <br /> web development, language learning, hiking and history. 
         </h2>
       </div>
     </div>
-
+    {/* ---------- Page 3 ---------- */}
     <div className="about-page3 row">
-      <div className="column-l-p3" data-aos="fade-up">
-        <h2 className="about-txt-p2 about-txt-p3">
+      <div 
+        className="column-l-p3" 
+        data-aos="zoom-in" data-aso-duration="2000"
+      >
+        <h2 className="about-txt about-txt-p3">
           I had a solo hike at Sai Kung while visiting HK in 2018.
           <br />
           My love of hiking was instantly sparked by the beauty of nature, which among other factors led to the decision of moving to there.
         </h2>
       </div>
-      <div className="column-r-p3 coloum-r-p3" data-aos="flip-right">
+      <div className="column-r-p3" data-aos="flip-right">
         <img
           src={mountain_1} alt="Sketch Mountain" 
           className="mountain-img"
         />
       </div>
     </div>
-
-
-    
-    <br />
-    <br />
-    <br />
-    <h1 data-aos="fade-up">Testing</h1>
-    <p data-aos="fade-up">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla felis ut mollis semper. Duis vel risus odio. Curabitur viverra arcu id nunc blandit sodales. Nulla auctor, ex sed viverra bibendum, eros enim ullamcorper enim, ac tempus nunc turpis sit amet libero. Phasellus commodo augue in mattis rutrum. Curabitur est libero, pulvinar ac pretium vitae, dapibus vitae mi. Proin tempor vulputate elit, eu blandit ipsum lobortis vel. Quisque posuere velit tincidunt, dignissim justo ac, efficitur nibh. Donec vel mi ut arcu auctor interdum. Sed at tristique elit, id accumsan elit. Aliquam sed libero ipsum. Maecenas turpis nisl, fermentum vitae sodales varius, pretium vitae odio. Aliquam suscipit, erat sit amet dictum bibendum, dolor mi imperdiet lorem, quis sollicitudin lacus lacus eget enim.
-
-      Ut et condimentum est. Pellentesque ut tortor nec felis dictum vulputate. Nam suscipit, eros eu ornare sodales, eros velit convallis tellus, semper congue dolor sem aliquam orci. Curabitur non mi et orci convallis eleifend sed id orci. Mauris lobortis velit sit amet maximus mattis. Quisque vel imperdiet augue. Suspendisse tincidunt eros ac venenatis egestas. Fusce et quam sed dui pharetra fermentum. Nullam ut pretium tellus, at aliquet quam. Vivamus nisi lacus, efficitur et libero a, sodales lacinia enim. Vestibulum iaculis dolor eu augue dictum, non luctus sapien maximus.
-
-      Fusce dignissim, ex sit amet egestas luctus, velit massa blandit enim, a dictum massa arcu id neque. Sed condimentum venenatis metus, vestibulum ullamcorper metus pulvinar nec. Nunc ut dui quis lectus bibendum ornare. Aliquam gravida egestas massa, eget lacinia sapien porttitor eu. Vivamus sed tincidunt massa. Curabitur pellentesque vulputate commodo. Aenean ut augue pharetra, mattis sapien nec, dapibus nisl. Proin at consequat orci. In ipsum diam, sodales et ex vel, imperdiet efficitur enim. Sed tincidunt sem sed justo vestibulum efficitur. Aenean sodales, orci sed accumsan venenatis, dolor ipsum ullamcorper lacus, a convallis justo ex et arcu.
-
-      Nunc elementum mi id vulputate euismod. Nullam at purus sed ipsum tempor consectetur. Nam quis turpis et eros efficitur sagittis. Morbi venenatis erat elementum efficitur vehicula. Donec nisl mi, posuere et dapibus eget, consectetur ac nibh. Integer sit amet massa rhoncus, sagittis mauris sed, mollis lectus. Vivamus ex libero, imperdiet mollis faucibus ut, sodales sed augue. In facilisis ornare porta. Sed condimentum mollis elit eu laoreet. Nullam aliquam neque at semper porttitor. Pellentesque et nisl a mauris elementum laoreet nec sit amet felis.
-
-      Curabitur ante sapien, condimentum vitae odio in, pellentesque volutpat ex. Nulla dictum urna eget ipsum venenatis, quis fermentum sem blandit. Ut finibus id massa a tempus. Sed in sapien in lacus tincidunt vehicula vel non ligula. Sed et faucibus nulla. Ut at vehicula nulla. Praesent id justo mollis, commodo sem eget, egestas lorem. Ut quis mauris ac eros accumsan ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam gravida, felis eu facilisis malesuada, nunc purus ultricies erat, eget volutpat lectus diam vel sem. Aliquam vel finibus lorem. Pellentesque iaculis vehicula lectus id elementum. Curabitur malesuada imperdiet ex, at dignissim arcu.
-    </p>
-    <br />
-    <br />
-    <br />
-    <p data-aos="slide-up">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla felis ut mollis semper. Duis vel risus odio. Curabitur viverra arcu id nunc blandit sodales. Nulla auctor, ex sed viverra bibendum, eros enim ullamcorper enim, ac tempus nunc turpis sit amet libero. Phasellus commodo augue in mattis rutrum. Curabitur est libero, pulvinar ac pretium vitae, dapibus vitae mi. Proin tempor vulputate elit, eu blandit ipsum lobortis vel. Quisque posuere velit tincidunt, dignissim justo ac, efficitur nibh. Donec vel mi ut arcu auctor interdum. Sed at tristique elit, id accumsan elit. Aliquam sed libero ipsum. Maecenas turpis nisl, fermentum vitae sodales varius, pretium vitae odio. Aliquam suscipit, erat sit amet dictum bibendum, dolor mi imperdiet lorem, quis sollicitudin lacus lacus eget enim.
-
-      Ut et condimentum est. Pellentesque ut tortor nec felis dictum vulputate. Nam suscipit, eros eu ornare sodales, eros velit convallis tellus, semper congue dolor sem aliquam orci. Curabitur non mi et orci convallis eleifend sed id orci. Mauris lobortis velit sit amet maximus mattis. Quisque vel imperdiet augue. Suspendisse tincidunt eros ac venenatis egestas. Fusce et quam sed dui pharetra fermentum. Nullam ut pretium tellus, at aliquet quam. Vivamus nisi lacus, efficitur et libero a, sodales lacinia enim. Vestibulum iaculis dolor eu augue dictum, non luctus sapien maximus.
-
-      Fusce dignissim, ex sit amet egestas luctus, velit massa blandit enim, a dictum massa arcu id neque. Sed condimentum venenatis metus, vestibulum ullamcorper metus pulvinar nec. Nunc ut dui quis lectus bibendum ornare. Aliquam gravida egestas massa, eget lacinia sapien porttitor eu. Vivamus sed tincidunt massa. Curabitur pellentesque vulputate commodo. Aenean ut augue pharetra, mattis sapien nec, dapibus nisl. Proin at consequat orci. In ipsum diam, sodales et ex vel, imperdiet efficitur enim. Sed tincidunt sem sed justo vestibulum efficitur. Aenean sodales, orci sed accumsan venenatis, dolor ipsum ullamcorper lacus, a convallis justo ex et arcu.
-
-      Nunc elementum mi id vulputate euismod. Nullam at purus sed ipsum tempor consectetur. Nam quis turpis et eros efficitur sagittis. Morbi venenatis erat elementum efficitur vehicula. Donec nisl mi, posuere et dapibus eget, consectetur ac nibh. Integer sit amet massa rhoncus, sagittis mauris sed, mollis lectus. Vivamus ex libero, imperdiet mollis faucibus ut, sodales sed augue. In facilisis ornare porta. Sed condimentum mollis elit eu laoreet. Nullam aliquam neque at semper porttitor. Pellentesque et nisl a mauris elementum laoreet nec sit amet felis.
-
-      Curabitur ante sapien, condimentum vitae odio in, pellentesque volutpat ex. Nulla dictum urna eget ipsum venenatis, quis fermentum sem blandit. Ut finibus id massa a tempus. Sed in sapien in lacus tincidunt vehicula vel non ligula. Sed et faucibus nulla. Ut at vehicula nulla. Praesent id justo mollis, commodo sem eget, egestas lorem. Ut quis mauris ac eros accumsan ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam gravida, felis eu facilisis malesuada, nunc purus ultricies erat, eget volutpat lectus diam vel sem. Aliquam vel finibus lorem. Pellentesque iaculis vehicula lectus id elementum. Curabitur malesuada imperdiet ex, at dignissim arcu.
-    </p>
-    <br />
-    <br />
-    <br />
+    {/* ---------- Page 4 ---------- */}
+    <div className="row">
+      <div className="column-l-p4" data-aos="zoom-out-up">
+        <h2 className="about-txt about-txt-p4">
+          With the aim of coding my own <br /> hiking blog, I plunged into <br /> web development.
+          <br />
+          And I'm delighted to present this website to you, which showcases my hiking experiences and other passions.
+        </h2>
+      </div>
+      <div 
+        className="column-r-p4" 
+        data-aos="fade-up"
+      >
+        <img
+          src={hk_1} alt="Hong Kong Skyline" 
+          className="hk-img"
+        />
+      </div>
+    </div>
     </>
   )
 }
