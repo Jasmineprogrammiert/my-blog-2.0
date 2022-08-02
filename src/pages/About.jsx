@@ -49,7 +49,7 @@ const About = () => {
                 className="about-p1-txt2" 
                 data-aos="fade-left" data-aos-once='true'
               >
-                {">"} Blog of Jasmine Zeng
+                {'>'} Blog of Jasmine Zeng
               </h2>
             </div>
             <img 
@@ -75,7 +75,7 @@ const About = () => {
         <h2 className="about-txt">
           Hello, my name is <i><strong>Jasmine</strong></i>.
           <br />
-          I'm a Hong-Kong-based marketing undergrad with a passion for <br /> web development, language learning, hiking and history. 
+          I'm a Hong-Kong-based marketing undergrad with a passion for <br /> web development, language learning, hiking {'&'} history. 
         </h2>
       </div>
     </div>
@@ -88,7 +88,7 @@ const About = () => {
         <h2 className="about-txt about-txt-p3">
           I had a solo hike at Sai Kung while visiting HK in 2018.
           <br />
-          My love of hiking was instantly sparked by the beauty of nature, which among other factors led to the decision of moving to there.
+          My love of hiking was instantly sparked by the beauty of nature, which among other factors led to the decision of moving to HK.
         </h2>
       </div>
       <div className="column-r-p3" data-aos="flip-right">
@@ -107,10 +107,7 @@ const About = () => {
           And I'm delighted to present this website to you, which showcases my hiking experiences and other passions.
         </h2>
       </div>
-      <div 
-        className="column-r-p4" 
-        data-aos="fade-up"
-      >
+      <div className="column-r-p4" data-aos="fade-up">
         <img
           src={hk_1} alt="Hong Kong Skyline" 
           className="hk-img"

@@ -17,7 +17,7 @@ const NavigationBar = () => {
       window.removeEventListener('scroll', showNav);
     };
   }, []);
-  let hideNav = isHidden ? "hideNavbar" : "";
+  let hideNav = isHidden ? 'hideNavbar' : '';
 
   const [show, setShow] = useState(false);
   const showDropdown = () => {
