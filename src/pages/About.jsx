@@ -11,17 +11,19 @@ import hk_1 from '../assets/img/hk-01.png';
 const About = () => {
   const FadeUp = batch(Fade(), Sticky(), MoveOut(0, -680));
 
-  useEffect(() => {
-    window.addEventListener('load', () => { 
-      AOS.init({ 
-        duration: 1800, 
-        easing: 'ease-in-out' 
-      });
+  useEffect(() => {    
+    AOS.init({ 
+      duration: 1800, 
+      easing: 'ease-in-out' 
     });
-    // AOS.init({ 
-    //   duration: 1800, 
-    //   easing: 'ease-in-out' 
-    // });
+    window.addEventListener('load', function() {
+      AOS.refresh();
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() { 
+        AOS.refresh(); 
+      }, 500);
+    });
   }, [])
   
   return (
