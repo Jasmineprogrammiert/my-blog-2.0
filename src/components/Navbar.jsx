@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+// ON TESTING -------------------
+// import ThemeSwitch from './Testing/ThemeSwitch';
 
 const NavigationBar = () => {
   const [isHidden, setIsHidden] = useState(true);
   const showNav = () => {
     const loc = window.pageYOffset;
     loc > 20 ? setIsHidden(false) : setIsHidden(true);
-  }
+  };
   useEffect(() => {
     window.addEventListener('scroll', showNav, { passive: true });
     return () => {
@@ -72,6 +72,7 @@ const NavigationBar = () => {
                 Sign Up
               </NavDropdown.Item>
             </NavDropdown>
+            {/* <ThemeSwitch /> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

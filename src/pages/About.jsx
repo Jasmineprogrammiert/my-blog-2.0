@@ -99,7 +99,7 @@ const About = () => {
       </div>
     </div>
     {/* ---------- Page 4 ---------- */}
-    <div className="row">
+    <div className="about-page4 row">
       <div className="column-l-p4" data-aos="zoom-out-up">
         <h2 className="about-txt about-txt-p4">
           With the aim of coding my own <br /> hiking blog, I plunged into <br /> web development.
