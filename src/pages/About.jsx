@@ -36,7 +36,7 @@ const About = () => {
             <img
               src={floral_1} alt="Floral"
               className="deco-img deco-img-01"
-              data-aos="fade-right" data-aos-once='true'
+              data-aos="fade-right"
             />
             <div className="headings">
               <h1 
@@ -61,10 +61,7 @@ const About = () => {
       </ScrollPage>
     </ScrollContainer>
     {/* ---------- Page 2 ---------- */}
-    <div 
-      className="about-page2 row" 
-      data-aos="slide-up"
-    >
+    <div className="about-page2 row" data-aos="zoom-in">
       <div className="column-l-p2">
         <img
           src={jasmine} alt="Jasmine at Sunset Peak, Lantau Island, Hong Kong, 2021. Photo by Tsz Kwan Chiang" 
@@ -81,10 +78,7 @@ const About = () => {
     </div>
     {/* ---------- Page 3 ---------- */}
     <div className="about-page3 row">
-      <div 
-        className="column-l-p3" 
-        data-aos="zoom-in" data-aso-duration="2000"
-      >
+      <div className="column-l-p3" data-aos="fade-up">
         <h2 className="about-txt about-txt-p3">
           I had a solo hike at Sai Kung while visiting HK in 2018.
           <br />

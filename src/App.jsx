@@ -7,7 +7,6 @@ import Hiking from './pages/Hiking';
 import Others from './pages/Others';
 import LogIn from './auth/LogIn';
 import SignUp from './auth/SignUp';
-// import ThemeSwitch from './components/Testing/ThemeSwitch';
 
 // styles
 import 'aos/dist/aos.css';
@@ -16,17 +15,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/global.css';
 // import './assets/media.css';
 
-// Light & Dark Mode (need to optmized)
-import { createContext, useState } from 'react';
-import { Switch } from '@mui/material';
-import LightModeIcon from '@mui/icons-material/LightMode';
+// Light & Dark Mode (need to optmize)
+import { createContext } from 'react';
+import ModeSwitch from './components/ModeSwitch';
+import useLocalStorage from 'use-local-storage';
 export const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState('light');
-
+  const defaultMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultMode ? 'dark' : 'light');
   const toggleTheme = () => {
-    setTheme(current => current === 'light' ? 'dark' : 'light');
+    setTheme(cur => cur === 'light' ? 'dark' : 'light');
   };
 
   return (
@@ -36,18 +35,11 @@ function App() {
         <Router>
           <Suspense fallback={<Spinner />}>
             <NavigationBar />
-            <LightModeIcon
-              className="theme-switch"
-              // onClick={() => setTheme('dark')}
-              onClick={toggleTheme}
-              // checked={theme === 'dark'}
-            />
-            <Switch 
+            <ModeSwitch 
               className="theme-switch"
               onChange={toggleTheme}
               checked={theme === 'dark'}
             />
-            {/* <ThemeSwitch /> */}
             <Routes>
               <Route path="/" element={<About />} />
               <Route path="hiking" element={<Hiking />} />

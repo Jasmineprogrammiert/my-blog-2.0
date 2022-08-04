@@ -18,9 +18,6 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-/* body {
-  background-color: hsl(0, 0%, 92%);
-} */
 /* ---------- Light & Dark Mode ---------- */
 #light {
   background-color: hsl(0, 0%, 92%);
@@ -32,13 +29,13 @@ html {
   #282828, #3A3B3C, #1a3235 */
 }
 .theme-switch {
-  margin: 1.5vh 0 0 90vw;
+  margin: 2.5vh 0 0 90vw !important;
   z-index: 100 !important;
 }
 /* ---------- Navbar ---------- */
 .navbar {
   position: fixed;
-  height: 7.5vh;
+  height: 7vh;
   width: 100%;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
   transition: top .3s;
@@ -51,7 +48,6 @@ html {
   font-family: 'Playball', cursive;
   font-size: 2vw;
   font-weight: 800;
-  margin-left: 30.8vw;
 }
 .nav-item, #nav-item-dropdown, .nav-dropdown {
   color: rgb(2, 2, 2);
@@ -60,6 +56,10 @@ html {
 }
 .nav-item {
   margin-left: 2vw;
+}
+.dropdown-menu {
+  padding: 0;
+  margin: .5vh 0 .5vh 0;
 }
 #light .navbar {
   background-color: hsl(0, 0%, 92%);
@@ -75,6 +75,14 @@ html {
 }
 #dark #nav-item-dropdown {
   color: lightblue;
+  background-color: #2b4258;
+}
+#dark .nav-dropdown {
+  color: lightblue;
+  background-color: #2b4258;
+}
+#dark .nav-dropdown:hover {
+  background-color:#35536f;
 }
 /* ---------- About - Page 01 ---------- */
 .about-page {
@@ -112,7 +120,7 @@ html {
 }
 .deco-img-02 {
   width: 28vw;
-  opacity: .885;
+  opacity: .85;
   animation: diagonal-moveIn-02 1.5s ease-in-out forwards;
 }
 @keyframes diagonal-moveIn-02 {
@@ -178,7 +186,7 @@ html {
 .mountain-img {
   width: 53vw;
   height: auto;
-  opacity: .35;
+  opacity: .45;
   margin-left: -21vw;
   margin-top: 3vh;
 }
