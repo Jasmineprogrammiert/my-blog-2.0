@@ -38,20 +38,18 @@ const About = () => {
               className="deco-img deco-img-01"
               data-aos="fade-right"
             />
-            <div className="headings">
-              <h1 
-                className="about-p1-txt1" 
-                data-aos="fade-right" data-aos-once='true'
-              >
-                DeineLieblingsJasmin
-              </h1>
-              <h2 
-                className="about-p1-txt2" 
-                data-aos="fade-left" data-aos-once='true'
-              >
-                {'>'} Blog of Jasmine Zeng
-              </h2>
-            </div>
+            <h1 
+              className="about-p1-txt1" 
+              data-aos="fade-right" data-aos-once='true'
+            >
+              DeineLieblingsJasmin
+            </h1>
+            <h2 
+              className="about-p1-txt2" 
+              data-aos="fade-left" data-aos-once='true'
+            >
+              {'>'} Blog of Jasmine Zeng
+            </h2>
             <img 
               src={floral_2} alt="Floral"
               className="deco-img deco-img-02"
