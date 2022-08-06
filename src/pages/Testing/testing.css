@@ -1,0 +1,29 @@
+.searchBar-container {
+  background-color: hsl(0, 0%, 90%);
+  width: fit-content;
+  margin: 2.5vh auto 4vh auto;
+  /* padding: .5rem 2rem; */
+  border-radius: 5px;
+}
+/* .searchBar-container form {
+  display: flex;
+  align-items: center;
+} */
+.searchBar-container input {
+  background-color: hsl(0, 0%, 90%);
+  margin: .5rem 3rem;
+  border: none;
+  outline: none;
+}
+/* .searchBar-container span {
+  padding-right: 0.5rem;
+  cursor: pointer;
+} */
+.searchBar-container button {
+  background-color: hsl(207, 85%, 30%);
+  color: #fff;
+  padding: 0.3rem .7rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}

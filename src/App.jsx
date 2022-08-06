@@ -5,8 +5,10 @@ import NavigationBar from './components/Navbar';
 import About from './pages/About';
 import Hiking from './pages/Hiking';
 import Others from './pages/Others';
-import LogIn from './auth/LogIn';
-import SignUp from './auth/SignUp';
+import LogIn from './pages/auth/LogIn';
+import SignUp from './pages/auth/SignUp';
+// TESTING
+import Blog from './pages/Testing/Pages/Blog';
 
 // styles
 import 'aos/dist/aos.css';
@@ -42,6 +44,9 @@ function App() {
             />
             <Routes>
               <Route path="/" element={<About />} />
+              {/* TESTING */}
+              <Route path="blog" element={<Blog />} />
+              {/* <Route path="blog/:id" element={<Blog />} /> */}
               <Route path="hiking" element={<Hiking />} />
               <Route path="others" element={<Others />} />
               <Route path="login" element={<LogIn />} />
