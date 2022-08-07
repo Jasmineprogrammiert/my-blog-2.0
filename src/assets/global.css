@@ -24,20 +24,6 @@ h1, h2 {
   font-family: 'Satisfy', 'cursive';
   text-align: center;
 }
-/* ---------- Light & Dark Mode ---------- */
-#light {
-  background-color: hsl(0, 0%, 92%);
-}
-#dark {
-  background-color: hsl(209, 34%, 26%);
-  color: lightblue;
-  /* #2b4258, #233648, #22303C, #242526, 
-  #282828, #3A3B3C, #1a3235 */
-}
-.theme-switch {
-  margin: 2.5vh 0 0 90vw !important;
-  z-index: 100 !important;
-}
 /* ---------- Navbar ---------- */
 .navbar {
   position: fixed;
@@ -66,25 +52,6 @@ h1, h2 {
 .dropdown-menu {
   padding: 0;
   margin: .5vh 0 .5vh 0;
-}
-#light .navbar {
-  background-color: hsl(0, 0%, 92%);
-}
-#dark .navbar {
-  background-color: hsl(209, 34%, 26%);
-}
-#dark .nav-brand,
-#dark .nav-item,
-#dark #nav-item-dropdown,
-#dark .nav-dropdown {
-  color: lightblue;
-}
-#dark #nav-item-dropdown,
-#dark .nav-dropdown {
-  background-color: hsl(209, 34%, 26%);
-}
-#dark .nav-dropdown:hover {
-  background-color:hsl(209, 35%, 32%);
 }
 /* ---------- About - Page 01 ---------- */
 .about-page {
@@ -232,8 +199,6 @@ h1, h2 {
 
 
 
-
-
 /* ------------------ TESTING ------------------ */
 /* ---------- 1. Header ---------- */
 .blog-header {
@@ -296,14 +261,27 @@ input, button {
   display: flex;
   flex-direction: column;
 }
-.blogCard-cover {
+.blogCard-container img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 0.5rem;
 }
-.blogCard-container h3 {
+.blogCard-container label {
+  font-size: 0.7rem;
+  background: linear-gradient(to right, #6190e8, #a7bfe8);
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  width: fit-content;
+  text-transform: capitalize;
+}
+.blogCard-link {
+  text-decoration: none;
+  color: inherit;
+}
+.blogCard-link h3 {
   margin: 0.5rem 0 1rem 0;
   flex: 1;
 }
@@ -321,29 +299,40 @@ input, button {
   bottom: 0;
   right: 0;
 }
-.blogCard-container footer {
+/* ---------- 5. Empty List ---------- */
+.emptyList-container {
   display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  justify-content: space-between;
+  justify-content: center;
 }
-.blogCard-link {
+/* .emptyList-container img {
+  max-width: 250px;
+  width: 100%;
+} */
+/* ---------- 5. Empty List ---------- */
+.article-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.article-goBack {
   text-decoration: none;
-  color: inherit;
-}
-.blogCard-author {
-  display: flex;
-  align-items: center;
-}
-.blogCard-author img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 0.5rem;
-}
-.blogCard-author p {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: #a9a9a9;
-  font-weight: 600;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  display: block;
+}
+.article-container header {
+  text-align: center;
+}
+.article-date {
+  font-size: 0.8rem;
+  color: #a9a9a9;
+  font-weight: 500;
+}
+.article-container img {
+  width: 100%;
+}
+.article-desc {
+  padding: 1rem;
+  margin-top: 1.5rem;
 }

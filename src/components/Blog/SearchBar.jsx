@@ -1,7 +1,7 @@
 import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBar = ({ 
-  submitForm, value, handleSearch, clearSearch
+  submitForm, value, handleSearchInput, clearSearch
 }) => {
   return (
     <>
@@ -13,7 +13,7 @@ const SearchBar = ({
         type="text"
         placeholder="search by category or keyword"
         value={value}
-        onChange={handleSearch}
+        onChange={handleSearchInput}
       />
       {value && <span onClick={clearSearch}>X</span>}
       <button><SearchIcon /></button>

@@ -1,20 +1,21 @@
 import { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // components
 import NavigationBar from './components/Navbar';
 import About from './pages/About';
 import Hiking from './pages/Hiking';
-import Others from './pages/Others';
 import LogIn from './pages/auth/LogIn';
 import SignUp from './pages/auth/SignUp';
 // TESTING
-import Blog from './pages/Testing/Pages/Blog';
+import Blog from './pages/Blog/Blog';
+import Article from './pages/Blog/Article';
 
 // styles
 import 'aos/dist/aos.css';
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/global.css';
+import './assets/mode.css';
 // import './assets/media.css';
 
 // Light & Dark Mode (need to optmize)
@@ -34,26 +35,22 @@ function App() {
     <>
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div id={theme}>
-        <Router>
-          <Suspense fallback={<Spinner />}>
-            <NavigationBar />
-            <ModeSwitch 
-              className="theme-switch"
-              onChange={toggleTheme}
-              checked={theme === 'dark'}
-            />
-            <Routes>
-              <Route path="/" element={<About />} />
-              {/* TESTING */}
-              <Route path="blog" element={<Blog />} />
-              {/* <Route path="blog/:id" element={<Blog />} /> */}
-              <Route path="hiking" element={<Hiking />} />
-              <Route path="others" element={<Others />} />
-              <Route path="login" element={<LogIn />} />
-              <Route path="signup" element={<SignUp />} />
-            </Routes>
-          </Suspense>
-        </Router>
+        <Suspense fallback={<Spinner />}>
+          <NavigationBar />
+          <ModeSwitch 
+            className="theme-switch"
+            onChange={toggleTheme}
+            checked={theme === 'dark'}
+          />
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<Article />} />
+            <Route path="hiking" element={<Hiking />} />
+            <Route path="login" element={<LogIn />} />
+            <Route path="signup" element={<SignUp />} />
+          </Routes>
+        </Suspense>
       </div>
     </ThemeContext.Provider>
     </>
