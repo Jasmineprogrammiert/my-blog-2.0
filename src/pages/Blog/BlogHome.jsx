@@ -1,11 +1,13 @@
 import { useState } from 'react';
+// components
 import Header from '../../components/Blog/Header';
 import SearchBar from '../../components/Blog/SearchBar';
 import BlogList from '../../components/Blog/BlogList';
-import { blogList } from '../../data/blog'
 import EmptyList from '../../components/Blog/EmptyList';
+// data
+import { blogList } from '../../data/blog'
 
-const Blog = () => {
+const BlogHome = () => {
   const [blogs, setBlogs] = useState(blogList);
   const [searchBarInput, setSearchBarInput] = useState('');
 
@@ -43,4 +45,4 @@ const Blog = () => {
   )
 }
 
-export default Blog;
+export default BlogHome;
