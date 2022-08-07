@@ -9,7 +9,7 @@
   #282828, #3A3B3C, #1a3235 */
 }
 .theme-switch {
-  margin: 2.5vh 0 0 5vw !important;
+  margin: 2.5vh 0 0 .5vw !important;
   z-index: 100 !important;
 }
 /* ---------- Navbar, Blog: Header ---------- */
