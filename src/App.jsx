@@ -3,22 +3,20 @@ import { Routes, Route } from 'react-router-dom';
 // components
 import NavigationBar from './components/Navbar';
 import About from './pages/About';
-import Hiking from './pages/Hiking';
+import BlogHome from './pages/Blog/BlogHome';
+import Blog from './pages/Blog/Blog';
 import LogIn from './pages/auth/LogIn';
 import SignUp from './pages/auth/SignUp';
-// TESTING
-import Blog from './pages/Blog/Blog';
-import Article from './pages/Blog/Article';
 
 // styles
 import 'aos/dist/aos.css';
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/global.css';
 import './assets/mode.css';
+import './assets/global.css';
 // import './assets/media.css';
 
-// Light & Dark Mode (need to optmize)
+// mode (to be optimized with useRef Hook)
 import { createContext } from 'react';
 import ModeSwitch from './components/ModeSwitch';
 import useLocalStorage from 'use-local-storage';
@@ -44,9 +42,8 @@ function App() {
           />
           <Routes>
             <Route path="/" element={<About />} />
-            <Route path="blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<Article />} />
-            <Route path="hiking" element={<Hiking />} />
+            <Route path="blog" element={<BlogHome />} />
+            <Route path="/blog/:id" element={<Blog />} />
             <Route path="login" element={<LogIn />} />
             <Route path="signup" element={<SignUp />} />
           </Routes>

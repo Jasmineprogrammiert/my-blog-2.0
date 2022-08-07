@@ -47,12 +47,6 @@ const NavigationBar = () => {
             >
               Blog
             </Nav.Link>
-            <Nav.Link 
-              as={NavLink} to="hiking" 
-              className="nav-item"
-            >
-              Hiking
-            </Nav.Link>
             <NavDropdown 
               title="User" 
               id="nav-item-dropdown"

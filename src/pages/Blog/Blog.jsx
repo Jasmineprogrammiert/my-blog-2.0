@@ -1,44 +1,43 @@
-import { useState } from 'react';
-import Header from '../../components/Blog/Header';
-import SearchBar from '../../components/Blog/SearchBar';
-import BlogList from '../../components/Blog/BlogList';
-import { blogList } from '../../data/blog'
+import { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { blogList } from '../../data/blog';
 import EmptyList from '../../components/Blog/EmptyList';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Blog = () => {
-  const [blogs, setBlogs] = useState(blogList);
-  const [searchBarInput, setSearchBarInput] = useState('');
+  const { id } = useParams();
+  const [blog, setBlog] = useState(null);
 
-  // search submission
-  const handleSearchBar = e => {
-    e.preventDefault();
-    handleSearchResult();
-  };
-  // search for blog by category
-  const handleSearchResult = () => {
-    const allBlogs = blogList;
-    const filterBlogs = allBlogs.filter(blog => 
-      blog.category.toLowerCase().includes(searchBarInput.toLowerCase().trim())
-    );
-    setBlogs(filterBlogs);
-  };
-  // clear search & show all blogs
-  const handleClearSearch = () => {
-    setBlogs(blogList);
-    setSearchBarInput('');
-  };
+  useEffect(() => {
+    let blog = blogList.find(blog => blog.id === parseInt(id));
+    if (blog) {
+      setBlog(blog);
+    }
+  }, []);
 
   return (
     <>
-    <Header />
-    <SearchBar
-      value={searchBarInput}
-      submitForm={handleSearchBar}
-      handleSearchInput={e => setSearchBarInput(e.target.value)}
-      clearSearch={handleClearSearch}
-    />
-    {!blogs.length ? <EmptyList /> :  <BlogList blogs={blogs} /> }
-    {/* <BlogList blogs={blogList} /> */}
+    <Link className="article-goBack" to="/blog">
+      <span><ArrowBackIcon /></span>
+    </Link>
+    {blog ? (
+      <div className="article-container">
+        <header>
+          <h1>
+            {blog.title}
+          </h1>
+          <p className="article-date">
+            Published {blog.createdAt}
+          </p>
+        </header>
+        <img src={blog.cover} alt="cover" />
+        <p className="article-desc">
+          {blog.description}
+        </p>
+      </div>
+    ) : (
+      <EmptyList />
+    )}
     </>
   )
 }
