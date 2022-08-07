@@ -9,26 +9,38 @@
   #282828, #3A3B3C, #1a3235 */
 }
 .theme-switch {
-  margin: 2.5vh 0 0 90vw !important;
+  margin: 2.5vh 0 0 5vw !important;
   z-index: 100 !important;
 }
-/* ---------- Navbar ---------- */
-#light .navbar {
+/* ---------- Navbar, Blog: Header ---------- */
+#light .navbar,
+#light #accordion-heading {
   background-color: hsl(0, 0%, 92%);
 }
-#dark .navbar {
+#dark .navbar,
+#dark #nav-item-dropdown,
+#dark .nav-dropdown,
+#dark #accordion-heading {
   background-color: hsl(209, 34%, 26%);
 }
 #dark .nav-brand,
 #dark .nav-item,
 #dark #nav-item-dropdown,
-#dark .nav-dropdown {
+#dark .nav-dropdown,
+#dark #accordion-heading h3 {
   color: lightblue;
-}
-#dark #nav-item-dropdown,
-#dark .nav-dropdown {
-  background-color: hsl(209, 34%, 26%);
 }
 #dark .nav-dropdown:hover {
   background-color:hsl(209, 35%, 32%);
+}
+/* ---------- Blog: Header ---------- */
+#light #accordion-txt p {
+  background-color: hsl(0, 0%, 94%);
+}
+#dark #accordion-txt p {
+  background-color: hsl(209, 34%, 28%);
+}
+#dark #accordion-txt p {
+  color: lightblue;
+  color: hsl(0, 0%, 78%);
 }

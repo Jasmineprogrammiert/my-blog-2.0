@@ -5,7 +5,7 @@ const SearchBar = ({
 }) => {
   return (
     <>
-    <form 
+    <form
       className="searchBar-container"
       onSubmit={submitForm}
     >
@@ -15,6 +15,7 @@ const SearchBar = ({
         value={value}
         onChange={handleSearchInput}
       />
+      {/* Pro: barely visible */}
       {value && <span onClick={clearSearch}>X</span>}
       <button><SearchIcon /></button>
     </form>

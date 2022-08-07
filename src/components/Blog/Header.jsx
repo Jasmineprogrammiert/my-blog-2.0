@@ -1,16 +1,64 @@
+import { useState } from 'react';
+// style
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// img
+import floral from '../../assets/img/floral-03.png';
+import bird from '../../assets/img/crane-01.png';
+
 const Header = () => {
+  const [hideImg, setHideImg] = useState(true);
+  const handleClick = () => {
+    setHideImg(current => !current);
+  };
+
   return (
     <>
-    <header className='blog-header'>
-      <h1>
-        <span>“ </span>DeineLieblingsJasmin Blog<span> ”</span>
-      </h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Ab similique doloribus id! Numquam dolore architecto maxime <br /> dignissimos minima, molestias provident vel neque, <br /> et aliquid natus enim, quidem tempora quos. Error.
-      </p>
+    <header className="blog-header">
+      <img 
+        className="blog-img-00" 
+        src={bird} alt="Crane"
+        style={{
+          visibility: hideImg ? "hidden" : "visible"
+        }}
+      />
+      <img 
+        className="blog-img-01" 
+        src={floral} alt="Magnolia" 
+      />
+      <h1>Jasmine's Blog</h1>
+      <Accordion className="accordion">
+        <AccordionSummary
+          id="accordion-heading"
+          aria-controls="panel1a-content"
+          expandIcon={<ExpandMoreIcon id="expand-icon" />}
+          onClick={handleClick}
+        >
+          <h3>More about me ...</h3>
+        </AccordionSummary>
+        <AccordionDetails id="accordion-txt">
+          <p>
+            Apart from studying full-time, I devote most of my spare time to my passions and hobbies. Web development and language learning are presently my two favorites things. 
+          </p>
+          <p>
+            I acquired both front- and backend web development skills by attending an intensive bootcamp and building projects that interest me. And I constantly strive to improve my coding skills.
+          </p>
+          <p>
+            Mandarin is my mother tongue as I was born and raised in Mainland China. I acquired Cantonese and English in high school as I was determined to attend university in Hong Kong.
+          </p>
+          <p>
+            It was purely a matter of fun that I began learning German. Nevertheless, the ability to converse in German, obtain information from different perspectives, etc. really fascinates me. Therefore, I became serious about language learning and aimed to become a polyglot. I learned intermediate to advanced German in my early uni years, and I'm currently learning French since I'd like to travel around Central Europe in the future. 
+          </p>
+          <p>
+            Furthermore, I enjoy outdoor sports such as hiking and cycling, as well as cultural activities like visiting art {'&'} history museums, attending instrumental concerts, consuming relative books and documentaries, and many more.
+          </p>
+        </AccordionDetails>
+      </Accordion>
     </header>
     </>
   )
 }
 
-export default Header
+export default Header;

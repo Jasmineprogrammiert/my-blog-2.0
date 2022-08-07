@@ -24,6 +24,12 @@ h1, h2 {
   font-family: 'Satisfy', 'cursive';
   text-align: center;
 }
+h3 {
+  font-family: 'Hahmlet', serif;
+}
+p {
+  font-family: 'Georgia', sans-serif;
+}
 /* ---------- Navbar ---------- */
 .navbar {
   position: fixed;
@@ -173,46 +179,62 @@ h1, h2 {
   opacity: .3;
   margin: 20vh 0 0 -71vw;
 }
-/* ---------- Hiking ---------- */
-.hiking-container {
-  position: relative;
-  text-align: center;
-}
-.hiking-heading {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 6vw;
-}
-.hiking-img {
-  margin-top: -10vh;
-  width: 100%;
-  height: auto;
-  opacity: .5;
-}
-
-
-
-
-
-/* ------------------ TESTING ------------------ */
+/* --------------- BlogHome (5) --------------- */
 /* ---------- 1. Header ---------- */
 .blog-header {
-  margin-top: -3vh;
-  text-align: center;
+  position: relative;
+}
+.blog-img-00 {
+  position: absolute;
+  width: 31vw;
+  height: auto;
+  margin-top: 22vh;
+  margin-left: -1vw;
+}
+.blog-img-01 {
+  position: absolute;
+  width: 29vw;
+  height: auto;
+  margin-top: -8vh;
+  margin-left: 71vw;
 }
 .blog-header h1 {
-  font-size: 4.5vw;
-  margin-bottom: 2vh;
+  font-size: 4.8vw;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
 }
-.blog-header p, h1 > span {
-  color: hsl(192, 14%, 21%);
-  font-weight: 500;
+.accordion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 41.5%;
+  margin-bottom: 1.5vh;
 }
-#dark .blog-header p, 
-#dark h1 span {
-  color: lightsteelblue;
+#accordion-heading {
+  min-height: 35px;
+  height: 5.8vh;
+  padding-top: 1.2vh;
+}
+#expand-icon {
+  font-size: 2.5vw;
+  margin-bottom: .6vh;
+}
+#accordion-heading h3, #accordion-txt {
+  font-size: 1.8vw;
+  font-family: 'Georgia', sans-serif;
+}
+#accordion-txt {
+  height: 25vw;
+  overflow: scroll;
+  padding: 0;
+}
+#accordion-txt p {
+  font-size: 1.5vw;
+  line-height: 1.4rem;
+  text-align: justify;
+  margin: 0;
+  padding: 1.8vh 1.5vw;
 }
 /* ---------- 2. Search Bar ---------- */
 input, button {
@@ -313,7 +335,7 @@ input, button {
 .article-goBack {
   text-decoration: none;
   font-size: 0.8rem;
-  color: #a9a9a9;
+  color: hsl(0, 0%, 78%);
   font-weight: 500;
   margin-bottom: 2rem;
   display: block;
@@ -323,7 +345,7 @@ input, button {
 }
 .article-date {
   font-size: 0.8rem;
-  color: #a9a9a9;
+  color: hsl(0, 0%, 78%);
   font-weight: 500;
 }
 .article-container img {
@@ -332,4 +354,22 @@ input, button {
 .article-desc {
   padding: 1rem;
   margin-top: 1.5rem;
+}
+/* ---------- Login (Hiking) ---------- */
+.hiking-container {
+  position: relative;
+  text-align: center;
+}
+.hiking-heading {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6vw;
+}
+.hiking-img {
+  margin-top: -10vh;
+  width: 100%;
+  height: auto;
+  opacity: .5;
 }
