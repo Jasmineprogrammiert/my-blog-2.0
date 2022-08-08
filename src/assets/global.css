@@ -184,19 +184,27 @@ p {
 .blog-header {
   position: relative;
 }
-.blog-img-00 {
+.blog-img-0 {
+  position: absolute;
+  width: 29vw;
+  height: auto;
+  margin-top: -8vh;
+  margin-left: 71vw;
+}
+.blog-img-1 {
   position: absolute;
   width: 31vw;
   height: auto;
   margin-top: 22vh;
   margin-left: -1vw;
 }
-.blog-img-01 {
+.blog-img-2 {
   position: absolute;
-  width: 29vw;
+  width: 7vw;
   height: auto;
-  margin-top: -8vh;
-  margin-left: 71vw;
+  margin-top: 17vh;
+  margin-left: 22vw;
+  transform: rotate(28deg);
 }
 .blog-header h1 {
   font-size: 4.8vw;
@@ -209,32 +217,31 @@ p {
   left: 50%;
   transform: translate(-50%, 0%);
   width: 41.5%;
-  margin-bottom: 1.5vh;
 }
 #accordion-heading {
-  min-height: 35px;
-  height: 5.8vh;
+  min-height: 20px;
+  height: 5.5vh;
   padding-top: 1.2vh;
 }
 #expand-icon {
-  font-size: 2.5vw;
-  margin-bottom: .6vh;
+  font-size: 1.8vw;
+  margin-bottom: .8vh;
 }
 #accordion-heading h3, #accordion-txt {
-  font-size: 1.8vw;
+  font-size: 1.4vw;
   font-family: 'Georgia', sans-serif;
 }
 #accordion-txt {
-  height: 25vw;
+  max-height: 25vw;
   overflow: scroll;
   padding: 0;
 }
 #accordion-txt p {
-  font-size: 1.5vw;
-  line-height: 1.4rem;
+  font-size: 1.28vw;
+  line-height: 1.35rem;
   text-align: justify;
   margin: 0;
-  padding: 1.8vh 1.5vw;
+  padding: 1.2vh 1.5vw;
 }
 /* ---------- 2. Search Bar ---------- */
 input, button {
