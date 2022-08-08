@@ -50,3 +50,10 @@
 #dark #accordion-txt p {
   color: hsl(0, 0%, 78%);
 }
+/* ---------- BlogHome: 2. Search Bar ---------- */
+#light #searchBar {
+  background-color: rgb(255, 255, 255, 0.25);
+}
+#light #searchBar:hover {
+  background-color: rgb(255, 255, 255, 0.4);
+}

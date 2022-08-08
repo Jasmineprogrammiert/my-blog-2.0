@@ -14,7 +14,7 @@ const Header = () => {
   const handleClick = () => {
     setHideImg(current => !current);
   };
-
+  
   const [hideImg1, setHideImg1] = useState(true);
   const handleClick1 = () => {
     setHideImg1(current => !current);

@@ -19,7 +19,8 @@ export const blogList = [
   },
   {
     id: 3,
-    category: 'development',
+    // category: ['museum', 'hiking'],
+    category: 'museum',
     title: '7 CSS tools you should be using',
     createdAt: 'June 03, 2021',
     description:

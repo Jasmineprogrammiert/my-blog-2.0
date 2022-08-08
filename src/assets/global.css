@@ -248,43 +248,17 @@ input, button {
   padding: 1.2vh 1.5vw;
 }
 /* ---------- 2. Search Bar ---------- */
-.searchBar0 {
-  background-color: hsl(0, 0%, 90%);
-  width: fit-content;
-  margin: 2.5vh auto 4vh auto;
-  border-radius: 8px;
-}
-.searchBar0 input {
-  background-color: hsl(0, 0%, 90%);
-  width: 35vw;
-  margin: .5rem 1.3rem;
-}
-.searchBar0 button {
-  background-color: hsl(207, 85%, 30%);
-  color: #fff;
-  padding: .3rem .4rem;
-  border-radius: 12px;
-  margin-right: .1rem;
-}
-
-
-
-
-
-
-
-
-
-
 #searchBar {
-  /* width: fit-content; */
   width: 41.5vw;
   margin: 0 auto 4vh auto;
-  /* border-radius: 8px; */
+  background-color: rgb(255, 255, 255, 0.1);
 }
-.searchBar input {
-  /* width: 35vw; */
-  /* margin: .5rem 1.3rem; */
+#searchBar:hover {
+  background-color: rgb(255, 255, 255, 0.15);
+}
+#searchBar-input {
+  font-size: 1.4vw;
+  font-family: 'Georgia', sans-serif;
 }
 /* ---------- 3. Blog List ---------- */
 .blogList-container {
