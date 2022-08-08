@@ -96,7 +96,7 @@ const About = () => {
         <h2 className="about-txt about-txt-p4">
           With the aim of coding my own <br /> hiking blog, I plunged into <br /> web development.
           <br />
-          And I'm delighted to present this website to you, which not only features my hiking experiences, but also <br /> other passions and hobbies.
+          And I'm delighted to present this website to you, which not only features my hiking experiences, but also my <br /> other passions and hobbies.
         </h2>
       </div>
       <div className="column-r-4" data-aos="fade-down">

@@ -8,9 +8,16 @@
   /* #2b4258, #233648, #22303C, #242526, 
   #282828, #3A3B3C, #1a3235 */
 }
-.theme-switch {
-  margin: 2.5vh 0 0 .5vw !important;
-  z-index: 100 !important;
+#theme-switch {
+  margin: 1.5vh 0 0 1vw;
+  padding: 7px;
+  z-index: 100;
+}
+#light #theme-switch {
+  color: hsl(350, 100%, 80%);
+}
+#dark #theme-switch {
+  color: lightskyblue;
 }
 /* ---------- Navbar, Blog: Header ---------- */
 #light .navbar,
@@ -41,6 +48,5 @@
   background-color: hsl(209, 34%, 28%);
 }
 #dark #accordion-txt p {
-  color: lightblue;
   color: hsl(0, 0%, 78%);
 }

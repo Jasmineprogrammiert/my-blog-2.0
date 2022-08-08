@@ -18,8 +18,11 @@ import './assets/global.css';
 
 // mode (to be optimized with useRef Hook)
 import { createContext } from 'react';
-import ModeSwitch from './components/ModeSwitch';
+import IconButton from '@mui/material/IconButton';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import useLocalStorage from 'use-local-storage';
+
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -35,11 +38,13 @@ function App() {
       <div id={theme}>
         <Suspense fallback={<Spinner />}>
           <NavigationBar />
-          <ModeSwitch 
-            className="theme-switch"
-            onChange={toggleTheme}
-            checked={theme === 'dark'}
-          />
+          <IconButton 
+            id="theme-switch"
+            sx={{ ml: 1 }} 
+            onClick={toggleTheme}
+          >
+            {theme === 'dark' ? <DarkModeOutlinedIcon /> : <LightModeOutlinedIcon />}
+          </IconButton>
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="blog" element={<BlogHome />} />
