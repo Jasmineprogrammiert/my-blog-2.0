@@ -35,7 +35,7 @@ const BlogHome = () => {
     <Header />
     <SearchBar
       value={searchBarInput}
-      submitForm={handleSearchBar}
+      submitInput={handleSearchBar}
       handleSearchInput={e => setSearchBarInput(e.target.value)}
       clearSearch={handleClearSearch}
     />

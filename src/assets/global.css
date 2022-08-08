@@ -30,6 +30,10 @@ h3 {
 p {
   font-family: 'Georgia', sans-serif;
 }
+input, button {
+  border: none;
+  outline: none;
+}
 /* ---------- Navbar ---------- */
 .navbar {
   position: fixed;
@@ -244,27 +248,43 @@ p {
   padding: 1.2vh 1.5vw;
 }
 /* ---------- 2. Search Bar ---------- */
-input, button {
-  border: none;
-  outline: none;
-}
-.searchBar-container {
+.searchBar0 {
   background-color: hsl(0, 0%, 90%);
   width: fit-content;
   margin: 2.5vh auto 4vh auto;
   border-radius: 8px;
 }
-.searchBar-container input {
+.searchBar0 input {
   background-color: hsl(0, 0%, 90%);
   width: 35vw;
   margin: .5rem 1.3rem;
 }
-.searchBar-container button {
+.searchBar0 button {
   background-color: hsl(207, 85%, 30%);
   color: #fff;
   padding: .3rem .4rem;
   border-radius: 12px;
   margin-right: .1rem;
+}
+
+
+
+
+
+
+
+
+
+
+#searchBar {
+  /* width: fit-content; */
+  width: 41.5vw;
+  margin: 0 auto 4vh auto;
+  /* border-radius: 8px; */
+}
+.searchBar input {
+  /* width: 35vw; */
+  /* margin: .5rem 1.3rem; */
 }
 /* ---------- 3. Blog List ---------- */
 .blogList-container {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // style
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -25,6 +25,10 @@ const Header = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
+  useEffect(() => {
+    setHideImg(true);
+  }, [hideImg1]);
+
   return (
     <>
     <header className="blog-header">
@@ -36,21 +40,21 @@ const Header = () => {
         className="blog-img-1" 
         src={bird} alt="Crane"
         style={{
-          visibility: hideImg ? "hidden" : "visible"
+          visibility: hideImg ? 'hidden' : 'visible'
         }}
       />
       <img 
         className="blog-img-2" 
         src={butterfly} alt="Butterfly"
         style={{
-          visibility: hideImg1 ? "hidden" : "visible"
+          visibility: hideImg1 ? 'hidden' : 'visible'
         }}
       />
       <h1>Jasmine's Blog</h1>
       <Accordion 
         className="accordion"
-        expanded={expanded === 'panel1'} 
-        onChange={handleChange('panel1')}
+        expanded={expanded === "panel1"} 
+        onChange={handleChange("panel1")}
       >
         <AccordionSummary
           id="accordion-heading"
