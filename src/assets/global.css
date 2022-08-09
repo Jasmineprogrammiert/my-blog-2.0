@@ -313,14 +313,21 @@ input, button {
   overflow: auto;
 }
 /* ---------- 5. Empty List ---------- */
-.emptyList-container {
+.emptyList {
+  height: 60vh;
   display: flex;
-  justify-content: center;
+  margin: 0 10vw;
 }
-/* .emptyList-container img {
-  max-width: 250px;
-  width: 100%;
-} */
+.emptyList img {
+  width: auto;
+  height: 17rem;
+  margin-top: 5vh;
+}
+.emptyList p {
+  font-size: 5vw;
+  font-weight: 600;
+  margin-top: 15vh;
+}
 /* ---------- 5. Empty List ---------- */
 .article-container {
   max-width: 700px;
