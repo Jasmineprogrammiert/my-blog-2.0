@@ -12,9 +12,9 @@ import SignUp from './pages/auth/SignUp';
 import 'aos/dist/aos.css';
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/mode.css';
 import './assets/global.css';
-// import './assets/media.css';
+import './assets/mode.css';
+import './assets/media.css';
 
 // mode (to be optimized with useRef Hook)
 import { createContext } from 'react';

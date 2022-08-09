@@ -14,10 +14,10 @@ const BlogHome = () => {
   // search submission
   const handleSearchBar = e => {
     e.preventDefault();
-    handleSearchResult();
+    handleSearchResults();
   };
   // search for blog by category
-  const handleSearchResult = () => {
+  const handleSearchResults = () => {
     const allBlogs = blogList;
     const filterBlogs = allBlogs.filter(blog => 
       blog.category.toLowerCase().includes(searchBarInput.toLowerCase().trim())
@@ -39,8 +39,7 @@ const BlogHome = () => {
       handleSearchInput={e => setSearchBarInput(e.target.value)}
       clearSearch={handleClearSearch}
     />
-    {!blogs.length ? <EmptyList /> :  <BlogList blogs={blogs} /> }
-    {/* <BlogList blogs={blogList} /> */}
+    {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} /> }
     </>
   )
 }

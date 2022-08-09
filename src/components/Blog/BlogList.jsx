@@ -3,7 +3,7 @@ import BlogCard from "./BlogCard";
 const BlogList = ({ blogs }) => {
   return (
     <>
-    <div className="blogList-container">
+    <div className="blogList">
       {blogs.map(blog => (
          <BlogCard blog={blog} key={blog.id} />
       ))}

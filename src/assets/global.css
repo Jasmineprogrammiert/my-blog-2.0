@@ -24,7 +24,7 @@ h1, h2 {
   font-family: 'Satisfy', 'cursive';
   text-align: center;
 }
-h3 {
+h3, label {
   font-family: 'Hahmlet', serif;
 }
 p {
@@ -190,10 +190,10 @@ input, button {
 }
 .blog-img-0 {
   position: absolute;
-  width: 29vw;
+  width: 31vw;
   height: auto;
   margin-top: -8vh;
-  margin-left: 71vw;
+  margin-left: 69vw;
 }
 .blog-img-1 {
   position: absolute;
@@ -211,7 +211,7 @@ input, button {
   transform: rotate(33deg);
 }
 .blog-header h1 {
-  font-size: 4.8vw;
+  font-size: 5vw;
   margin-top: 3vh;
   margin-bottom: 5vh;
 }
@@ -236,7 +236,7 @@ input, button {
   font-family: 'Georgia', sans-serif;
 }
 #accordion-txt {
-  max-height: 25vw;
+  max-height: 24.5vw;
   overflow: scroll;
   padding: 0;
 }
@@ -252,6 +252,7 @@ input, button {
   width: 41.5vw;
   margin: 0 auto 4vh auto;
   background-color: rgb(255, 255, 255, 0.1);
+  box-shadow: .2vw .25vh 0 rgba(0,0,0,0.1);
 }
 #searchBar:hover {
   background-color: rgb(255, 255, 255, 0.15);
@@ -261,63 +262,55 @@ input, button {
   font-family: 'Georgia', sans-serif;
 }
 /* ---------- 3. Blog List ---------- */
-.blogList-container {
+.blogList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem;
-}
-@media (max-width: 768px) {
-  .blogList-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .blogList-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  grid-column-gap: 2vw;
+  padding: 0 2vw;
+  padding-top: 5vh;
 }
 /* ---------- 4. Blog Card ---------- */
-.blogCard-container {
+.blogCard {
   display: flex;
   flex-direction: column;
-}
-.blogCard-container img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-}
-.blogCard-container label {
-  font-size: 0.7rem;
-  background: linear-gradient(to right, #6190e8, #a7bfe8);
-  color: #fff;
-  padding: 0.3rem 0.5rem;
-  border-radius: 5px;
-  width: fit-content;
-  text-transform: capitalize;
+  margin-bottom: 10vh;
 }
 .blogCard-link {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
+}
+.blogCard-link:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+.blogCard-link img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+  border-radius: 8px;
 }
 .blogCard-link h3 {
-  margin: 0.5rem 0 1rem 0;
+  font-size: 1.8vw;
+  margin: .3rem 0 .2rem 0;
   flex: 1;
 }
-.blogCard-desc {
-  position: relative;
-  max-height: 50px;
-  overflow: hidden;
-  padding-right: 0.6rem;
-  font-size: 0.8rem;
-  color: #a9a9a9;
+.blogCard-date {
+  font-size: 1.3vw;
 }
-.blogCard-desc::before {
-  position: absolute;
-  content: '...';
-  bottom: 0;
-  right: 0;
+.blogCard label {
+  font-size: 1.2vw;
+  text-transform: capitalize;
+  color: hsl(30, 30%, 100%);
+  background-image: linear-gradient(to right, #4463a0, #81a2db);
+  padding: 0 .35rem;
+  border-radius: 6px;
+  width: fit-content;
+  margin: -.8rem 0 1.5rem 0;
+}
+.blogCard-preview {
+  font-size: 1.35vw;
+  color: hsl(0, 0%, 78%);
+  overflow: auto;
 }
 /* ---------- 5. Empty List ---------- */
 .emptyList-container {

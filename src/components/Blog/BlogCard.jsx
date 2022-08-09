@@ -3,23 +3,28 @@ import { Link } from 'react-router-dom';
 const BlogCard = ({
   blog: {
     id,
-    category,
+    cover,
     title,
     createdAt,
-    description,
-    cover,
+    category,
+    preview
   },
 }) => {
   return (
-    <div className="blogCard-container">
-      <img src={cover} alt='Blog Cover' />
-      <label>{category}</label>
-      <Link className='blogCard-link' to={`/blog/${id}`}>
+    <>
+    <div className="blogCard">
+      <Link
+        to={`/blog/${id}`}
+        className="blogCard-link" 
+      >
+        <img src={cover} alt="Blog cover" />
         <h3>{title}</h3>
       </Link>
-      <p>{createdAt}</p>
-      <p className='blogCard-desc'>{description}</p>
+      <p className="blogCard-date">{createdAt}</p>
+      <label>{category}</label>
+      <p className="blogCard-preview">{preview}</p>
     </div>
+    </>
   );
 };
 

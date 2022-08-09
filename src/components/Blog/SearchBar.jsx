@@ -33,10 +33,13 @@ const SearchBar = ({
           style={{fontSize: '1.5vw'}}
         />
       }
-      {/* clear search when input field is empty: for keyboard */}
     </form>
     </>
   )
 }
 
 export default SearchBar;
+
+/* To be done: 
+    clear search when input field is empty: for keyboard
+*/

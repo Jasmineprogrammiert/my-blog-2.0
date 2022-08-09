@@ -14,12 +14,15 @@
   z-index: 100;
 }
 #light #theme-switch {
-  color: hsl(350, 100%, 80%);
+  color: hsl(350, 100%, 71%);
 }
 #dark #theme-switch {
   color: lightskyblue;
 }
-/* ---------- Navbar, Blog: Header ---------- */
+/* ---------------
+    Navbar, 
+    BlogHome: 1. Header 
+--------------- */
 #light .navbar,
 #light #accordion-heading {
   background-color: hsl(0, 0%, 92%);
@@ -40,7 +43,8 @@
 #dark .nav-dropdown:hover {
   background-color:hsl(209, 35%, 32%);
 }
-/* ---------- Blog: Header ---------- */
+/* --------------- BlogHome (5) --------------- */
+/* ---------- 1. Header ---------- */
 #light #accordion-txt p {
   background-color: hsl(0, 0%, 94%);
 }
@@ -50,10 +54,21 @@
 #dark #accordion-txt p {
   color: hsl(0, 0%, 78%);
 }
-/* ---------- BlogHome: 2. Search Bar ---------- */
+/* ---------- 2. Search Bar ---------- */
 #light #searchBar {
   background-color: rgb(255, 255, 255, 0.25);
 }
 #light #searchBar:hover {
   background-color: rgb(255, 255, 255, 0.4);
+}
+/* ---------- 4. Blog Card ---------- */
+#light .blogCard label {
+  color: black;
+  background-image: linear-gradient(to right, hsl(350, 100%, 85%), hsl(351, 100%, 93%));
+}
+#light .blogCard label {
+  color: hsl(0, 0%, 20%);
+}
+#light .blogCard-preview {
+  color: hsl(0, 0%, 38%);
 }

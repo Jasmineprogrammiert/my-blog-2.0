@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { blogList } from '../../data/blog';
 import EmptyList from '../../components/Blog/EmptyList';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+// TESTING
+// import Chip from '../../components/Blog/Chip';
 
 const Blog = () => {
   const { id } = useParams();
@@ -29,6 +31,13 @@ const Blog = () => {
           <p className="article-date">
             Published {blog.createdAt}
           </p>
+          {/* <div className='blog-subCategory'>
+            {blog.subCategory.map((category, i) => (
+              <div key={i}>
+                <Chip label={category} />
+              </div>
+            ))}
+          </div> */}
         </header>
         <img src={blog.cover} alt="cover" />
         <p className="article-desc">
