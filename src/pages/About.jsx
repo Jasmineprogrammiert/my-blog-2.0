@@ -40,13 +40,13 @@ const About = () => {
             />
             <h1 
               className="about-heading-1" 
-              data-aos="fade-right" data-aos-once='true'
+              data-aos="fade-right" data-aos-once="true"
             >
               DeineLieblingsJasmin
             </h1>
             <h2 
               className="about-heading-2" 
-              data-aos="fade-left" data-aos-once='true'
+              data-aos="fade-left" data-aos-once="true"
             >
               {'>'} Blog of Jasmine Zeng
             </h2>

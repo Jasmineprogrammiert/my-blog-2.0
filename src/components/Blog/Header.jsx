@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // style
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -10,24 +10,10 @@ import bird from '../../assets/img/crane-01.png';
 import butterfly from '../../assets/img/butterfly-01.png'
 
 const Header = () => {
-  const [hideImg, setHideImg] = useState(true);
-  const handleClick = () => {
-    setHideImg(current => !current);
-  };
-  
-  const [hideImg1, setHideImg1] = useState(true);
-  const handleClick1 = () => {
-    setHideImg1(current => !current);
-  };
-
   const [expanded, setExpanded] = useState(false);
   const handleChange = (panel) => (e, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-
-  useEffect(() => {
-    setHideImg(true);
-  }, [hideImg1]);
 
   return (
     <>
@@ -36,30 +22,15 @@ const Header = () => {
         className="blog-img-0" 
         src={floral} alt="Magnolia" 
       />
-      <img 
-        className="blog-img-1" 
-        src={bird} alt="Crane"
-        style={{
-          visibility: hideImg ? 'hidden' : 'visible'
-        }}
-      />
-      <img 
-        className="blog-img-2" 
-        src={butterfly} alt="Butterfly"
-        style={{
-          visibility: hideImg1 ? 'hidden' : 'visible'
-        }}
-      />
       <h1>Jasmine's Blog</h1>
       <Accordion 
         className="accordion"
-        expanded={expanded === "panel1"} 
-        onChange={handleChange("panel1")}
+        expanded={expanded === 'panel1'} 
+        onChange={handleChange('panel1')}
       >
         <AccordionSummary
           id="accordion-heading"
           expandIcon={<ExpandMoreIcon id="expand-icon" />}
-          onClick={handleClick}
         >
           <h3>About</h3>
         </AccordionSummary>
@@ -81,6 +52,12 @@ const Header = () => {
           </p>
         </AccordionDetails>
       </Accordion>
+      {expanded === 'panel1' &&
+        <img 
+          className="blog-img-1" 
+          src={bird} alt="Crane"
+        />
+      }
       <Accordion 
         className="accordion"
         expanded={expanded === 'panel2'} 
@@ -89,7 +66,6 @@ const Header = () => {
         <AccordionSummary
           id="accordion-heading"
           expandIcon={<ExpandMoreIcon id="expand-icon" />}
-          onClick={handleClick1}
         >
           <h3>Category list</h3>
         </AccordionSummary>
@@ -102,6 +78,12 @@ const Header = () => {
           </p>
         </AccordionDetails>
       </Accordion>
+      {expanded === 'panel2' &&
+        <img 
+          className="blog-img-2" 
+          src={butterfly} alt="Butterfly"
+        />
+      }
     </header>
     </>
   )

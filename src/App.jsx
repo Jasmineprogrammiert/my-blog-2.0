@@ -29,7 +29,7 @@ function App() {
   const defaultMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultMode ? 'dark' : 'light');
   const toggleTheme = () => {
-    setTheme(cur => cur === 'light' ? 'dark' : 'light');
+    setTheme(current => current === 'light' ? 'dark' : 'light');
   };
 
   return (

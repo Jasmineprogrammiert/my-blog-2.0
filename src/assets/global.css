@@ -199,16 +199,16 @@ input, button {
   position: absolute;
   width: 31vw;
   height: auto;
-  margin-top: 22vh;
+  margin-top: -40vh;
   margin-left: -1vw;
 }
 .blog-img-2 {
   position: absolute;
   width: 7vw;
   height: auto;
-  margin-top: 17vh;
+  margin-top: -23vh;
   margin-left: 22vw;
-  transform: rotate(28deg);
+  transform: rotate(33deg);
 }
 .blog-header h1 {
   font-size: 4.8vw;
