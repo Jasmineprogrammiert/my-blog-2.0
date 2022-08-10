@@ -297,6 +297,10 @@ input, button {
 .blogCard-date {
   font-size: 1.3vw;
 }
+.blogCard-category {
+  display: flex;
+  justify-content: inline;
+}
 .blogCard label {
   font-size: 1.2vw;
   text-transform: capitalize;
@@ -305,7 +309,7 @@ input, button {
   padding: 0 .35rem;
   border-radius: 6px;
   width: fit-content;
-  margin: -.8rem 0 1.5rem 0;
+  margin: -.8rem .4rem 1.5rem 0;
 }
 .blogCard-preview {
   font-size: 1.35vw;
@@ -314,45 +318,46 @@ input, button {
 }
 /* ---------- 5. Empty List ---------- */
 .emptyList {
-  height: 60vh;
-  display: flex;
+  height: 55vh;
   margin: 0 10vw;
 }
 .emptyList img {
   width: auto;
-  height: 17rem;
-  margin-top: 5vh;
+  height: 38vh;
+  margin-top: 10vh;
 }
-.emptyList p {
-  font-size: 5vw;
-  font-weight: 600;
-  margin-top: 15vh;
+/* ---------- 6. Blog ---------- */
+#goBack {
+  margin: 1.5vh 0 0 92vw;
+  font-size: 1.45rem;
 }
-/* ---------- 5. Empty List ---------- */
-.article-container {
-  max-width: 700px;
-  margin: 0 auto;
+#goBack:hover {
+  transform: translateX(-10px);
+  text-indent: 0.1rem;
+  transition: .5s ease-out;
 }
-.article-goBack {
-  text-decoration: none;
-  font-size: 0.8rem;
-  color: hsl(0, 0%, 78%);
-  font-weight: 500;
-  margin-bottom: 2rem;
-  display: block;
+.blog {
+  margin: 0 15vw;
 }
-.article-container header {
+.blog header h1 {
+  font-size: 4vw;
+}
+.blog-subHeading {
+  font-size: 1.2vw;
+  color: hsl(0, 0%, 50%);
   text-align: center;
 }
-.article-date {
-  font-size: 0.8rem;
-  color: hsl(0, 0%, 78%);
-  font-weight: 500;
+#readTime {
+  font-size: 1rem;
+  margin-left: 2vw;
 }
-.article-container img {
+
+
+
+.blog img {
   width: 100%;
 }
-.article-desc {
+.blog-desc {
   padding: 1rem;
   margin-top: 1.5rem;
 }

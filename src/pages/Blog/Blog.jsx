@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+// local
 import { blogList } from '../../data/blog';
 import EmptyList from '../../components/Blog/EmptyList';
+// style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-// TESTING
-// import Chip from '../../components/Blog/Chip';
+import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 
 const Blog = () => {
   const { id } = useParams();
@@ -19,28 +20,21 @@ const Blog = () => {
 
   return (
     <>
-    <Link className="article-goBack" to="/blog">
-      <span><ArrowBackIcon /></span>
+    <Link to="/blog">
+      <ArrowBackIcon id="goBack" />
     </Link>
     {blog ? (
-      <div className="article-container">
+      <div className="blog">
         <header>
-          <h1>
-            {blog.title}
-          </h1>
-          <p className="article-date">
-            Published {blog.createdAt}
+          <h1>{blog.title}</h1>
+          <p className="blog-subHeading">
+            {blog.createdAt}
+            <AccessTimeRoundedIcon id="readTime" />
+            {blog.readTime} min read
           </p>
-          {/* <div className='blog-subCategory'>
-            {blog.subCategory.map((category, i) => (
-              <div key={i}>
-                <Chip label={category} />
-              </div>
-            ))}
-          </div> */}
         </header>
         <img src={blog.cover} alt="cover" />
-        <p className="article-desc">
+        <p className="blog-desc">
           {blog.description}
         </p>
       </div>

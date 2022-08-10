@@ -5,7 +5,6 @@ const EmptyList = () => {
    <>
    <div className="emptyList">
     <img src={fish} alt="chinese fish" />
-    <p>No results found</p>
    </div>
    </>
   )

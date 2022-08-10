@@ -18,10 +18,11 @@ const BlogHome = () => {
   };
   // search for blog by category
   const handleSearchResults = () => {
-    const allBlogs = blogList;
-    const filterBlogs = allBlogs.filter(blog => 
-      blog.category.toLowerCase().includes(searchBarInput.toLowerCase().trim())
-    );
+    const filterBlogs = blogList.filter(blog => {
+      return (
+        blog.category.some(category => category.toLowerCase().includes(searchBarInput.toLowerCase().trim()))
+      )
+    });
     setBlogs(filterBlogs);
   };
   // clear search & show all blogs

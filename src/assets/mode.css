@@ -8,15 +8,21 @@
   /* #2b4258, #233648, #22303C, #242526, 
   #282828, #3A3B3C, #1a3235 */
 }
+/* ---------------
+    ThemeSwitch
+    Blog: <ArrowBackIcon />
+--------------- */
 #theme-switch {
   margin: 1.5vh 0 0 1vw;
   padding: 7px;
   z-index: 100;
 }
-#light #theme-switch {
-  color: hsl(350, 100%, 71%);
+#light #theme-switch,
+#light #goBack {
+  color: hsl(350, 100%, 73%);
 }
-#dark #theme-switch {
+#dark #theme-switch,
+#dark #goBack {
   color: lightskyblue;
 }
 /* ---------------
@@ -51,7 +57,8 @@
 #dark #accordion-txt p {
   background-color: hsl(209, 34%, 28%);
 }
-#dark #accordion-txt p {
+#dark #accordion-txt p,
+#dark .blog-subHeading {
   color: hsl(0, 0%, 78%);
 }
 /* ---------- 2. Search Bar ---------- */
@@ -72,3 +79,4 @@
 #light .blogCard-preview {
   color: hsl(0, 0%, 38%);
 }
+/* ---------- 5. Empty List ---------- */

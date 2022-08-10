@@ -51,6 +51,7 @@ function App() {
             <Route path="/blog/:id" element={<Blog />} />
             <Route path="login" element={<LogIn />} />
             <Route path="signup" element={<SignUp />} />
+            <Route path="*" element={<About />} />
           </Routes>
         </Suspense>
       </div>
