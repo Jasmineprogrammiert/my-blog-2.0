@@ -18,11 +18,11 @@
   z-index: 100;
 }
 #light #theme-switch,
-#light #goBack {
+#light #goBack-icon {
   color: hsl(350, 100%, 73%);
 }
 #dark #theme-switch,
-#dark #goBack {
+#dark #goBack-icon {
   color: lightskyblue;
 }
 /* ---------------

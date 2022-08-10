@@ -5,10 +5,10 @@ import SearchBar from '../../components/Blog/SearchBar';
 import BlogList from '../../components/Blog/BlogList';
 import EmptyList from '../../components/Blog/EmptyList';
 // data
-import { blogList } from '../../data/blog'
+import { blogData } from '../../data/blog'
 
 const BlogHome = () => {
-  const [blogs, setBlogs] = useState(blogList);
+  const [blogs, setBlogs] = useState(blogData);
   const [searchBarInput, setSearchBarInput] = useState('');
 
   // search submission
@@ -18,7 +18,7 @@ const BlogHome = () => {
   };
   // search for blog by category
   const handleSearchResults = () => {
-    const filterBlogs = blogList.filter(blog => {
+    const filterBlogs = blogData.filter(blog => {
       return (
         blog.category.some(category => category.toLowerCase().includes(searchBarInput.toLowerCase().trim()))
       )
@@ -27,7 +27,7 @@ const BlogHome = () => {
   };
   // clear search & show all blogs
   const handleClearSearch = () => {
-    setBlogs(blogList);
+    setBlogs(blogData);
     setSearchBarInput('');
   };
 

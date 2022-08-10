@@ -20,7 +20,7 @@ const BlogCard = ({
         <img src={cover} alt="Blog cover" />
         <h3>{title}</h3>
       </Link>
-      <p className="blogCard-date">{createdAt}</p>
+      <p>{createdAt}</p>
       <div className="blogCard-category">
         {category.map((category_txt, i) => (
           <label key={i}>{category_txt}</label>

@@ -1,8 +1,10 @@
 /* Google Fonts
 1. Satisfy, Regular 400, cursive
 2. Hahmlet, Regular 400
+3. Merriweather, Regular 400
 */
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Satisfy&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Satisfy&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Merriweather&family=Satisfy&display=swap');
 /* ---------- General ---------- */
 html { 
   -webkit-user-select: none;
@@ -28,7 +30,9 @@ h3, label {
   font-family: 'Hahmlet', serif;
 }
 p {
-  font-family: 'Georgia', sans-serif;
+  font-family: 'Merriweather', serif;
+  line-height: 2.3vw;
+  text-align: justify;
 }
 input, button {
   border: none;
@@ -242,8 +246,6 @@ input, button {
 }
 #accordion-txt p {
   font-size: 1.28vw;
-  line-height: 1.35rem;
-  text-align: justify;
   margin: 0;
   padding: 1.2vh 1.5vw;
 }
@@ -290,19 +292,19 @@ input, button {
   border-radius: 8px;
 }
 .blogCard-link h3 {
-  font-size: 1.8vw;
+  font-size: 1.7vw;
   margin: .3rem 0 .2rem 0;
   flex: 1;
 }
-.blogCard-date {
-  font-size: 1.3vw;
+.blogCard p {
+  font-size: 1.18vw;
 }
 .blogCard-category {
   display: flex;
   justify-content: inline;
 }
-.blogCard label {
-  font-size: 1.2vw;
+.blogCard-category label {
+  font-size: 1.12vw;
   text-transform: capitalize;
   color: hsl(30, 30%, 100%);
   background-image: linear-gradient(to right, #4463a0, #81a2db);
@@ -312,13 +314,13 @@ input, button {
   margin: -.8rem .4rem 1.5rem 0;
 }
 .blogCard-preview {
-  font-size: 1.35vw;
   color: hsl(0, 0%, 78%);
+  margin-top: -1rem;
   overflow: auto;
 }
 /* ---------- 5. Empty List ---------- */
 .emptyList {
-  height: 55vh;
+  height: 9vh;
   margin: 0 10vw;
 }
 .emptyList img {
@@ -327,39 +329,39 @@ input, button {
   margin-top: 10vh;
 }
 /* ---------- 6. Blog ---------- */
-#goBack {
+#goBack-icon {
   margin: 1.5vh 0 0 92vw;
   font-size: 1.45rem;
 }
-#goBack:hover {
+#goBack-icon:hover {
   transform: translateX(-10px);
   text-indent: 0.1rem;
   transition: .5s ease-out;
-}
-.blog {
-  margin: 0 15vw;
 }
 .blog header h1 {
   font-size: 4vw;
 }
 .blog-subHeading {
-  font-size: 1.2vw;
+  font-size: 1.25vw;
   color: hsl(0, 0%, 50%);
   text-align: center;
+  margin-top: -.2rem;
 }
-#readTime {
+#readTime-icon {
   font-size: 1rem;
-  margin-left: 2vw;
+  margin: 0 .1rem 0 2vw;
 }
-
-
-
 .blog img {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 1.5rem;
 }
 .blog-desc {
-  padding: 1rem;
-  margin-top: 1.5rem;
+  font-size: 1.3vw;
+  text-align: justify;
+  margin: 0 23vw;
+  margin-bottom: 3rem;
 }
 /* ---------- Login (Hiking) ---------- */
 .hiking-container {

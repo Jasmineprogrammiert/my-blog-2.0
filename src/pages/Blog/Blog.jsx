@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-// local
-import { blogList } from '../../data/blog';
-import EmptyList from '../../components/Blog/EmptyList';
+// local files
+import { blogData } from '../../data/blog';
+import BlogHome from './BlogHome';
 // style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
@@ -12,16 +12,18 @@ const Blog = () => {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    let blog = blogList.find(blog => blog.id === parseInt(id));
+    let blog = blogData.find(blog => 
+      blog.id === parseInt(id)
+    );
     if (blog) {
-      setBlog(blog);
+      return setBlog(blog);
     }
   }, []);
 
   return (
     <>
     <Link to="/blog">
-      <ArrowBackIcon id="goBack" />
+      <ArrowBackIcon id="goBack-icon" />
     </Link>
     {blog ? (
       <div className="blog">
@@ -29,17 +31,29 @@ const Blog = () => {
           <h1>{blog.title}</h1>
           <p className="blog-subHeading">
             {blog.createdAt}
-            <AccessTimeRoundedIcon id="readTime" />
+            <AccessTimeRoundedIcon id="readTime-icon" />
             {blog.readTime} min read
           </p>
         </header>
         <img src={blog.cover} alt="cover" />
         <p className="blog-desc">
-          {blog.description}
+          {blog.description_1}
+        </p>
+        <p className="blog-desc">
+          {blog.description_2}
+        </p>
+        <p className="blog-desc">
+          {blog.description_3}
+        </p>
+        <p className="blog-desc">
+          {blog.description_4}
+        </p>
+        <p className="blog-desc">
+          {blog.description_5}
         </p>
       </div>
     ) : (
-      <EmptyList />
+      <BlogHome />
     )}
     </>
   )
