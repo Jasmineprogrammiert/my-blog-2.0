@@ -1,18 +1,17 @@
-/* Google Fonts
-1. Satisfy, Regular 400, cursive
-2. Hahmlet, Regular 400
-3. Merriweather, Regular 400
+/* Google Fonts (Regular 400)
+1. Satisfy: cursive
+2. Hahmlet
+3. Merriweather
 */
-/* @import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Satisfy&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Merriweather&family=Satisfy&display=swap');
 /* ---------- General ---------- */
 html { 
-  /* -webkit-user-select: none;
+  -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
-  user-select: none; */
+  user-select: none;
   height: 100%;
 }
 *,
@@ -23,7 +22,8 @@ html {
   box-sizing: border-box;
 }
 h1, h2 {
-  font-family: 'Satisfy', 'cursive';
+  font-family: 'Satisfy', cursive;
+  letter-spacing: .8px;
   text-align: center;
 }
 h3, label {
@@ -52,6 +52,8 @@ input, button {
 }
 .nav-brand {
   font-family: 'Playball', cursive;
+  font-weight: 100;
+  letter-spacing: .5px;
   font-size: 2vw;
   font-weight: 800;
 }
@@ -72,11 +74,12 @@ input, button {
   height: 100vh;
 }
 .about-heading-1 {
-  font-size: 7vw;
-  margin-bottom: 3vh;
+  font-size: 7.5vw;
+  margin-bottom: 4.5vh;
+  letter-spacing: 6px;
 }
 .about-heading-2 {
-  font-size: 4vw;
+  font-size: 3.5vw;
 }
 .deco-img {
   height: auto;
@@ -210,12 +213,13 @@ input, button {
   position: absolute;
   width: 7vw;
   height: auto;
-  margin-top: -23vh;
+  margin-top: -45vh;
   margin-left: 22vw;
   transform: rotate(33deg);
 }
 .blog-header h1 {
   font-size: 5vw;
+  letter-spacing: 3px;
   margin-top: 3vh;
   margin-bottom: 5vh;
 }
@@ -244,10 +248,17 @@ input, button {
   overflow: scroll;
   padding: 0;
 }
-#accordion-txt p {
+#accordion-txt p, dl {
   font-size: 1.28vw;
   margin: 0;
   padding: 1.2vh 1.5vw;
+}
+#accordion-txt dd {
+  margin: 0;
+  padding: .6vh 1.5vw;
+}
+#accordion-txt dd::before {
+  content: '- ';
 }
 /* ---------- 2. Search Bar ---------- */
 #searchBar {
@@ -320,7 +331,7 @@ input, button {
 }
 /* ---------- 5. Empty List ---------- */
 .emptyList {
-  height: 9vh;
+  height: 55.5vh;
   margin: 0 10vw;
 }
 .emptyList img {
@@ -380,4 +391,49 @@ input, button {
   width: 100%;
   height: auto;
   opacity: .5;
+}
+
+
+
+
+
+
+/* ---------- Slider ---------- */
+/* .carousel {
+  cursor: grab;
+  overflow: hidden;
+  margin: -3% 0 -1.5% 0;
+}
+.inner-carousel {
+  display: flex;
+}
+.item {
+  min-width: 30rem;
+  height: auto;
+  padding: 15px;
+}
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: .5rem;
+  pointer-events: none;
+} */
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+  margin: -3% 0 -1.5% 0;
+}
+.inner-carousel {
+  display: flex;
+}
+.item {
+  min-width: 30rem;
+  height: auto;
+  padding: 15px;
+}
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: .5rem;
+  pointer-events: none;
 }

@@ -6,10 +6,17 @@ import BlogHome from './BlogHome';
 // style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
+// testing
+import Slider from '../../components/testing/Slider';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
+  // testing
+  const [width, setWidth] = useState(0);
+  const carousel = useRef();
 
   useEffect(() => {
     let blog = blogData.find(blog => 
@@ -19,6 +26,11 @@ const Blog = () => {
       return setBlog(blog);
     }
   }, []);
+
+  // testing
+  // useEffect(() => {
+  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  // }, [])
 
   return (
     <>
@@ -45,6 +57,28 @@ const Blog = () => {
         <p className="blog-desc">
           {blog.description_3}
         </p>
+        {/* testing ------------------------ */}
+        {/* <Slider /> */}
+
+        <motion.div 
+           ref={carousel}
+           whileTap={{cursor: "grabbing"}}
+           className="carousel" 
+        >
+          <motion.div 
+            drag="x"
+            dragConstraints={{ right: 0, left: -1300 }}
+            className="inner-carousel"
+          >
+            {blog.img.map((image, i) => {
+              return (
+                <motion.div className="item" key={i}>
+                  <img src={image} alt="carousel images" />
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </motion.div>
         <p className="blog-desc">
           {blog.description_4}
         </p>

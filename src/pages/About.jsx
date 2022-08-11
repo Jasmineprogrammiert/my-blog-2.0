@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, MoveOut, Sticky } from 'react-scroll-motion';
 import AOS from 'aos';
 // images
-import floral_1 from '../assets/img/floral-01.png';
-import floral_2 from '../assets/img/floral-02.png';
-import jasmine from '../assets/img/sunset-peak-01.jpg';
-import mountain_1 from '../assets/img/mountain-01.png';
-import hk_1 from '../assets/img/hk-01.png';
+import floral_1 from '../assets/img/About/floral-01.png';
+import floral_2 from '../assets/img/About/floral-02.png';
+import jasmine from '../assets/img/About/jasmine-01.jpg';
+import mountain_1 from '../assets/img/About/mountain-01.png';
+import hk_1 from '../assets/img/About/hk-01.png';
 
 const About = () => {
   const FadeUp = batch(Fade(), Sticky(), MoveOut(0, -680));
@@ -42,7 +42,7 @@ const About = () => {
               className="about-heading-1" 
               data-aos="fade-right" data-aos-once="true"
             >
-              DeineLieblingsJasmin
+              Lieblingsjasmin
             </h1>
             <h2 
               className="about-heading-2" 
@@ -78,9 +78,7 @@ const About = () => {
     <div className="about-sec3 row">
       <div className="column-l-3" data-aos="fade-up">
         <h2 className="about-txt about-txt-p3">
-          I had a solo hike at Sai Kung while visiting HK in 2018.
-          <br />
-          My love of hiking was instantly sparked by the beauty of nature, which among other factors led to the decision of moving to HK.
+          I had a solo hike at Sai Kung while visiting HK in 2018. My love of hiking was instantly sparked by the beauty of nature, which among other factors led to the decision of moving to HK.
         </h2>
       </div>
       <div className="column-r-3" data-aos="flip-right">
@@ -94,9 +92,7 @@ const About = () => {
     <div className="row">
       <div className="column-l-4" data-aos="zoom-in">
         <h2 className="about-txt about-txt-p4">
-          With the aim of coding my own <br /> hiking blog, I plunged into <br /> web development.
-          <br />
-          And I'm delighted to present this website to you, which not only features my hiking experiences, but also my <br /> other passions and hobbies.
+          With the aim of coding my own hiking blog, I plunged into <br /> web development. I'm delighted to present this website to you, <br /> which not only features my <br /> hiking experiences, but also my <br /> other passions and hobbies.
         </h2>
       </div>
       <div className="column-r-4" data-aos="fade-down">

@@ -51,13 +51,16 @@
 }
 /* --------------- BlogHome (5) --------------- */
 /* ---------- 1. Header ---------- */
-#light #accordion-txt p {
+#light #accordion-txt p,
+#light #accordion-txt dl {
   background-color: hsl(0, 0%, 94%);
 }
-#dark #accordion-txt p {
+#dark #accordion-txt p,
+#dark #accordion-txt dl {
   background-color: hsl(209, 34%, 28%);
 }
 #dark #accordion-txt p,
+#dark #accordion-txt dl,
 #dark .blog-subHeading {
   color: hsl(0, 0%, 78%);
 }

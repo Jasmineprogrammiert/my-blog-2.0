@@ -5,9 +5,9 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // img
-import floral from '../../assets/img/floral-03.png';
-import bird from '../../assets/img/crane-01.png';
-import butterfly from '../../assets/img/butterfly-01.png'
+import floral from '../../assets/img/Header/floral-03.png';
+import bird from '../../assets/img/Header/crane-01.png';
+import butterfly from '../../assets/img/Header/butterfly-01.png'
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
@@ -32,7 +32,7 @@ const Header = () => {
           id="accordion-heading"
           expandIcon={<ExpandMoreIcon id="expand-icon" />}
         >
-          <h3>About</h3>
+          <h3>More about me</h3>
         </AccordionSummary>
         <AccordionDetails id="accordion-txt">
           <p>
@@ -45,7 +45,7 @@ const Header = () => {
             Mandarin is my mother tongue as I was born and raised in Mainland China. I acquired Cantonese and English to a proficient level in high school as I was determined to attend university in Hong Kong.
           </p>
           <p>
-            It was purely a matter of fun that I began learning German. Nevertheless, the ability to converse in German, obtain information from different perspectives, etc. really fascinates me. Therefore, I became serious about language learning and aimed to become a polyglot. I reached an intermediate to advanced German in my early uni years, and I'm currently learning French since I'd like to travel around Central Europe in the future. 
+            It was purely a matter of fun that I began learning German. Nevertheless, the ability to converse in German, obtain information from different perspectives, etc. really fascinates me. Therefore, I became serious about language learning and aimed to become a polyglot. I reached an intermediate to advanced German in my early university years, and I'm currently learning French since I'd like to travel around Central Europe in the future. 
           </p>
           <p>
             Furthermore, I enjoy outdoor sports such as hiking and cycling, as well as cultural activities like visiting art {'&'} history museums, attending instrumental concerts, consuming relative books and documentaries, and many more.
@@ -70,12 +70,17 @@ const Header = () => {
           <h3>Category list</h3>
         </AccordionSummary>
         <AccordionDetails id="accordion-txt">
-          <p>
-            - Activities: Hiking
-          </p>
-          <p>
-            - Locations: Hong Kong
-          </p>
+          <dl>
+            {/* ----- by Activities ----- */}
+            <dt>Activities</dt>
+            <dd>Arts {'&'} Culture</dd>
+            <dd>Camping</dd>
+            <dd>Hiking</dd>
+            <dd>Others</dd>
+             {/* ----- by Locations ----- */}
+            <dt>Locations</dt>
+            <dd>Hong Kong | Hong Kong Island | Sai Kung</dd>
+          </dl>
         </AccordionDetails>
       </Accordion>
       {expanded === 'panel2' &&

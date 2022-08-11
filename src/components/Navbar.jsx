@@ -35,7 +35,7 @@ const NavigationBar = () => {
           as={NavLink} to="/" 
           className="nav-brand"
         >
-          DeineLieblingsJasmin
+          Lieblingsjasmin
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
