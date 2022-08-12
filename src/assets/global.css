@@ -31,8 +31,8 @@ h3, label {
 }
 p {
   font-family: 'Merriweather', serif;
-  line-height: 2.3vw;
   text-align: justify;
+  line-height: 1.6;
 }
 input, button {
   border: none;
@@ -41,7 +41,7 @@ input, button {
 /* ---------- Navbar ---------- */
 .navbar {
   position: fixed;
-  height: 7vh;
+  height: 6.5vh;
   width: 100%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   transition: top .3s;
@@ -54,13 +54,13 @@ input, button {
   font-family: 'Playball', cursive;
   font-weight: 100;
   letter-spacing: .5px;
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-weight: 800;
 }
 .nav-item, #nav-item-dropdown, .nav-dropdown {
   color: hsl(0, 0%, 1%);
   font-family: 'Georgia', sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.35vw;
 }
 .nav-item {
   margin-left: 2vw;
@@ -69,7 +69,7 @@ input, button {
   padding: 0;
   margin: .5vh 0 .5vh 0;
 }
-/* ---------- About - Sec. 1 ---------- */
+/* ---------- About - Front Page ---------- */
 .about-sec-1 {
   height: 100vh;
 }
@@ -143,11 +143,11 @@ input, button {
   border-radius: 50%;
 }
 .about-txt {
-  font-size: 3vw;
+  font-size: 2.8vw;
   font-family: 'Hahmlet', serif;
   font-weight: 500;
   text-align: center;
-  line-height: 9vh; 
+  line-height: 9vh;
 }
 /* ---------- About - Sec. 3 ---------- */
 .about-sec3 {
@@ -173,6 +173,9 @@ input, button {
   margin-top: 3vh;
 }
 /* ---------- About - Sec. 4 ---------- */
+.about-sec4 {
+  height: 135vh;
+}
 .column-l-4 {
   width: 60%;
   margin: 0 3.5vw 0 5.5vw;
@@ -182,7 +185,7 @@ input, button {
   width: 10%;
 }
 .about-txt-p4 {
-  margin-top: 27vh;
+  margin-top: 30vh;
 }
 .hk-img {
   width: 102vw;
@@ -197,10 +200,10 @@ input, button {
 }
 .blog-img-0 {
   position: absolute;
-  width: 31vw;
+  width: 30vw;
   height: auto;
-  margin-top: -8vh;
-  margin-left: 69vw;
+  margin-top: -10vh;
+  margin-left: 70vw;
 }
 .blog-img-1 {
   position: absolute;
@@ -218,10 +221,11 @@ input, button {
   transform: rotate(33deg);
 }
 .blog-header h1 {
-  font-size: 5vw;
+  font-size: 4.7vw;
   letter-spacing: 3px;
-  margin-top: 3vh;
-  margin-bottom: 5vh;
+  margin-top: 5vh;
+  margin-bottom: 6.5vh;
+  margin-bottom: 5.5vh;
 }
 .accordion {
   position: absolute;
@@ -239,8 +243,10 @@ input, button {
   font-size: 1.8vw;
   margin-bottom: .8vh;
 }
-#accordion-heading h3, #accordion-txt {
-  font-size: 1.4vw;
+#accordion-heading h3, 
+#accordion-txt,
+#searchBar-input {
+  font-size: 1.35vw;
   font-family: 'Georgia', sans-serif;
 }
 #accordion-txt {
@@ -249,9 +255,9 @@ input, button {
   padding: 0;
 }
 #accordion-txt p, dl {
-  font-size: 1.28vw;
+  font-size: 1.2vw;
   margin: 0;
-  padding: 1.2vh 1.5vw;
+  padding: 1.3vh 1.5vw;
 }
 #accordion-txt dd {
   margin: 0;
@@ -270,23 +276,19 @@ input, button {
 #searchBar:hover {
   background-color: rgb(255, 255, 255, 0.15);
 }
-#searchBar-input {
-  font-size: 1.4vw;
-  font-family: 'Georgia', sans-serif;
-}
 /* ---------- 3. Blog List ---------- */
 .blogList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 2vw;
-  padding: 0 2vw;
-  padding-top: 5vh;
+  padding: 0 5vw;
+  padding-top: 3.8vh;
 }
 /* ---------- 4. Blog Card ---------- */
 .blogCard {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10vh;
+  margin-bottom: 7vh;
 }
 .blogCard-link {
   color: inherit;
@@ -298,24 +300,25 @@ input, button {
 }
 .blogCard-link img {
   width: 100%;
-  height: 35vh;
+  height: 32.5vh;
   object-fit: cover;
   border-radius: 8px;
 }
 .blogCard-link h3 {
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   margin: .3rem 0 .2rem 0;
   flex: 1;
 }
 .blogCard p {
-  font-size: 1.18vw;
+  font-size: 1.15vw;
+  line-height: 1.6;
 }
 .blogCard-category {
   display: flex;
   justify-content: inline;
 }
 .blogCard-category label {
-  font-size: 1.12vw;
+  font-size: 1.08vw;
   text-transform: capitalize;
   color: hsl(30, 30%, 100%);
   background-image: linear-gradient(to right, #4463a0, #81a2db);
@@ -326,7 +329,7 @@ input, button {
 }
 .blogCard-preview {
   color: hsl(0, 0%, 78%);
-  margin-top: -1rem;
+  margin-top: -.5rem;
   overflow: auto;
 }
 /* ---------- 5. Empty List ---------- */
@@ -371,6 +374,7 @@ input, button {
 .blog-desc {
   font-size: 1.3vw;
   text-align: justify;
+  line-height: 2.3vw;
   margin: 0 23vw;
   margin-bottom: 3rem;
 }

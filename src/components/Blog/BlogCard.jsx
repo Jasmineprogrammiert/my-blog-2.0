@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
 
 const BlogCard = ({
   blog: {
@@ -10,9 +12,29 @@ const BlogCard = ({
     preview
   },
 }) => {
+
+  useEffect(() => {    
+    AOS.init({
+      offset: 300,
+      delay: 0,
+      duration: 1300, 
+    });
+    window.addEventListener('load', function() {
+      AOS.refresh();
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() { 
+        AOS.refresh(); 
+      }, 500);
+    });
+  }, [])
+
   return (
     <>
-    <div className="blogCard">
+    <div 
+      className="blogCard"
+      data-aos="fade-up"
+    >
       <Link
         to={`/blog/${id}`}
         className="blogCard-link" 

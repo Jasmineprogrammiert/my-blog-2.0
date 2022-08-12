@@ -65,6 +65,7 @@ const About = () => {
       className="about-sec-2 row" 
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
+      data-aos-delay="300"
     >
       <div className="column-l-2">
         <img
@@ -99,7 +100,7 @@ const About = () => {
     </div>
 {/* --------------- Sec. 4 --------------- */}
     <div 
-      className="row"
+      className="row about-sec4"
       data-aos-anchor-placement="center-bottom"
       data-aos="flip-right"
     >
