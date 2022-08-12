@@ -2,7 +2,6 @@ import { motion, useScroll } from 'framer-motion';
 
 const ProgressBar = () => {
   const { scrollYProgress } = useScroll();
-  
   return (
     <>
     <motion.div

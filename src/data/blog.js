@@ -18,14 +18,19 @@ export const blogData = [
       "It took us 40min to hike up to Shek O Peak, which was the summit of Dragon's Back, then another 1.5hr to reach Big Wave Bay, by which my only thought was to find a place to sit and rest. Again, there was a reasonably long concrete road between Dragon's Back and Big Wave Bay. I've been there several times and I do not particularly enjoy it. I just dislike walking on the stiff concrete while hiking.",
     description_5:
       "Interestingly, we met another two guys who did the same challenge like us while waiting at the bus stop. I did not expect that haha. Was it a coincidence or is doing Hong Kong Trail in one go a popular dare nowadays? I will leave that for you to judge ;p",
-    cover: '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-01.png',
-    blogCover: '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-02.jpeg',
+    cover: '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-01.png',
+    blogCover: '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-02.jpeg',
     img: [
-      '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
-      '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-07.jpg',
-      '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
-      '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-07.jpg',
-      '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-07.jpg',
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-07.jpg',
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-07.jpg',
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-07.jpg',
+      '/Blog_img/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
     ],
   },
   {
@@ -36,10 +41,10 @@ export const blogData = [
     preview: 'A fairly long, difficult but worth-to-challenge hike from HKU to big Wave Bay.',
     description_1:
       "hong kong island",
-    cover: '/Blog-coverImg/2022-02/hong-kong-trail/hong-kong-trail-01.png',
+    cover: '/Blog_img/2022-02/hong-kong-trail/hong-kong-trail-01.png',
     img: [
-      '/Blog-coverImg/2022-02/hong-kong-trail/hong-kong-trail-01.png', 
-      '/Blog-coverImg/2022-02/hong-kong-trail/hong-kong-trail-01.png',
+      '/Blog_img/2022-02/hong-kong-trail/hong-kong-trail-01.png', 
+      '/Blog_img/2022-02/hong-kong-trail/hong-kong-trail-01.png',
     ],
   },
   {
@@ -50,7 +55,7 @@ export const blogData = [
     preview: 'Some of the best arts & historical museums in Hong Kong.',
     description_1:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    cover: '/Blog-coverImg/2022-07/my-favourite-museums-in-hk/painting-01.jpeg',
+    cover: '/Blog_img/2022-07/my-favourite-museums-in-hk/painting-01.jpeg',
   },
   {
     id: 4,
@@ -61,7 +66,7 @@ export const blogData = [
     readTime: '2',
     description_1:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    cover: '/Blog-coverImg/2022-08/my-go-to-places-on-weekend/concert-01.jpg',
+    cover: '/Blog_img/2022-08/my-go-to-places-on-weekend/concert-01.jpg',
   },
   {
     id: 5,
@@ -71,7 +76,7 @@ export const blogData = [
     preview: 'Something I\'d been looking forward for years...',
     description_1:
       "hong kong island",
-    cover: '/Blog-coverImg/2021-07/first-time-watching-horse-racing/racecourse-01.jpeg',
+    cover: '/Blog_img/2021-07/first-time-watching-horse-racing/racecourse-01.jpeg',
   },
   {
     id: 6,
@@ -81,7 +86,7 @@ export const blogData = [
     preview: 'Awesome camping experience with two gentlemen :)',
     description_1:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    cover: '/Blog-coverImg/2021-11/first-time-camping/figure-01.jpg',
+    cover: '/Blog_img/2021-11/first-time-camping/figure-01.jpg',
   },
   {
     id: 7,
@@ -91,6 +96,6 @@ export const blogData = [
     preview: 'The most arduous hike I\'ve done so far',
     description_1:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    cover: '/Blog-coverImg/2022-03/three-tai/img-01.png',
+    cover: '/Blog_img/2022-03/three-tai/img-01.png',
   },
 ]

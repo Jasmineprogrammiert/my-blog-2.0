@@ -377,6 +377,27 @@ input, button {
   margin: 0 20vw;
   margin-bottom: 3rem;
 }
+/* -----  Inner Img Slider ----- */
+.carousel {
+  max-height: 50%;
+  overflow-x: scroll;
+}
+.inner-carousel {
+  display: flex;
+}
+.inner-carousel img {
+  max-width: 45vw;
+  height: auto;
+  padding: 0 10px;
+  pointer-events: none;
+}
+figcaption {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1;
+  color: #777;
+  padding: 0 5px;
+}
 /* ---------- 7. Progress Bar ---------- */
 .progress-bar {
   position: fixed;
@@ -387,45 +408,6 @@ input, button {
   background: lightblue;
   transform-origin: 0%;
   z-index: 100;
-}
-/* ---------- Slider ---------- */
-/* .carousel {
-  cursor: grab;
-  overflow: hidden;
-  margin: -3% 0 -1.5% 0;
-}
-.inner-carousel {
-  display: flex;
-}
-.item {
-  min-width: 30rem;
-  height: auto;
-  padding: 15px;
-}
-.item img {
-  width: 100%;
-  height: auto;
-  border-radius: .5rem;
-  pointer-events: none;
-} */
-.carousel {
-  cursor: grab;
-  overflow: hidden;
-  margin: -3% 0 -1.5% 0;
-}
-.inner-carousel {
-  display: flex;
-}
-.item {
-  min-width: 30rem;
-  height: auto;
-  padding: 15px;
-}
-.item img {
-  width: 100%;
-  height: auto;
-  border-radius: .5rem;
-  pointer-events: none;
 }
 /* ---------- Login (Hiking) ---------- */
 .hiking-container {
