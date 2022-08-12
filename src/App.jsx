@@ -40,10 +40,13 @@ function App() {
           <NavigationBar />
           <IconButton 
             id="theme-switch"
-            sx={{ ml: 1 }} 
+            sx={{ ml: 1 }}
             onClick={toggleTheme}
           >
-            {theme === 'dark' ? <DarkModeOutlinedIcon /> : <LightModeOutlinedIcon />}
+            {theme === 'dark' ? 
+              <DarkModeOutlinedIcon sx={{ fontSize: "28px" }} /> 
+              : <LightModeOutlinedIcon sx={{ fontSize: "28px" }} />
+            }
           </IconButton>
           <Routes>
             <Route path="/" element={<About />} />

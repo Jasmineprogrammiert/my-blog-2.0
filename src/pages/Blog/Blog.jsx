@@ -35,7 +35,7 @@ const Blog = () => {
   return (
     <>
     <Link to="/blog">
-      <ArrowBackIcon id="goBack-icon" />
+      <ArrowBackIcon id="goBack-icon" style={{ fontSize: "28px" }} />
     </Link>
     {blog ? (
       <div className="blog">
@@ -47,7 +47,7 @@ const Blog = () => {
             {blog.readTime} min read
           </p>
         </header>
-        <img src={blog.cover} alt="cover" />
+        <img src={blog.blogCover} alt="cover" />
         <p className="blog-desc">
           {blog.description_1}
         </p>
@@ -58,12 +58,12 @@ const Blog = () => {
           {blog.description_3}
         </p>
         {/* testing ------------------------ */}
-        {/* <Slider /> */}
+        <Slider />
 
         <motion.div 
-           ref={carousel}
-           whileTap={{cursor: "grabbing"}}
-           className="carousel" 
+          ref={carousel}
+          whileTap={{cursor: "grabbing"}}
+          className="carousel"
         >
           <motion.div 
             drag="x"
@@ -79,6 +79,8 @@ const Blog = () => {
             })}
           </motion.div>
         </motion.div>
+
+
         <p className="blog-desc">
           {blog.description_4}
         </p>

@@ -173,9 +173,6 @@ input, button {
   margin-top: 3vh;
 }
 /* ---------- About - Sec. 4 ---------- */
-.about-sec4 {
-  height: 135vh;
-}
 .column-l-4 {
   width: 60%;
   margin: 0 3.5vw 0 5.5vw;
@@ -344,64 +341,42 @@ input, button {
 }
 /* ---------- 6. Blog ---------- */
 #goBack-icon {
-  margin: 1.5vh 0 0 92vw;
+  margin: 1.2vh 0 0 91vw;
   font-size: 1.45rem;
 }
 #goBack-icon:hover {
   transform: translateX(-10px);
-  text-indent: 0.1rem;
+  text-indent: .1rem;
   transition: .5s ease-out;
 }
 .blog header h1 {
-  font-size: 4vw;
+  font-size: 4.3vw;
+  letter-spacing: 5px;
+  margin-top: 5vh;
 }
 .blog-subHeading {
-  font-size: 1.25vw;
+  font-size: 1.3vw;
   color: hsl(0, 0%, 50%);
   text-align: center;
   margin-top: -.2rem;
 }
 #readTime-icon {
   font-size: 1rem;
-  margin: 0 .1rem 0 2vw;
+  margin: 0 .2rem 0 2vw;
 }
 .blog img {
-  display: block;
-  margin: 0 auto;
-  width: 50%;
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
   margin-bottom: 1.5rem;
 }
 .blog-desc {
   font-size: 1.3vw;
   text-align: justify;
   line-height: 2.3vw;
-  margin: 0 23vw;
+  margin: 0 20vw;
   margin-bottom: 3rem;
 }
-/* ---------- Login (Hiking) ---------- */
-.hiking-container {
-  position: relative;
-  text-align: center;
-}
-.hiking-heading {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 6vw;
-}
-.hiking-img {
-  margin-top: -10vh;
-  width: 100%;
-  height: auto;
-  opacity: .5;
-}
-
-
-
-
-
-
 /* ---------- Slider ---------- */
 /* .carousel {
   cursor: grab;
@@ -440,4 +415,22 @@ input, button {
   height: auto;
   border-radius: .5rem;
   pointer-events: none;
+}
+/* ---------- Login (Hiking) ---------- */
+.hiking-container {
+  position: relative;
+  text-align: center;
+}
+.hiking-heading {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6vw;
+}
+.hiking-img {
+  margin-top: -10vh;
+  width: 100%;
+  height: auto;
+  opacity: .5;
 }

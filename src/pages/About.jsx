@@ -13,10 +13,9 @@ const About = () => {
 
   useEffect(() => {    
     AOS.init({
-      offset: 400,
-      delay: 0,
-      duration: 1800, 
-      // easing: 'ease-in-out' 
+      offset: 450,
+      delay: 200,
+      duration: 1800
     });
     window.addEventListener('load', function() {
       AOS.refresh();
@@ -30,7 +29,7 @@ const About = () => {
   
   return (
     <>
-{/* --------------- Sec. 1 --------------- */}
+{/* --------------- Front Page --------------- */}
     <ScrollContainer>
       <ScrollPage>
         <Animator animation={FadeUp}>
@@ -63,9 +62,8 @@ const About = () => {
 {/* --------------- Sec. 2 --------------- */}
     <div 
       className="about-sec-2 row" 
-      data-aos="fade-up"
+      data-aos="flip-left"
       data-aos-anchor-placement="center-bottom"
-      data-aos-delay="300"
     >
       <div className="column-l-2">
         <img
@@ -99,12 +97,12 @@ const About = () => {
       </div>
     </div>
 {/* --------------- Sec. 4 --------------- */}
-    <div 
-      className="row about-sec4"
-      data-aos-anchor-placement="center-bottom"
-      data-aos="flip-right"
-    >
-      <div className="column-l-4">
+    <div className="row">
+      <div 
+        className="column-l-4"
+        data-aos="zoom-in"
+        data-aos-anchor-placement="center-bottom"
+      >
         <h2 className="about-txt about-txt-p4">
           With the aim of coding my own hiking blog, I plunged into <br /> web development. I'm delighted to present this website to you, <br /> which not only features my <br /> hiking experiences, but also my <br /> other passions and hobbies.
         </h2>

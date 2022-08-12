@@ -18,7 +18,8 @@ export const blogData = [
       "It took us 40min to hike up to Shek O Peak, which was the summit of Dragon's Back, then another 1.5hr to reach Big Wave Bay, by which my only thought was to find a place to sit and rest. Again, there was a reasonably long concrete road between Dragon's Back and Big Wave Bay. I've been there several times and I do not particularly enjoy it. I just dislike walking on the stiff concrete while hiking.",
     description_5:
       "Interestingly, we met another two guys who did the same challenge like us while waiting at the bus stop. I did not expect that haha. Was it a coincidence or is doing Hong Kong Trail in one go a popular dare nowadays? I will leave that for you to judge ;p",
-    cover: '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-02.png',
+    cover: '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-01.png',
+    blogCover: '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-02.jpeg',
     img: [
       '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-03.jpg', 
       '/Blog-coverImg/2018-02/maclehose-trail-sec2/maclehose-trail-sec2-07.jpg',
