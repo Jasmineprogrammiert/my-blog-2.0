@@ -19,7 +19,7 @@
 }
 #light #theme-switch,
 #light #goBack-icon {
-  color: hsl(350, 100%, 73%);
+  color: hsl(350, 100%, 75%);
 }
 #dark #theme-switch,
 #dark #goBack-icon {
@@ -80,6 +80,9 @@
   color: hsl(0, 0%, 20%);
 }
 #light .blogCard-preview {
-  color: hsl(0, 0%, 38%);
+  color: hsl(209, 34%, 26%);
 }
-/* ---------- 5. Empty List ---------- */
+/* ---------- 7. Progress Bar ---------- */
+#light .progress-bar {
+  background: hsl(350, 100%, 85%);
+}

@@ -15,7 +15,7 @@ const BlogCard = ({
 
   useEffect(() => {    
     AOS.init({
-      offset: 300,
+      offset: 100,
       delay: 0,
       duration: 1300, 
     });

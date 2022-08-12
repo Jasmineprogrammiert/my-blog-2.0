@@ -6,10 +6,12 @@ import BlogHome from './BlogHome';
 // style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
+import AOS from 'aos';
 // testing
 import Slider from '../../components/testing/Slider';
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
+import ProgressBar from '../../components/Blog/ProgressBar';
 
 const Blog = () => {
   const { id } = useParams();
@@ -27,6 +29,21 @@ const Blog = () => {
     }
   }, []);
 
+  useEffect(() => {    
+    AOS.init({
+      delay: 0,
+      duration: 1300
+    });
+    window.addEventListener('load', function() {
+      AOS.refresh();
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() { 
+        AOS.refresh(); 
+      }, 500);
+    });
+  }, [])
+
   // testing
   // useEffect(() => {
   //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
@@ -38,7 +55,8 @@ const Blog = () => {
       <ArrowBackIcon id="goBack-icon" style={{ fontSize: "28px" }} />
     </Link>
     {blog ? (
-      <div className="blog">
+      <div className="blog"  data-aos="fade-down">
+        <ProgressBar />
         <header>
           <h1>{blog.title}</h1>
           <p className="blog-subHeading">

@@ -377,6 +377,17 @@ input, button {
   margin: 0 20vw;
   margin-bottom: 3rem;
 }
+/* ---------- 7. Progress Bar ---------- */
+.progress-bar {
+  position: fixed;
+  top: 6.5%;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: lightblue;
+  transform-origin: 0%;
+  z-index: 100;
+}
 /* ---------- Slider ---------- */
 /* .carousel {
   cursor: grab;

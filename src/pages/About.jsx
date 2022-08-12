@@ -13,8 +13,8 @@ const About = () => {
 
   useEffect(() => {    
     AOS.init({
-      offset: 450,
-      delay: 200,
+      offset: 300,
+      delay: 300,
       duration: 1800
     });
     window.addEventListener('load', function() {
