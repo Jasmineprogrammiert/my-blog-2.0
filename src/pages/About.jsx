@@ -12,9 +12,11 @@ const About = () => {
   const FadeUp = batch(Fade(), Sticky(), MoveOut(0, -680));
 
   useEffect(() => {    
-    AOS.init({ 
+    AOS.init({
+      offset: 400,
+      delay: 0,
       duration: 1800, 
-      easing: 'ease-in-out' 
+      // easing: 'ease-in-out' 
     });
     window.addEventListener('load', function() {
       AOS.refresh();
@@ -59,7 +61,11 @@ const About = () => {
       </ScrollPage>
     </ScrollContainer>
 {/* --------------- Sec. 2 --------------- */}
-    <div className="about-sec-2 row" data-aos="zoom-in">
+    <div 
+      className="about-sec-2 row" 
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+    >
       <div className="column-l-2">
         <img
           src={jasmine} alt="Jasmine at Sunset Peak, Lantau Island, Hong Kong, 2021. Photo by Tsz Kwan Chiang" 
@@ -75,13 +81,16 @@ const About = () => {
       </div>
     </div>
 {/* --------------- Sec. 3 --------------- */}
-    <div className="about-sec3 row">
-      <div className="column-l-3" data-aos="fade-up">
-        <h2 className="about-txt about-txt-p3">
+    <div 
+      className="about-sec3 row" 
+      data-aos-anchor-placement="top-center"
+    >
+      <div className="column-l-3">
+        <h2 className="about-txt about-txt-p3" data-aos="fade-right">
           I had a solo hike at Sai Kung while visiting HK in 2018. My love of hiking was instantly sparked by the beauty of nature, which among other factors led to the decision of moving to HK.
         </h2>
       </div>
-      <div className="column-r-3" data-aos="flip-right">
+      <div className="column-r-3" data-aos="fade-left">
         <img
           src={mountain_1} alt="Sketch mountain" 
           className="mountain-img"
@@ -89,13 +98,17 @@ const About = () => {
       </div>
     </div>
 {/* --------------- Sec. 4 --------------- */}
-    <div className="row">
-      <div className="column-l-4" data-aos="zoom-in">
+    <div 
+      className="row"
+      data-aos-anchor-placement="center-bottom"
+      data-aos="flip-right"
+    >
+      <div className="column-l-4">
         <h2 className="about-txt about-txt-p4">
           With the aim of coding my own hiking blog, I plunged into <br /> web development. I'm delighted to present this website to you, <br /> which not only features my <br /> hiking experiences, but also my <br /> other passions and hobbies.
         </h2>
       </div>
-      <div className="column-r-4" data-aos="fade-down">
+      <div className="column-r-4">
         <img
           src={hk_1} alt="Hong Kong skyline" 
           className="hk-img"

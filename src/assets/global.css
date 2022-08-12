@@ -75,7 +75,7 @@ input, button {
 }
 .about-heading-1 {
   font-size: 7.5vw;
-  margin-bottom: 4.5vh;
+  margin-bottom: 4vh;
   letter-spacing: 6px;
 }
 .about-heading-2 {
@@ -96,13 +96,13 @@ input, button {
     transform: rotate(75deg);
 	}
 	100% {
-    margin: -3vh 0 -3vh -8vw;
+    margin: -6vh 0 -3vh -7.8vw;
     transform: rotate(75deg);
 	}
 }
 .deco-img-2 {
   width: 28vw;
-  opacity: .85;
+  opacity: .88;
   animation: diagonal-moveIn-2 1.5s ease-in-out forwards;
 }
 @keyframes diagonal-moveIn-2 {
@@ -111,7 +111,7 @@ input, button {
     transform: rotate(10deg);
 	}
 	100% {
-    margin: -25vh 0 0 72.1vw;
+    margin: -22vh 0 0 72.1vw;
     transform: rotate(10deg);
 	}
 }
