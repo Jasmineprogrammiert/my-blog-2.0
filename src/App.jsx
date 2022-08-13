@@ -16,9 +16,9 @@ import ImgSlider from './components/testing/ImgSlider';
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
-import './assets/global.css';
-import './assets/mode.css';
-import './assets/media.css';
+import './assets/style/global.css';
+import './assets/style/mode.css';
+import './assets/style/media.css';
 
 export const ThemeContext = createContext(null);
 
