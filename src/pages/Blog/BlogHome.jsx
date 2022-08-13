@@ -9,36 +9,33 @@ import { blogData } from '../../data/blog'
 
 const BlogHome = () => {
   const [blogs, setBlogs] = useState(blogData);
-  const [searchBarInput, setSearchBarInput] = useState('');
+  const [searchInput, setSearchInput] = useState('');
 
-  // search submission
-  const handleSearchBar = e => {
+  const handleSearchInput = e => {
     e.preventDefault();
     handleSearchResults();
   };
-  // search for blog by category
+  // filter blog(s) by category
   const handleSearchResults = () => {
-    const filterBlogs = blogData.filter(blog => {
-      return (
-        blog.category.some(category => category.toLowerCase().includes(searchBarInput.toLowerCase().trim()))
-      )
-    });
+    const filterBlogs = blogData.filter(blog => 
+      blog.category.some(category => category.toLowerCase().includes(searchInput.toLowerCase().trim()))
+    );
     setBlogs(filterBlogs);
   };
   // clear search & show all blogs
   const handleClearSearch = () => {
     setBlogs(blogData);
-    setSearchBarInput('');
+    setSearchInput('');
   };
 
   return (
     <>
     <Header />
     <SearchBar
-      value={searchBarInput}
-      submitInput={handleSearchBar}
-      handleSearchInput={e => setSearchBarInput(e.target.value)}
-      clearSearch={handleClearSearch}
+      value={searchInput}
+      handleSearchInput={handleSearchInput}
+      clearSearchInput={e => setSearchInput(e.target.value)}
+      handleClearSearch={handleClearSearch}
     />
     {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} /> }
     </>

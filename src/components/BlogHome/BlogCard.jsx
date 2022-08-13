@@ -43,10 +43,10 @@ const BlogCard = ({
         <h3>{title}</h3>
       </Link>
       <p>{createdAt}</p>
-      <div className="blogCard-category">
-        {category.map((category_txt, i) => (
+       <div className="blogCard-category">
+        {category.map((category_txt, i) => 
           <label key={i}>{category_txt}</label>
-        ))}
+        )}
       </div>
       <p className="blogCard-preview">{preview}</p>
     </div>

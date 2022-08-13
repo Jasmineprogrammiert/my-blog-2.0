@@ -3,10 +3,10 @@ import BlogCard from "./BlogCard";
 const BlogList = ({ blogs }) => {
   return (
     <>
-    <div className="blogList">
-      {blogs.map(blog => (
+     <div className="blogList">
+      {blogs.map(blog => 
          <BlogCard blog={blog} key={blog.id} />
-      ))}
+      )}
     </div>
     </>
   )

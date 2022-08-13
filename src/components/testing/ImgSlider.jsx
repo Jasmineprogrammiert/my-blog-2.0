@@ -68,7 +68,7 @@ const ImgSlider = () => {
         ))}
       </Slider>
     ) 
-    : <h1>Error</h1>
+      : <h1>Error</h1>
     }
     {/* <Slider {...settings}>
       {images.map((img, idx) => (

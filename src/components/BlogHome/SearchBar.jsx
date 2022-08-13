@@ -12,28 +12,31 @@ const SearchBarInput = styled(InputBase)(({ theme }) => ({
   }
 }));
 
-const SearchBar = ({ 
-  submitInput, value, handleSearchInput, clearSearch
+const SearchBar = ({
+  value, 
+  handleSearchInput, 
+  clearSearchInput, 
+  handleClearSearch
 }) => {
   return (
     <>
     <form
       id="searchBar"
-      onChange={submitInput}
+      onChange={handleSearchInput}
     >
       <SearchBarInput
         id="searchBar-input"
         placeholder="Search by category"
         value={value}
-        onChange={handleSearchInput}
+        onChange={clearSearchInput}
       />
       {value && 
         <CloseIcon 
-          onClick={clearSearch} 
+          onClick={handleClearSearch} 
           style={{fontSize: '1.5vw'}}
         />
       }
-      {!value.length ? clearSearch() : ''}
+      {!value.length ? handleClearSearch() : ''}
     </form>
     </>
   )
