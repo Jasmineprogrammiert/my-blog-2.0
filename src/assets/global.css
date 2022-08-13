@@ -4,6 +4,9 @@
 3. Merriweather
 */
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Merriweather&family=Satisfy&display=swap');
+/* testing */
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 /* ---------- General ---------- */
 html { 
   -webkit-user-select: none;
@@ -426,4 +429,37 @@ figcaption {
   width: 100%;
   height: auto;
   opacity: .5;
+}
+/* ------- ImgSlider ------- */
+.slide img {
+  width: 20rem;
+  margin: 0 auto;
+}
+.slide {
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+.activeSlide {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow svg {
+  transition: color 300ms;
+}
+.arrow svg:hover {
+  color: #68edff;
+}
+.next {
+  right: 0%;
+  top: 50%;
+}
+.prev {
+  left: 0%;
+  top: 50%;
 }

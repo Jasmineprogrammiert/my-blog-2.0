@@ -7,15 +7,16 @@ import BlogHome from './pages/Blog/BlogHome';
 import Blog from './pages/Blog/Blog';
 import LogIn from './pages/auth/LogIn';
 import SignUp from './pages/auth/SignUp';
+// testing
+import ImgSlider from './components/testing/ImgSlider';
 
 // styles
-import 'aos/dist/aos.css';
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'aos/dist/aos.css';
 import './assets/global.css';
 import './assets/mode.css';
 import './assets/media.css';
-
 // mode (to be optimized with useRef Hook)
 import { createContext } from 'react';
 import IconButton from '@mui/material/IconButton';
@@ -50,6 +51,7 @@ function App() {
           </IconButton>
           <Routes>
             <Route path="/" element={<About />} />
+            <Route path="imgslider" element={<ImgSlider />} />
             <Route path="blog" element={<BlogHome />} />
             <Route path="/blog/:id" element={<Blog />} />
             <Route path="login" element={<LogIn />} />
