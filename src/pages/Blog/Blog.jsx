@@ -68,11 +68,10 @@ const Blog = () => {
       {/* Inner Img Slider */}
         <div className="carousel" ref={carousel}>
           <div className="inner-carousel">
-            {blog.img.map((image, i) => (
+            {blog.img.map(image => (
               <>
-              {/* <img src={image} alt="Blog images" key={i} /> */}
-              <img src={image} alt="Blog images" key={i} />
-              <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+              <img src={image} alt="Blog images" key={blog.id} />
+              {/* <figcaption key={blog.id}>Fig.1 - Trulli, Puglia, Italy.</figcaption> */}
               </>
             ))}
           </div>

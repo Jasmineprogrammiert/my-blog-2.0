@@ -12,16 +12,16 @@
     ThemeSwitch
     Blog: <ArrowBackIcon />
 --------------- */
-#theme-switch {
+#modeSwitch {
   margin: 1.4vh 0 0 1vw;
   padding: 7px;
   z-index: 100;
 }
-#light #theme-switch,
+#light #modeSwitch,
 #light #goBack-icon {
   color: hsl(350, 100%, 75%);
 }
-#dark #theme-switch,
+#dark #modeSwitch,
 #dark #goBack-icon {
   color: lightskyblue;
 }

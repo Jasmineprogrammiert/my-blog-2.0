@@ -1,9 +1,9 @@
 import { useState } from 'react';
 // components
-import Header from '../../components/Blog/Header';
-import SearchBar from '../../components/Blog/SearchBar';
-import BlogList from '../../components/Blog/BlogList';
-import EmptyList from '../../components/Blog/EmptyList';
+import Header from '../../components/BlogHome/Header';
+import SearchBar from '../../components/BlogHome/SearchBar';
+import BlogList from '../../components/BlogHome/BlogList';
+import EmptyList from '../../components/BlogHome/EmptyList';
 // data
 import { blogData } from '../../data/blog'
 
