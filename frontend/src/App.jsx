@@ -6,11 +6,12 @@ import NavigationBar from './components/universal/Navbar';
 import ModeSwitch from './components/universal/ModeSwitch';
 import About from './pages/About';
 import BlogHome from './pages/Blog/BlogHome';
-import Blog from './pages/Blog/Blog';
+import BlogDetails from './pages/Blog/BlogDetails';
 import LogIn from './pages/auth/LogIn';
 import SignUp from './pages/auth/SignUp';
 // testing
 import ImgSlider from './components/testing/ImgSlider';
+import BlogHomeTesting from './pages/Blog/testing/BlogHomeTesting';
 
 // styles
 import { Spinner } from 'react-bootstrap';
@@ -38,9 +39,10 @@ const App = () => {
           <ModeSwitch theme={theme} toggleTheme={toggleTheme}  />
           <Routes>
             <Route path="/" element={<About />} />
+            <Route path="bloghometesting" element={<BlogHomeTesting />} />
             <Route path="imgslider" element={<ImgSlider />} />
             <Route path="blog" element={<BlogHome />} />
-            <Route path="/blog/:id" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogDetails />} />
             <Route path="login" element={<LogIn />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="*" element={<About />} />

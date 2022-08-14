@@ -2,7 +2,7 @@ import { useState } from 'react';
 // components
 import Header from '../../components/BlogHome/Header';
 import SearchBar from '../../components/BlogHome/SearchBar';
-import BlogList from '../../components/BlogHome/BlogList';
+import BlogCard from '../../components/BlogHome/BlogCard';
 import EmptyList from '../../components/BlogHome/EmptyList';
 // data
 import { blogData } from '../../data/blog'
@@ -37,7 +37,14 @@ const BlogHome = () => {
       clearSearchInput={e => setSearchInput(e.target.value)}
       handleClearSearch={handleClearSearch}
     />
-    {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} /> }
+    {!blogs.length 
+      ? <EmptyList /> 
+      : <div className="blogList">
+          {blogs.map(blog => 
+            <BlogCard blog={blog} key={blog.id} />
+          )}
+        </div>
+    }
     </>
   )
 }
