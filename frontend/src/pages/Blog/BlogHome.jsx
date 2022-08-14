@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // components
 import Header from '../../components/BlogHome/Header';
 import SearchBar from '../../components/BlogHome/SearchBar';
 import BlogCard from '../../components/BlogHome/BlogCard';
 import EmptyList from '../../components/BlogHome/EmptyList';
 // data
-import { blogData } from '../../data/blog'
+import { blogData } from '../../data/blog';
 
 const BlogHome = () => {
   const [blogs, setBlogs] = useState(blogData);
@@ -28,6 +28,39 @@ const BlogHome = () => {
     setSearchInput('');
   };
 
+  // testing
+  // const [blogs, setBlogs] = useState(null);
+  // const [searchInput, setSearchInput] = useState('');
+
+  // useEffect(() => {
+  //   const fetchBlogs = async () => {
+  //   const response = await fetch('/api/blog')
+  //   const json = await response.json()
+
+  //   if (response.ok) {
+  //     setBlogs(json) 
+  //   }
+  // }
+  //   fetchBlogs()
+  // }, [])
+
+  // const handleSearchInput = e => {
+  //   e.preventDefault();
+  //   handleSearchResults();
+  // };
+  // // filter blog(s) by category
+  // const handleSearchResults = () => {
+  //   const filterBlogs = blogs.filter(blog => 
+  //     blog.category.some(category => category.toLowerCase().includes(searchInput.toLowerCase().trim()))
+  //   );
+  //   setBlogs(filterBlogs);
+  // };
+  // // clear search & show all blogs
+  // const handleClearSearch = () => {
+  //   setBlogs(blogs);
+  //   setSearchInput('');
+  // };
+
   return (
     <>
     <Header />
@@ -45,6 +78,12 @@ const BlogHome = () => {
           )}
         </div>
     }
+
+    {/* <div className="blogList">
+      {blogs && blogs.map(blog => 
+        <BlogCard blog={blog} key={blog.id} />
+      )}
+    </div> */}
     </>
   )
 }

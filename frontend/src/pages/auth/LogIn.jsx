@@ -1,14 +1,16 @@
-import mountain from '../../assets/img/mountain-02.png'
-
 const LogIn = () => {
   return (
     <>
-    <div className="hiking-container">
-      <h1 className="hiking-heading">Hiking</h1>
-      <img 
-        className="hiking-img" 
-        src={mountain} alt="mountain" 
-      />
+    <div className="login">
+      <span className="loginTitle">Login</span>
+      <form className="loginForm">
+        <label>Email</label>
+        <input className="loginInput" type="text" placeholder="Enter your email..." />
+        <label>Password</label>
+        <input className="loginInput" type="password" placeholder="Enter your password..." />
+        <button className="loginButton">Login</button>
+      </form>
+        <button className="loginRegisterButton">Register</button>
     </div>
     </>
   )

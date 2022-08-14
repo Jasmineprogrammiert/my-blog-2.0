@@ -4,6 +4,8 @@ import { useParams, Link } from 'react-router-dom';
 import { blogData } from '../../data/blog';
 import BlogHome from './BlogHome';
 import ProgressBar from '../../components/Blog/ProgressBar';
+// testing
+import Comment from '../../components/testing/Comment';
 // style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
@@ -83,6 +85,7 @@ const Blog = () => {
     ) : (
       <BlogHome />
     )}
+    <Comment />
     </>
   )
 }
