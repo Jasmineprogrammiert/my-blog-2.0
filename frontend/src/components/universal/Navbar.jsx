@@ -27,6 +27,8 @@ const NavigationBar = () => {
     setShow(false);
   }
 
+  const user = false;
+
   return (
     <>
     <Navbar expand="lg" className={`navbar ${hideNav}`}>
@@ -46,26 +48,38 @@ const NavigationBar = () => {
             >
               Blog
             </Nav.Link>
-            <NavDropdown 
-              title="User" 
-              id="nav-item-dropdown"
-              show={show}
-              onMouseEnter={showDropdown}
-              onMouseLeave={hideDropdown}
-            >
-              <NavDropdown.Item 
-                as={NavLink} to="login" 
-                className="nav-dropdown"
+            {user ? (
+              <Nav.Link 
+                as={NavLink} to="settings"
+                className="nav-item"
               >
-                Log In
-              </NavDropdown.Item>
-              <NavDropdown.Item 
-                as={NavLink} to="signup" 
-                className="nav-dropdown"
+                <img
+                  src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="user avatar"
+                  className="topImg"
+                />
+              </Nav.Link>
+            ) : (
+              <NavDropdown 
+                title="User" 
+                id="nav-item-dropdown"
+                show={show}
+                onMouseEnter={showDropdown}
+                onMouseLeave={hideDropdown}
               >
-                Sign Up
-              </NavDropdown.Item>
-            </NavDropdown>
+                <NavDropdown.Item 
+                  as={NavLink} to="login" 
+                  className="nav-dropdown"
+                >
+                  Log In
+                </NavDropdown.Item>
+                <NavDropdown.Item 
+                  as={NavLink} to="signup" 
+                  className="nav-dropdown"
+                >
+                  Sign Up
+                </NavDropdown.Item>
+              </NavDropdown>
+            )}
             {/* <ThemeSwitch /> */}
           </Nav>
         </Navbar.Collapse>

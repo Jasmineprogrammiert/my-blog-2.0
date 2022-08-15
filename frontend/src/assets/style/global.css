@@ -72,6 +72,14 @@ input, button {
   padding: 0;
   margin: .5vh 0 .5vh 0;
 }
+/* testing */
+.topImg {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
 /* ---------- About - Front Page ---------- */
 .about-sec-1 {
   height: 100vh;

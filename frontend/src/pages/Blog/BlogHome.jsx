@@ -72,11 +72,13 @@ const BlogHome = () => {
     />
     {!blogs.length 
       ? <EmptyList /> 
-      : <div className="blogList">
+      : (
+        <div className="blogList">
           {blogs.map(blog => 
             <BlogCard blog={blog} key={blog.id} />
           )}
         </div>
+      )
     }
 
     {/* <div className="blogList">

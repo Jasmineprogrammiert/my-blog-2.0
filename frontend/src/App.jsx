@@ -31,7 +31,7 @@ const App = () => {
     setTheme(current => current === 'light' ? 'dark' : 'light');
   };
 
-  const currentUser = false;
+  const user = false;
 
   return (
     <>
@@ -46,16 +46,16 @@ const App = () => {
             <Route path="blog" element={<BlogHome />} />
             <Route path="/blog/:id" element={<Blog />} />
             <Route path="login" 
-              element={currentUser ? <Blog /> : <LogIn />}
+              element={user ? <Blog /> : <LogIn />}
             />
             <Route path="signup" 
-              element={currentUser ? <Blog /> : <SignUp />}
+              element={user ? <Blog /> : <SignUp />}
             />
             <Route path="*" element={<About />} />
             {/* testing */}
             <Route path="bloghometesting" element={<BlogHomeTesting />} />
             <Route path="settings" 
-              element={currentUser ? <Settings /> : <LogIn />}
+              element={user ? <Settings /> : <LogIn />}
             />
             {/* testing */}
           </Routes>
