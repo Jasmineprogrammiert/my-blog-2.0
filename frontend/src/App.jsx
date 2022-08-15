@@ -12,6 +12,7 @@ import SignUp from './pages/auth/SignUp';
 // testing
 import ImgSlider from './components/testing/ImgSlider';
 import BlogHomeTesting from './pages/Blog/testing/BlogHomeTesting';
+import BlogTesting from './pages/Blog/testing/BlogTesting';
 import Settings from './components/testing/Settings';
 
 // styles
@@ -57,7 +58,14 @@ const App = () => {
             <Route path="settings" 
               element={user ? <Settings /> : <LogIn />}
             />
-            {/* testing */}
+            <Route path="/bloghometesting/:blogId" element={<BlogTesting />} />
+
+
+
+
+
+
+
           </Routes>
         </Suspense>
       </div>

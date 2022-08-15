@@ -1,19 +1,16 @@
 import { useEffect, useState } from 'react';
-import BlogDetails from './BlogDetails';
+import axios from 'axios';
+// components
+import BlogCardTesting from './BlogCardTesting';
 
 const BlogHomeTesting = () => {
-  const [blogs, setBlogs] = useState(null)
+  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-      const fetchBlogs = async () => {
-      const response = await fetch('/api/blog')
-      const json = await response.json()
-
-      if (response.ok) {
-        setBlogs(json) 
-      }
+    const fetchBlogs = async () => {
+      const res = await axios.get('/blogs');
+      setBlogs(res.data) ;
     }
-
     fetchBlogs()
   }, [])
 
@@ -21,7 +18,7 @@ const BlogHomeTesting = () => {
     <>
     <div className="blogList">
       {blogs && blogs.map(blog => (
-        <BlogDetails key={blog._id} blog={blog} />
+        <BlogCardTesting key={blog._id} blog={blog} />
       ))}
     </div>
     </>

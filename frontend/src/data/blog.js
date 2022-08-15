@@ -1,6 +1,18 @@
 export const blogData = [
   {
-    id: 1,
+    // 1. BlogCard cover image
+    // 2. title (Hong Kong Island Hike)
+    // 3. eventDate
+    // 4. categories (array)
+    // 5. preview
+
+    // 6. Blog cover image
+    // 7. linkTitle (hong-kong-island-hike)
+    // 8. createdAt (auto generated)
+    // 9. readTime
+    // 10. description
+
+    id: 1, // no need
     category: ['hiking', 'hong kong', 'sai kung'], // categories
     title: 'MacLehose Trail Section 2',
     createdAt: 'Feb 20, 2018', // date
