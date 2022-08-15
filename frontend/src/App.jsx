@@ -31,6 +31,8 @@ const App = () => {
     setTheme(current => current === 'light' ? 'dark' : 'light');
   };
 
+  const currentUser = false;
+
   return (
     <>
     <ThemeContext.Provider value={{ theme, setTheme }}>
@@ -43,12 +45,19 @@ const App = () => {
             <Route path="imgslider" element={<ImgSlider />} />
             <Route path="blog" element={<BlogHome />} />
             <Route path="/blog/:id" element={<Blog />} />
-            <Route path="login" element={<LogIn />} />
-            <Route path="signup" element={<SignUp />} />
+            <Route path="login" 
+              element={currentUser ? <Blog /> : <LogIn />}
+            />
+            <Route path="signup" 
+              element={currentUser ? <Blog /> : <SignUp />}
+            />
             <Route path="*" element={<About />} />
             {/* testing */}
             <Route path="bloghometesting" element={<BlogHomeTesting />} />
-            <Route path="settings" element={<Settings />} />
+            <Route path="settings" 
+              element={currentUser ? <Settings /> : <LogIn />}
+            />
+            {/* testing */}
           </Routes>
         </Suspense>
       </div>
