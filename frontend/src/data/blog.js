@@ -1,9 +1,9 @@
 export const blogData = [
   {
     id: 1,
-    category: ['hiking', 'hong kong', 'sai kung'],
+    category: ['hiking', 'hong kong', 'sai kung'], // categories
     title: 'MacLehose Trail Section 2',
-    createdAt: 'Feb 20, 2018',
+    createdAt: 'Feb 20, 2018', // date
     preview: "My first and one of the most memorable hikes I've ever had.",
     readTime: '2',
     description_1:
