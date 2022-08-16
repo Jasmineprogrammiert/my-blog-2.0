@@ -425,6 +425,10 @@ figcaption {
 
 
 
+
+
+
+
 /* -------------------------- TESTING -------------------------- */
 /* ------- ImgSlider ------- */
 .slide img {
@@ -515,94 +519,6 @@ figcaption {
   cursor: pointer;
   display: flex;
   align-items: center;
-}
-/* ---------- Setting ---------- */
-.settings {
-  display: flex;
-}
-.settingsWrapper {
-  flex: 9;
-  padding: 20px;
-}
-.settingsTitle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.settingsTitleUpdate {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: lightcoral;
-}
-.settingsTitleDelete {
-  color: red;
-  font-size: 12px;
-  cursor: pointer;
-}
-.settingsForm {
-  display: flex;
-  flex-direction: column;
-}
-.settingsPP {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.settingsPP > img {
-  height: 70px;
-  width: 70px;
-  border-radius: 20px;
-  object-fit: cover;
-}
-.settingsPPIcon {
-  width: 25px;
-  height: 25px;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  border-radius: 50%;
-  margin-left: 10px;
-  color: white;
-  background-color: lightcoral;
-  cursor: pointer;
-}
-.settingsPPButton:focus {
-  outline-style: none;
-}
-.settingsForm > label {
-  font-size: 20px;
-  margin-top: 20px;
-}
-.settingsPPInput {
-  width: 30%;
-}
-.settingsForm > input {
-  color: gray;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 30px;
-  border: none;
-  border-bottom: 1px solid lightgray;
-}
-.settingsSubmitButton {
-  align-self: center;
-  width: 150px;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  background-color: teal;
-  padding: 10px;
-  margin-top: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.settingsSubmitButton:hover {
-  background-color: rgb(1, 114, 114);
 }
 /* ---------- LogIn ---------- */
 .login {
@@ -714,89 +630,28 @@ figcaption {
   color: white;
   border-radius: 10px;
 }
-/* ---------- BlogCardTesting ---------- */
-.post {
-  width: 385px;
-  margin: 0px 25px 40px 25px;
-}
-
-.postImg {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 7px;
-}
-
-.postInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.postCat {
-  font-family: "Varela Round", sans-serif;
-  font-size: 11px;
-  color: #be9656;
-  line-height: 20px;
-  margin-top: 15px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.postTitle {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 15px;
-  cursor: pointer;
-}
-
-.postDate {
-  font-family: "Lora", serif;
-  font-style: italic;
-  font-size: 13px;
-  color: #999;
-  margin-top: 15px;
-}
-
-.postDesc {
-  font-family: "Varela Round", sans-serif;
-  font-size: 14px;
-  color: #444;
-  line-height: 24px;
-  margin-top: 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
 /* ---------- BlogTesting ---------- */
 .singlePost {
   flex: 9;
 }
-
 .singlePostWrapper {
   padding: 20px;
   padding-right: 0;
   display: flex;
   flex-direction: column;
 }
-
 .singlePostImg {
   width: 100%;
   height: 300px;
   border-radius: 5px;
   object-fit: cover;
 }
-
 .singlePostTitle {
   text-align: center;
   margin: 10px;
   font-family: "Lora", serif;
   font-size: 28px;
 }
-
 .singlePostTitleInput {
   margin: 10px;
   font-family: "Lora", serif;
@@ -806,29 +661,23 @@ figcaption {
   color: gray;
   border-bottom: 1px solid lightgray;
 }
-
 .singlePostTitleInput:focus {
   outline: none;
 }
-
 .singlePostEdit {
   float: right;
   font-size: 16px;
 }
-
 .singlePostIcon {
   margin-left: 10px;
   cursor: pointer;
 }
-
 .singlePostIcon:first-child {
   color: teal;
 }
-
 .singlePostIcon:last-child {
   color: tomato;
 }
-
 .singlePostInfo {
   margin-bottom: 20px;
   display: flex;
@@ -837,26 +686,22 @@ figcaption {
   font-family: "Varela Round", sans-serif;
   color: #b39656;
 }
-
 .singlePostDesc {
   color: #666;
   font-size: 18px;
   line-height: 25px;
 }
-
 .singlePostDesc::first-letter {
   margin-left: 20px;
   font-size: 30px;
   font-weight: 600;
 }
-
 .singlePostDescInput {
   border: none;
   color: #666;
   font-size: 18px;
   line-height: 25px;
 }
-
 .singlePostDescInput:focus {
   outline: none;
 }
@@ -871,4 +716,74 @@ figcaption {
   align-self: flex-end;
   margin-top: 20px;
 }
-
+/* ---------- Settings ---------- */
+.settings {
+  display: flex;
+  height: 100vh;
+}
+.settingsWrapper {
+  flex: 9;
+  padding: 20px;
+}
+.settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settingsUpdateTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.settingsDeleteTitle {
+  font-size: 12px;
+  cursor: pointer;
+}
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+.settingsPP {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.settingsPP > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.settingsPPIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: lightcoral;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.settingsForm > label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.settingsForm > input {
+  color: gray;
+  margin: 10px 0;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+.settingsSubmit{
+    width: 150px;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}

@@ -3,16 +3,16 @@ import { useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 
 // local files
-// import astronaut from '../../assets/img/ImgSlider/astronaut.png';
-// import celebrating from '../../assets/img/ImgSlider/celebrating.png';
-// import education from '../../assets/img/ImgSlider/education.png';
-// import taken from '../../assets/img/ImgSlider/taken.png';
-import { blogData } from '../../data/blog';
+import astronaut from '../../assets/img/ImgSlider/astronaut.png';
+import celebrating from '../../assets/img/ImgSlider/celebrating.png';
+import education from '../../assets/img/ImgSlider/education.png';
+import taken from '../../assets/img/ImgSlider/taken.png';
+// import { blogData } from '../../data/blog';
 // style
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-// const images = [astronaut, celebrating, education, taken];
+const images = [astronaut, celebrating, education, taken];
 
 const ImgSlider = () => {
   // testing
@@ -20,14 +20,14 @@ const ImgSlider = () => {
   const [blog, setBlog] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
 
-  useEffect(() => {
-    let blog = blogData.find(blog => 
-      blog.id === parseInt(id)
-    );
-    if (blog) {
-      return setBlog(blog);
-    }
-  }, []);
+  // useEffect(() => {
+  //   let blog = blogData.find(blog => 
+  //     blog.id === parseInt(id)
+  //   );
+  //   if (blog) {
+  //     return setBlog(blog);
+  //   }
+  // }, []);
 
   const NextArrow = ({ onClick }) => {
     return (
@@ -59,7 +59,7 @@ const ImgSlider = () => {
   
   return (
     <>
-    {blog ? (
+    {/* {blog ? (
       <Slider {...settings}>
         {blog.img.map((image, idx) => (
           <div className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
@@ -69,14 +69,14 @@ const ImgSlider = () => {
       </Slider>
     ) 
       : <h1>Error</h1>
-    }
-    {/* <Slider {...settings}>
+    } */}
+    <Slider {...settings}>
       {images.map((img, idx) => (
-        <div className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
+        <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
           <img src={img} alt={img} />
         </div>
       ))}
-    </Slider> */}
+    </Slider>
     </>
   )
 }

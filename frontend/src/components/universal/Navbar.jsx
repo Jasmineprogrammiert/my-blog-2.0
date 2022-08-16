@@ -8,10 +8,26 @@ import { Context } from '../../context/Context';
 
 const NavigationBar = () => {
   const [isHidden, setIsHidden] = useState(true);
+  const [show, setShow] = useState(false);
+  // testing
+  const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:8000/images/"
+
   const showNav = () => {
     const loc = window.pageYOffset;
     loc > 20 ? setIsHidden(false) : setIsHidden(true);
   };
+  const showDropdown = () => {
+    setShow(!show);
+  }
+  const hideDropdown = () => {
+    setShow(false);
+  }
+  // testing
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' });
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', showNav, { passive: true });
     return () => {
@@ -19,21 +35,6 @@ const NavigationBar = () => {
     };
   }, []);
   let hideNav = isHidden ? 'hideNavbar' : '';
-
-  const [show, setShow] = useState(false);
-  const showDropdown = () => {
-    setShow(!show);
-  }
-  const hideDropdown = () => {
-    setShow(false);
-  }
-
-  // testing
-  const { user, dispatch } = useContext(Context);
-
-  const handleLogout = () => {
-    dispatch({ type: 'LOGOUT' });
-  };
 
   return (
     <>
@@ -55,16 +56,21 @@ const NavigationBar = () => {
               Blog
             </Nav.Link>
             {user ? (
+              <>
               <Nav.Link 
                 as={NavLink} to="settings"
                 className="nav-item"
               >
-                <img
-                  src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" 
-                  alt="user avatar"
-                  className="topImg"
-                />
+                <img className="topImg" src={PF+user.profilePic} alt="" />
               </Nav.Link>
+              <Nav.Link 
+                as={NavLink} to="blog"
+                className="nav-item"
+                onClick={handleLogout}
+              >
+                Log Out
+              </Nav.Link>
+              </>
             ) : (
               <NavDropdown 
                 title="User" 
