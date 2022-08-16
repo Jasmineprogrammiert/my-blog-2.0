@@ -1,4 +1,4 @@
-import { createContext, Suspense } from 'react';
+import { createContext, Suspense, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage';
 // components
@@ -14,6 +14,7 @@ import ImgSlider from './components/testing/ImgSlider';
 import BlogHomeTesting from './pages/Blog/testing/BlogHomeTesting';
 import BlogTesting from './pages/Blog/testing/BlogTesting';
 import Settings from './components/testing/Settings';
+import { Context } from './context/Context';
 
 // styles
 import { Spinner } from 'react-bootstrap';
@@ -32,7 +33,7 @@ const App = () => {
     setTheme(current => current === 'light' ? 'dark' : 'light');
   };
 
-  const user = false;
+  const { user } = useContext(Context);
 
   return (
     <>
@@ -43,28 +44,16 @@ const App = () => {
           <ModeSwitch theme={theme} toggleTheme={toggleTheme}  />
           <Routes>
             <Route path="/" element={<About />} />
-            <Route path="imgslider" element={<ImgSlider />} />
             <Route path="blog" element={<BlogHome />} />
             <Route path="/blog/:id" element={<Blog />} />
-            <Route path="login" 
-              element={user ? <Blog /> : <LogIn />}
-            />
-            <Route path="signup" 
-              element={user ? <Blog /> : <SignUp />}
-            />
+            <Route path="signup" element={user ? <BlogHome /> : <SignUp />}/>
+            <Route path="login" element={user ? <BlogHome /> : <LogIn />}/>
             <Route path="*" element={<About />} />
             {/* testing */}
+            <Route path="imgslider" element={<ImgSlider />} />
+            <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
             <Route path="bloghometesting" element={<BlogHomeTesting />} />
-            <Route path="settings" 
-              element={user ? <Settings /> : <LogIn />}
-            />
             <Route path="/bloghometesting/:blogId" element={<BlogTesting />} />
-
-
-
-
-
-
 
           </Routes>
         </Suspense>

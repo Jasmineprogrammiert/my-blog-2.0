@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-// ON TESTING -------------------
+// TESTING
 // import ThemeSwitch from './Testing/ThemeSwitch';
+import { Context } from '../../context/Context';
 
 const NavigationBar = () => {
   const [isHidden, setIsHidden] = useState(true);
@@ -27,7 +28,12 @@ const NavigationBar = () => {
     setShow(false);
   }
 
-  const user = false;
+  // testing
+  const { user, dispatch } = useContext(Context);
+
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' });
+  };
 
   return (
     <>
@@ -54,7 +60,8 @@ const NavigationBar = () => {
                 className="nav-item"
               >
                 <img
-                  src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="user avatar"
+                  src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" 
+                  alt="user avatar"
                   className="topImg"
                 />
               </Nav.Link>

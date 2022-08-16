@@ -3,22 +3,24 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const SignUp = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
+
     try {
-      const res = await axios.post("/auth/signup", {
+      const res = await axios.post('/auth/signup', {
         username,
         email,
         password,
       });
-      res.data && window.location.replace("/login");
-    } catch (err) {
+      res.data && window.location.replace('/login');
+    } 
+    catch (err) {
       setError(true);
     }
   };

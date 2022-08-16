@@ -1,7 +1,15 @@
-import axios from "axios";
-import { useContext, useEffect, useState } from "react";
-import { useLocation } from "react-router";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useRef, useContext } from 'react';
+import { useLocation } from 'react-router';
+import { useParams, Link } from 'react-router-dom';
+import axios from 'axios';
+// local files
+import BlogHomeTesting from './BlogHomeTesting';
+import ProgressBar from '../../../components/Blog/ProgressBar';
+// style
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
+import AOS from 'aos';
+
 // import { Context } from "../../context/Context";
 
 const BlogTesting = () => {
@@ -44,80 +52,67 @@ const BlogTesting = () => {
   //     setUpdateMode(false)
   //   } catch (err) {}
   // };
+
+  useEffect(() => {    
+    AOS.init({
+      delay: 0,
+      duration: 1300
+    });
+    window.addEventListener('load', function() {
+      AOS.refresh();
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() { 
+        AOS.refresh(); 
+      }, 500);
+    });
+  }, [])
   
   return (
     <>
-    <h1>A Blog</h1>
-    <div className="singlePost">
-      <div className="singlePostWrapper">
-        {/* {photo && (
-          <img src={photo} alt="" className="singlePostImg" />
-        )} */}
-        {blog.title} <br />
-        {blog.category} <br />
-        {blog.username} <br />
-        {/* {new Date(blog.createdAt).toDateString()} <br /> */}
-        {/* {blog.description} */}
-        
-      </div>
-    </div>
-    {/* <div className="singlePost">
-      <div className="singlePostWrapper">
-        {post.photo && (
-          <img src={PF + post.photo} alt="" className="singlePostImg" />
-        )}
-        {updateMode ? (
-          <input
-            type="text"
-            value={title}
-            className="singlePostTitleInput"
-            autoFocus
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        ) : (
-          <h1 className="singlePostTitle">
-            {title}
-            {post.username === user?.username && (
-              <div className="singlePostEdit">
-                <i
-                  className="singlePostIcon far fa-edit"
-                  onClick={() => setUpdateMode(true)}
-                ></i>
-                <i
-                  className="singlePostIcon far fa-trash-alt"
-                  onClick={handleDelete}
-                ></i>
-              </div>
+    <Link to="/blog">
+      <ArrowBackIcon id="goBack-icon" style={{ fontSize: "28px" }} />
+    </Link>
+    {blog ? (
+      <div className="blog" data-aos="fade-down">
+        <ProgressBar />
+        <header>
+          <h1>{blog.title}</h1>
+          <p className="blog-subHeading">
+            {new Date(blog.createdAt).toDateString()}
+            <AccessTimeRoundedIcon id="readTime-icon" />
+            {blog.readTime} min read
+          </p>
+        </header>
+        <img src={blog.bannerImg} alt="blog cover" />
+
+        <p className="blog-desc">
+          {blog.description.p1}
+        </p>
+        <p className="blog-desc">
+          {blog.description.p2}
+        </p>
+        <p className="blog-desc">
+          {blog.description.p3}
+        </p>
+        {/* Inner Img Slider */}
+        {/* <div className="carousel" ref={carousel}>
+          <div className="inner-carousel">
+            {blog.img.map(image => 
+              <img src={image} alt="blog img" key={blog.id} />
             )}
-          </h1>
-        )}
-        <div className="singlePostInfo">
-          <span className="singlePostAuthor">
-            Author:
-            <Link to={`/?user=${post.username}`} className="link">
-              <b> {post.username}</b>
-            </Link>
-          </span>
-          <span className="singlePostDate">
-            {new Date(post.createdAt).toDateString()}
-          </span>
-        </div>
-        {updateMode ? (
-          <textarea
-            className="singlePostDescInput"
-            value={desc}
-            onChange={(e) => setDesc(e.target.value)}
-          />
-        ) : (
-          <p className="singlePostDesc">{desc}</p>
-        )}
-        {updateMode && (
-          <button className="singlePostButton" onClick={handleUpdate}>
-            Update
-          </button>
-        )}
+          </div>
+        </div> */}
+        <p className="blog-desc">
+          {blog.description.p4}
+        </p>
+        <p className="blog-desc">
+          {blog.description.p5}
+        </p>
       </div>
-    </div> */}
+    ) : (
+      <BlogHomeTesting />
+    )}
     </>
   )
 }

@@ -85,7 +85,7 @@ const Blog = () => {
     ) : (
       <BlogHome />
     )}
-    <Comment />
+    {/* <Comment /> */}
     </>
   )
 }

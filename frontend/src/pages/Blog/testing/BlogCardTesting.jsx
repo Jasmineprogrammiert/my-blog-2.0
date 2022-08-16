@@ -1,19 +1,45 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import BlogTesting from './BlogTesting';
+import AOS from 'aos';
 
 const BlogCardTesting = ({ 
+  // blog: {
+  //   title, 
+  //   category, 
+  //   categories,
+  //   createdAt,
+  //   desc,
+  //   _id,
+  //   photo,
+  //   PF,
+  // }
   blog: {
-    title, 
-    category, 
-    categories,
-    createdAt,
-    desc,
     _id,
-    photo,
-    PF,
-  }
-
+    cover,
+    title,
+    date,
+    category,
+    preview,
+    // title, createdAt, readTime, bannerImg, description.p1, description.p2, description.p3, description.p4, description.p5
+  },
 }) => {
+
+  useEffect(() => {    
+    AOS.init({
+      offset: 100,
+      delay: 0,
+      duration: 1300, 
+    });
+    window.addEventListener('load', function() {
+      AOS.refresh();
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() { 
+        AOS.refresh(); 
+      }, 500);
+    });
+  }, [])
+
   return (
     <>
     {/* <div className="blogCard">
@@ -22,7 +48,7 @@ const BlogCardTesting = ({
       <p>{new Date(createdAt).toDateString()}</p>
     </div> */}
 
-    <BlogTesting />
+    {/* <BlogTesting />
     <div className="post">
       {photo && <img className="postImg" src={PF + photo} alt="" />}
       <div className="postInfo">
@@ -40,9 +66,27 @@ const BlogCardTesting = ({
         </span>
       </div>
       <p className="postDesc">{desc}</p>
-    </div>
+    </div> */}
 
-   
+    <div 
+      className="blogCard"
+      data-aos="fade-up"
+    >
+      <Link
+        to={`/blog/${_id}`}
+        className="blogCard-link" 
+      >
+        <img src={cover} alt="blog cover" />
+        <h3>{title}</h3>
+      </Link>
+      <p>{date}</p>
+      <div className="blogCard-category">
+        {category.map((cat, i) => 
+          <label key={i}>{cat}</label>
+        )}
+      </div>
+      <p className="blogCard-preview">{preview}</p>
+    </div>
     </>
   )
 }
