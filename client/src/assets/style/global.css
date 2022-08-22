@@ -1,0 +1,789 @@
+/* Google Fonts (Regular 400)
+1. Satisfy: cursive
+2. Hahmlet
+3. Merriweather
+*/
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Merriweather&family=Satisfy&display=swap');
+/* testing */
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+/* ---------- General ---------- */
+html { 
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  height: 100%;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1, h2 {
+  font-family: 'Satisfy', cursive;
+  letter-spacing: .8px;
+  text-align: center;
+}
+h3, label {
+  font-family: 'Hahmlet', serif;
+}
+p {
+  font-family: 'Merriweather', serif;
+  text-align: justify;
+  line-height: 1.6;
+}
+input, button {
+  border: none;
+  outline: none;
+}
+/* ---------- Navbar ---------- */
+.navbar {
+  position: fixed;
+  height: 6.5vh;
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: top .3s;
+  z-index: 100;
+}
+.hideNavbar {
+  top: -7.5vh;
+}
+.nav-brand {
+  font-family: 'Playball', cursive;
+  font-weight: 100;
+  letter-spacing: .5px;
+  font-size: 1.8vw;
+  font-weight: 800;
+}
+.nav-item, #nav-item-dropdown, .nav-dropdown {
+  color: hsl(0, 0%, 1%);
+  font-family: 'Georgia', sans-serif;
+  font-size: 1.35vw;
+}
+.nav-item {
+  margin-left: 2vw;
+}
+.dropdown-menu {
+  padding: 0;
+  margin: .5vh 0 .5vh 0;
+}
+/* testing */
+.topImg {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+/* ---------- About - Front Page ---------- */
+.about-sec-1 {
+  height: 100vh;
+}
+.about-heading-1 {
+  font-size: 7.5vw;
+  margin-bottom: 4vh;
+  letter-spacing: 6px;
+}
+.about-heading-2 {
+  font-size: 3.5vw;
+}
+.deco-img {
+  height: auto;
+  object-fit: cover;
+  opacity: .65;
+}
+.deco-img-1 {
+  width: 44vw;
+  animation: diagonal-moveIn-1 1.5s ease-in-out forwards;
+}
+@keyframes diagonal-moveIn-1 {
+	0% {
+    margin: -13vh 0 -3vh -18vw;
+    transform: rotate(75deg);
+	}
+	100% {
+    margin: -6vh 0 -3vh -7.8vw;
+    transform: rotate(75deg);
+	}
+}
+.deco-img-2 {
+  width: 28vw;
+  opacity: .88;
+  animation: diagonal-moveIn-2 1.5s ease-in-out forwards;
+}
+@keyframes diagonal-moveIn-2 {
+	0% {
+    margin: -25vh 0 0 92.1vw;
+    transform: rotate(10deg);
+	}
+	100% {
+    margin: -22vh 0 0 72.1vw;
+    transform: rotate(10deg);
+	}
+}
+/* ---------- About - Sec. 2 ---------- */
+.about-sec-2 {
+  height: 73vh;
+  margin-top: 10vh;
+}
+.row {
+  width: 100%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column-l-2 {
+  float: left;
+  width: 25%;
+  margin: 6vh 3.5vw 0 6.5vw;
+}
+.column-r-2 {
+  margin: 13.5vh 5vw 0 0;
+  width: 60%;
+}
+.jasmine-img {
+  width: 26vw;
+  height: auto;
+  border-radius: 50%;
+}
+.about-txt {
+  font-size: 2.8vw;
+  font-family: 'Hahmlet', serif;
+  font-weight: 500;
+  text-align: center;
+  line-height: 9vh;
+}
+/* ---------- About - Sec. 3 ---------- */
+.about-sec3 {
+  height: 90vh;
+}
+.column-l-3 {
+  float: left;
+  width: 47%;
+  margin: 0 7.5vw 0 5.5vw;
+}
+.column-r-3 {
+  margin: 10vh 5vw 0 8vw;
+  width: 20%;
+}
+.about-txt-p3 {
+  margin-top: 23vh;
+}
+.mountain-img {
+  width: 53vw;
+  height: auto;
+  opacity: .45;
+  margin-left: -21vw;
+  margin-top: 3vh;
+}
+/* ---------- About - Sec. 4 ---------- */
+.column-l-4 {
+  width: 60%;
+  margin: 0 3.5vw 0 5.5vw;
+}
+.column-r-4 {
+  margin: 10vh 0 0 0;
+  width: 10%;
+}
+.about-txt-p4 {
+  margin-top: 30vh;
+}
+.hk-img {
+  width: 102vw;
+  height: auto;
+  opacity: .3;
+  margin: 20vh 0 0 -71vw;
+}
+/* --------------- BlogHome (5) --------------- */
+/* ---------- 1. Header ---------- */
+.blog-header {
+  position: relative;
+}
+.blog-img-0 {
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  margin-top: -10vh;
+  margin-left: 70vw;
+}
+.blog-img-1 {
+  position: absolute;
+  width: 31vw;
+  height: auto;
+  margin-top: -40vh;
+  margin-left: -1vw;
+}
+.blog-img-2 {
+  position: absolute;
+  width: 7vw;
+  height: auto;
+  margin-top: -45vh;
+  margin-left: 22vw;
+  transform: rotate(33deg);
+}
+.blog-header h1 {
+  font-size: 4.7vw;
+  letter-spacing: 3px;
+  margin-top: 5vh;
+  margin-bottom: 6.5vh;
+  margin-bottom: 5.5vh;
+}
+.accordion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 41.5%;
+}
+#accordion-heading {
+  min-height: 20px;
+  height: 5.5vh;
+  padding-top: 1.2vh;
+}
+#expand-icon {
+  font-size: 1.8vw;
+  margin-bottom: .8vh;
+}
+#accordion-heading h3, 
+#accordion-txt,
+#searchBar-input {
+  font-size: 1.35vw;
+  font-family: 'Georgia', sans-serif;
+}
+#accordion-txt {
+  max-height: 24.5vw;
+  overflow: scroll;
+  padding: 0;
+}
+#accordion-txt p, dl {
+  font-size: 1.2vw;
+  margin: 0;
+  padding: 1.3vh 1.5vw;
+}
+#accordion-txt dd {
+  margin: 0;
+  padding: .6vh 1.5vw;
+}
+#accordion-txt dd::before {
+  content: '- ';
+}
+/* ---------- 2. Search Bar ---------- */
+#searchBar {
+  width: 41.5vw;
+  margin: 0 auto 4vh auto;
+  background-color: rgb(255, 255, 255, 0.1);
+  box-shadow: .2vw .25vh 0 rgba(0,0,0,0.1);
+}
+#searchBar:hover {
+  background-color: rgb(255, 255, 255, 0.15);
+}
+/* ---------- 3. Blog List ---------- */
+.blogList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2vw;
+  padding: 0 5vw;
+  padding-top: 3.8vh;
+}
+/* ---------- 4. Blog Card ---------- */
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7vh;
+}
+.blogCard-link {
+  color: inherit;
+  text-decoration: none;
+}
+.blogCard-link:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+.blogCard-link img {
+  width: 100%;
+  height: 32.5vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.blogCard-link h3 {
+  font-size: 1.5vw;
+  margin: .3rem 0 .2rem 0;
+  flex: 1;
+}
+.blogCard p {
+  font-size: 1.15vw;
+  line-height: 1.6;
+}
+.blogCard-category {
+  display: flex;
+  justify-content: inline;
+}
+.blogCard-category label {
+  font-size: 1.08vw;
+  text-transform: capitalize;
+  color: hsl(30, 30%, 100%);
+  background-image: linear-gradient(to right, #4463a0, #81a2db);
+  padding: 0 .35rem;
+  border-radius: 6px;
+  width: fit-content;
+  margin: -.8rem .4rem 1.5rem 0;
+}
+.blogCard-preview {
+  color: hsl(0, 0%, 78%);
+  margin-top: -.5rem;
+  overflow: auto;
+}
+/* ---------- 5. Empty List ---------- */
+.emptyList {
+  height: 55.5vh;
+  margin: 0 10vw;
+}
+.emptyList img {
+  width: auto;
+  height: 38vh;
+  margin-top: 10vh;
+}
+/* ---------- 6. Blog ---------- */
+#goBack-icon {
+  margin: 1.2vh 0 0 91vw;
+  font-size: 1.45rem;
+}
+#goBack-icon:hover {
+  transform: translateX(-10px);
+  text-indent: .1rem;
+  transition: .5s ease-out;
+}
+.blog header h1 {
+  font-size: 4.3vw;
+  letter-spacing: 5px;
+  margin-top: 5vh;
+}
+.blog-subHeading {
+  font-size: 1.3vw;
+  color: hsl(0, 0%, 50%);
+  text-align: center;
+  margin-top: -.2rem;
+}
+#readTime-icon {
+  font-size: 1rem;
+  margin: 0 .2rem 0 2vw;
+}
+.blog img {
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+.blog-desc {
+  font-size: 1.3vw;
+  text-align: justify;
+  line-height: 2.3vw;
+  margin: 0 20vw;
+  margin-bottom: 3rem;
+}
+/* -----  Inner Img Slider ----- */
+.carousel {
+  max-height: 50%;
+  overflow-x: scroll;
+}
+.inner-carousel {
+  display: flex;
+}
+.inner-carousel img {
+  max-width: 45vw;
+  height: auto;
+  padding: 0 10px;
+  pointer-events: none;
+}
+figcaption {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1;
+  color: #777;
+  padding: 0 5px;
+}
+/* ---------- 7. Progress Bar ---------- */
+.progress-bar {
+  position: fixed;
+  top: 6.5%;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: lightblue;
+  transform-origin: 0%;
+  z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+/* -------------------------- TESTING -------------------------- */
+/* ------- ImgSlider ------- */
+.slide img {
+  width: 20rem;
+  margin: 0 auto;
+}
+.slide {
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+.activeSlide {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow svg {
+  transition: color 300ms;
+}
+.arrow svg:hover {
+  color: #68edff;
+}
+.next {
+  right: 0%;
+  top: 50%;
+}
+.prev {
+  left: 0%;
+  top: 50%;
+}
+/* ---------- CommentForm ---------- */
+.write {
+  padding-top: 50px;
+}
+.writeForm {
+  position: relative;
+}
+.writeFormGroup {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+}
+.writeIcon {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: rgb(129, 125, 125);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.writeInput {
+  font-size: 30px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+}
+.writeInput::placeholder {
+  color: rgb(189, 185, 185);
+  font-weight: 400;
+}
+.writeInput:focus {
+  outline-style: none;
+}
+.writeText {
+  width: 70vw;
+  height: 40vh;
+  font-family: inherit;
+  font-size: 20px;
+}
+.writeSubmit {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+/* ---------- LogIn ---------- */
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+}
+.loginTitle {
+  font-size: 50px;
+}
+.loginForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.loginForm > label {
+  margin: 10px 0;
+}
+.loginInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+.loginInput:focus {
+  outline: none;
+}
+.loginButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: lightcoral;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+.loginRegisterButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: teal;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+/* ---------- SignUp ---------- */
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+}
+.registerTitle {
+  font-size: 50px;
+}
+.registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.registerForm > label {
+  margin: 10px 0;
+}
+.registerInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+.registerInput:focus {
+  outline: none;
+}
+.registerButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+.registerLoginButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: lightcoral;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+/* ---------- BlogTesting ---------- */
+.singlePost {
+  flex: 9;
+}
+.singlePostWrapper {
+  padding: 20px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+}
+.singlePostImg {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.singlePostTitle {
+  text-align: center;
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+}
+.singlePostTitleInput {
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+  text-align: center;
+  border: none;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+}
+.singlePostTitleInput:focus {
+  outline: none;
+}
+.singlePostEdit {
+  float: right;
+  font-size: 16px;
+}
+.singlePostIcon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.singlePostIcon:first-child {
+  color: teal;
+}
+.singlePostIcon:last-child {
+  color: tomato;
+}
+.singlePostInfo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  color: #b39656;
+}
+.singlePostDesc {
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+}
+.singlePostDesc::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.singlePostDescInput {
+  border: none;
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+}
+.singlePostDescInput:focus {
+  outline: none;
+}
+.singlePostButton {
+  width: 100px;
+  border: none;
+  background-color: teal;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+/* ---------- Settings ---------- */
+.settings {
+  display: flex;
+  height: 100vh;
+}
+.settingsWrapper {
+  flex: 9;
+  padding: 20px;
+}
+.settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settingsUpdateTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.settingsDeleteTitle {
+  font-size: 12px;
+  cursor: pointer;
+}
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+.settingsPP {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.settingsPP > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.settingsPPIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: lightcoral;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.settingsForm > label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.settingsForm > input {
+  color: gray;
+  margin: 10px 0;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+.settingsSubmit{
+    width: 150px;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}

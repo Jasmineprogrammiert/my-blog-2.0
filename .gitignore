@@ -1,6 +1,4 @@
-backend/node_modules
-backend/.env
+server/node_modules
+server/.env
 
-frontend/node_modules
-frontend/public/Blog_img
-frontend/src/assets/img
+client/node_modules

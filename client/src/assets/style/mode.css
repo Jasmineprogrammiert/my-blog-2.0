@@ -1,0 +1,88 @@
+/* ---------- Light & Dark Mode ---------- */
+#light {
+  background-color: hsl(0, 0%, 92%);
+}
+#dark {
+  background-color: hsl(209, 34%, 26%);
+  color: lightblue;
+  /* #2b4258, #233648, #22303C, #242526, 
+  #282828, #3A3B3C, #1a3235 */
+}
+/* ---------------
+    ThemeSwitch
+    Blog: <ArrowBackIcon />
+--------------- */
+#modeSwitch {
+  margin: 1.4vh 0 0 1vw;
+  padding: 7px;
+  z-index: 100;
+}
+#light #modeSwitch,
+#light #goBack-icon {
+  color: hsl(350, 100%, 75%);
+}
+#dark #modeSwitch,
+#dark #goBack-icon {
+  color: lightskyblue;
+}
+/* ---------------
+    Navbar, 
+    BlogHome: 1. Header 
+--------------- */
+#light .navbar,
+#light #accordion-heading {
+  background-color: hsl(0, 0%, 92%);
+}
+#dark .navbar,
+#dark #nav-item-dropdown,
+#dark .nav-dropdown,
+#dark #accordion-heading {
+  background-color: hsl(209, 34%, 26%);
+}
+#dark .nav-brand,
+#dark .nav-item,
+#dark #nav-item-dropdown,
+#dark .nav-dropdown,
+#dark #accordion-heading h3 {
+  color: lightblue;
+}
+#dark .nav-dropdown:hover {
+  background-color:hsl(209, 35%, 32%);
+}
+/* --------------- BlogHome (5) --------------- */
+/* ---------- 1. Header ---------- */
+#light #accordion-txt p,
+#light #accordion-txt dl {
+  background-color: hsl(0, 0%, 94%);
+}
+#dark #accordion-txt p,
+#dark #accordion-txt dl {
+  background-color: hsl(209, 34%, 28%);
+}
+#dark #accordion-txt p,
+#dark #accordion-txt dl,
+#dark .blog-subHeading {
+  color: hsl(0, 0%, 78%);
+}
+/* ---------- 2. Search Bar ---------- */
+#light #searchBar {
+  background-color: rgb(255, 255, 255, 0.25);
+}
+#light #searchBar:hover {
+  background-color: rgb(255, 255, 255, 0.4);
+}
+/* ---------- 4. Blog Card ---------- */
+#light .blogCard label {
+  color: black;
+  background-image: linear-gradient(to right, hsl(350, 100%, 85%), hsl(351, 100%, 93%));
+}
+#light .blogCard label {
+  color: hsl(0, 0%, 20%);
+}
+#light .blogCard-preview {
+  color: hsl(209, 34%, 26%);
+}
+/* ---------- 7. Progress Bar ---------- */
+#light .progress-bar {
+  background: hsl(350, 100%, 85%);
+}
