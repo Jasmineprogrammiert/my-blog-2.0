@@ -44,8 +44,8 @@ const BlogCard = ({
       </Link>
       <p>{createdAt}</p>
        <div className="blogCard-category">
-        {category.map((category_txt, i) => 
-          <label key={i}>{category_txt}</label>
+        {category.map((cat, i) => 
+          <label key={i}>{cat}</label>
         )}
       </div>
       <p className="blogCard-preview">{preview}</p>

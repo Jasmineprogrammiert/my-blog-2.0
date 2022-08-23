@@ -29,7 +29,6 @@ const BlogHomeTesting = () => {
     );
     setBlogs(filterBlogs);
   };
-
   // clear search & show all blogs
   const handleClearSearch = () => {   
     setBlogs(blogs);
@@ -45,17 +44,12 @@ const BlogHomeTesting = () => {
       clearSearchInput={e => setSearchInput(e.target.value)}
       handleClearSearch={handleClearSearch}
     />
-    {/* <div className="blogList">
-      {blogs && blogs.map(blog => (
-        <BlogCardTesting key={blog._id} blog={blog} />
-      ))}
-    </div> */}
     {!blogs.length
       ? <EmptyList /> 
       : (
         <div className="blogList">
-          {blogs.map(blog => 
-            <BlogCardTesting blog={blog} key={blog.id} />
+          {blogs && blogs.map(blog => 
+            <BlogCardTesting blog={blog} key={blog._id} />
           )}
         </div>
       )

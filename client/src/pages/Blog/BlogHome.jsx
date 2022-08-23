@@ -41,7 +41,7 @@ const BlogHome = () => {
       ? <EmptyList /> 
       : (
         <div className="blogList">
-          {blogs.map(blog => 
+          {blogs && blogs.map(blog => 
             <BlogCard blog={blog} key={blog.id} />
           )}
         </div>

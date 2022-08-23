@@ -17,41 +17,14 @@ const BlogTesting = () => {
   const path = location.pathname.split("/")[2];
   const [blog, setBlog] = useState({});
   // const PF = "http://localhost:5000/images/";
-  // const { user } = useContext(Context);
-  // const [title, setTitle] = useState("");
-  // const [desc, setDesc] = useState("");
-  // const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
-    const getBlog = async () => {
+    const fetchBlog = async () => {
       const res = await axios.get("/blogs/" + path);
-      console.log(res)
       setBlog(res.data);
-      // setTitle(res.data.title);
-      // setDesc(res.data.desc);
     };
-    getBlog();
+    fetchBlog();
   }, [path]);
-
-  // const handleDelete = async () => {
-  //   try {
-  //     await axios.delete(`/posts/${post._id}`, {
-  //       data: { username: user.username },
-  //     });
-  //     window.location.replace("/");
-  //   } catch (err) {}
-  // };
-
-  // const handleUpdate = async () => {
-  //   try {
-  //     await axios.put(`/posts/${post._id}`, {
-  //       username: user.username,
-  //       title,
-  //       desc,
-  //     });
-  //     setUpdateMode(false)
-  //   } catch (err) {}
-  // };
 
   useEffect(() => {    
     AOS.init({
