@@ -70,8 +70,9 @@ const Blog = () => {
       {/* Inner Img Slider */}
         <div className="carousel" ref={carousel}>
           <div className="inner-carousel">
-            {blog.img.map(image => 
-              <img src={image} alt="blog img" key={blog.id} />
+            {blog.img.map((image, index) => 
+              // <img src={image} alt="blog img" key={blog.id} />
+              <img src={image} alt="blog img" key={index} />
             )}
           </div>
         </div>

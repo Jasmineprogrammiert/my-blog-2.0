@@ -53,7 +53,8 @@ const App = () => {
             <Route path="imgslider" element={<ImgSlider />} />
             <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
             <Route path="bloghometesting" element={<BlogHomeTesting />} />
-            <Route path="/bloghometesting/:blogId" element={<BlogTesting />} />
+            {/* <Route path="/bloghometesting/:blogId" element={<BlogTesting />} /> */}
+            <Route path="/bloghometesting/:id" element={<BlogTesting />} />
 
           </Routes>
         </Suspense>

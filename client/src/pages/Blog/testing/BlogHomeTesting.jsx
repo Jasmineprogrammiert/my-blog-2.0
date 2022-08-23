@@ -7,18 +7,17 @@ import BlogCardTesting from './BlogCardTesting';
 import EmptyList from '../../../components/BlogHome/EmptyList';
 
 const BlogHomeTesting = () => {
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState('');
   const [searchInput, setSearchInput] = useState('');
 
   useEffect(() => {
     const fetchBlogs = async () => {
       const res = await axios.get('/blogs');
       setBlogs(res.data);
-    }
+    };
     fetchBlogs();
-  }, [])
+  }, []);
   
-  // research bar logic has problem since blogData is disabled
   const handleSearchInput = e => {
     e.preventDefault();
     handleSearchResults();
@@ -30,8 +29,9 @@ const BlogHomeTesting = () => {
     );
     setBlogs(filterBlogs);
   };
+
   // clear search & show all blogs
-  const handleClearSearch = () => {
+  const handleClearSearch = () => {   
     setBlogs(blogs);
     setSearchInput('');
   };
@@ -50,7 +50,7 @@ const BlogHomeTesting = () => {
         <BlogCardTesting key={blog._id} blog={blog} />
       ))}
     </div> */}
-    {!blogs.length 
+    {!blogs.length
       ? <EmptyList /> 
       : (
         <div className="blogList">
