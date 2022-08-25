@@ -1,22 +1,16 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 // components
 import Header from '../../../components/BlogHome/Header';
 import SearchBar from '../../../components/BlogHome/SearchBar';
 import BlogCardTesting from './BlogCardTesting';
 import EmptyList from '../../../components/BlogHome/EmptyList';
+// data
+import useFetch from './useFetch';
 
 const BlogHomeTesting = () => {
-  const [blogs, setBlogs] = useState('');
+  const { data: blogs } = useFetch('/blogs');
+  const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState('');
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const res = await axios.get('/blogs');
-      setBlogs(res.data);
-    };
-    fetchBlogs();
-  }, []);
   
   const handleSearchInput = e => {
     e.preventDefault();
@@ -24,14 +18,14 @@ const BlogHomeTesting = () => {
   };
   // filter blog(s) by category
   const handleSearchResults = () => {
-    const filterBlogs = blogs.filter(blog => 
+    const filteredBlogs = blogs.filter(blog => 
       blog.category.some(category => category.toLowerCase().includes(searchInput.toLowerCase().trim()))
     );
-    setBlogs(filterBlogs);
+    setFilteredResults(filteredBlogs);
   };
   // clear search & show all blogs
   const handleClearSearch = () => {   
-    setBlogs(blogs);
+    setFilteredResults(blogs);
     setSearchInput('');
   };
 
@@ -41,14 +35,14 @@ const BlogHomeTesting = () => {
     <SearchBar
       value={searchInput}
       handleSearchInput={handleSearchInput}
-      clearSearchInput={e => setSearchInput(e.target.value)}
+      setSearchInput={e => setSearchInput(e.target.value)}
       handleClearSearch={handleClearSearch}
     />
-    {!blogs.length
+    {!filteredResults.length
       ? <EmptyList /> 
       : (
         <div className="blogList">
-          {blogs && blogs.map(blog => 
+          {filteredResults.map(blog => 
             <BlogCardTesting blog={blog} key={blog._id} />
           )}
         </div>

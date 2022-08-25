@@ -1,4 +1,4 @@
-const Blog = require('../models/blog');
+const Blog = require('../models/blogModel');
 
 const allBlogs = async (req, res) => {
   try {
@@ -21,19 +21,19 @@ const singleBlog = async (req, res) => {
   }
 }
 
-const newBlog = async (req, res) => {
-  const newBlog = new Blog(req.body);
-  try {
-    const savedBlog = await newBlog.save();
-    res.status(200).json(savedBlog);
-  }
-  catch (err) {
-    res.status(500).json(err);
-  }
-}
+// const newBlog = async (req, res) => {
+//   const newBlog = new Blog(req.body);
+//   try {
+//     const savedBlog = await newBlog.save();
+//     res.status(200).json(savedBlog);
+//   }
+//   catch (err) {
+//     res.status(500).json(err);
+//   }
+// }
 
 module.exports = {
   allBlogs,
   singleBlog,
-  newBlog,
+  // newBlog,
 }

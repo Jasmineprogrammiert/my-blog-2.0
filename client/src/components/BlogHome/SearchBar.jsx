@@ -15,7 +15,7 @@ const SearchBarInput = styled(InputBase)(({ theme }) => ({
 const SearchBar = ({
   value, 
   handleSearchInput, 
-  clearSearchInput, 
+  setSearchInput, 
   handleClearSearch
 }) => {
   return (
@@ -28,7 +28,7 @@ const SearchBar = ({
         id="searchBar-input"
         placeholder="Search by category"
         value={value}
-        onChange={clearSearchInput}
+        onChange={setSearchInput}
       />
       {value && 
         <CloseIcon 
