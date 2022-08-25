@@ -5,10 +5,11 @@ import SearchBar from '../../components/BlogHome/SearchBar';
 import BlogCard from '../../components/BlogHome/BlogCard';
 import EmptyList from '../../components/BlogHome/EmptyList';
 // data
-import { blogData } from '../../data/blog';
+import useFetch from '../../components/BlogHome/useFetch';
 
 const BlogHome = () => {
-  const [blogs, setBlogs] = useState(blogData);
+  const { data: blogs } = useFetch('/blogs');
+  const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState('');
 
   const handleSearchInput = e => {
@@ -17,14 +18,14 @@ const BlogHome = () => {
   };
   // filter blog(s) by category
   const handleSearchResults = () => {
-    const filterBlogs = blogData.filter(blog => 
+    const filteredBlogs = blogs.filter(blog => 
       blog.category.some(category => category.toLowerCase().includes(searchInput.toLowerCase().trim()))
     );
-    setBlogs(filterBlogs);
+    setFilteredResults(filteredBlogs);
   };
   // clear search & show all blogs
-  const handleClearSearch = () => {
-    setBlogs(blogData);
+  const handleClearSearch = () => {   
+    setFilteredResults(blogs);
     setSearchInput('');
   };
 
@@ -34,15 +35,15 @@ const BlogHome = () => {
     <SearchBar
       value={searchInput}
       handleSearchInput={handleSearchInput}
-      clearSearchInput={e => setSearchInput(e.target.value)}
+      setSearchInput={e => setSearchInput(e.target.value)}
       handleClearSearch={handleClearSearch}
     />
-    {!blogs.length 
+    {!filteredResults.length
       ? <EmptyList /> 
       : (
         <div className="blogList">
-          {blogs && blogs.map(blog => 
-            <BlogCard blog={blog} key={blog.id} />
+          {filteredResults.map(blog => 
+            <BlogCard blog={blog} key={blog._id} />
           )}
         </div>
       )

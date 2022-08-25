@@ -1,29 +1,34 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
+import { useLocation } from 'react-router';
 import { useParams, Link } from 'react-router-dom';
+import axios from 'axios';
 // local files
-import { blogData } from '../../data/blog';
 import BlogHome from './BlogHome';
 import ProgressBar from '../../components/Blog/ProgressBar';
-// testing
-import Comment from '../../components/testing/Comment';
 // style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import AOS from 'aos';
+// data
+import useFetch from '../../components/BlogHome/useFetch';
+// import { Context } from "../../context/Context";
 
 const Blog = () => {
-  const carousel = useRef(null);
-  const { id } = useParams();
-  const [blog, setBlog] = useState(null);
+  const location = useLocation();
+  const path = location.pathname.split('/')[2];
+  // const [blog, setBlog] = useState({});
 
-  useEffect(() => {
-    let blog = blogData.find(blog => 
-      blog.id === parseInt(id)
-    );
-    if (blog) {
-      return setBlog(blog);
-    }
-  }, []);
+  // testing
+  const { data: blog } = useFetch('/blogs/' + path);
+
+  // useEffect(() => {
+  //   const getBlog = async () => {
+  //     const res = await axios.get('/blogs/' + path);
+  //     setBlog(res.data);
+  //   };
+  //   getBlog();
+  // }, [path])
+
 
   useEffect(() => {    
     AOS.init({
@@ -39,54 +44,33 @@ const Blog = () => {
       }, 500);
     });
   }, [])
-
+  
   return (
     <>
     <Link to="/blog">
       <ArrowBackIcon id="goBack-icon" style={{ fontSize: "28px" }} />
     </Link>
+    <h1>{blog.title}</h1>
     {blog ? (
       <div className="blog" data-aos="fade-down">
         <ProgressBar />
         <header>
-          <h1>{blog.title}</h1>
           <p className="blog-subHeading">
-            {blog.createdAt}
+            {new Date(blog.createdAt).toDateString()}
             <AccessTimeRoundedIcon id="readTime-icon" />
             {blog.readTime} min read
           </p>
         </header>
-        <img src={blog.blogCover} alt="blog cover" />
-
-        <p className="blog-desc">
-          {blog.description_1}
-        </p>
-        <p className="blog-desc">
-          {blog.description_2}
-        </p>
-        <p className="blog-desc">
-          {blog.description_3}
-        </p>
-      {/* Inner Img Slider */}
-        <div className="carousel" ref={carousel}>
-          <div className="inner-carousel">
-            {blog.img.map((image, index) => 
-              // <img src={image} alt="blog img" key={blog.id} />
-              <img src={image} alt="blog img" key={index} />
-            )}
-          </div>
+        <img src={blog.bannerImg} alt="blog cover" />
+        <div className="blog-desc">
+          {blog.description && blog.description.map((p, i) => 
+            <p key={i}>{p}</p>
+          )}
         </div>
-        <p className="blog-desc">
-          {blog.description_4}
-        </p>
-        <p className="blog-desc">
-          {blog.description_5}
-        </p>
       </div>
     ) : (
       <BlogHome />
     )}
-    {/* <Comment /> */}
     </>
   )
 }

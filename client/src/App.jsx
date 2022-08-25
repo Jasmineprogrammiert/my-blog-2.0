@@ -7,13 +7,11 @@ import ModeSwitch from './components/universal/ModeSwitch';
 import About from './pages/About';
 import BlogHome from './pages/Blog/BlogHome';
 import Blog from './pages/Blog/Blog';
-import LogIn from './pages/auth/LogIn';
 import SignUp from './pages/auth/SignUp';
+import LogIn from './pages/auth/LogIn';
+import Settings from './components/testing/Settings';
 // testing
 import ImgSlider from './components/testing/ImgSlider';
-import BlogHomeTesting from './pages/Blog/testing/BlogHomeTesting';
-import BlogTesting from './pages/Blog/testing/BlogTesting';
-import Settings from './components/testing/Settings';
 import { Context } from './context/Context';
 
 // styles
@@ -48,14 +46,10 @@ const App = () => {
             <Route path="/blog/:id" element={<Blog />} />
             <Route path="signup" element={user ? <BlogHome /> : <SignUp />}/>
             <Route path="login" element={user ? <BlogHome /> : <LogIn />}/>
+            <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
             <Route path="*" element={<About />} />
             {/* testing */}
             <Route path="imgslider" element={<ImgSlider />} />
-            <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
-            <Route path="bloghometesting" element={<BlogHomeTesting />} />
-            {/* <Route path="/bloghometesting/:blogId" element={<BlogTesting />} /> */}
-            <Route path="/bloghometesting/:id" element={<BlogTesting />} />
-
           </Routes>
         </Suspense>
       </div>

@@ -2,14 +2,19 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 
-const BlogCard = ({
+const BlogCard = ({ 
   blog: {
-    id,
-    cover,
+    _id,
+    coverImg,
     title,
-    createdAt,
+    date,
     category,
-    preview
+    preview,
+    readTime,
+    bannerImg,
+    description,
+    createdAt,
+    updatedAt
   },
 }) => {
 
@@ -36,14 +41,14 @@ const BlogCard = ({
       data-aos="fade-up"
     >
       <Link
-        to={`/blog/${id}`}
+        to={`/blog/${_id}`}
         className="blogCard-link" 
       >
-        <img src={cover} alt="blog cover" />
+        <img src={coverImg} alt="blog cover" />
         <h3>{title}</h3>
       </Link>
-      <p>{createdAt}</p>
-       <div className="blogCard-category">
+      <p>{date}</p>
+      <div className="blogCard-category">
         {category.map((cat, i) => 
           <label key={i}>{cat}</label>
         )}
@@ -51,7 +56,7 @@ const BlogCard = ({
       <p className="blogCard-preview">{preview}</p>
     </div>
     </>
-  );
-};
+  )
+}
 
 export default BlogCard;

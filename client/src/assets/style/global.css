@@ -386,7 +386,10 @@ input, button {
   text-align: justify;
   line-height: 2.3vw;
   margin: 0 20vw;
-  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+}
+.blog-desc p {
+  margin-bottom: 1.6rem;
 }
 /* -----  Inner Img Slider ----- */
 .carousel {
