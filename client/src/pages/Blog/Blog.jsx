@@ -1,34 +1,19 @@
-import { useState, useEffect, useRef, useContext } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router';
-import { useParams, Link } from 'react-router-dom';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 // local files
+import useFetch from '../../components/BlogHome/useFetch';
 import BlogHome from './BlogHome';
 import ProgressBar from '../../components/Blog/ProgressBar';
 // style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import AOS from 'aos';
-// data
-import useFetch from '../../components/BlogHome/useFetch';
-// import { Context } from "../../context/Context";
 
 const Blog = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
-  // const [blog, setBlog] = useState({});
-
-  // testing
   const { data: blog } = useFetch('/blogs/' + path);
-
-  // useEffect(() => {
-  //   const getBlog = async () => {
-  //     const res = await axios.get('/blogs/' + path);
-  //     setBlog(res.data);
-  //   };
-  //   getBlog();
-  // }, [path])
-
 
   useEffect(() => {    
     AOS.init({

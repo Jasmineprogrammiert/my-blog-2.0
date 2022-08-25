@@ -1,11 +1,10 @@
 import { useState } from 'react';
-// components
+// local files
+import useFetch from '../../components/BlogHome/useFetch';
 import Header from '../../components/BlogHome/Header';
 import SearchBar from '../../components/BlogHome/SearchBar';
 import BlogCard from '../../components/BlogHome/BlogCard';
-import EmptyList from '../../components/BlogHome/EmptyList';
-// data
-import useFetch from '../../components/BlogHome/useFetch';
+import Empty from '../../components/BlogHome/Empty';
 
 const BlogHome = () => {
   const { data: blogs } = useFetch('/blogs');
@@ -39,7 +38,7 @@ const BlogHome = () => {
       handleClearSearch={handleClearSearch}
     />
     {!filteredResults.length
-      ? <EmptyList /> 
+      ? <Empty /> 
       : (
         <div className="blogList">
           {filteredResults.map(blog => 

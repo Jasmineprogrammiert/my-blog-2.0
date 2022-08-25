@@ -341,11 +341,11 @@ input, button {
   overflow: auto;
 }
 /* ---------- 5. Empty List ---------- */
-.emptyList {
+.empty {
   height: 55.5vh;
   margin: 0 10vw;
 }
-.emptyList img {
+.empty img {
   width: auto;
   height: 38vh;
   margin-top: 10vh;

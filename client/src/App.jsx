@@ -13,7 +13,6 @@ import Settings from './components/testing/Settings';
 // testing
 import ImgSlider from './components/testing/ImgSlider';
 import { Context } from './context/Context';
-
 // styles
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
