@@ -50,7 +50,7 @@ input, button {
   transition: top .3s;
   z-index: 100;
 }
-.hideNavbar {
+.hideBar {
   top: -7.5vh;
 }
 .nav-brand {
@@ -215,16 +215,9 @@ input, button {
 }
 .blog-img-1 {
   position: absolute;
-  width: 31vw;
-  height: auto;
-  margin-top: -40vh;
-  margin-left: -1vw;
-}
-.blog-img-2 {
-  position: absolute;
   width: 7vw;
   height: auto;
-  margin-top: -45vh;
+  margin-top: -42vh;
   margin-left: 22vw;
   transform: rotate(33deg);
 }
@@ -340,17 +333,18 @@ input, button {
   margin-top: -.5rem;
   overflow: auto;
 }
-/* ---------- 5. Empty List ---------- */
+/* ---------- 5. Empty ---------- */
 .empty {
-  height: 55.5vh;
+  height: 60vh;
   margin: 0 10vw;
 }
 .empty img {
   width: auto;
-  height: 38vh;
-  margin-top: 10vh;
+  height: 48vh;
+  margin-top: 5.5vh;
 }
-/* ---------- 6. Blog ---------- */
+/* --------------- Blog (3)  --------------- */
+/* ---------- 1. Blog ---------- */
 #goBack-icon {
   margin: 1.2vh 0 0 91vw;
   font-size: 1.45rem;
@@ -391,7 +385,7 @@ input, button {
 .blog-desc p {
   margin-bottom: 1.6rem;
 }
-/* -----  Inner Img Slider ----- */
+/* ---------- 2. Img Slider ---------- */
 .carousel {
   max-height: 50%;
   overflow-x: scroll;
@@ -412,16 +406,27 @@ figcaption {
   color: #777;
   padding: 0 5px;
 }
-/* ---------- 7. Progress Bar ---------- */
+/* ---------- 3. Progress Bar ---------- */
 .progress-bar {
   position: fixed;
-  top: 6.5%;
+  margin-top: -.4rem;
   left: 0;
   right: 0;
   height: 10px;
   background: lightblue;
   transform-origin: 0%;
   z-index: 100;
+}
+/* ---------- More ---------- */
+.more-header {
+  padding-bottom: 68vh;
+}
+.more-img-1 {
+  position: absolute;
+  width: 31vw;
+  height: auto;
+  margin-top: -40vh;
+  margin-left: -1vw;
 }
 
 
@@ -432,8 +437,12 @@ figcaption {
 
 
 
-/* -------------------------- TESTING -------------------------- */
-/* ------- ImgSlider ------- */
+
+
+
+
+/* -------------------- TESTING -------------------- */
+/* ---------- ImgSlider ---------- */
 .slide img {
   width: 20rem;
   margin: 0 auto;
@@ -466,7 +475,7 @@ figcaption {
   left: 0%;
   top: 50%;
 }
-/* ---------- CommentForm ---------- */
+/* ---------- Comment ---------- */
 .write {
   padding-top: 50px;
 }
@@ -523,61 +532,6 @@ figcaption {
   display: flex;
   align-items: center;
 }
-/* ---------- LogIn ---------- */
-.login {
-  height: calc(100vh - 50px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-  background-size: cover;
-}
-.loginTitle {
-  font-size: 50px;
-}
-.loginForm {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.loginForm > label {
-  margin: 10px 0;
-}
-.loginInput {
-  padding: 10px;
-  background-color: white;
-  border: none;
-  border-radius: 10px;
-}
-.loginInput:focus {
-  outline: none;
-}
-.loginButton {
-  margin-top: 20px;
-  cursor: pointer;
-  background-color: lightcoral;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  text-align: center;
-}
-.loginRegisterButton {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: teal;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-  color: white;
-  border-radius: 10px;
-}
 /* ---------- SignUp ---------- */
 .register {
   height: calc(100vh - 50px);
@@ -633,91 +587,60 @@ figcaption {
   color: white;
   border-radius: 10px;
 }
-/* ---------- BlogTesting ---------- */
-.singlePost {
-  flex: 9;
+/* ---------- LogIn ---------- */
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
 }
-.singlePostWrapper {
-  padding: 20px;
-  padding-right: 0;
+.loginTitle {
+  font-size: 50px;
+}
+.loginForm {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
-.singlePostImg {
-  width: 100%;
-  height: 300px;
-  border-radius: 5px;
-  object-fit: cover;
+.loginForm > label {
+  margin: 10px 0;
 }
-.singlePostTitle {
-  text-align: center;
-  margin: 10px;
-  font-family: "Lora", serif;
-  font-size: 28px;
-}
-.singlePostTitleInput {
-  margin: 10px;
-  font-family: "Lora", serif;
-  font-size: 28px;
-  text-align: center;
+.loginInput {
+  padding: 10px;
+  background-color: white;
   border: none;
-  color: gray;
-  border-bottom: 1px solid lightgray;
+  border-radius: 10px;
 }
-.singlePostTitleInput:focus {
+.loginInput:focus {
   outline: none;
 }
-.singlePostEdit {
-  float: right;
-  font-size: 16px;
-}
-.singlePostIcon {
-  margin-left: 10px;
-  cursor: pointer;
-}
-.singlePostIcon:first-child {
-  color: teal;
-}
-.singlePostIcon:last-child {
-  color: tomato;
-}
-.singlePostInfo {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  font-family: "Varela Round", sans-serif;
-  color: #b39656;
-}
-.singlePostDesc {
-  color: #666;
-  font-size: 18px;
-  line-height: 25px;
-}
-.singlePostDesc::first-letter {
-  margin-left: 20px;
-  font-size: 30px;
-  font-weight: 600;
-}
-.singlePostDescInput {
-  border: none;
-  color: #666;
-  font-size: 18px;
-  line-height: 25px;
-}
-.singlePostDescInput:focus {
-  outline: none;
-}
-.singlePostButton {
-  width: 100px;
-  border: none;
-  background-color: teal;
-  padding: 5px;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  align-self: flex-end;
+.loginButton {
   margin-top: 20px;
+  cursor: pointer;
+  background-color: lightcoral;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+.loginRegisterButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: teal;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 10px;
 }
 /* ---------- Settings ---------- */
 .settings {

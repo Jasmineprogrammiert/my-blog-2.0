@@ -1,10 +1,11 @@
 import { useState } from 'react';
-// local files
-import useFetch from '../../components/BlogHome/useFetch';
+// components
 import Header from '../../components/BlogHome/Header';
 import SearchBar from '../../components/BlogHome/SearchBar';
 import BlogCard from '../../components/BlogHome/BlogCard';
 import Empty from '../../components/BlogHome/Empty';
+// hooks
+import useFetch from '../../hooks/useFetch';
 
 const BlogHome = () => {
   const { data: blogs } = useFetch('/blogs');

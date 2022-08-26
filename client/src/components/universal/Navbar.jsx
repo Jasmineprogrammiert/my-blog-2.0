@@ -1,44 +1,36 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+// hooks
+import useYScroll from '../../hooks/useYScroll';
+// styles
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-// TESTING
+// testing
 // import ThemeSwitch from './Testing/ThemeSwitch';
 import { Context } from '../../context/Context';
 
 const NavigationBar = () => {
-  const [isHidden, setIsHidden] = useState(true);
   const [show, setShow] = useState(false);
-  // testing
-  const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:8000/images/"
-
-  const showNav = () => {
-    const loc = window.pageYOffset;
-    loc > 20 ? setIsHidden(false) : setIsHidden(true);
-  };
   const showDropdown = () => {
     setShow(!show);
   }
   const hideDropdown = () => {
     setShow(false);
   }
+
+  const { hideBar } = useYScroll();
+
   // testing
+  const { user, dispatch } = useContext(Context);
+  const PF = 'http://localhost:8000/images/'
+  
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' });
   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', showNav, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', showNav);
-    };
-  }, []);
-  let hideNav = isHidden ? 'hideNavbar' : '';
-
   return (
     <>
-    <Navbar expand="lg" className={`navbar ${hideNav}`}>
+    <Navbar expand="lg" className={`navbar ${hideBar}`}>
       <Container>
         <Navbar.Brand 
           as={NavLink} to="/" 
@@ -94,6 +86,12 @@ const NavigationBar = () => {
               </NavDropdown>
             )}
             {/* <ThemeSwitch /> */}
+            <Nav.Link 
+              as={NavLink} to="more"
+              className="nav-item"
+            >
+              More
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

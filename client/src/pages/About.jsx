@@ -13,7 +13,7 @@ const About = () => {
 
   useEffect(() => {    
     AOS.init({
-      offset: 300,
+      offset: 350,
       delay: 300,
       duration: 1800
     });
@@ -25,7 +25,7 @@ const About = () => {
         AOS.refresh(); 
       }, 500);
     });
-  }, [])
+  })
   
   return (
     <>

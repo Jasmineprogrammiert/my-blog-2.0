@@ -9,9 +9,10 @@ import BlogHome from './pages/Blog/BlogHome';
 import Blog from './pages/Blog/Blog';
 import SignUp from './pages/auth/SignUp';
 import LogIn from './pages/auth/LogIn';
-import Settings from './components/testing/Settings';
+import Settings from './components/_testing_/Settings';
+import More from './pages/More';
 // testing
-import ImgSlider from './components/testing/ImgSlider';
+import ImgSlider from './components/_testing_/ImgSlider';
 import { Context } from './context/Context';
 // styles
 import { Spinner } from 'react-bootstrap';
@@ -46,6 +47,7 @@ const App = () => {
             <Route path="signup" element={user ? <BlogHome /> : <SignUp />}/>
             <Route path="login" element={user ? <BlogHome /> : <LogIn />}/>
             <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
+            <Route path="more" element={<More />} />
             <Route path="*" element={<About />} />
             {/* testing */}
             <Route path="imgslider" element={<ImgSlider />} />

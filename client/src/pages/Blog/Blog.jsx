@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
-// local files
-import useFetch from '../../components/BlogHome/useFetch';
+// components
 import BlogHome from './BlogHome';
 import ProgressBar from '../../components/Blog/ProgressBar';
+// hooks
+import useFetch from '../../hooks/useFetch';
 // style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
@@ -28,17 +29,18 @@ const Blog = () => {
         AOS.refresh(); 
       }, 500);
     });
-  }, [])
+  })
   
   return (
     <>
+    <ProgressBar />
     <Link to="/blog">
       <ArrowBackIcon id="goBack-icon" style={{ fontSize: "28px" }} />
     </Link>
-    <h1>{blog.title}</h1>
+    <h1 data-aos="fade-down">{blog.title}</h1>
     {blog ? (
       <div className="blog" data-aos="fade-down">
-        <ProgressBar />
+        {/* <ProgressBar /> */}
         <header>
           <p className="blog-subHeading">
             {new Date(blog.createdAt).toDateString()}
@@ -54,7 +56,7 @@ const Blog = () => {
         </div>
       </div>
     ) : (
-      <BlogHome />
+        <BlogHome />
     )}
     </>
   )
