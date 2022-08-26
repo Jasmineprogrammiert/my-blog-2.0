@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 // components
-import BlogHome from './BlogHome';
+import Empty from '../../components/BlogHome/Empty';
 import ProgressBar from '../../components/Blog/ProgressBar';
 // hooks
 import useFetch from '../../hooks/useFetch';
@@ -14,7 +14,7 @@ import AOS from 'aos';
 const Blog = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
-  const { data: blog } = useFetch('/blogs/' + path);
+  const { data: blog, isPending } = useFetch('/blogs/' + path);
 
   useEffect(() => {    
     AOS.init({
@@ -38,9 +38,8 @@ const Blog = () => {
       <ArrowBackIcon id="goBack-icon" style={{ fontSize: "28px" }} />
     </Link>
     <h1 data-aos="fade-down">{blog.title}</h1>
-    {blog ? (
+    {blog && !isPending ? (
       <div className="blog" data-aos="fade-down">
-        {/* <ProgressBar /> */}
         <header>
           <p className="blog-subHeading">
             {new Date(blog.createdAt).toDateString()}
@@ -56,7 +55,7 @@ const Blog = () => {
         </div>
       </div>
     ) : (
-        <BlogHome />
+        <Empty />
     )}
     </>
   )

@@ -1,6 +1,5 @@
 import { createContext, Suspense, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import useLocalStorage from 'use-local-storage';
 // components
 import NavigationBar from './components/universal/Navbar';
 import ModeSwitch from './components/universal/ModeSwitch';
@@ -14,6 +13,7 @@ import More from './pages/More';
 // testing
 import ImgSlider from './components/_testing_/ImgSlider';
 import { Context } from './context/Context';
+import useModeSwitch from './hooks/useModeSwitch';
 // styles
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,12 +25,7 @@ import './assets/style/media.css';
 export const ThemeContext = createContext(null);
 
 const App = () => {
-  const defaultMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultMode ? 'dark' : 'light');
-  const toggleTheme = () => {
-    setTheme(current => current === 'light' ? 'dark' : 'light');
-  };
-
+  const { theme, setTheme, toggleTheme } = useModeSwitch();
   const { user } = useContext(Context);
 
   return (

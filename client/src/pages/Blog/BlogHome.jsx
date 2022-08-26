@@ -8,7 +8,7 @@ import Empty from '../../components/BlogHome/Empty';
 import useFetch from '../../hooks/useFetch';
 
 const BlogHome = () => {
-  const { data: blogs } = useFetch('/blogs');
+  const { data: blogs, isPending } = useFetch('/blogs');
   const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState('');
 
@@ -38,7 +38,7 @@ const BlogHome = () => {
       setSearchInput={e => setSearchInput(e.target.value)}
       handleClearSearch={handleClearSearch}
     />
-    {!filteredResults.length
+    {!filteredResults.length && isPending
       ? <Empty /> 
       : (
         <div className="blogList">

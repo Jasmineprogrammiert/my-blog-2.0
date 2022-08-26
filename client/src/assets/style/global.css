@@ -335,7 +335,7 @@ input, button {
 }
 /* ---------- 5. Empty ---------- */
 .empty {
-  height: 60vh;
+  height: 98vh;
   margin: 0 10vw;
 }
 .empty img {
@@ -409,7 +409,6 @@ figcaption {
 /* ---------- 3. Progress Bar ---------- */
 .progress-bar {
   position: fixed;
-  margin-top: -.4rem;
   left: 0;
   right: 0;
   height: 10px;
