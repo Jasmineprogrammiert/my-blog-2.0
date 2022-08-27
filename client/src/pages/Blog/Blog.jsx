@@ -43,7 +43,7 @@ const Blog = () => {
         <header>
           <h1>{blog.title}</h1>
           <p className="blog-subHeading">
-            {new Date(blog.createdAt).toDateString()}
+            Updated on {new Date(blog.updatedAt).toDateString().split(' ').slice(1).join(' ')}
             <AccessTimeRoundedIcon id="readTime-icon" />
             {blog.readTime} min read
           </p>

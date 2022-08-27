@@ -6,22 +6,13 @@ import useFetch from '../../hooks/useFetch';
 import Slider from 'react-slick';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-// img
-import astronaut from '../../assets/img/ImgSlider/astronaut.png';
-import celebrating from '../../assets/img/ImgSlider/celebrating.png';
-import education from '../../assets/img/ImgSlider/education.png';
-import taken from '../../assets/img/ImgSlider/taken.png';
-
-const images = [astronaut, celebrating, education, taken];
 
 const ImgSlider = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
-  const { data: blog, isPending } = useFetch('/blogs/' + path);
+  const { data: blog } = useFetch('/blogs/' + path);
 
-
-
-  const [imageIndex, setImageIndex] = useState(0);
+  const [imgIndex, setImgIndex] = useState(0);
 
   const NextArrow = ({ onClick }) => {
     return (
@@ -30,7 +21,6 @@ const ImgSlider = () => {
       </div>
     );
   };
-
   const PrevArrow = ({ onClick }) => {
     return (
       <div className="arrow prev" onClick={onClick}>
@@ -48,17 +38,23 @@ const ImgSlider = () => {
     centerPadding: 0,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setImageIndex(next),
+    beforeChange: (current, next) => setImgIndex(next),
   };
   
   return (
     <>
     <Slider {...settings}>
-      {images.map((img, index, i) => (
-        <div className = {index === imageIndex ? "slide activeSlide" : "slide"} key={i}>
-          <img src={img} alt='blog photos' />
+      {blog.blogImg && blog.blogImg.map((img, index) => 
+        <div 
+          className = {index === imgIndex 
+            ? 'slide activeSlide' 
+            : 'slide'
+          } 
+          key={index}
+        >
+          <img src={img} alt="blog photos" />
         </div>
-      ))}
+      )}
     </Slider>
     </>
   )

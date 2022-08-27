@@ -386,25 +386,40 @@ input, button {
   line-height: 32px;
 }
 /* ---------- 2. Img Slider ---------- */
-.carousel {
-  max-height: 50%;
-  overflow-x: scroll;
+.slide {
+  transform: scale(0.3);
+  transition: transform 300ms;
+  opacity: 0.5;
 }
-.inner-carousel {
-  display: flex;
+.activeSlide {
+  transform: scale(1);
+  opacity: 1;
 }
-.inner-carousel img {
-  max-width: 45vw;
-  height: auto;
-  padding: 0 10px;
-  pointer-events: none;
+.slide img {
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
 }
-figcaption {
-  font-size: 12px;
-  font-style: italic;
-  line-height: 1;
-  color: #777;
-  padding: 0 5px;
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow svg {
+  transition: color 300ms;
+  font-size: 2.5rem;
+}
+.arrow svg:hover {
+  color: #68edff;
+}
+.next {
+  right: 0%;
+  top: 50%;
+}
+.prev {
+  left: 0%;
+  top: 50%;
 }
 /* ---------- 3. Progress Bar ---------- */
 .progress-bar {
@@ -441,39 +456,6 @@ figcaption {
 
 
 /* -------------------- TESTING -------------------- */
-/* ---------- ImgSlider ---------- */
-.slide img {
-  width: 20rem;
-  margin: 0 auto;
-}
-.slide {
-  transform: scale(0.2);
-  transition: transform 300ms;
-  opacity: 0.5;
-}
-.activeSlide {
-  transform: scale(1.1);
-  opacity: 1;
-}
-.arrow {
-  position: absolute;
-  cursor: pointer;
-  z-index: 10;
-}
-.arrow svg {
-  transition: color 300ms;
-}
-.arrow svg:hover {
-  color: #68edff;
-}
-.next {
-  right: 0%;
-  top: 50%;
-}
-.prev {
-  left: 0%;
-  top: 50%;
-}
 /* ---------- Comment ---------- */
 .write {
   padding-top: 50px;

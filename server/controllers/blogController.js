@@ -5,7 +5,7 @@ const createBlog = async (req, res) => {
   const newBlog = new Blog(req.body);
   try {
     const saveBlog = await newBlog.save();
-    res.status(200).json(saveBlog);
+    res.status(200).json('New blog is created');
   } catch (err) {
     res.status(500).json(err);
   }
@@ -18,7 +18,7 @@ const allBlogs = async (req, res) => {
     res.status(200).json(blogs);
   }
   catch (err) {
-    res.status(500).json('Page not found');
+    res.status(500).json('Blog not found');
   }
 }
 const singleBlog = async (req, res) => {
