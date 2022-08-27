@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Slider from 'react-slick';
+import { useState } from 'react';
+import { useLocation } from 'react-router';
+// hooks
+import useFetch from '../../hooks/useFetch';
 // style
+import Slider from 'react-slick';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 // img
@@ -13,9 +15,12 @@ import taken from '../../assets/img/ImgSlider/taken.png';
 const images = [astronaut, celebrating, education, taken];
 
 const ImgSlider = () => {
-  // testing
-  const { id } = useParams();
-  const [blog, setBlog] = useState(null);
+  const location = useLocation();
+  const path = location.pathname.split('/')[2];
+  const { data: blog, isPending } = useFetch('/blogs/' + path);
+
+
+
   const [imageIndex, setImageIndex] = useState(0);
 
   const NextArrow = ({ onClick }) => {
@@ -48,21 +53,10 @@ const ImgSlider = () => {
   
   return (
     <>
-    {/* {blog ? (
-      <Slider {...settings}>
-        {blog.img.map((image, idx) => (
-          <div className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
-            <img src={image} alt='some pics' />
-          </div>
-        ))}
-      </Slider>
-    ) 
-      : <h1>Error</h1>
-    } */}
     <Slider {...settings}>
-      {images.map((img, idx) => (
-        <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-          <img src={img} alt={img} />
+      {images.map((img, index, i) => (
+        <div className = {index === imageIndex ? "slide activeSlide" : "slide"} key={i}>
+          <img src={img} alt='blog photos' />
         </div>
       ))}
     </Slider>
@@ -70,4 +64,4 @@ const ImgSlider = () => {
   )
 }
 
-export default ImgSlider
+export default ImgSlider;

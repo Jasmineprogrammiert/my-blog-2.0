@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // components
 import Empty from '../../components/BlogHome/Empty';
 import ProgressBar from '../../components/Blog/ProgressBar';
+import ImgSlider from '../../components/_testing_/ImgSlider';
 // hooks
 import useFetch from '../../hooks/useFetch';
 // style
@@ -37,10 +38,10 @@ const Blog = () => {
     <Link to="/blog">
       <ArrowBackIcon id="goBack-icon" style={{ fontSize: "28px" }} />
     </Link>
-    <h1 data-aos="fade-down">{blog.title}</h1>
     {blog && !isPending ? (
       <div className="blog" data-aos="fade-down">
         <header>
+          <h1>{blog.title}</h1>
           <p className="blog-subHeading">
             {new Date(blog.createdAt).toDateString()}
             <AccessTimeRoundedIcon id="readTime-icon" />
@@ -53,6 +54,7 @@ const Blog = () => {
             <p key={i}>{p}</p>
           )}
         </div>
+        <ImgSlider />
       </div>
     ) : (
         <Empty />

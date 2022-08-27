@@ -1,39 +1,66 @@
 const Blog = require('../models/blogModel');
 
+// create
+const createBlog = async (req, res) => {
+  const newBlog = new Blog(req.body);
+  try {
+    const saveBlog = await newBlog.save();
+    res.status(200).json(saveBlog);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+}
+
+// read
 const allBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find({}).sort({ createdAt: -1 });
     res.status(200).json(blogs);
   }
   catch (err) {
-    res.status(500).json(err);
+    res.status(500).json('Page not found');
   }
 }
-
 const singleBlog = async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
     res.status(200).json(blog);
   } 
   catch (err) {
-    // res.status(500).json(err);
-    res.status(500).json('Blog not found');
+    res.status(500).json(err);
   }
 }
 
-// const newBlog = async (req, res) => {
-//   const newBlog = new Blog(req.body);
-//   try {
-//     const savedBlog = await newBlog.save();
-//     res.status(200).json(savedBlog);
-//   }
-//   catch (err) {
-//     res.status(500).json(err);
-//   }
-// }
+// update
+const updateBlog = async (req, res) => {
+  try {
+    const updateBlog = await Blog.findByIdAndUpdate
+    (
+      req.params.id,
+      { $set: req.body },
+      { new: true }
+    );
+    res.status(200).json(updateBlog);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+}
+
+// delete
+const deleteBlog = async (req, res) => {
+  const blog = await Blog.findById(req.params.id);
+  try {
+    await blog.delete();
+    res.status(200).json('Blog is deleted');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+}
 
 module.exports = {
+  createBlog,
   allBlogs,
   singleBlog,
-  // newBlog,
+  updateBlog,
+  deleteBlog
 }

@@ -357,13 +357,13 @@ input, button {
 .blog header h1 {
   font-size: 4.3vw;
   letter-spacing: 5px;
-  margin-top: 5vh;
+  margin-top: 4.5vh;
 }
 .blog-subHeading {
-  font-size: 1.3vw;
+  font-size: 1.35vw;
   color: hsl(0, 0%, 50%);
   text-align: center;
-  margin-top: -.2rem;
+  margin-top: .8rem;
 }
 #readTime-icon {
   font-size: 1rem;
@@ -378,12 +378,12 @@ input, button {
 .blog-desc {
   font-size: 1.3vw;
   text-align: justify;
-  line-height: 2.3vw;
-  margin: 0 20vw;
+  margin: 0 18%;
   padding-bottom: 2.5rem;
 }
 .blog-desc p {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.8rem;
+  line-height: 32px;
 }
 /* ---------- 2. Img Slider ---------- */
 .carousel {

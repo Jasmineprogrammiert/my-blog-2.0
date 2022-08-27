@@ -4,7 +4,7 @@ const BlogSchema = new mongoose.Schema(
   {
     coverImg: {
       type: String,
-      required: false,
+      required: true,
     },
     title: {
       type: String,
@@ -12,7 +12,7 @@ const BlogSchema = new mongoose.Schema(
     },
     date: {
       type: String,
-      required: false,
+      required: true,
     },
     category: {
       type: Array,
@@ -28,7 +28,11 @@ const BlogSchema = new mongoose.Schema(
     },
     bannerImg: {
       type: String,
-      required: false,
+      required: true,
+    },
+    blogImg: {
+      type: Array,
+      required: true,
     },
     description: {
       type: Object,
