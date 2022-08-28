@@ -11,7 +11,6 @@ import LogIn from './pages/auth/LogIn';
 import Settings from './components/_testing_/Settings';
 import More from './pages/More';
 // testing
-import ImgSlider from './components/_testing_/ImgSlider';
 import { Context } from './context/Context';
 import useModeSwitch from './hooks/useModeSwitch';
 // styles
@@ -43,9 +42,7 @@ const App = () => {
             <Route path="login" element={user ? <BlogHome /> : <LogIn />}/>
             <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
             <Route path="more" element={<More />} />
-            <Route path="*" element={<About />} />
-            {/* testing */}
-            <Route path="imgslider" element={<ImgSlider />} />
+            <Route path="*" element={<Blog />} />
           </Routes>
         </Suspense>
       </div>

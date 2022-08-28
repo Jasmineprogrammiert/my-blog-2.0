@@ -82,7 +82,17 @@
 #light .blogCard-preview {
   color: hsl(209, 34%, 26%);
 }
-/* ---------- 7. Progress Bar ---------- */
-#light .progress-bar {
+/* --------------- Blog (3) --------------- */
+/* ---------- 1. Progress Bar ---------- */
+#light .progress-bar,
+#light .img_dots li button {
   background: hsl(350, 100%, 85%);
+}
+/* ---------- 3. Img Slider ---------- */
+#light .img_dots li.slick-active button {
+  background-color: hsl(350, 100%, 70%);
+}
+#light .img_dots li button:hover,
+.img_dots li button:focus {
+  background: hsl(350, 100%, 60%);
 }

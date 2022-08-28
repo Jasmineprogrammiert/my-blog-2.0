@@ -32,7 +32,7 @@ h1, h2 {
 h3, label {
   font-family: 'Hahmlet', serif;
 }
-p {
+p, li {
   font-family: 'Merriweather', serif;
   text-align: justify;
   line-height: 1.6;
@@ -344,7 +344,17 @@ input, button {
   margin-top: 5.5vh;
 }
 /* --------------- Blog (3)  --------------- */
-/* ---------- 1. Blog ---------- */
+/* ------- 1. Progress Bar ------- */
+.progress-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: lightblue;
+  transform-origin: 0%;
+  z-index: 100;
+}
+/* ---------- 2. Blog ---------- */
 #goBack-icon {
   margin: 1.2vh 0 0 91vw;
   font-size: 1.45rem;
@@ -360,7 +370,7 @@ input, button {
   margin-top: 4.5vh;
 }
 .blog-subHeading {
-  font-size: 1.35vw;
+  font-size: 1.2vw;
   color: hsl(0, 0%, 50%);
   text-align: center;
   margin-top: .8rem;
@@ -374,62 +384,71 @@ input, button {
   vertical-align: middle;
   object-fit: cover;
   margin-bottom: 1.5rem;
+  margin-top: -2vh;
 }
 .blog-desc {
   font-size: 1.3vw;
   text-align: justify;
   margin: 0 18%;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.3rem;
 }
 .blog-desc p {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.3rem;
   line-height: 32px;
 }
-/* ---------- 2. Img Slider ---------- */
-.slide {
-  transform: scale(0.3);
-  transition: transform 300ms;
-  opacity: 0.5;
+/* ---------- testing ---------- */
+.blog-row {
+  display: flex;
+  text-align: justify;
+  padding: 0 15vw;
+  font-size: 1.3vw;
 }
-.activeSlide {
-  transform: scale(1);
-  opacity: 1;
+.blog-row ul {
+  padding: 0 3vw 2.5vh;
 }
-.slide img {
-  width: 100%;
+.blog-column li {
+  list-style: square inside !important;
+}
+.blog-column-l {
+  flex: 45%;
+}
+.blog-column-m {
+  flex: 25%;
+}
+.blog-column-r {
+  flex: 25%;
+}
+/* ------- 3. Img Slider ------- */
+.img-slider {
+  padding: 0 20vw;
+  margin-bottom: -1rem;
+}
+.img_dots {
+  display: inline-block;
+  text-align: center;
   vertical-align: middle;
-  object-fit: cover;
-  margin-bottom: 1.5rem;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 1.3rem;
 }
-.arrow {
-  position: absolute;
-  cursor: pointer;
-  z-index: 10;
+.img_dots li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 1rem;
 }
-.arrow svg {
-  transition: color 300ms;
-  font-size: 2.5rem;
-}
-.arrow svg:hover {
-  color: #68edff;
-}
-.next {
-  right: 0%;
-  top: 50%;
-}
-.prev {
-  left: 0%;
-  top: 50%;
-}
-/* ---------- 3. Progress Bar ---------- */
-.progress-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 10px;
+.img_dots li button {
   background: lightblue;
-  transform-origin: 0%;
-  z-index: 100;
+  color: transparent;
+  height: .6rem;
+  width: .6rem;
+  border-radius: 7.5px;
+}
+.img_dots li.slick-active button {
+  background-color: hsl(209, 34%, 45%);
+}
+.img_dots li button:hover,
+.img_dots li button:focus {
+  background: hsl(240, 100%, 77%);
 }
 /* ---------- More ---------- */
 .more-header {
