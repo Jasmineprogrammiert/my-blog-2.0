@@ -423,7 +423,26 @@ input, button {
   padding: 0 20vw;
   margin-bottom: -1rem;
 }
-.img_dots {
+.img-arrow {
+   position: absolute;
+   cursor: pointer;
+   z-index: 10;
+   top: 50%;
+ }
+ .img-arrow svg {
+   font-size: 2.5rem;
+   color: lightblue;
+ }
+ .img-arrow svg:hover {
+  color: hsl(195, 53%, 59%);
+ }
+ .img-arrow-next {
+   right: 16%;
+ }
+ .img-arrow-prev {
+   left: 16%;
+ }
+ .img_dots {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -444,11 +463,11 @@ input, button {
   border-radius: 7.5px;
 }
 .img_dots li.slick-active button {
-  background-color: hsl(209, 34%, 45%);
+  background-color: hsl(195, 53%, 59%);
 }
 .img_dots li button:hover,
 .img_dots li button:focus {
-  background: hsl(240, 100%, 77%);
+  background: hsl(247, 28%, 68%);
 }
 /* ---------- More ---------- */
 .more-header {
