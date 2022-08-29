@@ -80,7 +80,8 @@ input, button {
   object-fit: cover;
   cursor: pointer;
 }
-/* ---------- About - Front Page ---------- */
+/* --------------- About (4) --------------- */
+/* ---------- About - Sec.1 ---------- */
 .about-sec-1 {
   height: 100vh;
 }
@@ -355,6 +356,13 @@ input, button {
   z-index: 100;
 }
 /* ---------- 2. Blog ---------- */
+/* -------- Blog - universal -------- */
+.blog img {
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+/* -------- Blog - icons -------- */
 #goBack-icon {
   margin: 1.2vh 0 0 91vw;
   font-size: 1.45rem;
@@ -364,50 +372,52 @@ input, button {
   text-indent: .1rem;
   transition: .5s ease-out;
 }
-.blog header h1 {
-  font-size: 4.3vw;
-  letter-spacing: 5px;
-  margin-top: 4.5vh;
-}
-.blog-subHeading {
-  font-size: 1.2vw;
-  color: hsl(0, 0%, 50%);
-  text-align: center;
-  margin-top: .8rem;
-}
 #readTime-icon {
   font-size: 1rem;
   margin: 0 .2rem 0 2vw;
 }
-.blog img {
-  width: 100%;
-  vertical-align: middle;
-  object-fit: cover;
+/* -------- Blog - header -------- */
+.blog header {
+  position: relative;
+  background: rgba(0, 0, 0, .75);
+  margin-top: .4rem;
   margin-bottom: 1.5rem;
-  margin-top: -2vh;
 }
-.blog-desc {
-  font-size: 1.3vw;
-  text-align: justify;
-  margin: 0 18%;
-  padding-bottom: 1.3rem;
+.blog header img {
+  opacity: .3;
 }
-.blog-desc p {
-  margin-bottom: 1.3rem;
-  line-height: 32px;
-}
-/* ---------- testing ---------- */
+.blog header h1, 
+.blog header p, 
 .blog-row {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 100%;
+}
+.blog header h1 {
+  top: 50%;
+  font-size: 4.5vw;
+  letter-spacing: 5px;
+}
+.blog header p {
+  top: 63%;
+  font-size: 1.2vw;
+  text-align: center;
+}
+.blog-row {
+  top: 88%;
   display: flex;
   text-align: justify;
   padding: 0 15vw;
   font-size: 1.3vw;
+
+  display: none;
 }
 .blog-row ul {
   padding: 0 3vw 2.5vh;
 }
-.blog-column li {
-  list-style: square inside !important;
+.blog-row li {
+  list-style: square;
 }
 .blog-column-l {
   flex: 45%;
@@ -418,9 +428,20 @@ input, button {
 .blog-column-r {
   flex: 25%;
 }
+/* -------- Blog - content -------- */
+.blog-desc {
+  font-size: 1.3vw;
+  text-align: justify;
+  margin: 0 18%;
+  padding-bottom: 1.3rem;
+}
+.blog-desc p {
+  margin-bottom: 1.3rem;
+  line-height: 32px;
+}
 /* ------- 3. Img Slider ------- */
 .img-slider {
-  padding: 0 20vw;
+  padding: 0 18vw;
   margin-bottom: -1rem;
 }
 .img-arrow {
@@ -437,10 +458,10 @@ input, button {
   color: hsl(195, 53%, 59%);
  }
  .img-arrow-next {
-   right: 16%;
+   right: 13.5%;
  }
  .img-arrow-prev {
-   left: 16%;
+   left: 13.5%;
  }
  .img_dots {
   display: inline-block;

@@ -41,14 +41,13 @@ const Blog = () => {
     {blog && !isPending ? (
       <div className="blog" data-aos="fade-down">
         <header>
+          <img src={blog.bannerImg} alt="blog cover" />
           <h1>{blog.title}</h1>
-          <p className="blog-subHeading">
-            Updated on {new Date(blog.updatedAt).toDateString().split(' ').slice(1).join(' ')}
+          <p>
+            {new Date(blog.createdAt).toDateString().split(' ').slice(1).join(' ')}
             <AccessTimeRoundedIcon id="readTime-icon" />
             {blog.readTime} min read
           </p>
-
-        
           <div className="blog-row">
             <ul className="blog-column-l">
               <li>
@@ -64,10 +63,8 @@ const Blog = () => {
               <li>Elevation: 887 m</li>
             </ul>
           </div>
-
         </header>
-        
-        <img src={blog.bannerImg} alt="blog cover" />
+
         <div className="blog-desc">
           {blog.description && blog.description.slice(0, 4).map((p, i) => 
             <p key={i}>{p}</p>
