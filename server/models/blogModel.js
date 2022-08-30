@@ -2,10 +2,20 @@ const mongoose = require('mongoose');
 
 const BlogSchema = new mongoose.Schema(
   {
-    coverImg: {
+    // images
+    cover_img: {
       type: String,
       required: true,
     },
+    banner_img: {
+      type: String,
+      required: true,
+    },
+    slider_img: {
+      type: Array,
+      required: true,
+    },
+    // blog-header
     title: {
       type: String,
       required: true,
@@ -22,21 +32,19 @@ const BlogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    readTime: {
+    read_time: {
       type: String,
       required: true,
     },
-    bannerImg: {
-      type: String,
-      required: true,
-    },
-    blogImg: {
+    // blog-body
+    description: {
       type: Array,
       required: true,
     },
-    description: {
+    // hiking-info
+    hiking_info: {
       type: Object,
-      required: true,
+      required: false,
     },
   }, { timestamps: true }
 );

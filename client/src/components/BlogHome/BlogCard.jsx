@@ -5,16 +5,11 @@ import AOS from 'aos';
 const BlogCard = ({ 
   blog: {
     _id,
-    coverImg,
+    cover_img,
     title,
     date,
     category,
-    preview,
-    readTime,
-    bannerImg,
-    description,
-    createdAt,
-    updatedAt
+    preview
   },
 }) => {
 
@@ -44,7 +39,7 @@ const BlogCard = ({
         to={`/blog/${_id}`}
         className="blogCard-link" 
       >
-        <img src={coverImg} alt="blog cover" />
+        <img src={cover_img} alt="blog cover" />
         <h3>{title}</h3>
       </Link>
       <p>{date}</p>

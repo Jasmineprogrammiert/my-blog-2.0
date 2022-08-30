@@ -395,7 +395,7 @@ input, button {
   width: 100%;
 }
 .blog header h1 {
-  top: 50%;
+  top: 48%;
   font-size: 4.5vw;
   letter-spacing: 5px;
 }
@@ -405,13 +405,12 @@ input, button {
   text-align: center;
 }
 .blog-row {
-  top: 88%;
+  top: 85%;
   display: flex;
   text-align: justify;
   padding: 0 15vw;
   font-size: 1.3vw;
-
-  display: none;
+  /* display: none; */
 }
 .blog-row ul {
   padding: 0 3vw 2.5vh;
@@ -423,11 +422,72 @@ input, button {
   flex: 45%;
 }
 .blog-column-m {
-  flex: 25%;
+  flex: 26%;
 }
 .blog-column-r {
   flex: 25%;
 }
+
+
+
+
+
+/* ---------- testing ---------- */
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.container img {
+  vertical-align: middle;
+}
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.container-testing {
+  position: relative;
+  /* max-width: 800px; */
+  margin: 0 auto;
+}
+.container-testing img {
+  vertical-align: middle;
+  opacity: 1;
+}
+.content-testing {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -------- Blog - content -------- */
 .blog-desc {
   font-size: 1.3vw;
@@ -501,13 +561,6 @@ input, button {
   margin-top: -40vh;
   margin-left: -1vw;
 }
-
-
-
-
-
-
-
 
 
 

@@ -40,30 +40,46 @@ const Blog = () => {
     </Link>
     {blog && !isPending ? (
       <div className="blog" data-aos="fade-down">
-        <header>
-          <img src={blog.bannerImg} alt="blog cover" />
-          <h1>{blog.title}</h1>
-          <p>
-            {new Date(blog.createdAt).toDateString().split(' ').slice(1).join(' ')}
-            <AccessTimeRoundedIcon id="readTime-icon" />
-            {blog.readTime} min read
-          </p>
-          <div className="blog-row">
-            <ul className="blog-column-l">
-              <li>
-                Route: East Dam {'->'} Sai Wan {'->'} Ham Tin Wan {'->'} Tai Long Au {'->'} Pak Tam Au
-              </li>
-            </ul>
-            <ul className="blog-column-m">
-              <li>Length: 14.78 km</li>
-              <li>Moving time: 5 hrs</li>
-            </ul>
-            <ul className="blog-column-r">
-              <li>Difficulty: 3.5*</li>
-              <li>Elevation: 887 m</li>
-            </ul>
+        <header className="container-testing">
+          <img src={blog.banner_img} alt="blog cover" />
+
+          <div className="content-testing">
+            <h1>{blog.title}</h1>
+            <p>
+              {new Date(blog.createdAt).toDateString().split(' ').slice(1).join(' ')}
+              <AccessTimeRoundedIcon id="readTime-icon" />
+              {blog.read_time} min read
+            </p>
+            <div className="blog-row">
+              <ul className="blog-column-l">
+                <li>Route: {blog.hiking_info.route}</li>
+              </ul>
+              <ul className="blog-column-m">
+                <li>Length: {blog.hiking_info.length} km</li>
+                <li>Moving time: {blog.hiking_info.moving_time} hrs</li>
+              </ul>
+              <ul className="blog-column-r">
+                <li>Difficulty: {blog.hiking_info.difficulty}*</li>
+                <li>Elevation: {blog.hiking_info.elevation} m</li>
+              </ul>
+            </div>
           </div>
         </header>
+
+
+        <div className="container">
+          <img src="https://lieblingsjasmin.s3.ap-southeast-1.amazonaws.com/img/2022-08/my-go-to-places-on-weekend/00-cover-img.jpg" alt="Notebook" style={{width:"100"}} />
+          <div className="content">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+          </div>
+        </div>
+
+
+
+
+
+
 
         <div className="blog-desc">
           {blog.description && blog.description.slice(0, 4).map((p, i) => 
