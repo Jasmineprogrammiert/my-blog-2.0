@@ -1,12 +1,13 @@
 import InstagramIcon from '@mui/icons-material/Instagram';
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Avatar from '@mui/material/Avatar';
 
 const Footer = () => {
   return (
   <>
-  <div id="contact">
-    <a href="https://github.com/Jasmineprogrammiert" target="_blank">
-      <InstagramIcon className="icons" />
+  <div id="footer">
+    <a href="https://www.instagram.com/deinelieblingsjasmin/" target="_blank">
+      <InstagramIcon className="ins-icon" />
     </a>
     <footer>
       <small>
@@ -14,7 +15,12 @@ const Footer = () => {
       </small>
     </footer>
     <a href="#top">
-      <KeyboardDoubleArrowUpIcon className="icon" />
+      <Avatar 
+        sx={{ height: '40px', width: '40px' }}
+        className="backtoTop-icon-container"
+      >
+        <KeyboardArrowUpIcon className="backtoTop-icon" />
+      </Avatar>
     </a>
   </div>
   </>

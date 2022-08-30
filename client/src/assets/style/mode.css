@@ -89,14 +89,24 @@
   background: hsl(350, 100%, 85%);
 }
 /* ---------- 2. Blog ---------- */
-#light .blog header {
-  background: hsl(0, 0%, 53%);
+#light .blog-header {
+  color: #f1f1f1;
 }
 /* ---------- 3. Img Slider ---------- */
+#light .img-arrow svg {
+  color: hsl(350, 100%, 85%);
+}
+#light .img-arrow svg:hover {
+  color: hsl(350, 100%, 70%);
+}
 #light .img_dots li.slick-active button {
   background-color: hsl(350, 100%, 70%);
 }
 #light .img_dots li button:hover,
 .img_dots li button:focus {
-  background: hsl(350, 100%, 60%);
+  background: hsl(300, 76%, 52%);
+}
+/* --------------- Footer --------------- */
+#light .backtoTop-icon-container {
+  background-color: hsl(350, 100%, 85%) !important;
 }

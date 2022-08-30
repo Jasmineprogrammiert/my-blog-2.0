@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-    <header className="blog-header">
+    <header className="blogHome-header">
       <img 
         className="blog-img-0" 
         src={floral} alt="magnolia" 

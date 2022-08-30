@@ -32,7 +32,7 @@ h1, h2 {
 h3, label {
   font-family: 'Hahmlet', serif;
 }
-p, li {
+p, li, footer {
   font-family: 'Merriweather', serif;
   text-align: justify;
   line-height: 1.6;
@@ -79,6 +79,30 @@ input, button {
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+}
+/* ---------- Footer ---------- */
+#footer {
+  /* background-color: rgb(51, 121, 167); */
+  padding: 3% 18% 2.5%;
+}
+.ins-icon {
+  font-size: 3.8vw !important;
+  padding: 3px;
+  border-radius: 14px;
+  margin-bottom: .5vh;
+  color: white;
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+footer {
+  font-size: 1.2vw;
+  width: 50%;
+}
+.backtoTop-icon-container {
+  margin: -7.7vh 0 0 74vw;
+  background-color: lightblue !important;
+}
+.backtoTop-icon {
+  font-size: 2.8vw !important;
 }
 /* --------------- About (4) --------------- */
 /* ---------- About - Sec.1 ---------- */
@@ -204,7 +228,7 @@ input, button {
 }
 /* --------------- BlogHome (5) --------------- */
 /* ---------- 1. Header ---------- */
-.blog-header {
+.blogHome-header {
   position: relative;
 }
 .blog-img-0 {
@@ -222,11 +246,10 @@ input, button {
   margin-left: 22vw;
   transform: rotate(33deg);
 }
-.blog-header h1 {
+.blogHome-header h1 {
   font-size: 4.7vw;
   letter-spacing: 3px;
   margin-top: 5vh;
-  margin-bottom: 6.5vh;
   margin-bottom: 5.5vh;
 }
 .accordion {
@@ -354,15 +377,16 @@ input, button {
   background: lightblue;
   transform-origin: 0%;
   z-index: 100;
+  margin-top: -.15rem;
 }
-/* ---------- 2. Blog ---------- */
-/* -------- Blog - universal -------- */
+/* ---------- 2. Main Content ---------- */
+/* -------- universal -------- */
 .blog img {
   width: 100%;
   vertical-align: middle;
   object-fit: cover;
 }
-/* -------- Blog - icons -------- */
+/* -------- icons -------- */
 #goBack-icon {
   margin: 1.2vh 0 0 91vw;
   font-size: 1.45rem;
@@ -376,7 +400,7 @@ input, button {
   font-size: 1rem;
   margin: 0 .2rem 0 2vw;
 }
-/* -------- Blog - header -------- */
+/* -------- header -------- */
 .blog header {
   position: relative;
   margin-top: .4rem;
@@ -384,14 +408,15 @@ input, button {
 }
 .blog-header {
   position: absolute;
-  color: #f1f1f1;
-  background: rgba(0, 0, 0, .45); 
-  width: 100%;
   bottom: 0;
+  width: 100%;
+  color: hsl(195, 53%, 85%);
+  background: rgba(0, 0, 0, .45); 
 }
 .blog header h1 {
   font-size: 4.5vw;
   letter-spacing: 5px;
+  margin: 5vh 0;
 }
 .blog header p {
   font-size: 1.2vw;
@@ -405,12 +430,11 @@ input, button {
   font-size: 1.3vw;
   display: grid;
   grid-template-columns: auto auto auto;
-  /* display: none; */
 }
 .blog-row li {
   list-style: square;
 }
-/* -------- Blog - content -------- */
+/* -------- body -------- */
 .blog-desc {
   font-size: 1.3vw;
   text-align: justify;
@@ -470,7 +494,7 @@ input, button {
 }
 .img_dots li button:hover,
 .img_dots li button:focus {
-  background: hsl(247, 28%, 68%);
+  background: hsl(300, 76%, 72%);
 }
 /* ---------- More ---------- */
 .more-header {
@@ -483,23 +507,12 @@ input, button {
   margin-top: -40vh;
   margin-left: -1vw;
 }
-/* ---------- Footor ---------- */
-#contact {
-  padding: 9vh 0 5.5vh 12vw;
-  background-color: rgb(20, 20, 20);
-}
-.icons {
-  font-size: 4vw !important;
-  margin: 0 .5vw .5vh 0;
-}
-.icon {
-  font-size: 2vw !important;
-  margin: -7.7vh 0 0 74vw;
-}
-footer {
-  font-size: 1.4vw;
-  width: 50%;
-}
+
+
+
+
+
+
 
 
 
