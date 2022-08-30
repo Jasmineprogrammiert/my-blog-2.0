@@ -10,6 +10,7 @@ import SignUp from './pages/auth/SignUp';
 import LogIn from './pages/auth/LogIn';
 import Settings from './components/_testing_/Settings';
 import More from './pages/More';
+import Footer from './components/universal/Footer';
 // testing
 import { Context } from './context/Context';
 import useModeSwitch from './hooks/useModeSwitch';
@@ -44,6 +45,7 @@ const App = () => {
             <Route path="more" element={<More />} />
             <Route path="*" element={<Blog />} />
           </Routes>
+          <Footer />
         </Suspense>
       </div>
     </ThemeContext.Provider>

@@ -483,6 +483,23 @@ input, button {
   margin-top: -40vh;
   margin-left: -1vw;
 }
+/* ---------- Footor ---------- */
+#contact {
+  padding: 9vh 0 5.5vh 12vw;
+  background-color: rgb(20, 20, 20);
+}
+.icons {
+  font-size: 4vw !important;
+  margin: 0 .5vw .5vh 0;
+}
+.icon {
+  font-size: 2vw !important;
+  margin: -7.7vh 0 0 74vw;
+}
+footer {
+  font-size: 1.4vw;
+  width: 50%;
+}
 
 
 
