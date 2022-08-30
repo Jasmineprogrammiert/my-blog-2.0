@@ -379,115 +379,37 @@ input, button {
 /* -------- Blog - header -------- */
 .blog header {
   position: relative;
-  background: rgba(0, 0, 0, .75);
   margin-top: .4rem;
   margin-bottom: 1.5rem;
 }
-.blog header img {
-  opacity: .3;
-}
-.blog header h1, 
-.blog header p, 
-.blog-row {
+.blog-header {
   position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, .45); 
   width: 100%;
+  bottom: 0;
 }
 .blog header h1 {
-  top: 48%;
   font-size: 4.5vw;
   letter-spacing: 5px;
 }
 .blog header p {
-  top: 63%;
   font-size: 1.2vw;
   text-align: center;
+  margin-top: -.8rem;
+  padding-bottom: .8rem;
 }
 .blog-row {
-  top: 85%;
-  display: flex;
-  text-align: justify;
   padding: 0 15vw;
+  margin: -.8rem 0 .8rem 1vw ;
   font-size: 1.3vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
   /* display: none; */
-}
-.blog-row ul {
-  padding: 0 3vw 2.5vh;
 }
 .blog-row li {
   list-style: square;
 }
-.blog-column-l {
-  flex: 45%;
-}
-.blog-column-m {
-  flex: 26%;
-}
-.blog-column-r {
-  flex: 25%;
-}
-
-
-
-
-
-/* ---------- testing ---------- */
-.container {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.container img {
-  vertical-align: middle;
-}
-.container .content {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
-
-
-.container-testing {
-  position: relative;
-  /* max-width: 800px; */
-  margin: 0 auto;
-}
-.container-testing img {
-  vertical-align: middle;
-  opacity: 1;
-}
-.content-testing {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* -------- Blog - content -------- */
 .blog-desc {
   font-size: 1.3vw;
@@ -502,7 +424,7 @@ input, button {
 /* ------- 3. Img Slider ------- */
 .img-slider {
   padding: 0 18vw;
-  margin-bottom: -1rem;
+  margin-bottom: .5rem;
 }
 .img-arrow {
    position: absolute;

@@ -36,7 +36,6 @@ const ImgSlider = () => {
     autoplaySpeed: 3000,
     dots: true,
     dotsClass: 'img_dots',
-    // arrows: false,
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
