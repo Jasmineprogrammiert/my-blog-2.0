@@ -1,8 +1,11 @@
 import { createContext, Suspense, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-// components
+// components - universal
 import NavigationBar from './components/universal/Navbar';
 import ModeSwitch from './components/universal/ModeSwitch';
+import BackToTopp from './components/universal/BackToTop';
+import Footer from './components/universal/Footer';
+// components - pages
 import About from './pages/About';
 import BlogHome from './pages/Blog/BlogHome';
 import Blog from './pages/Blog/Blog';
@@ -10,9 +13,7 @@ import SignUp from './pages/auth/SignUp';
 import LogIn from './pages/auth/LogIn';
 import Settings from './components/_testing_/Settings';
 import More from './pages/More';
-import Footer from './components/universal/Footer';
-// testing
-import { Context } from './context/Context';
+// hooks
 import useModeSwitch from './hooks/useModeSwitch';
 // styles
 import { Spinner } from 'react-bootstrap';
@@ -21,6 +22,8 @@ import 'aos/dist/aos.css';
 import './assets/style/global.css';
 import './assets/style/mode.css';
 import './assets/style/media.css';
+// testing
+import { Context } from './context/Context';
 
 export const ThemeContext = createContext(null);
 
@@ -46,6 +49,7 @@ const App = () => {
             <Route path="*" element={<Blog />} />
           </Routes>
           <Footer />
+          <BackToTopp />
         </Suspense>
       </div>
     </ThemeContext.Provider>

@@ -107,6 +107,6 @@
   background: hsl(300, 76%, 52%);
 }
 /* --------------- Footer --------------- */
-#light .backtoTop-icon-container {
-  background-color: hsl(350, 100%, 85%) !important;
+#light #backtoTop-icon-container {
+  background-color: hsl(350, 100%, 85%);
 }
