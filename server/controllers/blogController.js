@@ -4,7 +4,7 @@ const Blog = require('../models/blogModel');
 const createBlog = async (req, res) => {
   const newBlog = new Blog(req.body);
   try {
-    const saveBlog = await newBlog.save();
+    await newBlog.save();
     res.status(200).json('New blog is created');
   } catch (err) {
     res.status(500).json(err);

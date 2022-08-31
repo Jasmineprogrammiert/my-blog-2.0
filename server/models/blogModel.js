@@ -15,6 +15,10 @@ const BlogSchema = new mongoose.Schema(
       type: Array,
       required: true,
     },
+    figcaption: {
+      type: Array,
+      required: false,
+    },
     // blog-header
     title: {
       type: String,

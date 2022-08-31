@@ -81,12 +81,12 @@ input, button {
   cursor: pointer;
 }
 /* ---------- BackToTop ---------- */
-#backtoTop-icon-container {
+#backtoTop-container {
   background-color: lightblue;
   z-index: 100;
 }
-#backtoTop-icon {
-  font-size: 2.8vw;
+#backtoTop {
+  font-size: 2.5vw;
 }
 /* ---------- Footer ---------- */
 #footer {
@@ -449,7 +449,19 @@ footer {
 .img-slider {
   padding: 0 18vw;
   margin-bottom: .5rem;
+  position: relative;
 }
+.img-slider figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+  text-align: center;
+  color: #fff; 
+  padding: 6px;
+}
+
+
+
 .img-arrow {
    position: absolute;
    cursor: pointer;

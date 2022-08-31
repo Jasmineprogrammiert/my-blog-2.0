@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Empty from '../../components/BlogHome/Empty';
 import ProgressBar from '../../components/Blog/ProgressBar';
 import ImgSlider from '../../components/Blog/ImgSlider';
+import ImgSlider_2nd from '../../components/Blog/ImgSlider_2nd';
 // hooks
 import useFetch from '../../hooks/useFetch';
 // style
@@ -72,7 +73,13 @@ const Blog = () => {
         </div>
         <ImgSlider />
         <div className="blog-desc">
-          {blog.description && blog.description.slice(4).map((p, i) => 
+          {blog.description && blog.description.slice(4, 7).map((p, i) => 
+            <p key={i}>{p}</p>
+          )}
+        </div>
+        <ImgSlider_2nd />
+        <div className="blog-desc">
+          {blog.description && blog.description.slice(7).map((p, i) => 
             <p key={i}>{p}</p>
           )}
         </div>

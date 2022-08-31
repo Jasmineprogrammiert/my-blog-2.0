@@ -12,10 +12,10 @@ const BackToTopp = () => {
       easing="easeInOutQuint"
     >
       <Avatar 
-        sx={{ height: '40px', width: '40px' }}
-        id={`backtoTop-icon-container`}
+        sx={{ height: '38px', width: '38px' }}
+        id={`backtoTop-container`}
       >
-        <KeyboardArrowUpIcon id="backtoTop-icon" />
+        <KeyboardArrowUpIcon id="backtoTop" />
       </Avatar>
     </BackToTop>
     </>

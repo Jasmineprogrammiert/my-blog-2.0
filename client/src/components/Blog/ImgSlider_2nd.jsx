@@ -5,10 +5,8 @@ import useFetch from '../../hooks/useFetch';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Slider from 'react-slick';
-// testing
-import FigCaption from './FigCaption';
 
-const ImgSlider = () => {
+const ImgSlider_2nd = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
   const { data: blog } = useFetch('/blogs/' + path);
@@ -46,30 +44,14 @@ const ImgSlider = () => {
   return (
     <>
     <Slider {...settings}>
-      {blog.slider_img && blog.slider_img.slice(0, 8).map((img, index) => 
-        <figure className="img-slider" key={index}>
+      {blog.slider_img && blog.slider_img.slice(8).map((img, index) => 
+        <div className="img-slider" key={index}>
           <img src={img} alt="blog photos" />
-          <FigCaption />
-          <figcaption>A figcaption</figcaption>
-        </figure>
+        </div>
       )}
-
-      {/* {blog.slider_img && blog.slider_img.slice(0, 8).map((img, index) => {
-        const fig = blog.slider_img[index];
-
-        return (
-          <>
-          <figure className="img-slider" key={index}>
-            <img src={img} alt="blog photos" />
-            <figcaption>{fig}</figcaption>
-          </figure>
-          </>
-        )
-      })} */}
     </Slider>
-    <FigCaption />
     </>
   )
 }
 
-export default ImgSlider;
+export default ImgSlider_2nd;

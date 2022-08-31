@@ -6,7 +6,6 @@ import useYScroll from '../../hooks/useYScroll';
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 // testing
-// import ThemeSwitch from './Testing/ThemeSwitch';
 import { Context } from '../../context/Context';
 
 const NavigationBar = () => {
@@ -85,7 +84,6 @@ const NavigationBar = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             )}
-            {/* <ThemeSwitch /> */}
             <Nav.Link 
               as={NavLink} to="more"
               className="nav-item"
