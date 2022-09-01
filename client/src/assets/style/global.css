@@ -451,6 +451,7 @@ footer {
   margin-bottom: .5rem;
   position: relative;
 }
+/* under development */
 .img-slider figcaption {
   position: absolute;
   bottom: 0;
@@ -459,9 +460,6 @@ footer {
   color: #fff; 
   padding: 6px;
 }
-
-
-
 .img-arrow {
    position: absolute;
    cursor: pointer;

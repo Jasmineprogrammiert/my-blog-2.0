@@ -6,7 +6,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Slider from 'react-slick';
 
-const ImgSlider_2nd = () => {
+const ImgSliderr = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
   const { data: blog } = useFetch('/blogs/' + path);
@@ -45,13 +45,15 @@ const ImgSlider_2nd = () => {
     <>
     <Slider {...settings}>
       {blog.slider_img && blog.slider_img.slice(8).map((img, index) => 
-        <div className="img-slider" key={index}>
+        <figure className="img-slider" key={index}>
           <img src={img} alt="blog photos" />
-        </div>
+          {/* under development */}
+          {/* <figcaption>A figcaption</figcaption> */}
+        </figure>
       )}
     </Slider>
     </>
   )
 }
 
-export default ImgSlider_2nd;
+export default ImgSliderr;

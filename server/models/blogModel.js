@@ -15,7 +15,7 @@ const BlogSchema = new mongoose.Schema(
       type: Array,
       required: true,
     },
-    figcaption: {
+    figcaption: { // under development
       type: Array,
       required: false,
     },

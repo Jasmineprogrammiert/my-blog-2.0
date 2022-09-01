@@ -5,8 +5,6 @@ import useFetch from '../../hooks/useFetch';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Slider from 'react-slick';
-// testing
-import FigCaption from './FigCaption';
 
 const ImgSlider = () => {
   const location = useLocation();
@@ -49,25 +47,11 @@ const ImgSlider = () => {
       {blog.slider_img && blog.slider_img.slice(0, 8).map((img, index) => 
         <figure className="img-slider" key={index}>
           <img src={img} alt="blog photos" />
-          <FigCaption />
-          <figcaption>A figcaption</figcaption>
+          {/* under development */}
+          {/* <figcaption>A figcaption</figcaption> */}
         </figure>
       )}
-
-      {/* {blog.slider_img && blog.slider_img.slice(0, 8).map((img, index) => {
-        const fig = blog.slider_img[index];
-
-        return (
-          <>
-          <figure className="img-slider" key={index}>
-            <img src={img} alt="blog photos" />
-            <figcaption>{fig}</figcaption>
-          </figure>
-          </>
-        )
-      })} */}
     </Slider>
-    <FigCaption />
     </>
   )
 }
