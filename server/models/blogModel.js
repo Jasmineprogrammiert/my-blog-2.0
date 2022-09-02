@@ -11,18 +11,18 @@ const BlogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    // slider_img: {
-    //   type: Array,
-    //   required: true,
-    // },
-    // figcaption: { // under development
-    //   type: Array,
-    //   required: false,
-    // },
-    carousel: {
-      type: Object,
+    slider_img: {
+      type: Array,
       required: true,
     },
+    figcaption: { // under development
+      type: Array,
+      required: false,
+    },
+    // carousel: {
+    //   type: Object,
+    //   required: true,
+    // },
     // blog-header
     title: {
       type: String,

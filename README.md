@@ -9,3 +9,4 @@ Any lint errors can be seen in the console.
 ## Note
 
 banner image - 3 : 1
+blog image - 1.3 : 1

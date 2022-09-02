@@ -46,7 +46,7 @@ const NavigationBar = () => {
             >
               Blog
             </Nav.Link>
-            {user ? (
+            {/* {user ? (
               <>
               <Nav.Link 
                 as={NavLink} to="settings"
@@ -83,13 +83,13 @@ const NavigationBar = () => {
                   Sign Up
                 </NavDropdown.Item>
               </NavDropdown>
-            )}
-            <Nav.Link 
+            )} */}
+            {/* <Nav.Link 
               as={NavLink} to="more"
               className="nav-item"
             >
               More
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

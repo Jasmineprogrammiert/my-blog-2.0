@@ -5,7 +5,6 @@ import Empty from '../../components/BlogHome/Empty';
 import ProgressBar from '../../components/Blog/ProgressBar';
 import ImgSlider from '../../components/Blog/ImgSlider';
 import ImgSliderr from '../../components/Blog/ImgSliderr';
-import Carousels from '../../components/_testing_/Carousel';
 // hooks
 import usePath from '../../hooks/usePath';
 import useFetch from '../../hooks/useFetch';
@@ -72,7 +71,6 @@ const Blog = () => {
           )}
         </div>
         <ImgSlider />
-        <Carousels />
         <div className="blog-desc">
           {blog.description && blog.description.slice(4, 7).map((p, i) => 
             <p key={i}>{p}</p>

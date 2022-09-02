@@ -46,20 +46,12 @@ const ImgSlider = () => {
   return (
     <>
     <Slider {...settings}>
-      {/* {blog.slider_img && blog.slider_img.slice(0, 8).map((img, index) => 
+      {blog.slider_img && blog.slider_img.slice(0, 8).map((img, index) => 
         <figure className="img-slider" key={index}>
           <img src={img} alt="blog photos" />
           <FigCaption />
         </figure>
-      )} */}
-
-      {Object.keys(blog.carousel) && Object.keys(blog.carousel).slice(0, 8).map((item, index) => 
-        <figure className="img-slider" key={index}>
-          <img src={blog.carousel[item.img]} alt="blog photos" />
-        </figure>
       )}
-
-
     </Slider>
     </>
   )
