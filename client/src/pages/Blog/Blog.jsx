@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 // components
 import Empty from '../../components/BlogHome/Empty';
 import ProgressBar from '../../components/Blog/ProgressBar';
 import ImgSlider from '../../components/Blog/ImgSlider';
 import ImgSliderr from '../../components/Blog/ImgSliderr';
+import Carousels from '../../components/_testing_/Carousel';
 // hooks
+import usePath from '../../hooks/usePath';
 import useFetch from '../../hooks/useFetch';
 // style
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -14,8 +15,7 @@ import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import AOS from 'aos';
 
 const Blog = () => {
-  const location = useLocation();
-  const path = location.pathname.split('/')[2];
+  const { path } = usePath();
   const { data: blog, isPending } = useFetch('/blogs/' + path);
 
   useEffect(() => {    
@@ -72,6 +72,7 @@ const Blog = () => {
           )}
         </div>
         <ImgSlider />
+        <Carousels />
         <div className="blog-desc">
           {blog.description && blog.description.slice(4, 7).map((p, i) => 
             <p key={i}>{p}</p>

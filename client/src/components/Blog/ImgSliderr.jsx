@@ -1,5 +1,5 @@
-import { useLocation } from 'react-router';
 // hooks
+import usePath from '../../hooks/usePath';
 import useFetch from '../../hooks/useFetch';
 // style
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -7,8 +7,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Slider from 'react-slick';
 
 const ImgSliderr = () => {
-  const location = useLocation();
-  const path = location.pathname.split('/')[2];
+  const { path } = usePath();
   const { data: blog } = useFetch('/blogs/' + path);
 
   const NextArrow = ({ onClick }) => {
