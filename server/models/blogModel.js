@@ -15,14 +15,10 @@ const BlogSchema = new mongoose.Schema(
       type: Array,
       required: true,
     },
-    figcaption: { // under development
+    figcaption: {
       type: Array,
-      required: false,
+      required: true,
     },
-    // carousel: {
-    //   type: Object,
-    //   required: true,
-    // },
     // blog-header
     title: {
       type: String,

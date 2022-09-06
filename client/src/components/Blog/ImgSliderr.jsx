@@ -1,9 +1,9 @@
 // hooks
 import usePath from '../../hooks/usePath';
 import useFetch from '../../hooks/useFetch';
-// style
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+// styles
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Slider from 'react-slick';
 
 const ImgSliderr = () => {
@@ -13,14 +13,14 @@ const ImgSliderr = () => {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="img-arrow img-arrow-next" onClick={onClick}>
-        <ChevronRightIcon />
+        <ArrowForwardIosIcon />
       </div>
     );
   };
   const PrevArrow = ({ onClick }) => {
     return (
       <div className="img-arrow img-arrow-prev" onClick={onClick}>
-        <ChevronLeftIcon />
+        <ArrowBackIosIcon />
       </div>
     );
   };
@@ -28,7 +28,7 @@ const ImgSliderr = () => {
   const settings = {
     lazyLoad: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -38,6 +38,8 @@ const ImgSliderr = () => {
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    pauseOnHover: true,
+    fade: true
   };
 
   return (
@@ -46,8 +48,7 @@ const ImgSliderr = () => {
       {blog.slider_img && blog.slider_img.slice(8).map((img, index) => 
         <figure className="img-slider" key={index}>
           <img src={img} alt="blog photos" />
-          {/* under development */}
-          {/* <figcaption>A figcaption</figcaption> */}
+          <figcaption key={index}>{blog.figcaption[index+8]}</figcaption>
         </figure>
       )}
     </Slider>

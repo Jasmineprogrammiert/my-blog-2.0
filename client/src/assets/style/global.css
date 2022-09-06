@@ -451,14 +451,14 @@ footer {
   margin-bottom: .5rem;
   position: relative;
 }
-/* under development */
 .img-slider figcaption {
+  font-size: 1.1vw;
+  padding: 2px 5px;
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, .6);
   text-align: center;
-  color: #fff; 
-  padding: 6px;
+  color: #fff;
+  background: rgba(0, 0, 0, .6);
 }
 .img-arrow {
    position: absolute;
@@ -467,7 +467,7 @@ footer {
    top: 50%;
  }
  .img-arrow svg {
-   font-size: 2.5rem;
+   font-size: 2rem;
    color: lightblue;
  }
  .img-arrow svg:hover {
