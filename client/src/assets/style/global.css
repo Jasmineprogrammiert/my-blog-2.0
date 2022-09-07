@@ -479,7 +479,7 @@ footer {
  .img-arrow-prev {
    left: 13.5%;
  }
- .img_dots {
+ .img-dots {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -487,23 +487,23 @@ footer {
   margin: auto;
   margin-bottom: 1.3rem;
 }
-.img_dots li {
+.img-dots li {
   list-style: none;
   display: inline-block;
   margin: 0 1rem;
 }
-.img_dots li button {
+.img-dots li button {
   background: lightblue;
   color: transparent;
   height: .6rem;
   width: .6rem;
   border-radius: 7.5px;
 }
-.img_dots li.slick-active button {
+.img-dots li.slick-active button {
   background-color: hsl(195, 53%, 59%);
 }
-.img_dots li button:hover,
-.img_dots li button:focus {
+.img-dots li button:hover,
+.img-dots li button:focus {
   background: hsl(300, 76%, 72%);
 }
 /* ---------- More ---------- */
@@ -644,18 +644,41 @@ footer {
 }
 /* ---------- LogIn ---------- */
 .login {
+  position: relative;
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-  background-size: cover;
 }
+.login img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: .85;
+}
+.login-content {
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 30vw;
+  height: 60vh;
+  padding: 70px 40px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .loginTitle {
   font-size: 50px;
 }
@@ -697,6 +720,117 @@ footer {
   color: white;
   border-radius: 10px;
 }
+
+
+
+
+
+
+
+/* TESTING */
+/* .loginBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 420px;
+  padding: 70px 40px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+.user {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: calc(-100px/2);
+  left: calc(50% - 50px);
+}
+
+h2 {
+  margin: 0;
+  padding: 0 0 26px;
+  color: #ff8c00;
+  text-align: center;
+}
+
+.login-content p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.login-content input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-content input[type="email"],
+.login-content input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+::placeholder
+{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login-content input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #eee;
+  font-size: 16px;
+  background-color: #FF8C00;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 12px 0 18px;
+}
+
+.login-content input[type="submit"]:hover {
+  background-color: #ff9719;
+  color: #fff;
+}
+
+.login-content a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------- Settings ---------- */
 .settings {
   display: flex;

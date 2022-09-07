@@ -46,7 +46,8 @@ const NavigationBar = () => {
             >
               Blog
             </Nav.Link>
-            {/* {user ? (
+            {/* ---------- Under Development ---------- */}
+            {user ? (
               <>
               <Nav.Link 
                 as={NavLink} to="settings"
@@ -83,7 +84,7 @@ const NavigationBar = () => {
                   Sign Up
                 </NavDropdown.Item>
               </NavDropdown>
-            )} */}
+            )}
             {/* <Nav.Link 
               as={NavLink} to="more"
               className="nav-item"

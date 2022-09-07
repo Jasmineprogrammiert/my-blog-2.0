@@ -85,7 +85,7 @@
 /* --------------- Blog (3) --------------- */
 /* ---------- 1. Progress Bar ---------- */
 #light .progress-bar,
-#light .img_dots li button {
+#light .img-dots li button {
   background: hsl(350, 100%, 85%);
 }
 /* ---------- 2. Blog ---------- */
@@ -99,11 +99,11 @@
 #light .img-arrow svg:hover {
   color: hsl(350, 100%, 70%);
 }
-#light .img_dots li.slick-active button {
+#light .img-dots li.slick-active button {
   background-color: hsl(350, 100%, 70%);
 }
-#light .img_dots li button:hover,
-.img_dots li button:focus {
+#light .img-dots li button:hover,
+.img-dots li button:focus {
   background: hsl(300, 76%, 52%);
 }
 /* --------------- Footer --------------- */

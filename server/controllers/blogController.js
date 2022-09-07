@@ -1,6 +1,6 @@
 const Blog = require('../models/blogModel');
 
-// create
+// create: post
 const createBlog = async (req, res) => {
   const newBlog = new Blog(req.body);
   try {
@@ -11,7 +11,7 @@ const createBlog = async (req, res) => {
   }
 }
 
-// read
+// read: get
 const allBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find({}).sort({ createdAt: -1 });
@@ -31,7 +31,7 @@ const singleBlog = async (req, res) => {
   }
 }
 
-// update
+// update: put
 const updateBlog = async (req, res) => {
   try {
     const updateBlog = await Blog.findByIdAndUpdate
@@ -46,7 +46,7 @@ const updateBlog = async (req, res) => {
   }
 }
 
-// delete
+// delete: delete
 const deleteBlog = async (req, res) => {
   const blog = await Blog.findById(req.params.id);
   try {
