@@ -31,7 +31,7 @@ const LogIn = () => {
     <div className="login">
       <img src={bgImg} alt="Background Image" />
       <div className="login-content">
-        {/* <h1>Lieblingsjasmin</h1> */}
+        <h1>Lieblingsjasmin</h1>
         <h2>Login</h2>
         <form>
           <input 

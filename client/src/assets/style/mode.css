@@ -115,6 +115,12 @@
 #light .login img {
   opacity: .8;
 }
+#light .login-content h1 {
+  color: #d4ccb1;
+}
+#light .login-content h1:after {
+  background: #d4ccb1;
+}
 #light .login-content input[type="submit"] {
   background-color: rgb(137, 113, 88);
 }

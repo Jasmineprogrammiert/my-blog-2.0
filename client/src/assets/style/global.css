@@ -530,9 +530,26 @@ footer {
 .login-content {
   position: absolute;
   width: 30vw;
-  height: 60vh;
-  padding: 8vh 3vw;
+  height: 66.8vh;
+  padding: 6vh 3vw;
   background: rgba(0, 0, 0, .5);
+}
+.login-content h1 {
+  position: relative;
+  font-size: 1.8vw;
+  padding-bottom: 1vh;
+  margin-bottom: 4.5vh;
+  color: lightskyblue;
+}
+.login-content h1:after {
+  position: absolute;
+  background: lightskyblue;
+  content: '';
+  width: 3.5vw;
+  height: 1.5px;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
 }
 .login-content h2 {
   font-size: 3vw;
@@ -629,29 +646,6 @@ footer {
   border-radius: 10px;
 } */
 /* ---------- SignUp ---------- */
-.signup-content h1 {
-  position: relative;
-  font-size: 2vw;
-  margin-bottom: 5vh;
-  padding-bottom: 1vh;
-}
-.signup-content h1:after {
-  position: absolute;
-  background: #fff;
-  content: '';
-  width: 5vw;
-  height: 1.5px;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-}
-
-
-
-
-
-
-
 .login-content,
 .login-content input,
 .pwd-recovery,
@@ -673,7 +667,24 @@ footer {
   opacity: .3;
 }
 .signup-content {
-  height: 65vh;
+  height: 76.5vh;
+}
+.login-content h1 {
+  position: relative;
+  font-size: 1.8vw;
+  padding-bottom: 1vh;
+  margin-bottom: 4.5vh;
+  color: lightskyblue;
+}
+.login-content h1:after {
+  position: absolute;
+  background: lightskyblue;
+  content: '';
+  width: 3.5vw;
+  height: 1.5px;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
 }
 .login-content h2 {
   font-size: 3vw;
@@ -687,14 +698,14 @@ footer {
 .login-content input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-/* .login-content input[type="email"],
+.login-content input[type="email"],
 .login-content input[type="password"],
 .login-content input[type="username"] {
   width: 100%;
   height: 5.5vh;
   background: transparent;
   border-bottom: 1px solid #fff;
-} */
+}
 .login-content input[type="submit"] {
   font-size: 1.25vw;
   padding: .6vh 10vw;
@@ -719,6 +730,19 @@ footer {
 .pwd-recovery {
   margin-right: 11vw;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .register {
   height: calc(100vh - 50px);
   display: flex;
