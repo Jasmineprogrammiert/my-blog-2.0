@@ -64,7 +64,8 @@ const NavigationBar = () => {
               </Nav.Link>
               </>
             ) : (
-              <NavDropdown 
+              <>
+              {/* <NavDropdown 
                 title="User" 
                 id="nav-item-dropdown"
                 show={show}
@@ -83,7 +84,15 @@ const NavigationBar = () => {
                 >
                   Sign Up
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
+              <Nav.Link 
+                as={NavLink} to="login"
+                className="nav-item"
+                >
+                Login
+              </Nav.Link>
+              </>
+              
             )}
             {/* <Nav.Link 
               as={NavLink} to="more"

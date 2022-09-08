@@ -2,7 +2,7 @@ import { useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 // local files
-import bgImg from '../../assets/img/LogIn/pat-sin-leng-01.jpeg'
+import bgImg from '../../assets/img/LogIn/forbidden-city-02.png';
 import { Context } from '../../context/Context';
 
 const LogIn = () => {
@@ -29,22 +29,21 @@ const LogIn = () => {
   return (
     <>
     <div className="login">
-      <img src={bgImg} alt="Pat Sin Leng" />
+      <img src={bgImg} alt="Background Image" />
       <div className="login-content">
+        {/* <h1>Lieblingsjasmin</h1> */}
         <h2>Login</h2>
         <form>
-          <p>Email</p>
           <input 
             type="email" 
             name="email" 
-            placeholder="Enter Email" 
+            placeholder="Email Address" 
             required 
           />
-          <p>Password</p>
           <input 
             type="password" 
             name="password" 
-            placeholder="Enter Password" 
+            placeholder="Password" 
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
             title="Must contain at least one digit, one uppercase and lowercase letter, and at least 8 or more characters" 
             required 
@@ -54,9 +53,14 @@ const LogIn = () => {
             name="sign-in" 
             value="Sign In" 
           />
-          <a href="#">Forget Password</a>
+          <br />
+          <Link className="pwd-recovery" to="/pwdrecovery">
+            <p>Forget Password</p>
+          </Link>
+          <Link className="sign-up" to="/signup">
+            <p>Sign Up</p>
+          </Link>
         </form>
-
         {/* <span className="loginTitle">Login</span>
         <form 
           className="loginForm" 

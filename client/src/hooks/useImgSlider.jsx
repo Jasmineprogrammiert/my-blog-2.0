@@ -30,7 +30,7 @@ const useImgSlider = () => {
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    pauseOnHover: true,
+    pauseOnHover: false,
     fade: true
   };
 
