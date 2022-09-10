@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 // styles
 import bgImg from '../../assets/img/LogIn/floral-01.jpg';
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 
 const SignUp = () => {
   const [username, setUsername] = useState('');
@@ -38,17 +36,17 @@ const SignUp = () => {
         <h2>Sign Up</h2>
         <form>
           <input 
-            type="email" 
-            name="email" 
-            placeholder="Email Address" 
-            required 
-          />
-          <input 
             type="username" 
             name="username"
             placeholder="Username"
             pattern="[A-Za-z0-9-_.]{4,25}"
             title="The usernaem must be 4-25 long, with letters, numbers, hyphens, underscores or periods only. No punctuation or special characters are allowed."
+            required 
+          />
+           <input 
+            type="email" 
+            name="email" 
+            placeholder="Email Address" 
             required 
           />
           <input 
@@ -65,12 +63,6 @@ const SignUp = () => {
             value="Register" 
           />
           <br />
-          <Link className="pwd-recovery" to="/pwdrecovery">
-            <p>Forget Password</p>
-          </Link>
-          <Link className="sign-up" to="/signup">
-            <p>Sign Up</p>
-          </Link>
         </form>
         {/* <span className="loginTitle">Login</span>
         <form 

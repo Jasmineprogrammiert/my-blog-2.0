@@ -132,3 +132,11 @@
 #light .sign-up:hover {
   color: hsl(31, 22%, 64%);
 }
+/* --------------- LogIn --------------- */
+#light .signup-content input[type="submit"] {
+  background-color: hsl(41, 10%, 53%);
+}
+#light .signup-content input[type="submit"]:hover {
+  color: hsl(83, 6%, 25%);
+  background-color: hsl(41, 10%, 63%);
+}

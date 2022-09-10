@@ -581,6 +581,24 @@ footer {
 .login-content input[type="submit"]:hover {
   background-color: hsl(209, 34%, 36%);
 }
+#field-icon {
+  float: right;
+  /* margin-left: -25px; */
+  margin-left: -30px;
+  margin-top: 11px;
+  font-size: 2vw;
+  /* position: relative; */
+  /* z-index: 2; */
+}
+
+
+
+
+
+
+
+
+
 .pwd-recovery, 
 .sign-up {
   font-size: 1vw;
@@ -646,103 +664,9 @@ footer {
   border-radius: 10px;
 } */
 /* ---------- SignUp ---------- */
-.login-content,
-.login-content input,
-.pwd-recovery,
-.sign-up {
-  color: #fff;
-}
-.login {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: -8.2vh;
-}
-.login img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  opacity: .3;
-}
 .signup-content {
-  height: 76.5vh;
+  height: 69.5vh;
 }
-.login-content h1 {
-  position: relative;
-  font-size: 1.8vw;
-  padding-bottom: 1vh;
-  margin-bottom: 4.5vh;
-  color: lightskyblue;
-}
-.login-content h1:after {
-  position: absolute;
-  background: lightskyblue;
-  content: '';
-  width: 3.5vw;
-  height: 1.5px;
-  left: 50%;
-  bottom: -5px;
-  transform: translateX(-50%);
-}
-.login-content h2 {
-  font-size: 3vw;
-  margin-bottom: 4.5vh;
-}
-.login-content input,
-.login-content input::placeholder {
-  font-size: 1.2vw;
-  margin-bottom: 5vh;
-}
-.login-content input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-.login-content input[type="email"],
-.login-content input[type="password"],
-.login-content input[type="username"] {
-  width: 100%;
-  height: 5.5vh;
-  background: transparent;
-  border-bottom: 1px solid #fff;
-}
-.login-content input[type="submit"] {
-  font-size: 1.25vw;
-  padding: .6vh 10vw;
-  border-radius: 30px;
-  color: #eee;
-  background-color: hsl(209, 34%, 26%);
-}
-.login-content input[type="submit"]:hover {
-  background-color: hsl(209, 34%, 36%);
-}
-.pwd-recovery, 
-.sign-up {
-  font-size: 1vw;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-}
-.pwd-recovery:hover,
-.sign-up:hover {
-  color: lightskyblue;
-}
-.pwd-recovery {
-  margin-right: 11vw;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* .register {
   height: calc(100vh - 50px);
   display: flex;
