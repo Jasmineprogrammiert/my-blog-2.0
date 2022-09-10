@@ -590,16 +590,8 @@ footer {
 }
 #visibility-icon {
   font-size: 1.8vw;
+  color: #eee;
 }
-
-
-
-
-
-
-
-
-
 .pwd-recovery, 
 .sign-up {
   font-size: 1vw;
