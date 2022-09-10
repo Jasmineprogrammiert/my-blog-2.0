@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 // styles
 import bgImg from '../../assets/img/LogIn/floral-01.jpg';
+import useVisibility from '../../hooks/useVisibility';
+import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
 
 const SignUp = () => {
   const [username, setUsername] = useState('');
@@ -27,6 +29,8 @@ const SignUp = () => {
     }
   };
 
+  const { visibility, handleVisibility } = useVisibility();
+
   return (
     <>
     <div className="login">
@@ -50,13 +54,19 @@ const SignUp = () => {
             required 
           />
           <input 
-            type="password" 
-            name="password" 
+            type={visibility === 'visible' ? 'text' : 'password'} 
+            name="password"
             placeholder="Password" 
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
             title="Must contain at least one digit, one uppercase and lowercase letter, and at least 8 or more characters" 
             required 
           />
+          <span id="visibility-switch">
+            <VisibilitySwitch
+              visibility={visibility} 
+              handleVisibility={handleVisibility} 
+          />
+          </span>
           <input 
             type="submit" 
             name="sign-in" 

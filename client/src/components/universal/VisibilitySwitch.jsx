@@ -5,16 +5,16 @@ const VisibilitySwitch = ({ visibility, handleVisibility }) => {
 
   return (
     <>
-    <div onClick={handleVisibility}>
+    <span onClick={handleVisibility}>
       {visibility === 'visible' ?
         <VisibilityOutlinedIcon 
-          // id="visibility-icon" 
+          id="visibility-icon" 
         /> 
         : <VisibilityOffOutlinedIcon 
-            // id="visibility-icon" 
+            id="visibility-icon" 
           />
       }
-    </div>
+    </span>
     </>
   )
 }
