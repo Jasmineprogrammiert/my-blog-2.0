@@ -59,12 +59,11 @@ const LogIn = () => {
               handleVisibility={handleVisibility} 
             />
           </span>
-          <input 
-            type="submit" 
-            name="sign-in" 
-            value="Sign In" 
-          />
-          <br />
+          <button>
+            <Link className="submit-btn-link" to="/blog">
+              Sign In
+            </Link>
+          </button>
           <Link className="pwd-recovery" to="/pwdrecovery">
             <p>Forget Password</p>
           </Link>
@@ -72,38 +71,6 @@ const LogIn = () => {
             <p>Sign Up</p>
           </Link>
         </form>
-        {/* <span className="loginTitle">Login</span>
-        <form 
-          className="loginForm" 
-          onSubmit={handleSubmit}
-        >
-          <label>Username</label>
-          <input
-            type="text"
-            className="loginInput"
-            placeholder="Enter your username"
-            ref={userRef}
-          />
-          <label>Password</label>
-          <input
-            type="password"
-            className="loginInput"
-            placeholder="Enter your password"
-            ref={passwordRef}
-          />
-          <button
-            type="submit" 
-            className="loginButton" 
-            disabled={isFetching}
-          >
-            Login
-          </button>
-        </form>
-        <button className="loginRegisterButton">
-          <Link className="link" to="/signup">
-            Sign Up
-          </Link>
-        </button> */}
       </div>
     </div>    
     </>

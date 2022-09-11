@@ -121,10 +121,10 @@
 #light .login-content h1:after {
   background: #d4ccb1;
 }
-#light .login-content input[type="submit"] {
+#light .login-content button {
   background-color: rgb(137, 113, 88);
 }
-#light .login-content input[type="submit"]:hover {
+#light .login-content button:hover {
   color: rgb(137, 113, 88);
   background-color: #d4ccb1;
 }
@@ -132,11 +132,11 @@
 #light .sign-up:hover {
   color: hsl(31, 22%, 64%);
 }
-/* --------------- LogIn --------------- */
-#light .signup-content input[type="submit"] {
+/* --------------- SignUp --------------- */
+#light .signup-content button {
   background-color: hsl(41, 10%, 53%);
 }
-#light .signup-content input[type="submit"]:hover {
+#light .signup-content button:hover {
   color: hsl(83, 6%, 25%);
   background-color: hsl(41, 10%, 63%);
 }
