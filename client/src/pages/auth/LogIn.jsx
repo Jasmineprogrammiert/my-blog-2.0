@@ -40,9 +40,9 @@ const LogIn = () => {
         <h2>Login</h2>
         <form>
           <input 
-            type="email" 
-            name="email" 
-            placeholder="Email Address" 
+            type="username" 
+            name="username" 
+            placeholder="Username" 
             required 
           />
           <input 

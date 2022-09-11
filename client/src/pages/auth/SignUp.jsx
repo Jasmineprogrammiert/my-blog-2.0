@@ -15,7 +15,6 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      // const res = await axios.post('/api/auth/signup', {
       const res = await axios.post('/auth/signup', {
         username,
         email,
@@ -24,7 +23,7 @@ const SignUp = () => {
       res.data && window.location.replace('/login');
     } 
     catch (err) {
-      return err;
+      console.log(err);
     }
   };
 
@@ -50,7 +49,7 @@ const SignUp = () => {
            <input 
             type="email" 
             name="email" 
-            placeholder="Email Address" 
+            placeholder="Email" 
             required
             onChange={e => setEmail(e.target.value)}
           />
