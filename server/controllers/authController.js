@@ -9,7 +9,7 @@ const handleErrors = err => {
   if (err.code === 11000) {
     errors.username = 'This username is already registered';
     errors.email = 'This email is already registered';
-
+    
     return errors;
   };
 
