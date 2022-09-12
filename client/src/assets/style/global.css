@@ -623,6 +623,13 @@ footer {
 .signup-content button {
   padding: .7vh 9.6vw;
 }
+.signup-error {
+  font-size: 1vw;
+  font-family: 'Merriweather', serif;
+  color: hsl(0, 100%, 90%);
+  margin-top: -3vh;
+  margin-bottom: 2.5vh;
+}
 /* ---------- More ---------- */
 .more-header {
   padding-bottom: 68vh;

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 // styles
 import bgImg from '../../assets/img/LogIn/floral-01.jpg';
@@ -10,9 +9,11 @@ const SignUp = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
 
   const handleSubmit = async e => {
     e.preventDefault();
+    setError(false);
 
     try {
       const res = await axios.post('/auth/signup', {
@@ -23,7 +24,7 @@ const SignUp = () => {
       res.data && window.location.replace('/login');
     } 
     catch (err) {
-      console.log(err);
+      setError(true);
     }
   };
 
@@ -68,10 +69,9 @@ const SignUp = () => {
               handleVisibility={handleVisibility} 
           />
           </span>
-          <button>
-            <Link className="submit-btn-link" to="/login">
+          {error && <div className="signup-error">Username or email is taken. Please try again.</div>}
+          <button className="submit-btn-link">
               Register
-            </Link>
           </button>
         </form>
       </div>
