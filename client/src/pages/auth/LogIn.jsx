@@ -1,4 +1,4 @@
-import { useRef, useContext } from 'react';
+import { useState, useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 // local files
@@ -12,9 +12,11 @@ const LogIn = () => {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
+    setError(false);
     dispatch({ type: 'LOGIN_START' });
 
     try {
@@ -27,10 +29,10 @@ const LogIn = () => {
     catch (err) {
       dispatch({ type: 'LOGIN_FAILURE' });
     }
-  };
+  }
 
   const { visibility, handleVisibility } = useVisibility();
-
+  
   return (
     <>
     <div className="login">
@@ -38,12 +40,12 @@ const LogIn = () => {
       <div className="login-content">
         <h1>Lieblingsjasmin</h1>
         <h2>Login</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input 
             type="username" 
             name="username" 
             placeholder="Username" 
-            required 
+            required
           />
           <input 
             type={visibility === 'visible' ? 'text' : 'password'} 
@@ -59,10 +61,9 @@ const LogIn = () => {
               handleVisibility={handleVisibility} 
             />
           </span>
-          <button>
-            <Link className="submit-btn-link" to="/blog">
-              Sign In
-            </Link>
+          {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>}
+          <button className="submit-btn" disabled={isFetching}>
+            Sign In
           </button>
           <Link className="pwd-recovery" to="/pwdrecovery">
             <p>Forget Password</p>

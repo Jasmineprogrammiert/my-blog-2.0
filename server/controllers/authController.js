@@ -9,7 +9,7 @@ const handleErrors = err => {
   if (err.code === 11000) {
     errors.username = 'This username is already registered';
     errors.email = 'This email is already registered';
-    
+
     return errors;
   };
 
@@ -48,8 +48,13 @@ const signUp = async (req, res) => {
 const logIn = async (req, res) => {
   const { email, password } = req.body;
 
-  console.log(email, password);
-  res.send('User login');
+  try {
+    const user= await User.login(username, password);
+    res.status(200).json({ user: user._id});
+  }
+  catch (err) {
+    res.status(400).json({});
+  }
 }
 
 // read: get

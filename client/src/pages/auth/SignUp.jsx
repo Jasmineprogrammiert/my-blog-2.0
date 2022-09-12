@@ -21,6 +21,7 @@ const SignUp = () => {
         email,
         password,
       });
+      res.data && window.location.replace('/login');
     } 
     catch (err) {
       setError(true);
@@ -69,7 +70,7 @@ const SignUp = () => {
           />
           </span>
           {error && <div className="signup-error">Username or email is taken. Please try again.</div>}
-          <button className="submit-btn-link">
+          <button className="submit-btn">
             Register
           </button>
         </form>
