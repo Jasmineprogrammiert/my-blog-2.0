@@ -46,14 +46,27 @@ const signUp = async (req, res) => {
   }
 }
 const logIn = async (req, res) => {
-  const { email, password } = req.body;
+  // const { email, password } = req.body;
 
+  // try {
+  //   const user= await User.login(username, password);
+  //   res.status(200).json({ user: user._id});
+  // }
+  // catch (err) {
+  //   res.status(400).json({});
+  // }
+  // const { username, email, password } = req.body;
   try {
-    const user= await User.login(username, password);
-    res.status(200).json({ user: user._id});
-  }
-  catch (err) {
-    res.status(400).json({});
+    const user = await User.findOne({ username: req.body.username });
+    !user && res.status(400).json("Wrong credentials!");
+
+    const validated = await bcrypt.compare(req.body.password, user.password);
+    !validated && res.status(400).json("Wrong credentials!");
+
+    const { password, ...others } = user._doc;
+    res.status(200).json(others);
+  } catch (err) {
+    res.status(500).json(err);
   }
 }
 

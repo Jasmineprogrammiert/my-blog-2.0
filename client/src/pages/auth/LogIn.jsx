@@ -12,28 +12,25 @@ const LogIn = () => {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(AuthContext);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
 
   const handleSubmit = async e => {
     e.preventDefault();
-    setError(false);
+    // setError(false);
     dispatch({ type: 'LOGIN_START' });
 
     try {
-      const res = await axios.post('/auth/login', {
+      const res = await axios.post("/auth/login", {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });
-      dispatch({ type: 'LOGIN_SUCCESS', payload: res.data });
-    } 
-    catch (err) {
-      dispatch({ type: 'LOGIN_FAILURE' });
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+    } catch (err) {
+      dispatch({ type: "LOGIN_FAILURE" });
     }
   };
 
   const { visibility, handleVisibility } = useVisibility();
-
-  // console.log(user);
 
   return (
     <>
@@ -65,9 +62,12 @@ const LogIn = () => {
               handleVisibility={handleVisibility} 
             />
           </span>
-          {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>}
-          <button className="submit-btn" disabled={isFetching}>
+          {/* {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>} */}
+          {/* <button className="submit-btn" disabled={isFetching}>
             Sign In
+          </button> */}
+          <button className="loginButton" type="submit" disabled={isFetching}>
+            Login
           </button>
           <Link className="pwd-recovery" to="/pwdrecovery">
             <p>Forget Password</p>
