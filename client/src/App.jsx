@@ -23,13 +23,13 @@ import './assets/style/global.css';
 import './assets/style/mode.css';
 import './assets/style/media.css';
 // testing
-import { Context } from './context/Context';
+import { AuthContext } from './context/AuthContext';
 
 export const ThemeContext = createContext(null);
 
 const App = () => {
   const { theme, setTheme, toggleTheme } = useModeSwitch();
-  const { user } = useContext(Context);
+  const { user } = useContext(AuthContext);
 
   return (
     <>

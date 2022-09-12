@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 // local files
 import bgImg from '../../assets/img/LogIn/forbidden-city-02.png';
-import { Context } from '../../context/Context';
+import { AuthContext } from '../../context/AuthContext';
 // styles
 import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
 import useVisibility from '../../hooks/useVisibility';
@@ -11,7 +11,7 @@ import useVisibility from '../../hooks/useVisibility';
 const LogIn = () => {
   const userRef = useRef();
   const passwordRef = useRef();
-  const { dispatch, isFetching } = useContext(Context);
+  const { dispatch, isFetching } = useContext(AuthContext);
   const [error, setError] = useState(false);
 
   const handleSubmit = async e => {
@@ -29,10 +29,12 @@ const LogIn = () => {
     catch (err) {
       dispatch({ type: 'LOGIN_FAILURE' });
     }
-  }
+  };
 
   const { visibility, handleVisibility } = useVisibility();
-  
+
+  // console.log(user);
+
   return (
     <>
     <div className="login">
@@ -46,6 +48,7 @@ const LogIn = () => {
             name="username" 
             placeholder="Username" 
             required
+            ref={userRef}
           />
           <input 
             type={visibility === 'visible' ? 'text' : 'password'} 
@@ -53,7 +56,8 @@ const LogIn = () => {
             placeholder="Password" 
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
             title="Must contain at least one digit, one uppercase and lowercase letter, and at least 8 or more characters" 
-            required 
+            required
+            ref={passwordRef}
           />
           <span id="visibility-switch">
             <VisibilitySwitch

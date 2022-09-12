@@ -6,7 +6,7 @@ import useYScroll from '../../hooks/useYScroll';
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 // testing
-import { Context } from '../../context/Context';
+import { AuthContext } from '../../context/AuthContext';
 
 const NavigationBar = () => {
   const [show, setShow] = useState(false);
@@ -20,7 +20,7 @@ const NavigationBar = () => {
   const { hideBar } = useYScroll();
 
   // testing
-  const { user, dispatch } = useContext(Context);
+  const { user, dispatch } = useContext(AuthContext);
   const PF = 'http://localhost:8000/images/'
   
   const handleLogout = () => {

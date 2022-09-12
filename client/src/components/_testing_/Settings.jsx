@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { Context } from '../../context/Context';
+import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
 
 const Settings = () => {
@@ -9,7 +9,7 @@ const Settings = () => {
   const [password, setPassword] = useState('');
   const [success, setSuccess] = useState(false);
 
-  const { user, dispatch } = useContext(Context);
+  const { user, dispatch } = useContext(AuthContext);
   const PF = 'http://localhost:8000/images/'
 
   const handleSubmit = async (e) => {
