@@ -1,22 +1,22 @@
 import { useState, useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-// local files
-import bgImg from '../../assets/img/LogIn/forbidden-city-02.png';
+// hooks and contexts
 import { AuthContext } from '../../context/AuthContext';
-// styles
-import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
 import useVisibility from '../../hooks/useVisibility';
+// styles
+import bgImg from '../../assets/img/LogIn/forbidden-city-02.png';
+import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
 
 const LogIn = () => {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(AuthContext);
-  // const [error, setError] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async e => {
     e.preventDefault();
-    // setError(false);
+    setError(false);
     dispatch({ type: 'LOGIN_START' });
 
     try {
@@ -62,12 +62,9 @@ const LogIn = () => {
               handleVisibility={handleVisibility} 
             />
           </span>
-          {/* {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>} */}
-          {/* <button className="submit-btn" disabled={isFetching}>
+          {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>}
+          <button className="submit-btn" type="submit" disabled={isFetching}>
             Sign In
-          </button> */}
-          <button className="loginButton" type="submit" disabled={isFetching}>
-            Login
           </button>
           <Link className="pwd-recovery" to="/pwdrecovery">
             <p>Forget Password</p>

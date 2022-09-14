@@ -14,7 +14,7 @@ const SignUp = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     setError(false);
-
+    
     try {
       const res = await axios.post('/auth/signup', {
         username,
@@ -47,7 +47,7 @@ const SignUp = () => {
             required
             onChange={e => setUsername(e.target.value)}
           />
-           <input 
+          <input 
             type="email" 
             name="email" 
             placeholder="Email" 

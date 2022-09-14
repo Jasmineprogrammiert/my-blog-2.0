@@ -14,12 +14,10 @@ const UserSchema = new mongoose.Schema(
       required: [true, 'Please enter an email'],
       unique: true,
       lowercase: true,
-      // validate: [validator.isEmail, 'Please enter a valid email'],
     },
     password: {
       type: String,
       required: [true, 'Please enter a password'],
-      // minlength: [8, 'Minimum password length is 8 characters'],
     },
     profilePic: {
       type: String,
@@ -27,19 +25,6 @@ const UserSchema = new mongoose.Schema(
     },
   }, { timestamps: true }
 );
-
-// function fired before doc saved to db
-// UserSchema.pre('save', async function (next) {
-//   const salt = await bcrypt.genSalt();
-//   this.password = await bcrypt.hash(this.password, salt);
-//   next();
-// });
-
-// function fired after doc saved to db
-UserSchema.post('save', function (doc, next) {
-  console.log('New user was created & saved', doc);
-  next(); 
-});
 
 // static signup method 
 UserSchema.static.signup = async function (username, email, password) {
@@ -86,17 +71,6 @@ UserSchema.statics.login = async function (username, password) {
   }
 
   return user;
-  
-  // const user = await this.findOne({ username });
-
-  // if (user) {
-  //   const auth = await bcrypt.compare(password, user.password);
-  //   if (auth) {
-  //     return user;
-  //   };
-  //   throw Error('Incorrect password');
-  // };
-  // throw Error('Incorrect username');
 };
 
 module.exports = mongoose.model('User', UserSchema);
