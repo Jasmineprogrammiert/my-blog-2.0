@@ -22,9 +22,9 @@ object-assign
 */
 
 /*!
-  Copyright (c) 2018 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
 */
 
 /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
@@ -80,7 +80,7 @@ object-assign
  */
 
 /**
- * React Router DOM v6.3.0
+ * @remix-run/router v1.0.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -91,7 +91,7 @@ object-assign
  */
 
 /**
- * React Router v6.3.0
+ * React Router DOM v6.4.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -101,7 +101,18 @@ object-assign
  * @license MIT
  */
 
-/** @license MUI v5.10.2
+/**
+ * React Router v6.4.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/** @license MUI v5.10.6
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.

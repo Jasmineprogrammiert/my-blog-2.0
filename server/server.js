@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const multer = require('multer');
 const cookieParser = require('cookie-parser');
+// Deployment Testing
+const path = require('path');
 // routes
 const blogRoutes = require('./routes/blogRoutes');
 const authRoutes = require('./routes/authRoutes');
@@ -31,6 +33,14 @@ const storage = multer.diskStorage({
     cb(null, req.body.name)
   }
 });
+
+// Deployment Testing
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build' , 'index.html'));
+  });
+}
 
 const upload = multer({ storage: storage });
 app.post('/api/upload', upload.single('file'), (req, res) => {

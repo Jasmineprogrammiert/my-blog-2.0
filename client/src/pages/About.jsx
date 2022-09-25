@@ -75,7 +75,7 @@ const About = () => {
         <h2 className="about-txt">
           Hello, my name is <i><strong>Jasmine</strong></i>.
           <br />
-          I'm a Hong-Kong-based marketing undergrad with a passion for <br /> web development, language learning, hiking {'&'} history. 
+          I'm a Hong-Kong-based marketing undergrad with a passion for <br /> software engineering, languages, <br /> hiking {'&'} history. 
         </h2>
       </div>
     </div>
@@ -104,7 +104,7 @@ const About = () => {
         data-aos-anchor-placement="center-bottom"
       >
         <h2 className="about-txt about-txt-p4">
-          With the aim of coding my own hiking blog, I plunged into <br /> web development. I'm delighted to present this website to you, <br /> which not only features my <br /> hiking experiences, but also my <br /> other passions and hobbies.
+          With the aim of creating my own <br /> hiking blog, I plunged into software engineering. I'm delighted to present this website to you, which not only features my hiking experiences, but also my other passions and hobbies.
         </h2>
       </div>
       <div className="column-r-4">

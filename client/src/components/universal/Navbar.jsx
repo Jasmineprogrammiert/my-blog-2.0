@@ -40,12 +40,6 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link 
-              as={NavLink} to="blog"
-              className="nav-item"
-            >
-              Blog
-            </Nav.Link>
             {/* ---------- Under Development ---------- */}
             {user ? (
               <>
@@ -53,38 +47,31 @@ const NavigationBar = () => {
                 as={NavLink} to="settings"
                 className="nav-item"
               >
-                <img className="topImg" src={PF+user.profilePic} alt="" />
+                {/* <img className="topImg" src={PF+user.profilePic} alt="" /> */}
+                Welcome, {user.username}
+              </Nav.Link>
+              <Nav.Link 
+                as={NavLink} to="blog"
+                className="nav-item"
+              >
+                Blog
               </Nav.Link>
               <Nav.Link 
                 as={NavLink} to="blog"
                 className="nav-item"
                 onClick={handleLogout}
               >
-                Log Out
+                Log out
               </Nav.Link>
               </>
             ) : (
               <>
-              {/* <NavDropdown 
-                title="User" 
-                id="nav-item-dropdown"
-                show={show}
-                onMouseEnter={showDropdown}
-                onMouseLeave={hideDropdown}
+              <Nav.Link 
+                as={NavLink} to="blog"
+                className="nav-item"
               >
-                <NavDropdown.Item 
-                  as={NavLink} to="login" 
-                  className="nav-dropdown"
-                >
-                  Log In
-                </NavDropdown.Item>
-                <NavDropdown.Item 
-                  as={NavLink} to="signup" 
-                  className="nav-dropdown"
-                >
-                  Sign Up
-                </NavDropdown.Item>
-              </NavDropdown> */}
+                Blog
+              </Nav.Link>
               <Nav.Link 
                 as={NavLink} to="login"
                 className="nav-item"
@@ -92,7 +79,6 @@ const NavigationBar = () => {
                 Login
               </Nav.Link>
               </>
-              
             )}
             {/* <Nav.Link 
               as={NavLink} to="more"
