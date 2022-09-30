@@ -16,8 +16,7 @@ const allBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find({}).sort({ createdAt: -1 });
     res.status(200).json(blogs);
-  }
-  catch (err) {
+  } catch (err) {
     res.status(500).json('Blog not found');
   }
 }
@@ -25,8 +24,7 @@ const singleBlog = async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
     res.status(200).json(blog);
-  } 
-  catch (err) {
+  } catch (err) {
     res.status(500).json(err);
   }
 }

@@ -22,8 +22,7 @@ const SignUp = () => {
         password,
       });
       res.data && window.location.replace('/login');
-    } 
-    catch (err) {
+    } catch (err) {
       setError(true);
     }
   };

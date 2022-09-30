@@ -30,8 +30,7 @@ router.put('/:id', async (req, res) => {
         }
       );
       res.status(200).json(updatedUser);
-    } 
-    catch (err) {
+    } catch (err) {
       res.status(500).json(err);
     }
   } else {
@@ -50,8 +49,7 @@ router.delete('/:id', async (req, res) => {
       } catch (err) {
         res.status(500).json(err);
       }
-    } 
-    catch (err) {
+    } catch (err) {
       res.status(404).json('User not found!');
     }
   } else {

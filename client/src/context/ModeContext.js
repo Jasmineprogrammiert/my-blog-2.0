@@ -12,5 +12,3 @@ export const ModeContext = ({ children }) => {
     </ThemeContext.Provider>
   )
 };
-
-// export default ModeContext
