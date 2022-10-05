@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.41110fb0.css",
-    "main.js": "/static/js/main.0b5ce036.js",
+    "main.js": "/static/js/main.38dd1bce.js",
     "static/media/floral-01.jpg": "/static/media/floral-01.b692cc3ba62badf12e6a.jpg",
     "static/media/forbidden-city-02.png": "/static/media/forbidden-city-02.f5e55b071cc6dca066ba.png",
     "static/media/floral-01.png": "/static/media/floral-01.112dec8c0dda22684373.png",
@@ -18,10 +18,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.41110fb0.css.map": "/static/css/main.41110fb0.css.map",
-    "main.0b5ce036.js.map": "/static/js/main.0b5ce036.js.map"
+    "main.38dd1bce.js.map": "/static/js/main.38dd1bce.js.map"
   },
   "entrypoints": [
     "static/css/main.41110fb0.css",
-    "static/js/main.0b5ce036.js"
+    "static/js/main.38dd1bce.js"
   ]
 }
