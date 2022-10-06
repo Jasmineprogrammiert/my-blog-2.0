@@ -67,7 +67,7 @@ const About = () => {
     >
       <div className="column-l-2">
         <img
-          src={jasmine} alt="Jasmine at Sunset Peak, Lantau Island, Hong Kong, 2021. Photo by Tsz Kwan Chiang" 
+          src={jasmine} alt="Jasmine at Sunset Peak, Lantau Island, Hong Kong, 2021. By Tsz Kwan Chiang" 
           className="jasmine-img"
         />
       </div>

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
   <>
   <div id="footer">
-    <a href="https://www.instagram.com/deinelieblingsjasmin/" target="_blank">
+    <a href="https://www.instagram.com/deinelieblingsjasmin/" target="_blank" rel="noreferrer">
       <InstagramIcon id="ins-icon" />
     </a>
     <footer>

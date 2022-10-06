@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // img
 import floral from '../assets/img/Header/floral-01.png';
 import crane from '../assets/img/Header/crane-01.png';
-import butterfly from '../assets/img/Header/butterfly-01.png'
+// import butterfly from '../assets/img/Header/butterfly-01.png';
 
 const More = () => {
   const [expanded, setExpanded] = useState(false);

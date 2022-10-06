@@ -32,7 +32,7 @@ const SignUp = () => {
   return (
     <>
     <div className="login">
-      <img src={bgImg} alt="Background Image" />
+      <img src={bgImg} alt="Background" />
       <div className="login-content signup-content">
         <h1>Lieblingsjasmin</h1>
         <h2>Sign Up</h2>

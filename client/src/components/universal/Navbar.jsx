@@ -1,27 +1,19 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 // hooks
 import useYScroll from '../../hooks/useYScroll';
 // styles
 import Container from 'react-bootstrap/Container';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 // testing
 import { AuthContext } from '../../context/AuthContext';
 
 const NavigationBar = () => {
-  const [show, setShow] = useState(false);
-  const showDropdown = () => {
-    setShow(!show);
-  }
-  const hideDropdown = () => {
-    setShow(false);
-  }
-
   const { hideBar } = useYScroll();
 
   // testing
   const { user, dispatch } = useContext(AuthContext);
-  const PF = 'http://localhost:8000/images/'
+  // const PF = 'http://localhost:8000/images/'
   
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' });
@@ -80,12 +72,6 @@ const NavigationBar = () => {
               </Nav.Link>
               </>
             )}
-            {/* <Nav.Link 
-              as={NavLink} to="more"
-              className="nav-item"
-            >
-              More
-            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -15,7 +15,7 @@ import AOS from 'aos';
 
 const Blog = () => {
   const { path } = usePath();
-  const { data: blog, isPending } = useFetch('/blogs/' + path);
+  const { data: blog, isPending } = useFetch('https://deinelieblingsjasmin.com/blogs/' + path);
 
   useEffect(() => {    
     AOS.init({

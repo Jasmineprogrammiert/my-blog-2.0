@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-// const cors = require('cors');
+const cors = require('cors');
 const multer = require('multer');
 const cookieParser = require('cookie-parser');
 // routes
@@ -14,7 +14,8 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cookieParser());
-// app.use(cors({ origin: 'https://deinelieblingsjasmin.com' }));
+// app.use(cors({ origin: 'https://lieblingsjasmin.com/' }));
+app.use(cors({ origin: '*' }));
 
 app.use('/api/blogs', blogRoutes);
 app.use('/api/auth', authRoutes);
