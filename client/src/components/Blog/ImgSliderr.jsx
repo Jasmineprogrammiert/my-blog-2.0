@@ -7,7 +7,7 @@ import Slider from 'react-slick';
 
 const ImgSliderr = () => {
   const { path } = usePath();
-  const { data: blog } = useFetch('https://deinelieblingsjasmin.com/blogs/' + path);
+  const { data: blog } = useFetch(`${process.env.REACT_APP_BACKEND_URL}/blogs/` + path);
   const { settings } = useImgSlider();
 
   return (

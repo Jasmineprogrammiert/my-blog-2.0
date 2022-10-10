@@ -13,9 +13,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import AOS from 'aos';
 
+// REACT_APP_
+
 const Blog = () => {
   const { path } = usePath();
-  const { data: blog, isPending } = useFetch('https://deinelieblingsjasmin.com/blogs/' + path);
+  const { data: blog, isPending } = useFetch(`${process.env.REACT_APP_BACKEND_URL}/blogs/` + path);
 
   useEffect(() => {    
     AOS.init({

@@ -14,12 +14,11 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cookieParser());
-// app.use(cors({ origin: 'https://lieblingsjasmin.com/' }));
-app.use(cors({ origin: '*' }));
+app.use(cors());
 
-app.use('/api/blogs', blogRoutes);
-app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes); 
+app.use('/blogs', blogRoutes);
+app.use('/auth', authRoutes);
+app.use('/users', userRoutes); 
 
 mongoose
   .connect(process.env.dbURL)

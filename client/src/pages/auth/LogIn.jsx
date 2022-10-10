@@ -9,7 +9,7 @@ import bgImg from '../../assets/img/LogIn/forbidden-city-02.png';
 import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
 
 const LogIn = () => {
-  const userRef = useRef();
+  const userRef = useRef(); 
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(AuthContext);
   const [error, setError] = useState(false);
@@ -20,7 +20,7 @@ const LogIn = () => {
     dispatch({ type: 'LOGIN_START' });
 
     try {
-      const res = await axios.post('/auth/login', {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

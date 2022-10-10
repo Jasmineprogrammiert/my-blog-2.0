@@ -8,7 +8,7 @@ import Empty from '../../components/BlogHome/Empty';
 import useFetch from '../../hooks/useFetch';
 
 const BlogHome = () => {
-  const { data: blogs, isPending } = useFetch('https://deinelieblingsjasmin.com/blogs');
+  const { data: blogs, isPending } = useFetch(`${process.env.REACT_APP_BACKEND_URL}/blogs`);
   const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState('');
 

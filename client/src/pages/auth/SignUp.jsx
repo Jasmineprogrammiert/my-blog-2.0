@@ -16,7 +16,7 @@ const SignUp = () => {
     setError(false);
     
     try {
-      const res = await axios.post('/auth/signup', {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, {
         username,
         email,
         password,
