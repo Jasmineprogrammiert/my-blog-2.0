@@ -24,6 +24,9 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --lightblue: lightblue;
+}
 h1, h2 {
   font-family: 'Satisfy', cursive;
   letter-spacing: .8px;
@@ -82,7 +85,7 @@ input, button {
 }
 /* ---------- BackToTop ---------- */
 #backtoTop-container {
-  background-color: lightblue;
+  background-color: var(--lightblue);
   z-index: 100;
 }
 #backtoTop {
@@ -374,7 +377,7 @@ footer {
   left: 0;
   right: 0;
   height: 10px;
-  background: lightblue;
+  background: var(--lightblue);
   transform-origin: 0%;
   z-index: 100;
   margin-top: -1.1vh;
@@ -468,7 +471,7 @@ footer {
  }
  .img-arrow svg {
    font-size: 2rem;
-   color: lightblue;
+   color: var(--lightblue);
  }
  .img-arrow svg:hover {
   color: hsl(195, 53%, 59%);
@@ -493,7 +496,7 @@ footer {
   margin: 0 1rem;
 }
 .img-dots li button {
-  background: lightblue;
+  background: var(--lightblue);
   color: transparent;
   height: .6rem;
   width: .6rem;
@@ -589,6 +592,10 @@ footer {
   text-align: center;
 }
 .submit-btn:hover {
+  color: inherit;
+}
+.submit-btn:disabled {
+  cursor: not-allowed;
   color: inherit;
 }
 #visibility-switch {

@@ -1,18 +1,17 @@
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-// hooks
+// hooks & contexts
 import useYScroll from '../../hooks/useYScroll';
+import { AuthContext } from '../../context/AuthContext';
 // styles
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar } from 'react-bootstrap';
-// testing
-import { AuthContext } from '../../context/AuthContext';
 
 const NavigationBar = () => {
   const { hideBar } = useYScroll();
+  const { user, dispatch } = useContext(AuthContext);
 
   // testing
-  const { user, dispatch } = useContext(AuthContext);
   // const PF = 'http://localhost:8000/images/'
   
   const handleLogout = () => {

@@ -13,8 +13,9 @@ import SignUp from './pages/auth/SignUp';
 import LogIn from './pages/auth/LogIn';
 import Settings from './components/_testing_/Settings';
 import More from './pages/More';
-// hooks
-import useModeSwitch from './hooks/useModeSwitch';
+// hooks & contexts
+import { ModeContext } from './context/ModeContext';
+import { AuthContext } from './context/AuthContext';
 // styles
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,38 +23,31 @@ import 'aos/dist/aos.css';
 import './assets/style/global.css';
 import './assets/style/mode.css';
 import './assets/style/media.css';
-// testing
-import { AuthContext } from './context/AuthContext';
-
 export const ThemeContext = createContext(null);
 
 const App = () => {
-  const { theme, setTheme, toggleTheme } = useModeSwitch();
+  const { theme, toggleTheme } = useContext(ModeContext);
   const { user } = useContext(AuthContext);
 
   return (
     <>
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div id={theme}>
-        <Suspense fallback={<Spinner />}>
-          <NavigationBar />
-          <ModeSwitch theme={theme} toggleTheme={toggleTheme}  />
-          <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="blog" element={<BlogHome />} />
-            <Route path="/blog/:id" element={<Blog />} />
-            {/* ---------- Under Development ---------- */}
-            <Route path="signup" element={user ? <BlogHome /> : <SignUp />}/>
-            <Route path="login" element={user ? <BlogHome /> : <LogIn />}/>
-            <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
-            <Route path="more" element={<More />} />
-            <Route path="*" element={<Blog />} />
-          </Routes>
-          <Footer />
-          <BackToTopp />
-        </Suspense>
-      </div>
-    </ThemeContext.Provider>
+    <Suspense fallback={<Spinner />}>
+      <NavigationBar />
+      <ModeSwitch theme={theme} toggleTheme={toggleTheme}  />
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="blog" element={<BlogHome />} />
+        <Route path="/blog/:id" element={<Blog />} />
+        {/* ---------- Under Development ---------- */}
+        <Route path="signup" element={user ? <BlogHome /> : <SignUp />}/>
+        <Route path="login" element={user ? <BlogHome /> : <LogIn />}/>
+        <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
+        <Route path="more" element={<More />} />
+        <Route path="*" element={<Blog />} />
+      </Routes>
+      <Footer />
+      <BackToTopp />
+    </Suspense>
     </>
   );
 }

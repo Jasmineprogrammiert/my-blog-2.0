@@ -1,10 +1,13 @@
+:root {
+  --lightblue: lightblue;
+}
 /* ---------- Light & Dark Mode ---------- */
 #light {
   background-color: hsl(0, 0%, 92%);
 }
 #dark {
   background-color: hsl(209, 34%, 26%);
-  color: lightblue;
+  color: var(--lightblue);
   /* #2b4258, #233648, #22303C, #242526, 
   #282828, #3A3B3C, #1a3235 */
 }
@@ -45,7 +48,7 @@
 #dark #nav-item-dropdown,
 #dark .nav-dropdown,
 #dark #accordion-heading h3 {
-  color: lightblue;
+  color: var(--lightblue);
 }
 #dark .nav-dropdown:hover {
   background-color:hsl(209, 35%, 32%);

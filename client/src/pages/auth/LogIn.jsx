@@ -52,8 +52,6 @@ const LogIn = () => {
             type={visibility === 'visible' ? 'text' : 'password'} 
             name="password"
             placeholder="Password" 
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-            title="Must contain at least one digit, one uppercase and lowercase letter, and at least 8 or more characters" 
             required
             ref={passwordRef}
           />
