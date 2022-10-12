@@ -16,10 +16,9 @@
     Blog: <ArrowBackIcon />
 --------------- */
 #modeSwitch {
-  margin: 1.4vh 0 0 1vw;
+  margin: 1.4vh 0 .4rem 1vw;
   padding: 7px;
   z-index: 100;
-  margin-bottom: .4rem;
 }
 #light #modeSwitch,
 #light #goBack-icon {

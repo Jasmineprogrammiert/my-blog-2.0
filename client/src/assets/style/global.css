@@ -364,7 +364,20 @@ footer {
   margin-top: 5.5vh;
 }
 /* --------------- Blog (3)  --------------- */
-/* ---------- 1. Progress Bar ---------- */
+/* ---------- 1. Icons ---------- */
+#goBack-icon {
+  margin: .6vh 0 0 91vw;
+  font-size: 1.45rem;
+}
+#goBack-icon:hover {
+  transform: translateX(-10px);
+  text-indent: .1rem;
+  transition: .5s ease-out;
+}
+#readTime-icon {
+  font-size: 1rem;
+  margin: 0 .2rem 0 2vw;
+}
 .progress-bar {
   position: fixed;
   left: 0;
@@ -382,24 +395,9 @@ footer {
   vertical-align: middle;
   object-fit: cover;
 }
-/* -------- 2.2 icons -------- */
-#goBack-icon {
-  margin: 1.2vh 0 0 91vw;
-  font-size: 1.45rem;
-}
-#goBack-icon:hover {
-  transform: translateX(-10px);
-  text-indent: .1rem;
-  transition: .5s ease-out;
-}
-#readTime-icon {
-  font-size: 1rem;
-  margin: 0 .2rem 0 2vw;
-}
-/* -------- 2.3 header -------- */
+/* -------- 2.2 header -------- */
 .blog header {
   position: relative;
-  /* margin-top: .4rem; */
   margin-bottom: 1.5rem;
 }
 .blog-header {
@@ -421,16 +419,16 @@ footer {
   padding-bottom: .8rem;
 }
 .blog-row {
+  font-size: 1.3vw;
   padding: 0 15vw;
   margin: -.8rem 0 .8rem 1vw ;
-  font-size: 1.3vw;
   display: grid;
   grid-template-columns: auto auto auto;
 }
 .blog-row li {
   list-style: square;
 }
-/* -------- 2.4 body -------- */
+/* -------- 2.3 body -------- */
 .blog-desc {
   font-size: 1.3vw;
   text-align: justify;
