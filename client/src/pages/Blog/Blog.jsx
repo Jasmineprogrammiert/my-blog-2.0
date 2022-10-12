@@ -8,7 +8,7 @@ import ImgSliderr from '../../components/Blog/ImgSliderr';
 // hooks
 import usePath from '../../hooks/usePath';
 import useFetch from '../../hooks/useFetch';
-// style
+// styles
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import AOS from 'aos';

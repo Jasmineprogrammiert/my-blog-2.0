@@ -32,8 +32,8 @@ const SearchBar = ({
       />
       {value && 
         <CloseIcon 
-          onClick={handleClearSearch} 
-          style={{fontSize: '1.5vw'}}
+          onClick={handleClearSearch}
+          style={{fontSize: '17px'}}
         />
       }
       {!value.length ? handleClearSearch() : ''}

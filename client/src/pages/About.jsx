@@ -13,6 +13,7 @@ const About = () => {
 
   useEffect(() => {    
     AOS.init({
+      // once: true,
       duration: 1800
     });
     window.addEventListener('load', AOS.refresh);
@@ -36,10 +37,7 @@ const About = () => {
             >
               Lieblingsjasmin
             </h1>
-            <h2 
-              className="about-heading-2" 
-              data-aos="fade-left" 
-            >
+            <h2 className="about-heading-2">
               {'>'} Blog of Jasmine Zeng
             </h2>
             <img 
@@ -56,7 +54,7 @@ const About = () => {
       className="about-sec-2 row" 
       data-aos="flip-left"
       data-aos-delay="10"
-      data-aos-anchor-placement="center-center"
+      data-aos-anchor-placement="top-center"
     >
       <div className="column-l-2">
         <img
@@ -74,7 +72,7 @@ const About = () => {
     </div>
 {/* --------------- Sec. 3 --------------- */}
     <div 
-      className="about-sec3 row"
+      className="about-sec-3 row"
       data-aos-anchor-placement="bottom-bottom"
     >
       <div className="column-l-3">
