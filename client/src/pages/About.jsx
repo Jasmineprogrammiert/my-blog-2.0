@@ -13,18 +13,9 @@ const About = () => {
 
   useEffect(() => {    
     AOS.init({
-      offset: 350,
-      delay: 300,
       duration: 1800
     });
-    window.addEventListener('load', function() {
-      AOS.refresh();
-    });
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() { 
-        AOS.refresh(); 
-      }, 500);
-    });
+    window.addEventListener('load', AOS.refresh);
   })
   
   return (
@@ -36,24 +27,25 @@ const About = () => {
           <div className="about-sec-1">
             <img
               src={floral_1} alt="floral"
-              className="deco-img deco-img-1"
-              data-aos="fade-right"
+              id="deco-img-1"
+              className="deco-img"
             />
             <h1 
               className="about-heading-1" 
-              data-aos="fade-right" data-aos-once="true"
+              data-aos="fade-right" 
             >
               Lieblingsjasmin
             </h1>
             <h2 
               className="about-heading-2" 
-              data-aos="fade-left" data-aos-once="true"
+              data-aos="fade-left" 
             >
               {'>'} Blog of Jasmine Zeng
             </h2>
             <img 
               src={floral_2} alt="floral"
-              className="deco-img deco-img-2"
+              id="deco-img-2"
+              className="deco-img"
             />
           </div>
         </Animator>
@@ -63,7 +55,8 @@ const About = () => {
     <div 
       className="about-sec-2 row" 
       data-aos="flip-left"
-      data-aos-anchor-placement="center-bottom"
+      data-aos-delay="10"
+      data-aos-anchor-placement="center-center"
     >
       <div className="column-l-2">
         <img
@@ -81,15 +74,21 @@ const About = () => {
     </div>
 {/* --------------- Sec. 3 --------------- */}
     <div 
-      className="about-sec3 row" 
-      data-aos-anchor-placement="top-center"
+      className="about-sec3 row"
+      data-aos-anchor-placement="bottom-bottom"
     >
       <div className="column-l-3">
-        <h2 className="about-txt about-txt-p3" data-aos="fade-right">
+        <h2 
+          className="about-txt about-txt-p3"
+          data-aos="fade-right"
+        >
           I had a solo hike at Sai Kung while visiting HK in 2018. My love of hiking was instantly sparked by the beauty of nature, which among other factors led to the decision of moving to HK.
         </h2>
       </div>
-      <div className="column-r-3" data-aos="fade-left">
+      <div 
+        className="column-r-3" 
+        data-aos="flip-left"
+      >
         <img
           src={mountain_1} alt="mountain" 
           className="mountain-img"

@@ -38,20 +38,13 @@
   background-color: hsl(0, 0%, 92%);
 }
 #dark .navbar,
-#dark #nav-item-dropdown,
-#dark .nav-dropdown,
 #dark #accordion-heading {
   background-color: hsl(209, 34%, 26%);
 }
 #dark .nav-brand,
 #dark .nav-item,
-#dark #nav-item-dropdown,
-#dark .nav-dropdown,
 #dark #accordion-heading h3 {
   color: var(--lightblue);
-}
-#dark .nav-dropdown:hover {
-  background-color:hsl(209, 35%, 32%);
 }
 /* --------------- BlogHome (5) --------------- */
 /* ---------- 1. Header ---------- */

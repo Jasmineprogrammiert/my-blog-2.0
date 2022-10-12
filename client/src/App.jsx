@@ -23,6 +23,7 @@ import 'aos/dist/aos.css';
 import './assets/style/global.css';
 import './assets/style/mode.css';
 import './assets/style/media.css';
+
 export const ThemeContext = createContext(null);
 
 const App = () => {

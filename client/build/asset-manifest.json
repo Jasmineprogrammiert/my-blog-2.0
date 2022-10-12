@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.914acbd4.css",
-    "main.js": "/static/js/main.437a55c8.js",
+    "main.css": "/static/css/main.b5de18d0.css",
+    "main.js": "/static/js/main.53d4ee86.js",
     "static/media/floral-01.jpg": "/static/media/floral-01.b692cc3ba62badf12e6a.jpg",
     "static/media/forbidden-city-02.png": "/static/media/forbidden-city-02.f5e55b071cc6dca066ba.png",
-    "static/media/floral-01.png": "/static/media/floral-01.112dec8c0dda22684373.png",
+    "static/media/floral-01.png": "/static/media/floral-01.5902989e27f85205d4cd.png",
     "static/media/crane-01.png": "/static/media/crane-01.1d129da27f31e036ed85.png",
     "static/media/jasmine-01.jpg": "/static/media/jasmine-01.89123082c1b207ee0c77.jpg",
     "static/media/mountain-01.png": "/static/media/mountain-01.f051e7053bbb99c5e43c.png",
@@ -17,11 +17,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.914acbd4.css.map": "/static/css/main.914acbd4.css.map",
-    "main.437a55c8.js.map": "/static/js/main.437a55c8.js.map"
+    "main.b5de18d0.css.map": "/static/css/main.b5de18d0.css.map",
+    "main.53d4ee86.js.map": "/static/js/main.53d4ee86.js.map"
   },
   "entrypoints": [
-    "static/css/main.914acbd4.css",
-    "static/js/main.437a55c8.js"
+    "static/css/main.b5de18d0.css",
+    "static/js/main.53d4ee86.js"
   ]
 }

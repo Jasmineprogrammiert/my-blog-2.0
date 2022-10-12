@@ -13,8 +13,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import AOS from 'aos';
 
-// REACT_APP_
-
 const Blog = () => {
   const { path } = usePath();
   const { data: blog, isPending } = useFetch(`${process.env.REACT_APP_BACKEND_URL}/blogs/` + path);
@@ -24,14 +22,7 @@ const Blog = () => {
       delay: 0,
       duration: 1300
     });
-    window.addEventListener('load', function() {
-      AOS.refresh();
-    });
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() { 
-        AOS.refresh(); 
-      }, 500);
-    });
+    window.addEventListener('load', AOS.refresh);
   })
   
   return (

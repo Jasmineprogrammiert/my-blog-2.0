@@ -15,19 +15,12 @@ const BlogCard = ({
 
   useEffect(() => {    
     AOS.init({
-      offset: 100,
       delay: 0,
+      offset: 100,
       duration: 1300, 
     });
-    window.addEventListener('load', function() {
-      AOS.refresh();
-    });
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() { 
-        AOS.refresh(); 
-      }, 500);
-    });
-  }, [])
+    window.addEventListener('load', AOS.refresh);
+  })
 
   return (
     <>

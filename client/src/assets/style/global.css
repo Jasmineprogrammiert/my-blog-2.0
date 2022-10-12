@@ -45,6 +45,9 @@ input, button {
   outline: none;
 }
 /* ---------- Navbar ---------- */
+.hideBar {
+  top: -7.5vh;
+}
 .navbar {
   position: fixed;
   height: 6.5vh;
@@ -53,9 +56,6 @@ input, button {
   transition: top .3s;
   z-index: 100;
 }
-.hideBar {
-  top: -7.5vh;
-}
 .nav-brand {
   font-family: 'Playball', cursive;
   font-weight: 100;
@@ -63,26 +63,20 @@ input, button {
   font-size: 1.8vw;
   font-weight: 800;
 }
-.nav-item, #nav-item-dropdown, .nav-dropdown {
+.nav-item {
   color: hsl(0, 0%, 1%);
   font-family: 'Georgia', sans-serif;
   font-size: 1.35vw;
-}
-.nav-item {
   margin-left: 2vw;
 }
-.dropdown-menu {
-  padding: 0;
-  margin: .5vh 0 .5vh 0;
-}
 /* testing */
-.topImg {
+/* .topImg {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
-}
+} */
 /* ---------- BackToTop ---------- */
 #backtoTop-container {
   background-color: var(--lightblue);
@@ -114,43 +108,42 @@ footer {
 }
 .about-heading-1 {
   font-size: 7.5vw;
-  margin-bottom: 4vh;
   letter-spacing: 6px;
+  margin-bottom: 4vh;
 }
 .about-heading-2 {
   font-size: 3.5vw;
+  margin-bottom: -5vh;
 }
 .deco-img {
   height: auto;
   object-fit: cover;
-  opacity: .65;
+  opacity: .85;
+  width: 26vw;
 }
-.deco-img-1 {
-  width: 44vw;
-  animation: diagonal-moveIn-1 1.5s ease-in-out forwards;
+#deco-img-1 {
+  animation: diagonal-moveIn-1 2s ease-in-out forwards;
 }
 @keyframes diagonal-moveIn-1 {
 	0% {
-    margin: -13vh 0 -3vh -18vw;
-    transform: rotate(75deg);
+    margin: -26vh 0 -18vh -25vw;
+    transform: rotate(-17deg);
 	}
 	100% {
-    margin: -6vh 0 -3vh -7.8vw;
-    transform: rotate(75deg);
+    margin: -16vh 0 -18vh 1vw;
+    transform: rotate(-17deg);
 	}
 }
-.deco-img-2 {
-  width: 28vw;
-  opacity: .88;
-  animation: diagonal-moveIn-2 1.5s ease-in-out forwards;
+#deco-img-2 {
+  animation: diagonal-moveIn-2 2s ease-in-out forwards;
 }
 @keyframes diagonal-moveIn-2 {
 	0% {
-    margin: -25vh 0 0 92.1vw;
+    margin: -15vh 0 0 126vw;
     transform: rotate(10deg);
 	}
 	100% {
-    margin: -22vh 0 0 72.1vw;
+    margin: -15vh 0 0 74.5vw;
     transform: rotate(10deg);
 	}
 }

@@ -1,11 +1,75 @@
-@media (max-width: 768px) {
+@media (max-width: 888px) {
 /* ---------- BlogHome - 3. Blog List ---------- */
   .blogList{
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) { */
+@media (orientation: portrait) and (max-width: 540px) {
+  /* ---------- Navbar ---------- */
+  .hideBar {
+    top: -30vh;
+  }
+  #nav-toggle {
+    font-size: 2.8vw;
+  }
+  .navbar {
+    height: 8vh;
+  }
+  .nav-brand {
+    letter-spacing: 1.3px;
+    font-size: 5vw;
+    margin-left: 4vw;
+  }
+  .nav-item {
+    font-size: 4vw;
+    padding-left: 43%
+  }
+  .nav-item-1 {
+    margin-top: 4vh;
+    margin-bottom: 1vh;
+  }
+  /* ---------- BackToTop ---------- */
+  #backtoTop {
+    font-size: 8vw;
+  }
+  /* --------------- About (4) --------------- */
+  /* ---------- About - Sec.1 ---------- */
+  /* .about-sec-1 {
+    height: 85vh;
+  }
+  .about-heading-1 {
+    font-size: 10vw;
+    margin: 5vh 0;
+    letter-spacing: 5px;
+  }
+  .about-heading-2 {
+    font-size: 6vw;
+    margin-bottom: -2.5vh;
+  }
+  .deco-img-1 {
+    width: 70vw;
+    margin-top: 1vh !important;
+  }
+  .deco-img-2 {
+    width: 47vw;
+    margin-top: .1vh !important;
+  } */
+  /* ---------- About - Sec. 2 ---------- */
+  /* .about-sec-2 {
+    margin-top: 5vh;
+  }
+  .column-l-2 {
+    margin: 20vh 3.5vw 0 6.5vw;
+  }
+  .column-r-2 {
+    margin: 9vh 5vw 0 0;
+  }
+  .about-txt {
+    font-size: 5vw;
+    line-height: 4.5vh;
+  } */
 /* ---------- BlogHome - 3. Blog List ---------- */
   .blogList {
     grid-template-columns: repeat(1, 1fr);

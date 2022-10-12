@@ -28,8 +28,8 @@ const NavigationBar = () => {
         >
           Lieblingsjasmin
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" id="nav-toggle" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             {/* ---------- Under Development ---------- */}
             {user ? (
@@ -43,7 +43,7 @@ const NavigationBar = () => {
               </Nav.Link>
               <Nav.Link 
                 as={NavLink} to="blog"
-                className="nav-item"
+                className="nav-item nav-item-1"
               >
                 Blog
               </Nav.Link>
@@ -59,7 +59,7 @@ const NavigationBar = () => {
               <>
               <Nav.Link 
                 as={NavLink} to="blog"
-                className="nav-item"
+                className="nav-item nav-item-1"
               >
                 Blog
               </Nav.Link>
