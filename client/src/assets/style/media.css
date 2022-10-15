@@ -261,7 +261,7 @@
   }
   .login-content {
     width: 70%;
-    height: 61vh;
+    height: 61.5vh;
     padding: 6vh 10vw;
   }
   .login-content h1 {
@@ -288,7 +288,7 @@
     font-size: 3.5vw;
   }
   #visibility-switch {
-    margin-top: -7.7vh;
+    margin-top: -7.5vh;
   }
   #visibility-icon {
     font-size: 4.5vw;
@@ -297,5 +297,14 @@
   .sign-up {
     font-size: 3.2vw;
     display: block;
+  }
+  /* ---------- SignUp ---------- */
+  .signup-content {
+    height: 60vh;
+  }
+  .signup-error {
+    font-size: 2.8vw;
+    margin-top: -1.5vh;
+    margin-bottom: 0vh;
   }
 }
