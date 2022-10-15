@@ -26,6 +26,7 @@ html {
 }
 :root {
   --lightblue: lightblue;
+  --dark-mode: hsl(209, 34%, 26%);
 }
 h1, h2 {
   font-family: 'Satisfy', cursive;
@@ -68,6 +69,7 @@ input, button {
   font-family: 'Georgia', sans-serif;
   font-size: 1.35vw;
   margin-left: 2vw;
+  background-color: var(--dark-mode);
 }
 /* testing */
 /* .topImg {
@@ -570,7 +572,7 @@ footer {
   padding: .7vh 9.8vw;
   border-radius: 30px;
   color: #eee;
-  background-color: hsl(209, 34%, 26%);
+  background-color: var(--dark-mode);
   margin-bottom: 5vh;
 }
 .login-content button:hover {

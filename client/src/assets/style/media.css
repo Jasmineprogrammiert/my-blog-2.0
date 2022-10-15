@@ -198,28 +198,21 @@
   /* ---------- 2. Main Content ---------- */
   /* -------- 2.2 header -------- */
   .blog {
-    /* padding-top: 0; */
     padding-top: 8.3vh;
   }
   .blog header h1 {
     font-size: 7.5vw;
     letter-spacing: 4px;
-    /* margin-top: 1.5vh;
-    margin-bottom: 2.5vh; */
     margin: 3vh 0;
   }
   .blog header p {
-    /* font-size: 3vw; */
     font-size: 3.4vw;
     padding-bottom: .1rem;
   }
   .blog-row {
-    /* font-size: 3vw; */
     font-size: 3.4vw;
-    /* letter-spacing: -.1vw; */
     padding: 0;
     padding-right: 5vw;
-    /* margin: -1rem 0 -.6rem 0; */
     margin-bottom: -.4rem;
   }
   /* -------- 2.3 body -------- */
@@ -258,5 +251,51 @@
   .img-dots li button {
     height: .3rem;
     width: .6rem;
+  }
+  /* ---------- LogIn ---------- */
+  .login {
+    margin-top: 0;
+  }
+  .login img {
+    height: 85vh;
+  }
+  .login-content {
+    width: 70%;
+    height: 61vh;
+    padding: 6vh 10vw;
+  }
+  .login-content h1 {
+    font-size: 5.5vw;
+  }
+  .login-content h1:after {
+    width: 13vw;
+  }
+  .login-content h2 {
+    font-size: 7vw;
+    margin-bottom: 2.5vh;
+  }
+  .login-content input,
+  .login-content input::placeholder {
+    font-size: 3.8vw;
+    margin-bottom: 2.8vh;
+  }
+  .login-content button {
+    width: 100%;
+    margin-bottom: 3vh;
+    margin-top: 1vh;
+  }
+  .submit-btn {
+    font-size: 3.5vw;
+  }
+  #visibility-switch {
+    margin-top: -7.7vh;
+  }
+  #visibility-icon {
+    font-size: 4.5vw;
+  }
+  .pwd-recovery, 
+  .sign-up {
+    font-size: 3.2vw;
+    display: block;
   }
 }

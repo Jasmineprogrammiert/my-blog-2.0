@@ -58,7 +58,7 @@ const LogIn = () => {
           <span id="visibility-switch">
             <VisibilitySwitch
               visibility={visibility} 
-              handleVisibility={handleVisibility} 
+              handleVisibility={handleVisibility}
             />
           </span>
           {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>}
