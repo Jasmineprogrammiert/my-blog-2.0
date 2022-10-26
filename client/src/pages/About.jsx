@@ -66,8 +66,9 @@ const About = () => {
         <h2 className="about-txt">
           Hello, my name is <i><strong>Jasmine</strong></i>.
           <br />
-          I'm a Hong-Kong-based marketing undergrad with a passion for <br /> software engineering, languages, <br /> hiking {'&'} history. 
-        </h2>
+          I'm a Hong-Kong-based software engineer with a passion for <br /> languages, <br /> hiking, history {'&'} travelling. 
+          {/* I'm a Hong-Kong-based marketing undergrad with a passion for <br /> software engineering, languages, <br /> hiking {'&'} history.  */}
+        </h2> 
       </div>
     </div>
 {/* --------------- Sec. 3 --------------- */}

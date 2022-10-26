@@ -21,7 +21,7 @@ const Header = () => {
         className="blog-img-0" 
         src={floral} alt="magnolia" 
       />
-      <h1>Jasmine's Blogs</h1>
+      <h1>Jasmine's Blog</h1>
       <Accordion 
         className="accordion"
         expanded={expanded === 'panel1'} 

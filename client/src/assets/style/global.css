@@ -629,87 +629,6 @@ footer {
   margin-top: -3vh;
   margin-bottom: 2.5vh;
 }
-/* ---------- More ---------- */
-.more-header {
-  padding-bottom: 68vh;
-}
-.more-img-1 {
-  position: absolute;
-  width: 31vw;
-  height: auto;
-  margin-top: -40vh;
-  margin-left: -1vw;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* -------------------- TESTING -------------------- */
-/* ---------- Comment ---------- */
-.write {
-  padding-top: 50px;
-}
-.writeForm {
-  position: relative;
-}
-.writeFormGroup {
-  margin-left: 150px;
-  display: flex;
-  align-items: center;
-}
-.writeIcon {
-  width: 25px;
-  height: 25px;
-  font-size: 20px;
-  border: 1px solid;
-  border-radius: 50%;
-  color: rgb(129, 125, 125);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.writeInput {
-  font-size: 30px;
-  border: none;
-  padding: 20px;
-  width: 70vw;
-}
-.writeInput::placeholder {
-  color: rgb(189, 185, 185);
-  font-weight: 400;
-}
-.writeInput:focus {
-  outline-style: none;
-}
-.writeText {
-  width: 70vw;
-  height: 40vh;
-  font-family: inherit;
-  font-size: 20px;
-}
-.writeSubmit {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  color: white;
-  background-color: teal;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
 /* ---------- Settings ---------- */
 .settings {
   display: flex;
@@ -780,4 +699,85 @@ footer {
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------- Under Development --------------- */
+/* ---------- More ---------- */
+.more-header {
+  padding-bottom: 68vh;
+}
+.more-img-1 {
+  position: absolute;
+  width: 31vw;
+  height: auto;
+  margin-top: -40vh;
+  margin-left: -1vw;
+}
+/* ---------- Comment ---------- */
+.write {
+  padding-top: 50px;
+}
+.writeForm {
+  position: relative;
+}
+.writeFormGroup {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+}
+.writeIcon {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: rgb(129, 125, 125);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.writeInput {
+  font-size: 30px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+}
+.writeInput::placeholder {
+  color: rgb(189, 185, 185);
+  font-weight: 400;
+}
+.writeInput:focus {
+  outline-style: none;
+}
+.writeText {
+  width: 70vw;
+  height: 40vh;
+  font-family: inherit;
+  font-size: 20px;
+}
+.writeSubmit {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }

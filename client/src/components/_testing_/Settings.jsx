@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
+import { AuthContext } from '../../context/AuthContext';
+import bgImg from '../../assets/img/Settings/floral-1.jpg'
 
 const Settings = () => {
   const [file, setFile] = useState(null);
@@ -42,19 +43,64 @@ const Settings = () => {
 
   return (
     <>
+    <div className="login">
+      <img src={bgImg} alt="Background" />
+      <div className="login-content">
+        <h1>Lieblingsjasmin</h1>
+        <h2>Login</h2>
+        <form 
+          // onSubmit={handleSubmit}
+        >
+          <input 
+            type="username" 
+            name="username" 
+            placeholder="Username" 
+            required
+            // ref={userRef}
+          />
+          <input 
+            // type={visibility === 'visible' ? 'text' : 'password'} 
+            name="password"
+            placeholder="Password" 
+            required
+            // ref={passwordRef}
+          />
+          <span id="visibility-switch">
+            {/* <VisibilitySwitch
+              visibility={visibility} 
+              handleVisibility={handleVisibility}
+            /> */}
+          </span>
+          {/* {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>} */}
+          <button className="submit-btn" type="submit" 
+            // disabled={isFetching}
+          >
+            Sign In
+          </button>
+          {/* <Link className="pwd-recovery" to="/pwdrecovery">
+            <p>Forget Password</p>
+          </Link>
+          <Link className="sign-up" to="/signup">
+            <p>Sign Up</p>
+          </Link> */}
+        </form>
+      </div>
+    </div>  
+
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsUpdateTitle">Update Your Account</span>
           <span className="settingsDeleteTitle">Delete Account</span>
         </div>
+
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="settingsPP">
-            <img
+            {/* <img
               src={file ? URL.createObjectURL(file) : PF+user.profilePic}
               alt=""
-            />
+            /> */}
             <label htmlFor="fileInput">
               <i className="settingsPPIcon far fa-user-circle"></i>
             </label>
@@ -65,26 +111,31 @@ const Settings = () => {
               onChange={e => setFile(e.target.files[0])}
             />
           </div>
+
           <label>Username</label>
           <input
             type="text"
             placeholder={user.username}
             onChange={e => setUsername(e.target.value)}
           />
+
           <label>Email</label>
           <input
             type="email"
             placeholder={user.email}
             onChange={e => setEmail(e.target.value)}
           />
+
           <label>Password</label>
           <input
             type="password"
             onChange={e => setPassword(e.target.value)}
           />
+
           <button className="settingsSubmit" type="submit">
             Update
           </button>
+
           {success && (
             <span
               style={{ color: "green", textAlign: "center", marginTop: "20px" }}
@@ -93,6 +144,7 @@ const Settings = () => {
             </span>
           )}
         </form>
+
       </div>
     </div>
     </>
