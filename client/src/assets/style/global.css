@@ -423,7 +423,7 @@ footer {
 .blog-row {
   font-size: 1.3vw;
   padding: 0 15vw;
-  margin: -.8rem 0 .8rem 1vw ;
+  margin: -.8rem 0 .8rem 1vw;
   display: grid;
   grid-template-columns: auto auto auto;
 }

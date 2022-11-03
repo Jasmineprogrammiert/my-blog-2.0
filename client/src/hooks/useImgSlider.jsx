@@ -18,13 +18,13 @@ const useImgSlider = () => {
   };
 
   const settings = {
-    lazyLoad: true,
+    lazyLoad: 'progressive',
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     dots: true,
     dotsClass: 'img-dots',
     arrows: true,

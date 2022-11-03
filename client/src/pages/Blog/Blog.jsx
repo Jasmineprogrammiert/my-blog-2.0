@@ -47,12 +47,12 @@ const Blog = () => {
                 <li>Route: {blog.hiking_info.route}</li>
               </ul>
               <ul>
-                <li>Length: {blog.hiking_info.length} km</li>
-                <li>Moving time: {blog.hiking_info.moving_time} hrs</li>
+                <li>Length: {blog.hiking_info.length}km</li>
+                <li>Time: {blog.hiking_info.moving_time}hr</li>
               </ul>
               <ul>
                 <li>Difficulty: {blog.hiking_info.difficulty}*</li>
-                <li>Elevation: {blog.hiking_info.elevation} m</li>
+                <li>Elevation: {blog.hiking_info.elevation}m</li>
               </ul>
             </div>
           </div>

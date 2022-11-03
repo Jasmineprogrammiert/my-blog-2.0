@@ -44,7 +44,7 @@ const Header = () => {
              {/* ----- by Locations ----- */}
             <dt>Locations</dt>
             {/* <dd>Hong Kong | Hong Kong Island | Sai Kung</dd> */}
-            <dd>Hong Kong | Hong Kong Island</dd>
+            <dd>Hong Kong | Hong Kong Island | Lantau Island</dd>
           </dl>
         </AccordionDetails>
       </Accordion>
