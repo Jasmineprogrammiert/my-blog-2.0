@@ -33,7 +33,7 @@ const NavigationBar = () => {
           <Nav className="ms-auto">
             {/* ---------- Under Development ---------- */}
             {user ? (
-              <>
+              <> 
               <Nav.Link 
                 as={NavLink} to="settings"
                 className="nav-item"

@@ -1,5 +1,5 @@
-import { createContext, Suspense, useContext } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Suspense, useContext } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 // components - universal
 import NavigationBar from './components/universal/Navbar';
 import ModeSwitch from './components/universal/ModeSwitch';
@@ -24,8 +24,6 @@ import './assets/style/global.css';
 import './assets/style/mode.css';
 import './assets/style/media.css';
 
-export const ThemeContext = createContext(null);
-
 const App = () => {
   const { theme, toggleTheme } = useContext(ModeContext);
   const { user } = useContext(AuthContext);
@@ -40,9 +38,9 @@ const App = () => {
         <Route path="blog" element={<BlogHome />} />
         <Route path="/blog/:id" element={<Blog />} />
         {/* ---------- Under Development ---------- */}
-        <Route path="signup" element={user ? <BlogHome /> : <SignUp />}/>
-        <Route path="login" element={user ? <BlogHome /> : <LogIn />}/>
-        <Route path="settings" element={user ? <Settings /> : <LogIn />}/>
+        <Route path="signup" element={user ? <Navigate to="/blog" /> : <SignUp />}/>
+        <Route path="login" element={user ? <Navigate to="/blog" /> : <LogIn />}/>
+        <Route path="settings" element={user ? <Settings /> : <Navigate to="/login" />}/>
         <Route path="more" element={<More />} />
         <Route path="*" element={<Blog />} />
       </Routes>

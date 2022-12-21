@@ -37,13 +37,9 @@ const Header = () => {
           <dl>
             {/* ----- by Activities ----- */}
             <dt>Activities</dt>
-            {/* <dd>Arts {'&'} Culture</dd>
-            <dd>Camping</dd> */}
             <dd>Hiking</dd>
-            {/* <dd>Others</dd> */}
              {/* ----- by Locations ----- */}
             <dt>Locations</dt>
-            {/* <dd>Hong Kong | Hong Kong Island | Sai Kung</dd> */}
             <dd>Hong Kong | Hong Kong Island | Lantau Island</dd>
           </dl>
         </AccordionDetails>
