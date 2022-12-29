@@ -12,7 +12,8 @@ const NavigationBar = () => {
   const { user, dispatch } = useContext(AuthContext);
 
   // testing
-  // const PF = 'http://localhost:8000/images/'
+  // const PF = 'http://localhost:8000/images/';
+  // const PF = 'https://lieblingsjasmin.com/';
   
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' });
@@ -39,6 +40,7 @@ const NavigationBar = () => {
                 className="nav-item"
               >
                 {/* <img className="topImg" src={PF+user.profilePic} alt="" /> */}
+                <img className="topImg" src={user.profilePic} alt="" />
                 Welcome, {user.username}
               </Nav.Link>
               <Nav.Link 
