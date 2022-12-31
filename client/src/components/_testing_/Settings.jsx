@@ -40,19 +40,15 @@ const Settings = () => {
     //   } catch (err) {}
     // }
     try {
-      // const res = await axios.put('/users/' + user._id, updatedUser);
-      // const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/users/${user.id}`, updatedUser);
       const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`, updatedUser);
       setSuccess(true);
       dispatch({ type: 'UPDATE_SUCCESS', payload: res.data });
 
-      // console.log('----------- res.data --------');
-      // console.log(res.data);
-      // console.log('----------- updated User --------');
-      // console.log(updatedUser);
-      // console.log('----------- user.email --------');
-      // console.log(user.email);
-      
+      console.log('----------- res.data --------');
+      console.log(res.data);
+      console.log('----------- updated User --------');
+      console.log(updatedUser);
+
     } catch (err) {
       dispatch({ type: 'UPDATE_FAILURE' });
     }
@@ -68,22 +64,24 @@ const Settings = () => {
         <form onSubmit={handleSubmit}>
           <input 
             type="username" 
-            name="username" 
-            // type="text"
+            name="username"
             placeholder={user.username}
+            pattern="[A-Za-z0-9-_.]{4,25}"
+            title="The usernaem must be 4-25 long, with letters, numbers, hyphens, underscores or periods only. No punctuation or special characters are allowed."
             onChange={e => setUsername(e.target.value)}
           />
           <input 
             type="email" 
             name="email" 
-            // type="text"
-            placeholder={user.email}
+            placeholder="New email"
             onChange={e => setEmail(e.target.value)}
           />
           <input 
             type={visibility === 'visible' ? 'text' : 'password'} 
             name="password"
             placeholder="New password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="Must contain at least one digit, one uppercase and lowercase letter, and at least 8 or more characters" 
             onChange={e => setPassword(e.target.value)}
           />
           <span id="visibility-switch">
