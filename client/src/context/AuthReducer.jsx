@@ -21,7 +21,7 @@ const AuthReducer = (state, action) => {
     case 'UPDATE_START':
       return {
         ...state,
-        isFetching: true
+        isFetching: true,
       };
     case 'UPDATE_SUCCESS':
       return {

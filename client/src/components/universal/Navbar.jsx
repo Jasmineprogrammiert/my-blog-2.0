@@ -40,7 +40,6 @@ const NavigationBar = () => {
                 className="nav-item"
               >
                 {/* <img className="topImg" src={PF+user.profilePic} alt="" /> */}
-                <img className="topImg" src={user.profilePic} alt="" />
                 Welcome, {user.username}
               </Nav.Link>
               <Nav.Link 
