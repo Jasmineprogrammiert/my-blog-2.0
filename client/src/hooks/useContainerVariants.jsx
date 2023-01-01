@@ -1,5 +1,5 @@
 const useContainerVariants = () => {
-  const ContainerVariants = {
+  const containerVariants = {
     hidden: {
       opacity: 0,
     },
@@ -9,11 +9,11 @@ const useContainerVariants = () => {
     },
     exit: {
       x: '-100vh',
-      transition: { ease: 'easeInOut'}
+      transition: { ease: 'easeInOut' }
     }
   };
   
-  return { ContainerVariants };
+  return { containerVariants };
 }
 
 export default useContainerVariants;

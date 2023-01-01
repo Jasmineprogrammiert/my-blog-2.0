@@ -632,17 +632,31 @@ footer {
 /* ---------- Settings ---------- */
 .settings-content {
   width: 30vw;
-  height: 51.5vh;
+  height: 60vh;
   padding: 6vh 3vw;
 }
-.settings-li {
+.settings-content ul {
+  margin-left: .5vw;
+  list-style-type: none;
+}
+.settings-content li {
   margin-bottom: 4vh;
   font-size: 1.28vw;
   color: lightskyblue;
 }
-
-
-
+.settings-content li span.active {
+  font-weight: bold;
+}
+.settings-content li span.active::before {
+  content: '>';
+  position: relative;
+  margin-right: .5vw;
+  transform: scale(0.8, 1);
+  display: inline-block;
+}
+.settings-content button {
+  padding: .7vh 8vw;
+}
 
 
 

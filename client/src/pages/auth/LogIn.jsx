@@ -4,6 +4,7 @@ import axios from 'axios';
 // hooks and contexts
 import { AuthContext } from '../../context/AuthContext';
 import useContainerVariants from '../../hooks/useContainerVariants';
+import useButtonVariants from '../../hooks/useButtonVariants';
 import useVisibility from '../../hooks/useVisibility';
 // styles
 import { motion } from 'framer-motion';
@@ -34,7 +35,8 @@ const LogIn = () => {
     }
   };
 
-  const { ContainerVariants } = useContainerVariants();
+  const { containerVariants } = useContainerVariants();
+  const { buttonVariants } = useButtonVariants();
   const { visibility, handleVisibility } = useVisibility();
 
   return (
@@ -42,7 +44,7 @@ const LogIn = () => {
     <div className="login">
       <img src={bgImg} alt="Background" />
       <motion.div className="login-content"
-        variants={ContainerVariants}
+        variants={containerVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
@@ -71,9 +73,12 @@ const LogIn = () => {
             />
           </span>
           {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>}
-          <button className="submit-btn" type="submit" disabled={isFetching}>
+          <motion.button 
+            className="submit-btn" type="submit" disabled={isFetching} 
+            variants={buttonVariants} whileHover="hover"
+          >
             Sign In
-          </button>
+          </motion.button>
           <Link className="pwd-recovery" to="/pwdrecovery">
             <p>Forget Password</p>
           </Link>

@@ -116,7 +116,7 @@
   opacity: .8;
 }
 #light .login-content h1,
-#light .settings-li {
+#light .settings-content li {
   color: #d4ccb1;
 }
 #light .login-content h1:after {

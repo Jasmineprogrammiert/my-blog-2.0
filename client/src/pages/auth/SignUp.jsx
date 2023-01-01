@@ -2,6 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 // hooks
 import useContainerVariants from '../../hooks/useContainerVariants';
+import useButtonVariants from '../../hooks/useButtonVariants';
 import useVisibility from '../../hooks/useVisibility';
 import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
 // styles
@@ -29,7 +30,8 @@ const SignUp = () => {
     }
   };
 
-  const { ContainerVariants } = useContainerVariants();
+  const { containerVariants } = useContainerVariants();
+  const { buttonVariants } = useButtonVariants();
   const { visibility, handleVisibility } = useVisibility();
 
   return (
@@ -37,7 +39,7 @@ const SignUp = () => {
     <div className="login">
       <img src={bgImg} alt="Background" />
       <motion.div className="login-content signup-content"
-        variants={ContainerVariants}
+        variants={containerVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
@@ -77,9 +79,12 @@ const SignUp = () => {
           />
           </span>
           {error && <div className="signup-error">Username or email is taken. Please try again.</div>}
-          <button className="submit-btn">
+          <motion.button 
+            className="submit-btn"
+            variants={buttonVariants} whileHover="hover"
+          >
             Register
-          </button>
+          </motion.button>
         </form>
       </motion.div>
     </div>    

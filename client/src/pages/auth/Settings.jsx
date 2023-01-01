@@ -1,9 +1,10 @@
 import { useState, useContext } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 // hooks and contexts
 import { AuthContext } from '../../context/AuthContext';
 import useContainerVariants from '../../hooks/useContainerVariants';
+import useButtonVariants from '../../hooks/useButtonVariants';
 import useVisibility from '../../hooks/useVisibility';
 // styles
 import { motion } from 'framer-motion';
@@ -54,7 +55,17 @@ const Settings = () => {
   const confirmSelect = select => {
     setUpdate({ ...update, select })
   };
-  const { ContainerVariants } = useContainerVariants();
+  const { containerVariants } = useContainerVariants();
+  const { buttonVariants } = useButtonVariants();
+  const nextVariants = {
+    hidden: { 
+      x: '-100vw' 
+    },
+    visible: {
+      x: '2.5vw',
+      transition: { type: 'spring', stiffness: 120 }
+    } 
+  };
   const { visibility, handleVisibility } = useVisibility();
 
   return (
@@ -62,7 +73,7 @@ const Settings = () => {
     <div className="login">
       <img src={bgImg} alt="Background" />
       <motion.div className="login-content settings-content"
-        variants={ContainerVariants}
+        variants={containerVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
@@ -78,7 +89,6 @@ const Settings = () => {
                 onClick={() => confirmSelect(select)}
                 whileHover={{ scale: 1.2, originX: 0, color: '#fff' }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                className="settings-li"
               >
                 <span className={selectClass}>
                   { select }
@@ -87,6 +97,19 @@ const Settings = () => {
             )
           })}
         </ul>
+        
+        {update.select && (
+          <motion.div variants={nextVariants}>
+            <Link to="/toppings">
+              <motion.button
+                variants={buttonVariants}
+                whileHover="hover"
+              >
+                Next
+              </motion.button>
+            </Link>
+          </motion.div>
+        )}
 
         {/* <form onSubmit={handleSubmit}>
           <input 
