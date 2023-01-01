@@ -11,7 +11,7 @@ import BlogHome from './pages/Blog/BlogHome';
 import Blog from './pages/Blog/Blog';
 import SignUp from './pages/auth/SignUp';
 import LogIn from './pages/auth/LogIn';
-import Settings from './components/_testing_/Settings';
+import Settings from './pages/auth/Settings';
 import More from './pages/More';
 // hooks & contexts
 import { ModeContext } from './context/ModeContext';

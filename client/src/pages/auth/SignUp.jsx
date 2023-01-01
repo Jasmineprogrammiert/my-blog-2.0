@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import axios from 'axios';
-// styles
-import bgImg from '../../assets/img/LogIn/floral-01.jpg';
+// hooks
+import useContainerVariants from '../../hooks/useContainerVariants';
 import useVisibility from '../../hooks/useVisibility';
 import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
+// styles
+import { motion } from 'framer-motion';
+import bgImg from '../../assets/img/LogIn/floral-01.jpg';
 
 const SignUp = () => {
   const [username, setUsername] = useState('');
@@ -14,7 +17,6 @@ const SignUp = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     setError(false);
-    
     try {
       const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, {
         username,
@@ -27,13 +29,19 @@ const SignUp = () => {
     }
   };
 
+  const { ContainerVariants } = useContainerVariants();
   const { visibility, handleVisibility } = useVisibility();
 
   return (
     <>
     <div className="login">
       <img src={bgImg} alt="Background" />
-      <div className="login-content signup-content">
+      <motion.div className="login-content signup-content"
+        variants={ContainerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <h1>Lieblingsjasmin</h1>
         <h2>Sign Up</h2>
         <form onSubmit={handleSubmit}>
@@ -73,7 +81,7 @@ const SignUp = () => {
             Register
           </button>
         </form>
-      </div>
+      </motion.div>
     </div>    
     </>
   )

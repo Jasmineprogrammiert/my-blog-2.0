@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 // hooks and contexts
 import { AuthContext } from '../../context/AuthContext';
+import useContainerVariants from '../../hooks/useContainerVariants';
 import useVisibility from '../../hooks/useVisibility';
 // styles
+import { motion } from 'framer-motion';
 import bgImg from '../../assets/img/LogIn/forbidden-city-02.png';
 import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
 
@@ -18,7 +20,6 @@ const LogIn = () => {
     e.preventDefault();
     setError(false);
     dispatch({ type: 'LOGIN_START' });
-
     try {
       const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
         username: userRef.current.value,
@@ -33,13 +34,19 @@ const LogIn = () => {
     }
   };
 
+  const { ContainerVariants } = useContainerVariants();
   const { visibility, handleVisibility } = useVisibility();
 
   return (
     <>
     <div className="login">
       <img src={bgImg} alt="Background" />
-      <div className="login-content">
+      <motion.div className="login-content"
+        variants={ContainerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <h1>Lieblingsjasmin</h1>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
@@ -74,7 +81,7 @@ const LogIn = () => {
             <p>Sign Up</p>
           </Link>
         </form>
-      </div>
+      </motion.div>
     </div>    
     </>
   )

@@ -111,11 +111,12 @@
 #light #backtoTop-container {
   background-color: hsl(350, 100%, 85%);
 }
-/* --------------- LogIn --------------- */
+/* --------------- LogIn, Settings --------------- */
 #light .login img {
   opacity: .8;
 }
-#light .login-content h1 {
+#light .login-content h1,
+#light .settings-li {
   color: #d4ccb1;
 }
 #light .login-content h1:after {
