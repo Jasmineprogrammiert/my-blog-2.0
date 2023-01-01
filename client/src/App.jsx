@@ -12,6 +12,9 @@ import Blog from './pages/Blog/Blog';
 import SignUp from './pages/auth/SignUp';
 import LogIn from './pages/auth/LogIn';
 import Settings from './pages/auth/Settings';
+import UpdateUsername from './components/Settings/UpdateUsername';
+import UpdateEmail from './components/Settings/UpdateEmail';
+import UpdatePwd from './components/Settings/UpdatePwd';
 import More from './pages/More';
 // hooks & contexts
 import { ModeContext } from './context/ModeContext';
@@ -35,12 +38,18 @@ const App = () => {
       <ModeSwitch theme={theme} toggleTheme={toggleTheme}  />
       <Routes>
         <Route path="/" element={<About />} />
+        {/* ---------- Blogs ----------  */}
         <Route path="blog" element={<BlogHome />} />
         <Route path="/blog/:id" element={<Blog />} />
+        {/* ---------- Authentication ----------  */}
         <Route path="signup" element={user ? <Navigate to="/blog" /> : <SignUp />}/>
         <Route path="login" element={user ? <Navigate to="/blog" /> : <LogIn />}/>
+        {/* ---------- Settings ----------  */}
         <Route path="settings" element={user ? <Settings /> : <Navigate to="/login" />}/>
-        {/* ---------- Under Development ---------- */}
+        <Route path="update-username" element={<UpdateUsername />} />
+        <Route path="update-email" element={<UpdateEmail />} />
+        <Route path="update-password" element={<UpdatePwd />} />
+        {/* ---------- Others ----------  */}
         <Route path="more" element={<More />} />
         <Route path="*" element={<Blog />} />
       </Routes>

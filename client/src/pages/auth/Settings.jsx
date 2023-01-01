@@ -4,11 +4,11 @@ import axios from 'axios';
 // hooks and contexts
 import { AuthContext } from '../../context/AuthContext';
 import useContainerVariants from '../../hooks/useContainerVariants';
-import useButtonVariants from '../../hooks/useButtonVariants';
 import useVisibility from '../../hooks/useVisibility';
 // styles
 import { motion } from 'framer-motion';
 import bgImg from '../../assets/img/Settings/floral-1.jpg';
+import NextButton from '../../components/Settings/NextButton';
 import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
 
 const Settings = () => {
@@ -56,7 +56,6 @@ const Settings = () => {
     setUpdate({ ...update, select })
   };
   const { containerVariants } = useContainerVariants();
-  const { buttonVariants } = useButtonVariants();
   const nextVariants = {
     hidden: { 
       x: '-100vw' 
@@ -97,74 +96,28 @@ const Settings = () => {
             )
           })}
         </ul>
-        
-        {update.select && (
+
+        {update.select === 'Username' ? (
           <motion.div variants={nextVariants}>
-            <Link to="/toppings">
-              <motion.button
-                variants={buttonVariants}
-                whileHover="hover"
-              >
-                Next
-              </motion.button>
+            <Link to="/update-username">
+              <NextButton />
+            </Link>
+          </motion.div>
+        ) : update.select === 'Email' ? (
+          <motion.div variants={nextVariants}>
+            <Link to="/update-email">
+              <NextButton />
+            </Link>
+          </motion.div>
+        ) : (
+          <motion.div variants={nextVariants}>
+            <Link to="/update-password">
+              <NextButton />
             </Link>
           </motion.div>
         )}
-
-        {/* <form onSubmit={handleSubmit}>
-          <input 
-            type="username" 
-            name="username"
-            placeholder={user.username}
-            pattern="[A-Za-z0-9-_.]{4,25}"
-            title="The usernaem must be 4-25 long, with letters, numbers, hyphens, underscores or periods only. No punctuation or special characters are allowed."
-            required
-            onChange={e => setUsername(e.target.value)}
-          />
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="New email"
-            required
-            onChange={e => setEmail(e.target.value)}
-          />
-          <input 
-            type={visibility === 'visible' ? 'text' : 'password'} 
-            name="password"
-            placeholder="New password"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-            title="Must contain at least one digit, one uppercase and lowercase letter, and at least 8 or more characters" 
-            required
-            onChange={e => setPassword(e.target.value)}
-          />
-          <span id="visibility-switch">
-            <VisibilitySwitch
-              visibility={visibility} 
-              handleVisibility={handleVisibility}
-            />
-          </span>
-          <button className="submit-btn" type="submit">
-            Update
-          </button>
-          {success && (
-            <span style={{ color: "green", textAlign: "center", marginTop: "20px" }}>
-             Profile has been updated...
-           </span>
-          )}
-          <Link className="pwd-recovery" to="/pwdrecovery">
-            <p>Delete Account</p>
-          </Link>
-        </form> */}
       </motion.div>
     </div>
-
-
-
-
-
-
-
-
 
 
     {/* <div className="login">
