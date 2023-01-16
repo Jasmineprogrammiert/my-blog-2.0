@@ -1,8 +1,13 @@
 import { useState, useContext } from 'react';
 import axios from 'axios';
+// hooks & contexts
 import { AuthContext } from "../../context/AuthContext";
+import useContainerVariants from '../../hooks/useContainerVariants';
+// styles
+import { motion } from 'framer-motion';
+import bgImg from '../../assets/img/Settings/floral-1.jpg';
 import useVisibility from "../../hooks/useVisibility";
-import VisibilitySwitch from "../universal/VisibilitySwitch";
+import VisibilitySwitch from "../../components/universal/VisibilitySwitch";
 
 const UpdatePwd = () => {
   const [password, setPassword] = useState('');
@@ -27,8 +32,49 @@ const UpdatePwd = () => {
     }
   };
 
+  const { containerVariants } = useContainerVariants();
+
   return (
     <>
+    <div className="login">
+      <img src={bgImg} alt="Background" />
+      <motion.div className="login-content update-content"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <form onSubmit={handleSubmit}>
+        <input 
+          type={visibility === 'visible' ? 'text' : 'password'} 
+          name="password"
+          placeholder="New password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+          title="Must contain at least one digit, one uppercase and lowercase letter, and at least 8 or more characters" 
+          required
+          onChange={e => setPassword(e.target.value)}
+        />
+        <span id="visibility-switch">
+          <VisibilitySwitch
+            visibility={visibility} 
+            handleVisibility={handleVisibility}
+          />
+        </span>
+
+        <button className="submit-btn" type="submit">
+          Update
+        </button>
+        {success && (
+          <span style={{ color: "green", textAlign: "center", marginTop: "20px" }}>
+            Profile has been updated...
+          </span>
+        )}
+        </form>
+      </motion.div>
+    </div>
+
+
+
     <form onSubmit={handleSubmit}>
       <input 
         type={visibility === 'visible' ? 'text' : 'password'} 

@@ -1,8 +1,10 @@
 import { useState, useContext } from 'react';
 import axios from 'axios';
-// hooks and contexts
+// hooks & contexts
 import { AuthContext } from "../../context/AuthContext";
+import useContainerVariants from '../../hooks/useContainerVariants';
 // styles
+import { motion } from 'framer-motion';
 import bgImg from '../../assets/img/Settings/floral-1.jpg';
 
 const UpdateUsername = () => {
@@ -16,7 +18,7 @@ const UpdateUsername = () => {
     dispatch({ type: 'UPDATE_START' });
     const updatedUser = {
       _id: user._id,
-      username,
+      username, // wanna use useHandleSubmit but have to make this dynamic (don't have a clue yet)
     };
     try {
       const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`, updatedUser);
@@ -27,16 +29,24 @@ const UpdateUsername = () => {
     }
   };
 
+  const { containerVariants } = useContainerVariants();
+
   return (
     <>
     <div className="login">
       <img src={bgImg} alt="Background" />
-      <div className="login-content">
+      <motion.div className="login-content update-content"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <form onSubmit={handleSubmit}>
           <input 
             type="username" 
             name="username"
-            placeholder={user.username}
+            // placeholder={user.username}
+            placeholder="New Username"
             pattern="[A-Za-z0-9-_.]{4,25}"
             title="The usernaem must be 4-25 long, with letters, numbers, hyphens, underscores or periods only. No punctuation or special characters are allowed."
             required
@@ -46,41 +56,18 @@ const UpdateUsername = () => {
           <button className="submit-btn" type="submit">
             Update
           </button>
+
+          {/* <span className="updated-msg">
+            Username has been successfully.
+          </span> */}
           {success && (
-            <span style={{ color: "green", textAlign: "center", marginTop: "20px" }}>
-              Profile has been updated...
+            <span className="updated-msg">
+              Username has been successfully.
             </span>
           )}
         </form>
-      </div>
+      </motion.div>
     </div>
-
-    {/* <div className="login">
-      <img src={bgImg} alt="Background" />
-      <div className="login-content">
-        <h1>Lieblingsjasmin</h1>
-        <h2>Update</h2>
-        <form onSubmit={handleSubmit}>
-          <input 
-            type="username" 
-            name="username"
-            placeholder={user.username}
-            pattern="[A-Za-z0-9-_.]{4,25}"
-            title="The usernaem must be 4-25 long, with letters, numbers, hyphens, underscores or periods only. No punctuation or special characters are allowed."
-            required
-            onChange={e => setUsername(e.target.value)}
-          />
-          <button className="submit-btn" type="submit">
-            Update
-          </button>
-          {success && (
-            <span style={{ color: "green", textAlign: "center", marginTop: "20px" }}>
-             Profile has been updated...
-           </span>
-          )}
-        </form>
-      </div>
-    </div> */}
     </>
   )
 }

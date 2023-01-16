@@ -657,8 +657,48 @@ footer {
 .settings-content button {
   padding: .7vh 8vw;
 }
-
-
+/* ----- UpdateUsername, ~Email, ~Password ----- */
+.update-content {
+  height: 28vh;
+}
+.update-content button {
+  margin-bottom: 3vh;
+}
+.updated-msg {
+  font-family: 'Merriweather', serif;
+}
+/* TESTING ----- UpdatePopUp */
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.modal{ 
+  max-width: 30vw;
+  max-height: 30vh;
+  margin: 0 auto;
+  padding: 5vh 5vw;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+}
+.modal p {
+  text-align: center;
+}
+.modal button{
+  color: #444;
+  border-color: #444;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.modal p{
+  color: #444;
+  font-weight: bold;
+}
 
 
 

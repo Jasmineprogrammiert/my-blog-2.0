@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 
-const useHandleSubmit = (url) => {
+const useHandleSubmit = (updatedUserElement) => {
   // const [file, setFile] = useState(null);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -15,11 +15,10 @@ const useHandleSubmit = (url) => {
   const handleSubmit = async e => {
     e.preventDefault();
     dispatch({ type: 'UPDATE_START' });
+
     const updatedUser = {
       _id: user._id,
-      // username,
-      // email,
-      // password,
+      updatedUserElement, // how to make it dynamic? 
     };
     // if (file) {
     //   const data = new FormData();

@@ -1,7 +1,7 @@
 import { useState, useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-// hooks and contexts
+// hooks & contexts
 import { AuthContext } from '../../context/AuthContext';
 import useContainerVariants from '../../hooks/useContainerVariants';
 import useButtonVariants from '../../hooks/useButtonVariants';

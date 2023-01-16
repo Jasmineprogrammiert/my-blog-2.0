@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-// hooks and contexts
+// hooks & contexts
 import { AuthContext } from '../../context/AuthContext';
 import useContainerVariants from '../../hooks/useContainerVariants';
 import useVisibility from '../../hooks/useVisibility';
@@ -55,7 +55,8 @@ const Settings = () => {
   const confirmSelect = select => {
     setUpdate({ ...update, select })
   };
-  const { containerVariants } = useContainerVariants();
+
+  // const { containerVariants } = useContainerVariants();
   const nextVariants = {
     hidden: { 
       x: '-100vw' 
@@ -66,6 +67,22 @@ const Settings = () => {
     } 
   };
   const { visibility, handleVisibility } = useVisibility();
+
+  const containerVariants = {
+    hidden: { 
+      opacity: 0, 
+      x: '100vw' 
+    },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { type: 'spring', delay: .5 }
+    },
+    exit: {
+      x: "-100vh",
+      transition: { ease: 'easeInOut' }
+    }
+  };
 
   return (
     <>
@@ -86,7 +103,7 @@ const Settings = () => {
               <motion.li 
                 key={select} 
                 onClick={() => confirmSelect(select)}
-                whileHover={{ scale: 1.2, originX: 0, color: '#fff' }}
+                whileHover={{ scale: 1.2, originX: -0.05, color: '#fff' }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
                 <span className={selectClass}>
