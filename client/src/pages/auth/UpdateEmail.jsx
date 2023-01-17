@@ -3,6 +3,7 @@ import axios from 'axios';
 // hooks & contexts
 import { AuthContext } from "../../context/AuthContext";
 import useContainerVariants from '../../hooks/useContainerVariants';
+import useButtonVariants from '../../hooks/useButtonVariants';
 // styles
 import { motion } from 'framer-motion';
 import bgImg from '../../assets/img/Settings/floral-1.jpg';
@@ -30,6 +31,7 @@ const UpdateEmail = () => {
   };
 
   const { containerVariants } = useContainerVariants();
+  const { buttonVariants } = useButtonVariants();
 
   return (
     <>
@@ -50,9 +52,12 @@ const UpdateEmail = () => {
             onChange={e => setEmail(e.target.value)}
           />
 
-          <button className="submit-btn" type="submit">
+          <motion.button 
+            className="submit-btn" type="submit"
+            variants={buttonVariants} whileHover="hover"
+          >
             Update
-          </button>
+          </motion.button>
           {success && (
             <span style={{ color: "green", textAlign: "center", marginTop: "20px" }}>
               Profile has been updated...

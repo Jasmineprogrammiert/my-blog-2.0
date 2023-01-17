@@ -6,7 +6,7 @@ const NextButton = () => {
 
   return (
     <>
-    <motion.button variants={buttonVariants} whileHover="hover">
+    <motion.button className="next-btn" variants={buttonVariants} whileHover="hover">
       Next
     </motion.button>
     </>

@@ -3,9 +3,11 @@ import axios from 'axios';
 // hooks & contexts
 import { AuthContext } from "../../context/AuthContext";
 import useContainerVariants from '../../hooks/useContainerVariants';
+import useButtonVariants from '../../hooks/useButtonVariants';
 // styles
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import bgImg from '../../assets/img/Settings/floral-1.jpg';
+import Modal from '../../components/Settings/Modal';
 
 const UpdateUsername = () => {
   const [username, setUsername] = useState('');
@@ -30,6 +32,15 @@ const UpdateUsername = () => {
   };
 
   const { containerVariants } = useContainerVariants();
+  const { buttonVariants } = useButtonVariants();
+  
+  const setHidden = () => {
+    if (document.body.style.overflow !== "hidden") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
 
   return (
     <>
@@ -45,28 +56,23 @@ const UpdateUsername = () => {
           <input 
             type="username" 
             name="username"
-            // placeholder={user.username}
             placeholder="New Username"
             pattern="[A-Za-z0-9-_.]{4,25}"
             title="The usernaem must be 4-25 long, with letters, numbers, hyphens, underscores or periods only. No punctuation or special characters are allowed."
             required
             onChange={e => setUsername(e.target.value)}
           />
-
-          <button className="submit-btn" type="submit">
+          <motion.button 
+            className="submit-btn" type="submit" 
+            onClick={setHidden} 
+            variants={buttonVariants} whileHover="hover">
             Update
-          </button>
-
-          {/* <span className="updated-msg">
-            Username has been successfully.
-          </span> */}
-          {success && (
-            <span className="updated-msg">
-              Username has been successfully.
-            </span>
-          )}
+          </motion.button>
         </form>
       </motion.div>
+      <AnimatePresence>
+        { success && ( <Modal /> )}
+      </AnimatePresence>
     </div>
     </>
   )

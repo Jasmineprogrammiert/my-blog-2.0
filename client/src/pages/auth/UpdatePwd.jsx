@@ -3,6 +3,7 @@ import axios from 'axios';
 // hooks & contexts
 import { AuthContext } from "../../context/AuthContext";
 import useContainerVariants from '../../hooks/useContainerVariants';
+import useButtonVariants from '../../hooks/useButtonVariants';
 // styles
 import { motion } from 'framer-motion';
 import bgImg from '../../assets/img/Settings/floral-1.jpg';
@@ -33,6 +34,7 @@ const UpdatePwd = () => {
   };
 
   const { containerVariants } = useContainerVariants();
+  const { buttonVariants } = useButtonVariants();
 
   return (
     <>
@@ -61,9 +63,12 @@ const UpdatePwd = () => {
           />
         </span>
 
-        <button className="submit-btn" type="submit">
+        <motion.button 
+          className="submit-btn" type="submit"
+          variants={buttonVariants} whileHover="hover"
+        >
           Update
-        </button>
+        </motion.button>
         {success && (
           <span style={{ color: "green", textAlign: "center", marginTop: "20px" }}>
             Profile has been updated...
@@ -72,35 +77,6 @@ const UpdatePwd = () => {
         </form>
       </motion.div>
     </div>
-
-
-
-    <form onSubmit={handleSubmit}>
-      <input 
-        type={visibility === 'visible' ? 'text' : 'password'} 
-        name="password"
-        placeholder="New password"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-        title="Must contain at least one digit, one uppercase and lowercase letter, and at least 8 or more characters" 
-        required
-        onChange={e => setPassword(e.target.value)}
-      />
-      <span id="visibility-switch">
-        <VisibilitySwitch
-          visibility={visibility} 
-          handleVisibility={handleVisibility}
-        />
-      </span>
-
-      <button className="submit-btn" type="submit">
-        Update
-      </button>
-      {success && (
-        <span style={{ color: "green", textAlign: "center", marginTop: "20px" }}>
-          Profile has been updated...
-        </span>
-      )}
-    </form>
     </>
   )
 }

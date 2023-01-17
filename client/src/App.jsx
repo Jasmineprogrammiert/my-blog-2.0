@@ -26,7 +26,7 @@ import 'aos/dist/aos.css';
 import './assets/style/global.css';
 import './assets/style/mode.css';
 import './assets/style/media.css';
-import UpdatePopUp from './components/Settings/UpdatePopUp';
+import Modal from './components/Settings/Modal';
 import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
@@ -49,16 +49,13 @@ const App = () => {
             <Route path="signup" element={user ? <Navigate to="/blog" /> : <SignUp />}/>
             <Route path="login" element={user ? <Navigate to="/blog" /> : <LogIn />}/>
             {/* ---------- Settings ----------  */}
-            {/* <Route path="settings" element={user ? <Settings /> : <Navigate to="/login" />}/> */}
-            <Route path="settings" element={<Settings />} />
-            <Route path="update-username" element={<UpdateUsername />} />
-            <Route path="update-email" element={<UpdateEmail />} />
-            <Route path="update-password" element={<UpdatePwd />} />
+            <Route path="settings" element={user ? <Settings /> : <Navigate to="/login" />}/>
+            <Route path="update-username" element={user ? <UpdateUsername /> : <Navigate to="/login" />} />
+            <Route path="update-email" element={user ? <UpdateEmail /> : <Navigate to="/login" />} />
+            <Route path="update-password" element={user ? <UpdatePwd /> : <Navigate to="/login" />} />
             {/* ---------- Others ----------  */}
             <Route path="more" element={<More />} />
             <Route path="*" element={<Blog />} />
-            {/* TESTING */}
-            <Route path="update-popup" element={<UpdatePopUp />} />
           </Routes>
         </AnimatePresence>
       <Footer />
