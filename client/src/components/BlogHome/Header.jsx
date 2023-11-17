@@ -37,11 +37,23 @@ const Header = () => {
           <dl>
             {/* ----- by Activities ----- */}
             <dt>Activities</dt>
-            <dd>Hiking | Traveling</dd>
+            <dd>🥾 Hiking</dd>
+            {/* <dd>✈️ Traveling</dd> */}
              {/* ----- by Locations ----- */}
             <dt>Locations</dt>
-            <dd>France_Paris</dd>
-            <dd>Hong Kong_Hong Kong Island | Lantau Island</dd>
+            {/* <dd>🇫🇷 Paris | Versailles | Le Havre | Le Mont-Saint-Michel | Bayeux | Val de Loire | Semur en Auxois | Dijon | Nice | Èze | Ville Franche Sur Mer | Menton | Lyon | Giverny</dd>
+            <dd>🇨🇭 Zürich | Genf | Rothorn</dd>
+            <dd>🇩🇪 München | Garmisch-Partenkirchen | Dachau | Bad Reichenhall</dd>
+            <dd>🇦🇹 Wien | Salzburg | Altaussee | Bad Aussee | Hallstatt</dd>
+            <dd>🇨🇿 Prague</dd>
+            <dd>🇸🇰 Bratislava</dd>
+            <dd>🇭🇺 Budapest</dd>
+            <dd>🇮🇹 Roma | Pompeii | Venice | Milano</dd>
+            <dd>🇻🇦 Vatican City</dd>
+            <dd>🇲🇨 Monaco</dd>
+            <dd>🇱🇺 Luxembourg | Diekirch | Vianden</dd>
+            <dd>🇧🇪 Bruxelles</dd> */}
+            <dd>🇭🇰 Hong Kong Island | Lantau Island</dd>
           </dl>
         </AccordionDetails>
       </Accordion>

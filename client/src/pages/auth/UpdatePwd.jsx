@@ -2,13 +2,14 @@ import { useState, useContext } from 'react';
 import axios from 'axios';
 // hooks & contexts
 import { AuthContext } from "../../context/AuthContext";
-import useContainerVariants from '../../hooks/useContainerVariants';
+import useUpdateInfoVariants from '../../hooks/useUpdateInfoVariants';
 import useButtonVariants from '../../hooks/useButtonVariants';
 // styles
 import { motion } from 'framer-motion';
 import bgImg from '../../assets/img/Settings/floral-1.jpg';
 import useVisibility from "../../hooks/useVisibility";
 import VisibilitySwitch from "../../components/universal/VisibilitySwitch";
+import Modal from '../../components/Settings/Modal';
 
 const UpdatePwd = () => {
   const [password, setPassword] = useState('');
@@ -33,7 +34,7 @@ const UpdatePwd = () => {
     }
   };
 
-  const { containerVariants } = useContainerVariants();
+  const { updateInfoVariants } = useUpdateInfoVariants();
   const { buttonVariants } = useButtonVariants();
 
   return (
@@ -41,7 +42,7 @@ const UpdatePwd = () => {
     <div className="login">
       <img src={bgImg} alt="Background" />
       <motion.div className="login-content update-content"
-        variants={containerVariants}
+        variants={updateInfoVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
@@ -69,13 +70,9 @@ const UpdatePwd = () => {
         >
           Update
         </motion.button>
-        {success && (
-          <span style={{ color: "green", textAlign: "center", marginTop: "20px" }}>
-            Profile has been updated...
-          </span>
-        )}
         </form>
       </motion.div>
+      { success && ( <Modal info="password" /> )}
     </div>
     </>
   )

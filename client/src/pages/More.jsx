@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // img
 import floral from '../assets/img/Header/floral-01.png';
 import crane from '../assets/img/Header/crane-01.png';
-// import butterfly from '../assets/img/Header/butterfly-01.png';
+import butterfly from '../assets/img/Header/butterfly-01.png';
 
 const More = () => {
   const [expanded, setExpanded] = useState(false);
@@ -17,12 +17,59 @@ const More = () => {
 
   return (
     <>
-    <header className="blog-header more-header">
+    <header className="blogHome-header">
+      <img 
+        className="blog-img-0" 
+        src={floral} alt="magnolia" 
+      />
+      <h1>More About</h1>
+      <Accordion 
+        className="accordion"
+        expanded={expanded === 'panel1'} 
+        onChange={handleChange('panel1')}
+      >
+        <AccordionSummary
+          id="accordion-heading"
+          expandIcon={<ExpandMoreIcon id="expand-icon" />}
+        >
+          <h3>Purpose</h3>
+        </AccordionSummary>
+        <AccordionDetails id="accordion-txt">
+          <dl>
+            {/* ----- by Activities ----- */}
+            <dt>Activities</dt>
+            <dd>Hiking | Traveling</dd>
+             {/* ----- by Locations ----- */}
+            <dt>Locations</dt>
+            <dd>France_Paris</dd>
+            <dd>Hong Kong_Hong Kong Island | Lantau Island</dd>
+          </dl>
+          <p>
+            For a while, I kept asking myself: what's the purpose of you writing this blog?
+          </p>
+        </AccordionDetails>
+      </Accordion>
+      {expanded === 'panel1' &&
+        <img 
+          className="blog-img-1" 
+          src={butterfly} alt="butterfly"
+        />
+      }
+    </header>
+
+
+
+
+
+
+
+    <header className="more-header">
       <img 
         className="blog-img-0" 
         src={floral} alt="magnolia" 
       />
       <h1>More about ...</h1>
+
       <Accordion 
         className="accordion"
         expanded={expanded === 'panel1'} 

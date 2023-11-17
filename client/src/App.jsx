@@ -26,7 +26,6 @@ import 'aos/dist/aos.css';
 import './assets/style/global.css';
 import './assets/style/mode.css';
 import './assets/style/media.css';
-import Modal from './components/Settings/Modal';
 import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
@@ -39,7 +38,7 @@ const App = () => {
     <Suspense fallback={<Spinner />}>
       <NavigationBar />
       <ModeSwitch theme={theme} toggleTheme={toggleTheme}  />
-        <AnimatePresence>
+        <AnimatePresence mode='wait'>
           <Routes location={location} key={location.key}>
             <Route path="/" element={<About />} />
             {/* ---------- Blogs ----------  */}

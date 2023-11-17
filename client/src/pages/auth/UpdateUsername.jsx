@@ -2,10 +2,10 @@ import { useState, useContext } from 'react';
 import axios from 'axios';
 // hooks & contexts
 import { AuthContext } from "../../context/AuthContext";
-import useContainerVariants from '../../hooks/useContainerVariants';
+import useUpdateInfoVariants from '../../hooks/useUpdateInfoVariants';
 import useButtonVariants from '../../hooks/useButtonVariants';
 // styles
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import bgImg from '../../assets/img/Settings/floral-1.jpg';
 import Modal from '../../components/Settings/Modal';
 
@@ -31,7 +31,7 @@ const UpdateUsername = () => {
     }
   };
 
-  const { containerVariants } = useContainerVariants();
+  const { updateInfoVariants } = useUpdateInfoVariants();
   const { buttonVariants } = useButtonVariants();
   
   const setHidden = () => {
@@ -47,7 +47,7 @@ const UpdateUsername = () => {
     <div className="login">
       <img src={bgImg} alt="Background" />
       <motion.div className="login-content update-content"
-        variants={containerVariants}
+        variants={updateInfoVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
@@ -70,9 +70,7 @@ const UpdateUsername = () => {
           </motion.button>
         </form>
       </motion.div>
-      <AnimatePresence>
-        { success && ( <Modal /> )}
-      </AnimatePresence>
+      { success && ( <Modal info="username" /> )}
     </div>
     </>
   )

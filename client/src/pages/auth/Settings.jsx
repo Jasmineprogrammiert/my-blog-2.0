@@ -43,7 +43,7 @@ const Settings = () => {
               <motion.li 
                 key={select} 
                 onClick={() => confirmSelect(select)}
-                whileHover={{ scale: 1.2, originX: -0.05 }}
+                whileHover={{ scale: 1.2, originX: -.05 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
                 <span className={selectClass}>

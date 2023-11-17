@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import useContainerVariants from '../../hooks/useContainerVariants';
+import useButtonVariants from '../../hooks/useButtonVariants';
 
 const backdrop = {
   visible: { opacity: 1 },
   hidden: { opacity: 0 },
+  
 }
 const modal = {
   hidden: { y: "-100vh", opacity: 0 },
   visible: { 
     y: "200px", 
     opacity: 1,
-    transition: { delay: 0.5 }
+    transition: { delay: .5 }
   },
 }
 const setHidden = () => {
@@ -21,24 +24,31 @@ const setHidden = () => {
   }
 };
 
-const Modal = () => {
+const Modal = ({ info }) => {
+  const { containerVariants } = useContainerVariants();
+  const { buttonVariants } = useButtonVariants();
+
   return (
     <>
-    <motion.div className="backdrop"
-      variants={backdrop}
-      initial="hidden"
-      animate="visible"
-      exit="hidden"
-    >
-      <motion.div className="modal"
-        variants={modal}
+    <AnimatePresence>
+      <motion.div className="backdrop"
+        variants={backdrop}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
       >
-        <p>Update Successful !</p>
-        <Link to="/settings">
-          <button onClick={setHidden}>Back to Settings</button>
-        </Link>
+        <motion.div className="modal"
+          variants={modal}
+        >
+          <p>Your {info} has been reset successfully {`:D`}</p>
+          <Link to="/settings">
+            <motion.button onClick={setHidden} variants={buttonVariants} whileHover="hover">
+              Back to Settings
+            </motion.button>
+          </Link>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </AnimatePresence>
     </>
   )
 }
