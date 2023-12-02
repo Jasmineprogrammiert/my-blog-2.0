@@ -72,7 +72,7 @@ const LogIn = () => {
               handleVisibility={handleVisibility}
             />
           </span>
-          {error && <div className="signup-error">Username or email is incorrect. Please try again.</div>}
+          {error && <div className="signup-error">Username or password is incorrect. Please try again.</div>}
           <motion.button 
             className="submit-btn" type="submit" disabled={isFetching} 
             variants={buttonVariants} whileHover="hover"

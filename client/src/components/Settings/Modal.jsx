@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import useContainerVariants from '../../hooks/useContainerVariants';
 import useButtonVariants from '../../hooks/useButtonVariants';
 
 const backdrop = {
@@ -25,7 +24,6 @@ const setHidden = () => {
 };
 
 const Modal = ({ info }) => {
-  const { containerVariants } = useContainerVariants();
   const { buttonVariants } = useButtonVariants();
 
   return (
@@ -42,7 +40,7 @@ const Modal = ({ info }) => {
         >
           <p>Your {info} has been reset successfully {`:D`}</p>
           <Link to="/settings">
-            <motion.button onClick={setHidden} variants={buttonVariants} whileHover="hover">
+            <motion.button onClick={setHidden} variants={buttonVariants} whileHover="hover" className="modal-text">
               Back to Settings
             </motion.button>
           </Link>

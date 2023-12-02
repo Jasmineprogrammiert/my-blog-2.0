@@ -1,16 +1,21 @@
 @media (max-width: 888px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 /* ---------- BlogHome - 3. Blog List ---------- */
   .blogList{
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* Jasmine */
 
 /* @media (max-width: 600px) { */
 @media (orientation: portrait) and (max-width: 540px) {
-  /* --------------- ThemeSwitch --------------- */
-  /* #modeSwitch {
-    margin-bottom: 1.5rem;
-  } */
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   /* ---------- Navbar ---------- */
   .hideBar {
     top: -30vh;
@@ -315,5 +320,42 @@
     font-size: 2.8vw;
     margin-top: -1.5vh;
     margin-bottom: 0vh;
+  }
+  /* ---------- Settings ---------- */
+  .settings-content {
+    width: 75vw;
+    height: 70vh;
+    padding-top: 9vh;
+  }
+  .settings-content ul {
+    margin-left: -5vw;
+  }
+  .settings-content li {
+    margin-bottom: 5vh;
+    font-size: 4vw;
+  }
+  .settings-content button {
+    padding: 1vh 8vw;
+  }
+  .next-btn {
+    font-size: 3.8vw;
+  }
+  /*  ---------- Modal ---------- */
+  .modal { 
+    max-height: 47vh;
+    margin-top: -.5vh;
+    padding-top: 10vh;
+    border-radius: 13px;
+  }
+  .modal p {
+    font-size: 3.8vw;
+  }
+  .modal button {
+    margin: 5vh 4vw;
+    padding: 1.5% 3.5%;
+    border-radius: 9px;
+  }
+  .modal-text {
+    font-size: 3.6vw;
   }
 }
