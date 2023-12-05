@@ -10,10 +10,6 @@ import { Nav, Navbar } from 'react-bootstrap';
 const NavigationBar = () => {
   const { hideBar } = useYScroll();
   const { user, dispatch } = useContext(AuthContext);
-
-  // testing
-  // const PF = 'http://localhost:8000/images/';
-  // const PF = 'https://lieblingsjasmin.com/';
   
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' });
@@ -39,7 +35,6 @@ const NavigationBar = () => {
                 as={NavLink} to="settings"
                 className="nav-item"
               >
-                {/* <img className="topImg" src={PF+user.profilePic} alt="" /> */}
                 Welcome, {user.username}
               </Nav.Link>
               <Nav.Link 

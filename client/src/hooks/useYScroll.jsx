@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const useYScroll = () => {
   const [isHidden, setIsHidden] = useState(true);
   const showNav = () => {
-    const loc = window.pageYOffset;
+    const loc = window.scrollY;
     loc > 20 ? setIsHidden(false) : setIsHidden(true);
   };
   

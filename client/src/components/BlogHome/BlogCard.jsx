@@ -35,7 +35,7 @@ const BlogCard = ({
         <img src={cover_img} alt="blog cover" />
         <h3>{title}</h3>
       </Link>
-      <p>{date}</p>
+      <p>{new Date(date).toDateString().split(' ').slice(1).join(' ')}</p>
       <div className="blogCard-category">
         {category.map((cat, i) => 
           <label key={i}>{cat}</label>
