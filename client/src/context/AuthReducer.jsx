@@ -8,7 +8,7 @@ const AuthReducer = (state, action) => {
       };
     case 'LOGIN_SUCCESS':
       return {
-        user: action.payload,
+        user: action.payload, // Data being passed from the backend
         isFetching: false,
         error: false,
       };
@@ -20,7 +20,7 @@ const AuthReducer = (state, action) => {
       };
     case 'UPDATE_START':
       return {
-        ...state,
+        ...state, // Copy the existing state
         isFetching: true,
       };
     case 'UPDATE_SUCCESS':

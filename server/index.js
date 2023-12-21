@@ -13,7 +13,6 @@ app.use(cors({origin: '*'}));
 app.use(express.json());
 app.use(cookieParser());
 dotenv.config();
-
 app.use('/blogs', blogRoutes);
 app.use('/auth', authRoutes);
 app.use('/users', userRoutes); 

@@ -20,7 +20,7 @@ const UpdateUsername = () => {
     dispatch({ type: 'UPDATE_START' });
     const updatedUser = {
       _id: user._id,
-      username, // wanna use useHandleSubmit but have to make this dynamic (don't have a clue yet)
+      username, // wanna use useHandleSubmit to avoid repeated code (UpdateUsername, UpdateEmail, UpdatePwd) but have to make this dynamic, don't have a clue yet
     };
     try {
       const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`, updatedUser);

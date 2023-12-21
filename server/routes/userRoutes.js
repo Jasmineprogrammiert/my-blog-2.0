@@ -43,23 +43,6 @@ router.delete('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
-  // if (req.body._id === req.params.id) {
-  //   try {
-  //     const user = await User.findById(req.params.id);
-  //     try {
-  //       // await Blog.deleteMany({ username: user.username });
-  //       await User.findByIdAndDelete(req.params.id);
-  //       res.status(200).json('User is deleted.');
-  //     } catch (err) {
-  //       res.status(500).json(err);
-  //     }
-  //   } catch (err) {
-  //     res.status(404).json('User not found');
-  //   }
-  // } else {
-  //   res.status(401).json('Authorization failed');
-  // }
 });
 
 module.exports = router;
