@@ -7,6 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // img
 import floral from '../../assets/img/Header/floral-01.png';
 import butterfly from '../../assets/img/Header/butterfly-01.png'
+import crane from '../../assets/img/Header/crane-01.png';
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
@@ -26,6 +27,29 @@ const Header = () => {
         className="accordion"
         expanded={expanded === 'panel1'} 
         onChange={handleChange('panel1')}
+      >
+        <AccordionSummary
+          id="accordion-heading"
+          expandIcon={<ExpandMoreIcon id="expand-icon" />}
+        >
+          <h3>What's Lieblingsjasmin ?</h3>
+        </AccordionSummary>
+        <AccordionDetails id="accordion-txt">
+          <p>
+            The name Lieblingsjasmin (Lieb-lings-yas-min) means favourite jasmine in German. "Lieblings" is my favourite German word, and I created the name as a reminder to prioritize self-love during a difficult time in my life.
+          </p>
+        </AccordionDetails>
+      </Accordion>
+      {expanded === 'panel1' &&
+        <img 
+          className="blog-img-1" 
+          src={butterfly} alt="butterfly"
+        />
+      }
+      <Accordion 
+        className="accordion"
+        expanded={expanded === 'panel2'} 
+        onChange={handleChange('panel2')}
       >
         <AccordionSummary
           id="accordion-heading"
@@ -57,10 +81,10 @@ const Header = () => {
           </dl>
         </AccordionDetails>
       </Accordion>
-      {expanded === 'panel1' &&
+      {expanded === 'panel2' &&
         <img 
-          className="blog-img-1" 
-          src={butterfly} alt="butterfly"
+          className="blog-img-2" 
+          src={crane} alt="crane"
         />
       }
     </header>

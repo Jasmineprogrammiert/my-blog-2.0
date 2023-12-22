@@ -249,6 +249,13 @@ footer {
   margin-top: 5vh;
   margin-bottom: 5.5vh;
 }
+.blog-img-2 {
+  position: absolute;
+  width: 31vw;
+  height: auto;
+  margin-top: -40vh;
+  margin-left: -1vw;
+}
 .accordion {
   position: absolute;
   top: 50%;

@@ -15,7 +15,6 @@ import Settings from './pages/auth/Settings';
 import UpdateUsername from './pages/auth/UpdateUsername';
 import UpdateEmail from './pages/auth/UpdateEmail';
 import UpdatePwd from './pages/auth/UpdatePwd';
-import More from './pages/More';
 // contexts
 import { ModeContext } from './context/ModeContext';
 import { AuthContext } from './context/AuthContext';
@@ -53,7 +52,6 @@ const App = () => {
             <Route path="update-email" element={user ? <UpdateEmail /> : <Navigate to="/login" />} />
             <Route path="update-password" element={user ? <UpdatePwd /> : <Navigate to="/login" />} />
             {/* ---------- Others ----------  */}
-            <Route path="more" element={<More />} />
             <Route path="*" element={<Blog />} />
           </Routes>
         </AnimatePresence>
