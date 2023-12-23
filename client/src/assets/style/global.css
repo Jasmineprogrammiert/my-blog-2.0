@@ -708,45 +708,6 @@ footer {
   border-radius: 25px;
 }
 /* --------------- Under Development --------------- */
-/* ---------- More ---------- */
-/* .blog-header {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: hsl(195, 53%, 85%);
-  background: rgba(0, 0, 0, .45); 
-}
-.blog header h1 {
-  font-size: 4.5vw;
-  letter-spacing: 5px;
-  margin: 5vh 0;
-}
-.blog header p {
-  font-size: 1.2vw;
-  text-align: center;
-  margin-top: -.8rem;
-  padding-bottom: .8rem;
-} */
-.more-header h1 {
-  font-size: 4.7vw;
-  margin-bottom: 4.5vh;
-  font-family: 'Satisfy', cursive;
-  letter-spacing: .8px;
-  text-align: center;
-}
-.more-img-1 {
-  position: absolute;
-  width: 31vw;
-  height: auto;
-  margin-top: -40vh;
-  margin-left: -1vw;
-}
-
-
-
-
-
-
 /* ---------- Comment ---------- */
 .write {
   padding-top: 50px;

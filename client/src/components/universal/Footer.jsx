@@ -9,7 +9,7 @@ const Footer = () => {
     </a>
     <footer>
       <small>
-        Copyright © 2022-2023 Jasmine Zeng. All rights reserved.
+        Copyright © 2022-2024 Jasmine Zeng. All rights reserved.
       </small>
     </footer>
   </div>

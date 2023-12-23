@@ -43,12 +43,6 @@ const NavigationBar = () => {
               >
                 Blog
               </Nav.Link>
-              {/* <Nav.Link 
-                as={NavLink} to="more"
-                className="nav-item nav-item-1"
-              >
-                More
-              </Nav.Link> */}
               <Nav.Link 
                 as={NavLink} to="blog"
                 className="nav-item"
@@ -64,12 +58,6 @@ const NavigationBar = () => {
                 className="nav-item nav-item-1"
               >
                 Blog
-              </Nav.Link>
-              <Nav.Link 
-                as={NavLink} to="more"
-                className="nav-item nav-item-1"
-              >
-                More
               </Nav.Link>
               <Nav.Link 
                 as={NavLink} to="login"

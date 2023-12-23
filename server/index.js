@@ -6,13 +6,13 @@ const blogRoutes = require('./routes/blogRoutes');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const mongoose = require('mongoose');
-const multer = require('multer');
 
 const app = express();
 app.use(cors({origin: '*'}));
 app.use(express.json());
 app.use(cookieParser());
 dotenv.config();
+
 app.use('/blogs', blogRoutes);
 app.use('/auth', authRoutes);
 app.use('/users', userRoutes); 
@@ -21,20 +21,6 @@ mongoose
   .connect(process.env.dbURL)
   .then(() => app.listen(process.env.PORT))
   .catch(err => console.log(err));
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'images')
-  }, 
-  filename: (req, file, cb) => {
-    cb(null, req.body.name)
-  }
-});
-
-const upload = multer({ storage: storage });
-app.post('/api/upload', upload.single('file'), (req, res) => {
-  res.status(200).json('File has been uploaded')
-});
 
 app.use((req, res) => {
   res.status(404).render('404', { title: '404' })
