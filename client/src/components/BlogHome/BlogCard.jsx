@@ -4,7 +4,7 @@ import AOS from 'aos';
 
 const BlogCard = ({ 
   blog: {
-    _id,
+    url_title,
     cover_img,
     title,
     date,
@@ -29,7 +29,7 @@ const BlogCard = ({
       data-aos="fade-up"
     >
       <Link
-        to={`/blog/${_id}`}
+        to={`/blog/${url_title}`}
         className="blogCard-link" 
       >
         <img src={cover_img} alt="blog cover" />

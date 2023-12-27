@@ -43,7 +43,7 @@ const BlogHome = () => {
       : (
         <div className="blogList">
           {filteredResults.map(blog => 
-            <BlogCard blog={blog} key={blog._id} />
+            <BlogCard blog={blog} key={blog.url_title} />
           )}
         </div>
       )

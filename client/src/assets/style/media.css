@@ -120,10 +120,8 @@
     margin-left: 45vw;
     opacity: .7;
   }
-  .blog-img-1 {
-    width: 15vw;
-    margin-top: -40vh;
-    margin-left: 8vw;
+  .blog-img-1, .blog-img-2 {
+    display: none;
   }
   .blogHome-header h1 {
     font-size: 9.5vw;

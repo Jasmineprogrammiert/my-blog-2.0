@@ -1,6 +1,6 @@
 import Avatar from '@mui/material/Avatar';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import BackToTop from "react-back-to-top-button";
+import BackToTop from 'react-back-to-top-button';
 
 const BackToTopp = () => {
   return (
