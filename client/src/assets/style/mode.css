@@ -125,13 +125,19 @@
 #light .login-content button {
   background-color: rgb(137, 113, 88);
 }
-#light .login-content button:hover {
+#light .login-content button:hover,
+#light #switch-btn-l,
+#light #switch-btn-r {
   color: rgb(137, 113, 88);
   background-color: #d4ccb1;
 }
 #light .pwd-recovery:hover,
 #light .sign-up:hover {
   color: hsl(31, 22%, 64%);
+}
+#light #switch-btn-l, 
+#light #switch-btn-r {
+  background: none;
 }
 /* --------------- SignUp --------------- */
 #light .signup-content button {

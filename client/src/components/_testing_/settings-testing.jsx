@@ -23,6 +23,7 @@ const Settings = () => {
   const { containerVariants } = useContainerVariants();
   const { buttonVariants } = useButtonVariants();
   const { user, dispatch } = useContext(AuthContext);
+
   const nextVariants = {
     hidden: { 
       x: '-100vw'
@@ -33,6 +34,20 @@ const Settings = () => {
     } 
   };
 
+  // TESTING
+  const arrowBtnVariants = {
+    hover: {
+      scale: 1.1,
+      textShadow: "0 0 8px rgb(255,255,255)",
+      boxShadow: "0 0 8px rgb(255,255,255)",
+      transition: {
+        duration: .35,
+        yoyo: Infinity
+      }
+    }
+  };
+  // TESTING
+
   const switchInterface = () => {
     setSelectedInterface(selectedInterface === 'Update' ? 'Delete' : 'Update');
   };
@@ -40,8 +55,11 @@ const Settings = () => {
   const handleDelete = async e => {
     e.preventDefault();
     dispatch({ type: 'DELETE_START' });
+    const updatedUser = {
+      _id: user._id,
+    };
     try {
-      const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`);
+      const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`, updatedUser);
       dispatch({ type: 'DELETE_SUCCESS', payload: res.data });
     } catch (err) {
       dispatch({ type: 'DELETE_FAILURE' });

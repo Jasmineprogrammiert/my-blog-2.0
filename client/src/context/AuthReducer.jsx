@@ -35,6 +35,25 @@ const AuthReducer = (state, action) => {
         isFetching: false,
         error: true,
       };
+    // TESTING ----------------->
+    case 'DELETE_START':
+      return {
+        ...state,
+        isFetching: true,
+      };
+    case 'DELETE_SUCCESS':
+      return {
+        user: null,
+        isFetching: false,
+        error: false,
+      };
+    case 'DELETE_FAILURE':
+      return {
+        ...state, // Or handle failure state as per requirement
+        isFetching: false,
+        error: true,
+      };
+    // TESTING <-----------------
     case 'LOGOUT':
       return {
         user: null,

@@ -668,6 +668,27 @@ footer {
   font-family: 'Merriweather', serif;
   text-align: center;
 }
+#delete-account {
+  margin-bottom: 17.55vh;
+}
+#switch-btn-l, #switch-btn-r  {
+  position: absolute;
+  background: none;
+  padding: 0;
+  margin-left: -10vw;
+  margin-top: -30vh;
+  font-size: 2.5vw;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+#switch-btn-r {
+  margin-left: 31.5vw;
+}
+.delete-next-btn {
+  margin-left: -3.1vw;
+}
 /* ----- UpdateUsername, ~Email, ~Password ----- */
 .update-content {
   height: 28vh;
