@@ -12,8 +12,9 @@ import Modal from '../../components/Settings/Modal';
 const UpdateEmail = () => {
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState(false);
-
   const { user, dispatch } = useContext(AuthContext);
+  const { updateInfoVariants } = useUpdateInfoVariants();
+  const { buttonVariants } = useButtonVariants();
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -30,9 +31,6 @@ const UpdateEmail = () => {
       dispatch({ type: 'UPDATE_FAILURE' });
     }
   };
-
-  const { updateInfoVariants } = useUpdateInfoVariants();
-  const { buttonVariants } = useButtonVariants();
 
   return (
     <>

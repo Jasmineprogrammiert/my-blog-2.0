@@ -5,10 +5,12 @@ import useButtonVariants from '../../hooks/useButtonVariants';
 const backdrop = {
   visible: { opacity: 1 },
   hidden: { opacity: 0 },
-  
 }
 const modal = {
-  hidden: { y: "-100vh", opacity: 0 },
+  hidden: { 
+    y: "-100vh", 
+    opacity: 0 
+  },
   visible: { 
     y: "200px", 
     opacity: 1,

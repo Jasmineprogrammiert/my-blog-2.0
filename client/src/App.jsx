@@ -26,8 +26,6 @@ import './assets/style/global.css';
 import './assets/style/mode.css';
 import './assets/style/media.css';
 import { AnimatePresence } from 'framer-motion';
-// TESTING
-import SettingsTesting from './components/_testing_/settings-testing';
 
 const App = () => {
   const { theme, toggleTheme } = useContext(ModeContext);
@@ -55,8 +53,6 @@ const App = () => {
             <Route path="update-password" element={user ? <UpdatePwd /> : <Navigate to="/login" />} />
             {/* ---------- Others ----------  */}
             <Route path="*" element={<Blog />} />
-            {/* ---------- TESTING ----------  */}
-            <Route path="testing1" element={<SettingsTesting />}/>
           </Routes>
         </AnimatePresence>
       <Footer />

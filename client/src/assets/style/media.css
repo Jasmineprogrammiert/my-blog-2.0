@@ -8,7 +8,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* Jasmine */
 
 /* @media (max-width: 600px) { */
 @media (orientation: portrait) and (max-width: 540px) {
@@ -338,6 +337,12 @@
   .next-btn {
     font-size: 3.8vw;
   }
+  #setting-switch-l {
+    margin-left: -53.5vw;
+  }
+  #setting-switch-r {
+    margin-left: 34vw;
+  }
   /*  ---------- Modal ---------- */
   .modal { 
     max-height: 47vh;
@@ -349,11 +354,19 @@
     font-size: 3.8vw;
   }
   .modal button {
-    margin: 5vh 4vw;
+    margin: 5.5vh 4vw;
     padding: 1.5% 3.5%;
     border-radius: 9px;
   }
   .modal-text {
     font-size: 3.6vw;
+  }
+  /*  ---------- ModalDelete ---------- */
+  #modal-delete-btn {
+    margin: 2.5vh 4vw;
+    transition: none;
+    &:hover {
+      transform: none;
+    }
   }
 }

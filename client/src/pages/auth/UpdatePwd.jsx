@@ -14,9 +14,10 @@ import Modal from '../../components/Settings/Modal';
 const UpdatePwd = () => {
   const [password, setPassword] = useState('');
   const [success, setSuccess] = useState(false);
-
   const { user, dispatch } = useContext(AuthContext);
   const { visibility, handleVisibility } = useVisibility();
+  const { updateInfoVariants } = useUpdateInfoVariants();
+  const { buttonVariants } = useButtonVariants();
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -33,9 +34,6 @@ const UpdatePwd = () => {
       dispatch({ type: 'UPDATE_FAILURE' });
     }
   };
-
-  const { updateInfoVariants } = useUpdateInfoVariants();
-  const { buttonVariants } = useButtonVariants();
 
   return (
     <>

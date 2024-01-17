@@ -126,8 +126,8 @@
   background-color: rgb(137, 113, 88);
 }
 #light .login-content button:hover,
-#light #switch-btn-l,
-#light #switch-btn-r {
+#light #setting-switch-l,
+#light #setting-switch-r {
   color: rgb(137, 113, 88);
   background-color: #d4ccb1;
 }
@@ -135,8 +135,8 @@
 #light .sign-up:hover {
   color: hsl(31, 22%, 64%);
 }
-#light #switch-btn-l, 
-#light #switch-btn-r {
+#light #setting-switch-l, 
+#light #setting-switch-r {
   background: none;
 }
 /* --------------- SignUp --------------- */

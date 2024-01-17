@@ -1,51 +1,43 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 // hooks & contexts
 import useContainerVariants from '../../hooks/useContainerVariants';
 import useButtonVariants from '../../hooks/useButtonVariants';
-import { AuthContext } from '../../context/AuthContext';
 // styles
 import { motion } from 'framer-motion';
 import bgImg from '../../assets/img/Settings/floral-1.jpg';
 import NextButton from '../../components/Settings/NextButton';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ModalDelete from '../../components/Settings/ModalDelete';
 
 const Settings = () => {
   const selected = ['Username', 'Email', 'Password'];
-  const [update, setUpdate] = useState({ select: '' });
   const [selectedInterface, setSelectedInterface] = useState('Update'); 
+  const [update, setUpdate] = useState({ select: '' });
+  const [modalShow, setModalShow] = useState(false);
   const confirmSelect = select => {
     setUpdate({ ...update, select })
   };
 
   const { containerVariants } = useContainerVariants();
   const { buttonVariants } = useButtonVariants();
-  const { user, dispatch } = useContext(AuthContext);
   const nextVariants = {
-    hidden: { 
-      x: '-100vw'
-    },
+    hidden: { x: '-100vw' },
     visible: {
       x: '2.5vw',
       transition: { type: 'spring', stiffness: 120 }
     } 
   };
-
+  const setHidden = () => {
+    if (document.body.style.overflow !== "hidden") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
   const switchInterface = () => {
     setSelectedInterface(selectedInterface === 'Update' ? 'Delete' : 'Update');
-  };
-
-  const handleDelete = async e => {
-    e.preventDefault();
-    dispatch({ type: 'DELETE_START' });
-    try {
-      const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`);
-      dispatch({ type: 'DELETE_SUCCESS', payload: res.data });
-    } catch (err) {
-      dispatch({ type: 'DELETE_FAILURE' });
-    }
   };
 
   return (
@@ -112,9 +104,12 @@ const Settings = () => {
             </motion.li>
             <motion.div variants={nextVariants} className='delete-next-btn'>
               <motion.button 
-                type="submit" 
+                type="button" 
                 className="next-btn" variants={buttonVariants} whileHover="hover" 
-                onClick={handleDelete}
+                onClick={() => {
+                  setModalShow(true);
+                  setHidden();
+                }}
               >
                 Delete
               </motion.button>
@@ -122,9 +117,10 @@ const Settings = () => {
           </ul>
           </>
         )}
-        <motion.button onClick={switchInterface} id='switch-btn-l'><ArrowBackIosNewIcon /></motion.button> 
-        <motion.button onClick={switchInterface} id='switch-btn-r'><ArrowForwardIosIcon /></motion.button>
+        <motion.button onClick={switchInterface} id='setting-switch-l'><ArrowBackIosNewIcon /></motion.button> 
+        <motion.button onClick={switchInterface} id='setting-switch-r'><ArrowForwardIosIcon /></motion.button>
       </motion.div>
+      { modalShow === true && ( <ModalDelete info="account" setModalShow={setModalShow} setHidden={setHidden} /> )}
     </div>
     </>
   )

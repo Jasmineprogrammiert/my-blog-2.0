@@ -12,8 +12,9 @@ import Modal from '../../components/Settings/Modal';
 const UpdateUsername = () => {
   const [username, setUsername] = useState('');
   const [success, setSuccess] = useState(false);
-
   const { user, dispatch } = useContext(AuthContext);
+  const { updateInfoVariants } = useUpdateInfoVariants();
+  const { buttonVariants } = useButtonVariants();
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -31,9 +32,6 @@ const UpdateUsername = () => {
     }
   };
 
-  const { updateInfoVariants } = useUpdateInfoVariants();
-  const { buttonVariants } = useButtonVariants();
-  
   const setHidden = () => {
     if (document.body.style.overflow !== "hidden") {
       document.body.style.overflow = "hidden";
