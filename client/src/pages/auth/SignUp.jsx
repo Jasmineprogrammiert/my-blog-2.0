@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from "react";
+import axios from "axios";
 // hooks
-import useContainerVariants from '../../hooks/useContainerVariants';
-import useButtonVariants from '../../hooks/useButtonVariants';
-import useVisibility from '../../hooks/useVisibility';
-import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
+import useContainerVariants from "../../hooks/useContainerVariants";
+import useButtonVariants from "../../hooks/useButtonVariants";
+import useVisibility from "../../hooks/useVisibility";
+import VisibilitySwitch from "../../components/universal/VisibilitySwitch";
 // styles
-import { motion } from 'framer-motion';
-import bgImg from '../../assets/img/LogIn/floral-01.jpg';
+import { motion } from "framer-motion";
+import bgImg from "../../assets/img/LogIn/floral-01.jpg";
 
 const SignUp = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
   const handleSubmit = async e => {
@@ -24,7 +24,7 @@ const SignUp = () => {
         email,
         password,
       });
-      res.data && window.location.replace('/login');
+      res.data && window.location.replace("/login");
     } catch (err) {
       setError(true);
     }
@@ -64,7 +64,7 @@ const SignUp = () => {
             onChange={e => setEmail(e.target.value)}
           />
           <input 
-            type={visibility === 'visible' ? 'text' : 'password'} 
+            type={visibility === "visible" ? "text" : "password"} 
             name="password"
             placeholder="Password" 
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 

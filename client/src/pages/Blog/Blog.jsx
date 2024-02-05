@@ -1,17 +1,17 @@
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 // components
-import Empty from '../../components/BlogHome/Empty';
-import ProgressBar from '../../components/Blog/ProgressBar';
-import ImgSlider from '../../components/Blog/ImgSlider';
-import ImgSliderr from '../../components/Blog/ImgSliderr';
+import Empty from "../../components/BlogHome/Empty";
+import ProgressBar from "../../components/Blog/ProgressBar";
+import ImgSlider from "../../components/Blog/ImgSlider";
+import ImgSliderr from "../../components/Blog/ImgSliderr";
 // hooks
-import usePath from '../../hooks/usePath';
-import useFetch from '../../hooks/useFetch';
+import usePath from "../../hooks/usePath";
+import useFetch from "../../hooks/useFetch";
 // styles
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
-import AOS from 'aos';
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
+import AOS from "aos";
 
 const Blog = () => {
   const { path } = usePath();
@@ -22,7 +22,7 @@ const Blog = () => {
       delay: 0,
       duration: 1300
     });
-    window.addEventListener('load', AOS.refresh);
+    window.addEventListener("load", AOS.refresh);
   })
   
   return (
@@ -38,7 +38,7 @@ const Blog = () => {
           <div className="blog-header">
             <h1>{blog.title}</h1>
             <p>
-              {new Date(blog.createdAt).toDateString().split(' ').slice(1).join(' ')}
+              {new Date(blog.createdAt).toDateString().split(" ").slice(1).join(" ")}
               <AccessTimeRoundedIcon id="readTime-icon" />
               {blog.read_time} min read
             </p>

@@ -1,5 +1,5 @@
-import Snowfall from 'react-snowfall';
-import '../assets/style/snowfall.css';
+import Snowfall from "react-snowfall";
+import "../assets/style/snowfall.css";
 
 export const SnowfallContext = ({ children }) => {
   return (

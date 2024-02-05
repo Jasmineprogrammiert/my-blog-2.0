@@ -1,15 +1,15 @@
-import { useState, useRef, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { useState, useRef, useContext } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 // hooks & contexts
-import { AuthContext } from '../../context/AuthContext';
-import useContainerVariants from '../../hooks/useContainerVariants';
-import useButtonVariants from '../../hooks/useButtonVariants';
-import useVisibility from '../../hooks/useVisibility';
+import { AuthContext } from "../../context/AuthContext";
+import useContainerVariants from "../../hooks/useContainerVariants";
+import useButtonVariants from "../../hooks/useButtonVariants";
+import useVisibility from "../../hooks/useVisibility";
 // styles
-import { motion } from 'framer-motion';
-import bgImg from '../../assets/img/LogIn/forbidden-city-02.png';
-import VisibilitySwitch from '../../components/universal/VisibilitySwitch';
+import { motion } from "framer-motion";
+import bgImg from "../../assets/img/LogIn/forbidden-city-02.png";
+import VisibilitySwitch from "../../components/universal/VisibilitySwitch";
 
 const LogIn = () => {
   const userRef = useRef(); 
@@ -20,7 +20,7 @@ const LogIn = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     setError(false);
-    dispatch({ type: 'LOGIN_START' });
+    dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
         username: userRef.current.value,
@@ -59,7 +59,7 @@ const LogIn = () => {
             ref={userRef}
           />
           <input 
-            type={visibility === 'visible' ? 'text' : 'password'} 
+            type={visibility === "visible" ? "text" : "password"} 
             name="password"
             placeholder="Password" 
             required

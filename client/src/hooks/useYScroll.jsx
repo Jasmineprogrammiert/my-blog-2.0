@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const useYScroll = () => {
   const [isHidden, setIsHidden] = useState(true);
@@ -8,13 +8,13 @@ const useYScroll = () => {
   };
   
   useEffect(() => {
-    window.addEventListener('scroll', showNav, { passive: true });
+    window.addEventListener("scroll", showNav, { passive: true });
     return () => {
-      window.removeEventListener('scroll', showNav);
+      window.removeEventListener("scroll", showNav);
     };
   }, []);
   
-  let hideBar = isHidden ? 'hideBar' : '';
+  let hideBar = isHidden ? "hideBar" : "";
 
   return { hideBar };
 }

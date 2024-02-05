@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
-import useButtonVariants from '../../hooks/useButtonVariants';
+import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import useButtonVariants from "../../hooks/useButtonVariants";
 
 const backdrop = {
   visible: { opacity: 1 },

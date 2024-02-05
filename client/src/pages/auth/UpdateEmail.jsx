@@ -1,16 +1,16 @@
-import { useState, useContext } from 'react';
-import axios from 'axios';
+import { useState, useContext } from "react";
+import axios from "axios";
 // hooks & contexts
 import { AuthContext } from "../../context/AuthContext";
-import useUpdateInfoVariants from '../../hooks/useUpdateInfoVariants';
-import useButtonVariants from '../../hooks/useButtonVariants';
+import useUpdateInfoVariants from "../../hooks/useUpdateInfoVariants";
+import useButtonVariants from "../../hooks/useButtonVariants";
 // styles
-import { motion } from 'framer-motion';
-import bgImg from '../../assets/img/Settings/floral-1.jpg';
-import Modal from '../../components/Settings/Modal';
+import { motion } from "framer-motion";
+import bgImg from "../../assets/img/Settings/floral-1.jpg";
+import Modal from "../../components/Settings/Modal";
 
 const UpdateEmail = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
   const { user, dispatch } = useContext(AuthContext);
   const { updateInfoVariants } = useUpdateInfoVariants();
@@ -18,7 +18,7 @@ const UpdateEmail = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    dispatch({ type: 'UPDATE_START' });
+    dispatch({ type: "UPDATE_START" });
     const updatedUser = {
       _id: user._id,
       email,
@@ -26,9 +26,9 @@ const UpdateEmail = () => {
     try {
       const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`, updatedUser);
       setSuccess(true);
-      dispatch({ type: 'UPDATE_SUCCESS', payload: res.data });
+      dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {
-      dispatch({ type: 'UPDATE_FAILURE' });
+      dispatch({ type: "UPDATE_FAILURE" });
     }
   };
 

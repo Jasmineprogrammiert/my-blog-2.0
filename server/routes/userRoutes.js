@@ -1,6 +1,6 @@
-const router = require('express').Router();
-const bcrypt = require('bcrypt');
-const User = require('../models/userModel');
+const router = require("express").Router();
+const bcrypt = require("bcrypt");
+const User = require("../models/userModel");
 
 router.get("/:id", async (req, res) => {
   try {
@@ -12,7 +12,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put("/:id", async (req, res) => {
   if (req.body._id === req.params.id) {
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10);
@@ -30,16 +30,16 @@ router.put('/:id', async (req, res) => {
       res.status(500).json(err);
     }
   } else {
-    res.status(401).json('Authorization failed')
+    res.status(401).json("Authorization failed")
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const user = await User.findById(req.params.id);
 
   try {
     await user.delete();
-    res.status(200).json('User is deleted');
+    res.status(200).json("User is deleted");
   } catch (err) {
     res.status(500).json(err);
   }

@@ -1,6 +1,6 @@
-import Avatar from '@mui/material/Avatar';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import BackToTop from 'react-back-to-top-button';
+import Avatar from "@mui/material/Avatar";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import BackToTop from "react-back-to-top-button";
 
 const BackToTopp = () => {
   return (
@@ -12,7 +12,7 @@ const BackToTopp = () => {
       easing="easeInOutQuint"
     >
       <Avatar 
-        sx={{ height: '38px', width: '38px' }}
+        sx={{ height: "38px", width: "38px" }}
         id={`backtoTop-container`}
       >
         <KeyboardArrowUpIcon id="backtoTop" />

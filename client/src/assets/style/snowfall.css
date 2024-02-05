@@ -1,4 +1,4 @@
-.snowfall-container {
+.snowfall-container{
   position: relative;
   min-height: 100vh; /* Ensure the layout takes up the full viewport height */
 }

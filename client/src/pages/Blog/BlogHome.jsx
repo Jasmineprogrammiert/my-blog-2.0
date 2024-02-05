@@ -1,16 +1,16 @@
-import { useState } from 'react';
+import { useState } from "react";
 // components
-import Header from '../../components/BlogHome/Header';
-import SearchBar from '../../components/BlogHome/SearchBar';
-import BlogCard from '../../components/BlogHome/BlogCard';
-import Empty from '../../components/BlogHome/Empty';
+import Header from "../../components/BlogHome/Header";
+import SearchBar from "../../components/BlogHome/SearchBar";
+import BlogCard from "../../components/BlogHome/BlogCard";
+import Empty from "../../components/BlogHome/Empty";
 // hooks
-import useFetch from '../../hooks/useFetch';
+import useFetch from "../../hooks/useFetch";
 
 const BlogHome = () => {
   const { data: blogs, isPending } = useFetch(`${process.env.REACT_APP_BACKEND_URL}/blogs`);
   const [filteredResults, setFilteredResults] = useState([]);
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
 
   const handleSearchInput = e => {
     e.preventDefault();
@@ -26,7 +26,7 @@ const BlogHome = () => {
   // clear search & show all blogs
   const handleClearSearch = () => {   
     setFilteredResults(blogs);
-    setSearchInput('');
+    setSearchInput("");
   };
 
   return (

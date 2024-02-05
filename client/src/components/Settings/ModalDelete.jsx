@@ -1,10 +1,10 @@
-import axios from 'axios';
-import { useContext } from 'react';
+import axios from "axios";
+import { useContext } from "react";
 // hooks & contexts
-import useButtonVariants from '../../hooks/useButtonVariants';
-import { AuthContext } from '../../context/AuthContext';
+import useButtonVariants from "../../hooks/useButtonVariants";
+import { AuthContext } from "../../context/AuthContext";
 // styles
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from "framer-motion";
 
 const backdrop = {
   visible: { opacity: 1 },
@@ -29,13 +29,13 @@ const ModalDelete = ({ info, setModalShow, setHidden }) => {
   const handleDelete = async e => {
     e.preventDefault();
     setHidden();
-    dispatch({ type: 'DELETE_START' });
+    dispatch({ type: "DELETE_START" });
     try {
       const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`);
       setModalShow(false);
-      dispatch({ type: 'DELETE_SUCCESS', payload: res.data });
+      dispatch({ type: "DELETE_SUCCESS", payload: res.data });
     } catch (err) {
-      dispatch({ type: 'DELETE_FAILURE' });
+      dispatch({ type: "DELETE_FAILURE" });
     }
   };
   const handleCancel = () => {
@@ -55,15 +55,15 @@ const ModalDelete = ({ info, setModalShow, setHidden }) => {
           <p>Permanently delete your {info}?</p>
           <motion.button 
             type="submit" 
-            id='modal-delete-btn'
-            className="next-btn" variants={buttonVariants} whileHover="hover" 
+            id="modal-delete-btn"
+            className="next-btn next-btn-l" variants={buttonVariants} whileHover="hover" 
             onClick={handleDelete}
           >
             Delete
           </motion.button>
           <motion.button 
             type="button" 
-            id='modal-delete-btn'
+            id="modal-delete-btn"
             className="next-btn" variants={buttonVariants} whileHover="hover" 
             onClick={() => {
               handleCancel();

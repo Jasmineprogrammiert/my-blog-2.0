@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import AOS from 'aos';
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import AOS from "aos";
 
 const BlogCard = ({ 
   blog: {
@@ -19,7 +19,7 @@ const BlogCard = ({
       offset: 100,
       duration: 1300, 
     });
-    window.addEventListener('load', AOS.refresh);
+    window.addEventListener("load", AOS.refresh);
   })
 
   return (
@@ -35,7 +35,7 @@ const BlogCard = ({
         <img src={cover_img} alt="blog cover" />
         <h3>{title}</h3>
       </Link>
-      <p>{new Date(date).toDateString().split(' ').slice(1).join(' ')}</p>
+      <p>{new Date(date).toDateString().split(" ").slice(1).join(" ")}</p>
       <div className="blogCard-category">
         {category.map((cat, i) => 
           <label key={i}>{cat}</label>

@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, MoveOut, Sticky } from 'react-scroll-motion';
-import AOS from 'aos';
+import { useEffect } from "react";
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, MoveOut, Sticky } from "react-scroll-motion";
+import AOS from "aos";
 // images
-import floral_1 from '../assets/img/About/floral-01.png';
-import floral_2 from '../assets/img/About/floral-02.png';
-import jasmine from '../assets/img/About/jasmine-01.jpg';
-import mountain_1 from '../assets/img/About/mountain-01.png';
-import hk_1 from '../assets/img/About/hk-01.png';
+import floral_1 from "../assets/img/About/floral-01.png";
+import floral_2 from "../assets/img/About/floral-02.png";
+import jasmine from "../assets/img/About/jasmine-01.jpg";
+import mountain_1 from "../assets/img/About/mountain-01.png";
+import hk_1 from "../assets/img/About/hk-01.png";
 
 const About = () => {
   const FadeUp = batch(Fade(), Sticky(), MoveOut(0, -680));
@@ -16,7 +16,7 @@ const About = () => {
       // once: true,
       duration: 1800
     });
-    window.addEventListener('load', AOS.refresh);
+    window.addEventListener("load", AOS.refresh);
   })
   
   return (
@@ -38,7 +38,7 @@ const About = () => {
               Lieblingsjasmin
             </h1>
             <h2 className="about-heading-2">
-              {'>'} Blog of Jasmine Zeng
+              {">"} Blog of Jasmine Zeng
             </h2>
             <img 
               src={floral_2} alt="floral"
@@ -66,7 +66,7 @@ const About = () => {
         <h2 className="about-txt">
           Hello, my name is <i><strong>Jasmine</strong></i>.
           <br />
-          I'm a Hong-Kong-based software engineer with a passion for <br /> languages, <br /> hiking, history {'&'} travelling. 
+          I'm a Hong-Kong-based software engineer with a passion for <br /> languages, <br /> hiking, history {"&"} travelling. 
         </h2> 
       </div>
     </div>

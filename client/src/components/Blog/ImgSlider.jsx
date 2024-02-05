@@ -1,9 +1,9 @@
 // hooks
-import usePath from '../../hooks/usePath';
-import useFetch from '../../hooks/useFetch';
-import useImgSlider from '../../hooks/useImgSlider';
+import usePath from "../../hooks/usePath";
+import useFetch from "../../hooks/useFetch";
+import useImgSlider from "../../hooks/useImgSlider";
 // styles
-import Slider from 'react-slick';
+import Slider from "react-slick";
 
 const ImgSlider = () => {
   const { path } = usePath();

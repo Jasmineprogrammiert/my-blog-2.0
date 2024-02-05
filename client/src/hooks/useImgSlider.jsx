@@ -1,5 +1,5 @@
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const useImgSlider = () => {
   const NextArrow = ({ onClick }) => {
@@ -18,7 +18,7 @@ const useImgSlider = () => {
   };
 
   const settings = {
-    lazyLoad: 'progressive',
+    lazyLoad: "progressive",
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
@@ -26,7 +26,7 @@ const useImgSlider = () => {
     autoplay: true,
     autoplaySpeed: 3500,
     dots: true,
-    dotsClass: 'img-dots',
+    dotsClass: "img-dots",
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,

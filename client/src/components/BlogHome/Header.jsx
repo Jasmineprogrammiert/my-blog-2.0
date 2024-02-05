@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 // styles
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // img
-import floral from '../../assets/img/Header/floral-01.png';
-import butterfly from '../../assets/img/Header/butterfly-01.png'
-import crane from '../../assets/img/Header/crane-01.png';
+import floral from "../../assets/img/Header/floral-01.png";
+import butterfly from "../../assets/img/Header/butterfly-01.png"
+import crane from "../../assets/img/Header/crane-01.png";
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
@@ -22,11 +22,11 @@ const Header = () => {
         className="blog-img-0" 
         src={floral} alt="magnolia" 
       />
-      <h1>Jasmine's Blog</h1>
+      <h1>Jasmine"s Blog</h1>
       <Accordion 
         className="accordion"
-        expanded={expanded === 'panel1'} 
-        onChange={handleChange('panel1')}
+        expanded={expanded === "panel1"} 
+        onChange={handleChange("panel1")}
       >
         <AccordionSummary
           id="accordion-heading"
@@ -40,7 +40,7 @@ const Header = () => {
           </p>
         </AccordionDetails>
       </Accordion>
-      {expanded === 'panel1' &&
+      {expanded === "panel1" &&
         <img 
           className="blog-img-1" 
           src={butterfly} alt="butterfly"
@@ -48,8 +48,8 @@ const Header = () => {
       }
       <Accordion 
         className="accordion"
-        expanded={expanded === 'panel2'} 
-        onChange={handleChange('panel2')}
+        expanded={expanded === "panel2"} 
+        onChange={handleChange("panel2")}
       >
         <AccordionSummary
           id="accordion-heading"
@@ -81,7 +81,7 @@ const Header = () => {
           </dl>
         </AccordionDetails>
       </Accordion>
-      {expanded === 'panel2' &&
+      {expanded === "panel2" &&
         <img 
           className="blog-img-2" 
           src={crane} alt="crane"

@@ -1,5 +1,5 @@
-@media (max-width: 888px) {
-  body {
+@media (max-width: 888px){
+  body{
     max-width: 100%;
     overflow-x: hidden;
   }
@@ -9,364 +9,367 @@
   }
 }
 
-/* @media (max-width: 600px) { */
-@media (orientation: portrait) and (max-width: 540px) {
-  body {
+/* @media (max-width: 600px){ */
+@media (orientation: portrait) and (max-width: 540px){
+  body{
     max-width: 100%;
     overflow-x: hidden;
   }
   /* ---------- Navbar ---------- */
-  .hideBar {
+  .hideBar{
     top: -30vh;
   }
-  #nav-toggle {
+  #nav-toggle{
     font-size: 2.8vw;
   }
-  .navbar {
+  .navbar{
     height: 8vh;
   }
-  .nav-brand {
+  .nav-brand{
     letter-spacing: 1.3px;
     font-size: 5vw;
     margin-left: 4vw;
   }
-  .nav-item {
+  .nav-item{
     font-size: 4vw;
     padding-left: 43%
   }
-  .nav-item-1 {
+  .nav-item-1{
     margin-top: 4vh;
     margin-bottom: 1vh;
   }
   /* ---------- BackToTop ---------- */
-  #backtoTop {
+  #backtoTop{
     font-size: 8vw;
   }
   /* ---------- Footer ---------- */
-  #footer {
+  #footer{
     padding: 8% 10%;
   }
-  #ins-icon {
+  #ins-icon{
     font-size: 10.5vw;
   }
-  footer {
+  footer{
     font-size: 3.8vw;
     width: 85%;
   }
   /* --------------- About (4) --------------- */
   /* ---------- About - Sec.1 ---------- */
-  .about-sec-1 {
+  .about-sec-1{
     height: 53vh;
   }
-  .about-heading-1 {
+  .about-heading-1{
     font-size: 10vw;
     letter-spacing: 5px;
     margin: 10vh 0 3vh 0;
   }
-  .about-heading-2 {
+  .about-heading-2{
     font-size: 6vw;
     margin-bottom: 10vh;
   }
-  .deco-img {
+  .deco-img{
     width: 40vw;
   }
   /* ---------- About - Sec. 2 ---------- */
-  .about-sec-2 {
+  .about-sec-2{
     height: 70vh;
     margin-top: 0;
   }
-  .column-l-2 {
+  .column-l-2{
     width: 20%;
     margin: 16.5vh 13vw 0 5.5vw;
   }
-  .column-r-2 {
+  .column-r-2{
     margin: 9vh -2vw 0 0;
   }
-  .jasmine-img {
+  .jasmine-img{
     width: 33vw;
   }
-  .about-txt {
+  .about-txt{
     font-size: 5vw;
     line-height: 4.5vh;
   }
   /* ---------- About - Sec. 3 ---------- */
-  .column-l-3 {
+  .column-l-3{
     width: 53%;
     margin-right: 7vw;
   }
-  .column-r-3 {
+  .column-r-3{
     width: 20%;
     margin-left: 7vw;
   }
-  .mountain-img {
+  .mountain-img{
     width: 48vw;
     opacity: .5;
     margin-top: 13vh;
   }
   /* ---------- About - Sec. 4 ---------- */
-  .about-txt-p4 {
+  .about-txt-p4{
     margin-top: 25vh;
     margin-bottom: 10vh;
   }
-  .hk-img {
+  .hk-img{
     margin-top: 30vh;
   }
   /* --------------- BlogHome (5) --------------- */
   /* ---------- 1. Header ---------- */
-  .blog-img-0 {
+  .blog-img-0{
     width: 55vw;
     margin-top: -13vh;
     margin-left: 45vw;
     opacity: .7;
   }
-  .blog-img-1, .blog-img-2 {
+  .blog-img-1, .blog-img-2{
     display: none;
   }
-  .blogHome-header h1 {
+  .blogHome-header h1{
     font-size: 9.5vw;
     margin-bottom: 2.8vh;
     padding-top: 3vh;
   }
-  .accordion {
+  .accordion{
     width: 70%;
   }
-  #expand-icon {
+  #expand-icon{
     font-size: 5.5vw;
     margin-bottom: 1vh;
   }
   #accordion-heading h3, 
   #accordion-txt,
-  #searchBar-input {
+  #searchBar-input{
     font-size: 4.3vw;
   }
-  #accordion-txt {
+  #accordion-txt{
     max-height: 47vw;
   }
-  #accordion-txt p, dl {
+  #accordion-txt p, dl{
     font-size: 3.8vw;
     padding: 1.3vh 4.5vw;
   }
-  #accordion-txt dd {
+  #accordion-txt dd{
     padding: .6vh 2.1vw;
   }
   /* ---------- 2. Search Bar ---------- */
-  #searchBar {
+  #searchBar{
     width: 70vw;
     margin-bottom: 0;
   }
   /* ---------- 3. Blog List ---------- */
-  .blogList {
+  .blogList{
     grid-template-columns: repeat(1, 1fr);
     padding: 0 4vw;
     padding-top: 3vh;
   }
   /* ---------- 4. Blog Card ---------- */
-  .blogCard {
+  .blogCard{
     margin-bottom: 1vh;
   }
-  .blogCard-link img {
+  .blogCard-link img{
     height: 30vh;
     border-radius: 20px;
   }
-  .blogCard-link h3 {
+  .blogCard-link h3{
     font-size: 4.5vw;
   }
-  .blogCard p {
+  .blogCard p{
     font-size: 3.6vw;
     line-height: 1.15;
   }
-  .blogCard-category label {
+  .blogCard-category label{
     font-size: 3.4vw;
   }
-  .blogCard-preview {
+  .blogCard-preview{
     margin-top: -1rem;
   }
   /* ---------- 5. Empty ---------- */
-  .empty {
+  .empty{
     height: 85vh;
     margin: 0 6vw;
   }
   /* --------------- Blog (3)  --------------- */
   /* ---------- 1. Icons ---------- */
-  #goBack-icon {
+  #goBack-icon{
     margin: .5vh 0 0 78vw;
   }
-  #readTime-icon {
+  #readTime-icon{
     font-size: .8rem;
   }
-  .progress-bar {
+  .progress-bar{
     margin-top: -.6vh;
   }
   /* ---------- 2. Main Content ---------- */
   /* -------- 2.2 header -------- */
-  .blog {
+  .blog{
     padding-top: .8vh;
   }
-  .blog header h1 {
+  .blog header h1{
     font-size: 7.5vw;
     letter-spacing: 4px;
     margin-top: .5rem;
     margin-bottom: 1.8vh;
   }
-  .blog header p {
+  .blog header p{
     font-size: 3.3vw;
     padding-bottom: .1rem;
     margin-bottom: 1.5vh;
   }
-  .blog-row {
+  .blog-row{
     font-size: 3.3vw;
     padding: 0;
     padding-right: 5vw;
     margin-bottom: -.75rem;
     grid-template-columns: 43% auto auto;
   }
-  .blog-row li {
+  .blog-row li{
     line-height: 2.3vh;
   }
-  .blog-row li {
+  .blog-row li{
     list-style: circle;
   }
   /* -------- 2.3 body -------- */
-  .blog-desc {
+  .blog-desc{
     font-size: 3.8vw;
     margin: 0 9%;
     padding-bottom: .5rem;
   }
-  .blog-desc p {
+  .blog-desc p{
     margin-bottom: 1.5rem;
     line-height: 25px;
   }
   /* ---------- 3. Img Slider ---------- */
-  .img-slider {
+  .img-slider{
     padding: 0 9vw;
     margin-bottom: .3rem;
   }
-  .img-slider figcaption {
+  .img-slider figcaption{
     font-size: 3.6vw;
   }
-  .img-arrow {
+  .img-arrow{
     top: 40%;
   }
-  .img-arrow-next {
+  .img-arrow-next{
     right: .7%;
   }
-  .img-arrow-prev {
+  .img-arrow-prev{
     left: 2.3%;
   }
-  .img-dots {
+  .img-dots{
     margin-bottom: .3rem;
   }
-  .img-dots li {
+  .img-dots li{
     margin: 0 1.09rem;
   }
-  .img-dots li button {
+  .img-dots li button{
     height: .3rem;
     width: .6rem;
   }
   /* ---------- LogIn ---------- */
-  .login {
+  .login{
     margin-top: 0;
   }
-  .login img {
+  .login img{
     height: 85vh;
   }
-  .login-content {
+  .login-content{
     width: 70%;
     height: 61.5vh;
     padding: 6vh 10vw;
   }
-  .login-content h1 {
+  .login-content h1{
     font-size: 5.5vw;
   }
-  .login-content h1:after {
+  .login-content h1:after{
     width: 13vw;
   }
-  .login-content h2 {
+  .login-content h2{
     font-size: 7vw;
     margin-bottom: 2.5vh;
   }
   .login-content input,
-  .login-content input::placeholder {
+  .login-content input::placeholder{
     font-size: 3.8vw;
     margin-bottom: 2.8vh;
   }
-  .login-content button {
+  .login-content button{
     width: 100%;
     margin-bottom: 3vh;
     margin-top: 1vh;
   }
-  .submit-btn {
+  .submit-btn{
     font-size: 3.5vw;
   }
-  #visibility-switch {
+  #visibility-switch{
     margin-top: -7.5vh;
   }
-  #visibility-icon {
+  #visibility-icon{
     font-size: 4.5vw;
   }
   .pwd-recovery, 
-  .sign-up {
+  .sign-up{
     font-size: 3.2vw;
     display: block;
   }
   /* ---------- SignUp ---------- */
-  .signup-content {
+  .signup-content{
     height: 60vh;
   }
-  .signup-error {
+  .signup-error{
     font-size: 2.8vw;
     margin-top: -1.5vh;
     margin-bottom: 0vh;
   }
   /* ---------- Settings ---------- */
-  .settings-content {
+  .settings-content{
     width: 75vw;
     height: 70vh;
     padding-top: 9vh;
   }
-  .settings-content ul {
+  .settings-content ul{
     margin-left: -5vw;
   }
-  .settings-content li {
+  .settings-content li{
     margin-bottom: 5vh;
     font-size: 4vw;
   }
-  .settings-content button {
+  .settings-content button{
     padding: 1vh 8vw;
   }
-  .next-btn {
+  .next-btn{
     font-size: 3.8vw;
   }
-  #setting-switch-l {
+  #setting-switch-l{
     margin-left: -53.5vw;
   }
-  #setting-switch-r {
+  #setting-switch-r{
     margin-left: 34vw;
   }
   /*  ---------- Modal ---------- */
-  .modal { 
+  .modal{ 
     max-height: 47vh;
     margin-top: -.5vh;
     padding-top: 10vh;
     border-radius: 13px;
   }
-  .modal p {
+  .modal p{
     font-size: 3.8vw;
   }
-  .modal button {
+  .modal button{
     margin: 5.5vh 4vw;
     padding: 1.5% 3.5%;
     border-radius: 9px;
   }
-  .modal-text {
+  .modal-text{
     font-size: 3.6vw;
   }
   /*  ---------- ModalDelete ---------- */
-  #modal-delete-btn {
+  #modal-delete-btn{
     margin: 2.5vh 4vw;
     transition: none;
-    &:hover {
+    &:hover{
       transform: none;
     }
+  }
+  .next-btn-l{
+    margin-left: 0;
   }
 }

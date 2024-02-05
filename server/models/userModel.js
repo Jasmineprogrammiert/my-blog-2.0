@@ -1,6 +1,8 @@
-const mongoose = require('mongoose');
-const validator = require('validator');
-const bcrypt = require('bcrypt');
+const mongoose = require("mongoose");
+const validator = require("validator");
+const bcrypt = require("bcrypt");
+// TESTING
+const nodemailer = require("nodemailer");
 
 const UserSchema = new mongoose.Schema({
   username: {
@@ -23,18 +25,18 @@ const UserSchema = new mongoose.Schema({
 // static signup method 
 UserSchema.statics.signup = async function (username, email, password) {
   if (!username || !email || !password) {
-    throw Error('All fields must be filled');
+    throw Error("All fields must be filled");
   }
   if (!validator.isEmail(email)) {
-    throw Error('Email is invalid');
+    throw Error("Email is invalid");
   }
   if (!validator.isStrongPassword(password)) {
-    throw Error('Password is not strong enough');
+    throw Error("Password is not strong enough");
   }
 
   const exists = await this.findOne({ username, email });
   if (exists) {
-    throw Error('Username or email is already taken');
+    throw Error("Username or email is already taken");
   }
 
   const salt = await bcrypt.genSalt(10); // random value added to the pwd
@@ -47,19 +49,28 @@ UserSchema.statics.signup = async function (username, email, password) {
 // static login method
 UserSchema.statics.login = async function (username, password) {
   if (!username || !password) {
-    throw Error('All fields must be filled');
+    throw Error("All fields must be filled");
   }
   
   const user = await this.findOne({ username });
   if (!user) {
-    throw Error('Incorrect username');
+    throw Error("Incorrect username");
   }
   const match = await bcrypt.compare(password, user.password);
   if (!match) {
-    throw Error('Incorrect password');
+    throw Error("Incorrect password");
   }
 
   return user;
 };
 
-module.exports = mongoose.model('User', UserSchema);
+// TESTING 
+const transporter = nodemailer.createTransport({
+  service: "Gmail",
+  auth: {
+    user: `${process.env.GMAIL_USER}`,
+    pass: `${process.env.GMAIL_PASS}`
+  }
+})
+
+module.exports = mongoose.model("User", UserSchema);

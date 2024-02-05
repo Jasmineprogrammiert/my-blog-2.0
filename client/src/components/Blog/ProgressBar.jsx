@@ -1,5 +1,5 @@
-import { motion, useScroll } from 'framer-motion';
-import useYScroll from '../../hooks/useYScroll';
+import { motion, useScroll } from "framer-motion";
+import useYScroll from "../../hooks/useYScroll";
 
 const ProgressBar = () => {
   const { scrollYProgress } = useScroll();

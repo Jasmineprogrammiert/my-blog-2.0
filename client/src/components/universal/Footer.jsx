@@ -1,4 +1,4 @@
-import InstagramIcon from '@mui/icons-material/Instagram';
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   return (

@@ -1,5 +1,5 @@
-import { createContext } from 'react';
-import useModeSwitch from '../hooks/useModeSwitch';
+import { createContext } from "react";
+import useModeSwitch from "../hooks/useModeSwitch";
 
 export const ModeContext = createContext(null);
 

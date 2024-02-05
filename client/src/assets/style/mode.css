@@ -1,13 +1,13 @@
-:root {
+:root{
   --dark-mode: hsl(209, 34%, 26%);
   --light-mode: hsl(0, 0%, 92%);
   --lightblue: lightblue;
 }
 /* ---------- Light & Dark Mode ---------- */
-#light {
+#light{
   background-color: var(--light-mode);
 }
-#dark {
+#dark{
   background-color: var(--dark-mode);
   color: var(--lightblue);
   /* #2b4258, #233648, #22303C, #242526, 
@@ -17,17 +17,17 @@
     ThemeSwitch
     Blog: <ArrowBackIcon />
 --------------- */
-#modeSwitch {
+#modeSwitch{
   margin: 1.4vh 0 .4rem 1vw;
   padding: 7px;
   z-index: 100;
 }
 #light #modeSwitch,
-#light #goBack-icon {
+#light #goBack-icon{
   color: hsl(350, 100%, 75%);
 }
 #dark #modeSwitch,
-#dark #goBack-icon {
+#dark #goBack-icon{
   color: lightskyblue;
 }
 /* ---------------
@@ -35,115 +35,115 @@
     BlogHome: 1. Header 
 --------------- */
 #light .navbar,
-#light #accordion-heading {
+#light #accordion-heading{
   background-color: var(--light-mode);
 }
 #dark .navbar,
-#dark #accordion-heading {
+#dark #accordion-heading{
   background-color: var(--dark-mode);
 }
 #dark .nav-brand,
 #dark .nav-item,
-#dark #accordion-heading h3 {
+#dark #accordion-heading h3{
   color: var(--lightblue);
 }
-#light .nav-item {
+#light .nav-item{
   background-color: var(--light-mode);
 }
 /* --------------- BlogHome (5) --------------- */
 /* ---------- 1. Header ---------- */
 #light #accordion-txt p,
-#light #accordion-txt dl {
+#light #accordion-txt dl{
   background-color: hsl(0, 0%, 94%);
 }
 #dark #accordion-txt p,
-#dark #accordion-txt dl {
+#dark #accordion-txt dl{
   background-color: hsl(209, 34%, 28%);
 }
 #dark #accordion-txt p,
 #dark #accordion-txt dl,
-#dark .blog-subHeading {
+#dark .blog-subHeading{
   color: hsl(0, 0%, 78%);
 }
 /* ---------- 2. Search Bar ---------- */
-#light #searchBar {
+#light #searchBar{
   background-color: rgb(255, 255, 255, 0.25);
 }
-#light #searchBar:hover {
+#light #searchBar:hover{
   background-color: rgb(255, 255, 255, 0.4);
 }
 /* ---------- 4. Blog Card ---------- */
-#light .blogCard label {
+#light .blogCard label{
   color: black;
   background-image: linear-gradient(to right, hsl(350, 100%, 85%), hsl(351, 100%, 93%));
 }
-#light .blogCard label {
+#light .blogCard label{
   color: hsl(0, 0%, 20%);
 }
-#light .blogCard-preview {
+#light .blogCard-preview{
   color: var(--dark-mode);
 }
 /* --------------- Blog (3) --------------- */
 /* ---------- 1. Progress Bar ---------- */
 #light .progress-bar,
-#light .img-dots li button {
+#light .img-dots li button{
   background: hsl(350, 100%, 85%);
 }
 /* ---------- 2. Blog ---------- */
-#light .blog-header {
+#light .blog-header{
   color: #f1f1f1;
 }
 /* ---------- 3. Img Slider ---------- */
-#light .img-arrow svg {
+#light .img-arrow svg{
   color: hsl(350, 100%, 85%);
 }
-#light .img-arrow svg:hover {
+#light .img-arrow svg:hover{
   color: hsl(350, 100%, 70%);
 }
-#light .img-dots li.slick-active button {
+#light .img-dots li.slick-active button{
   background-color: hsl(350, 100%, 70%);
 }
 #light .img-dots li button:hover,
-.img-dots li button:focus {
+.img-dots li button:focus{
   background: hsl(300, 76%, 52%);
 }
 /* --------------- Footer --------------- */
-#light #backtoTop-container {
+#light #backtoTop-container{
   background-color: hsl(350, 100%, 85%);
 }
 /* --------------- LogIn, Settings --------------- */
-#light .login img {
+#light .login img{
   opacity: .8;
 }
 #light .login-content h1,
-#light .settings-content li {
+#light .settings-content li{
   color: #d4ccb1;
 }
-#light .login-content h1:after {
+#light .login-content h1:after{
   background: #d4ccb1;
 }
-#light .login-content button {
+#light .login-content button{
   background-color: rgb(137, 113, 88);
 }
 #light .login-content button:hover,
 #light #setting-switch-l,
-#light #setting-switch-r {
+#light #setting-switch-r{
   color: rgb(137, 113, 88);
   background-color: #d4ccb1;
 }
 #light .pwd-recovery:hover,
-#light .sign-up:hover {
+#light .sign-up:hover{
   color: hsl(31, 22%, 64%);
 }
 #light #setting-switch-l, 
-#light #setting-switch-r {
+#light #setting-switch-r{
   background: none;
 }
 /* --------------- SignUp --------------- */
-#light .signup-content button {
+#light .signup-content button{
   background-color: hsl(41, 10%, 53%);
 }
-#light .signup-content button:hover {
+#light .signup-content button:hover{
   color: hsl(83, 6%, 25%);
   background-color: hsl(41, 10%, 63%);
 }

@@ -1,18 +1,18 @@
-import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 // hooks & contexts
-import useYScroll from '../../hooks/useYScroll';
-import { AuthContext } from '../../context/AuthContext';
+import useYScroll from "../../hooks/useYScroll";
+import { AuthContext } from "../../context/AuthContext";
 // styles
-import Container from 'react-bootstrap/Container';
-import { Nav, Navbar } from 'react-bootstrap';
+import Container from "react-bootstrap/Container";
+import { Nav, Navbar } from "react-bootstrap";
 
 const NavigationBar = () => {
   const { hideBar } = useYScroll();
   const { user, dispatch } = useContext(AuthContext);
   
   const handleLogout = () => {
-    dispatch({ type: 'LOGOUT' });
+    dispatch({ type: "LOGOUT" });
   };
 
   return (

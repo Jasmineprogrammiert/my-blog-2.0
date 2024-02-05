@@ -1,4 +1,4 @@
-import fish from '../../assets/img/Empty/fish-01.png';
+import fish from "../../assets/img/Empty/fish-01.png";
 
 const Empty = () => {
   return (

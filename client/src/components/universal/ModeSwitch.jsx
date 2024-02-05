@@ -1,6 +1,6 @@
-import IconButton from '@mui/material/IconButton';
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import IconButton from "@mui/material/IconButton";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 
 const ModeSwitch = ({ theme, toggleTheme }) => {
   return (
@@ -10,7 +10,7 @@ const ModeSwitch = ({ theme, toggleTheme }) => {
       sx={{ ml: 1 }}
       onClick={toggleTheme}
     >
-      {theme === 'dark' ? 
+      {theme === "dark" ? 
         <DarkModeOutlinedIcon sx={{ fontSize: "28px" }} /> 
         : <LightModeOutlinedIcon sx={{ fontSize: "28px" }} />
       }

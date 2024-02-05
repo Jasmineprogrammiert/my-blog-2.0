@@ -8,7 +8,7 @@
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 /* ---------- General ---------- */
-html { 
+html{ 
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -17,43 +17,43 @@ html {
   user-select: none;
   height: 100%;
 }
-html, body {
+html, body{
   width: 100%;
   overflow-x: hidden;
 }
 *,
 *::before,
-*::after {
+*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
+:root{
   --lightblue: lightblue;
   --dark-mode: hsl(209, 34%, 26%);
 }
-h1, h2 {
+h1, h2{
   font-family: 'Satisfy', cursive;
   letter-spacing: .8px;
   text-align: center;
 }
-h3, label {
+h3, label{
   font-family: 'Hahmlet', serif;
 }
-p, li, input, footer {
+p, li, input, footer{
   font-family: 'Merriweather', serif;
   text-align: justify;
   line-height: 1.6;
 }
-input, button {
+input, button{
   border: none;
   outline: none;
 }
 /* ---------- Navbar ---------- */
-.hideBar {
+.hideBar{
   top: -7.5vh;
 }
-.navbar {
+.navbar{
   position: fixed;
   height: 6.5vh;
   width: 100%;
@@ -61,13 +61,13 @@ input, button {
   transition: top .3s;
   z-index: 100;
 }
-.nav-brand {
+.nav-brand{
   font-family: 'Playball', cursive;
   letter-spacing: .5px;
   font-size: 1.8vw;
   font-weight: 800;
 }
-.nav-item {
+.nav-item{
   color: hsl(0, 0%, 1%);
   font-family: 'Georgia', sans-serif;
   font-size: 1.35vw;
@@ -75,7 +75,7 @@ input, button {
   background-color: var(--dark-mode);
 }
 /* testing */
-/* .topImg {
+/* .topImg{
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -83,18 +83,18 @@ input, button {
   cursor: pointer;
 } */
 /* ---------- BackToTop ---------- */
-#backtoTop-container {
+#backtoTop-container{
   background-color: var(--lightblue);
   z-index: 100;
 }
-#backtoTop {
+#backtoTop{
   font-size: 2.5vw;
 }
 /* ---------- Footer ---------- */
-#footer {
+#footer{
   padding: 2.5% 18%;
 }
-#ins-icon {
+#ins-icon{
   font-size: 3.8vw;
   padding: 3px;
   border-radius: 14px;
@@ -102,84 +102,84 @@ input, button {
   color: white;
   background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
 }
-footer {
+footer{
   font-size: 1.2vw;
   width: 50%;
 }
 /* --------------- About (4) --------------- */
 /* ---------- About - Sec.1 ---------- */
-.about-sec-1 {
+.about-sec-1{
   height: 100vh;
 }
-.about-heading-1 {
+.about-heading-1{
   font-size: 7.5vw;
   letter-spacing: 6px;
   margin-bottom: 4vh;
 }
-.about-heading-2 {
+.about-heading-2{
   font-size: 3.5vw;
   margin-bottom: -5vh;
 }
-.deco-img {
+.deco-img{
   height: auto;
   object-fit: cover;
   opacity: .85;
   width: 26vw;
 }
-#deco-img-1 {
+#deco-img-1{
   animation: diagonal-moveIn-1 2s ease-in-out forwards;
 }
-@keyframes diagonal-moveIn-1 {
-	0% {
+@keyframes diagonal-moveIn-1{
+	0%{
     margin: -26vh 0 -18vh -25vw;
     transform: rotate(-17deg);
 	}
-	100% {
+	100%{
     margin: -16vh 0 -18vh 1vw;
     transform: rotate(-17deg);
 	}
 }
-#deco-img-2 {
+#deco-img-2{
   animation: diagonal-moveIn-2 2s ease-in-out forwards;
 }
-@keyframes diagonal-moveIn-2 {
-	0% {
+@keyframes diagonal-moveIn-2{
+	0%{
     margin: -15vh 0 0 126vw;
     transform: rotate(10deg);
 	}
-	100% {
+	100%{
     margin: -15vh 0 0 74.5vw;
     transform: rotate(10deg);
 	}
 }
 /* ---------- About - Sec. 2 ---------- */
-.about-sec-2 {
+.about-sec-2{
   height: 73vh;
   margin-top: 10vh;
 }
-.row {
+.row{
   width: 100%;
 }
-.row:after {
+.row:after{
   content: "";
   display: table;
   clear: both;
 }
-.column-l-2 {
+.column-l-2{
   float: left;
   width: 25%;
   margin: 6vh 3.5vw 0 6.5vw;
 }
-.column-r-2 {
+.column-r-2{
   width: 60%;
   margin: 13.5vh 5vw 0 0;
 }
-.jasmine-img {
+.jasmine-img{
   width: 26vw;
   height: auto;
   border-radius: 50%;
 }
-.about-txt {
+.about-txt{
   font-size: 2.8vw;
   font-family: 'Hahmlet', serif;
   font-weight: 500;
@@ -187,22 +187,22 @@ footer {
   line-height: 9vh;
 }
 /* ---------- About - Sec. 3 ---------- */
-.about-sec-3 {
+.about-sec-3{
   height: 90vh;
 }
-.column-l-3 {
+.column-l-3{
   float: left;
   width: 47%;
   margin: 0 7.5vw 0 5.5vw;
 }
-.column-r-3 {
+.column-r-3{
   width: 20%;
   margin: 10vh 5vw 0 8vw;
 }
-.about-txt-p3 {
+.about-txt-p3{
   margin-top: 23vh;
 }
-.mountain-img {
+.mountain-img{
   width: 53vw;
   height: auto;
   opacity: .45;
@@ -210,18 +210,18 @@ footer {
   margin-top: 3vh;
 }
 /* ---------- About - Sec. 4 ---------- */
-.column-l-4 {
+.column-l-4{
   width: 60%;
   margin: 0 3.5vw 0 5.5vw;
 }
-.column-r-4 {
+.column-r-4{
   margin: 10vh 0 0 0;
   width: 10%;
 }
-.about-txt-p4 {
+.about-txt-p4{
   margin-top: 30vh;
 }
-.hk-img {
+.hk-img{
   width: 102vw;
   height: auto;
   opacity: .3;
@@ -229,17 +229,17 @@ footer {
 }
 /* --------------- BlogHome (5) --------------- */
 /* ---------- 1. Header ---------- */
-.blogHome-header {
+.blogHome-header{
   position: relative;
 }
-.blog-img-0 {
+.blog-img-0{
   position: absolute;
   width: 30vw;
   height: auto;
   margin-top: -10vh;
   margin-left: 70vw;
 }
-.blog-img-1 {
+.blog-img-1{
   position: absolute;
   width: 7vw;
   height: auto;
@@ -247,70 +247,70 @@ footer {
   margin-left: 22vw;
   transform: rotate(33deg);
 }
-.blogHome-header h1 {
+.blogHome-header h1{
   font-size: 4.7vw;
   letter-spacing: 3px;
   margin-top: 5vh;
   margin-bottom: 5.5vh;
 }
-.blog-img-2 {
+.blog-img-2{
   position: absolute;
   width: 31vw;
   height: auto;
   margin-top: -40vh;
   margin-left: -1vw;
 }
-.accordion {
+.accordion{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0%);
   width: 41.5%;
 }
-#accordion-heading {
+#accordion-heading{
   min-height: 20px;
   height: 5.5vh;
   padding-top: 1.2vh;
 }
-#expand-icon {
+#expand-icon{
   font-size: 1.8vw;
   margin-bottom: .8vh;
 }
 #accordion-heading h3, 
 #accordion-txt,
-#searchBar-input {
+#searchBar-input{
   font-size: 1.35vw;
   font-family: 'Georgia', sans-serif;
 }
-#accordion-txt {
+#accordion-txt{
   max-height: 24.5vw;
   overflow: scroll;
   padding: 0;
 }
-#accordion-txt p, dl {
+#accordion-txt p, dl{
   font-size: 1.2vw;
   margin: 0;
   padding: 1.3vh 1.5vw;
 }
-#accordion-txt dd {
+#accordion-txt dd{
   margin: 0;
   padding: .6vh 1.5vw;
 }
-/* #accordion-txt dd::before {
+/* #accordion-txt dd::before{
   content: '- ';
 } */
 /* ---------- 2. Search Bar ---------- */
-#searchBar {
+#searchBar{
   width: 41.5vw;
   margin: 0 auto 4vh auto;
   background-color: rgb(255, 255, 255, 0.1);
   box-shadow: .2vw .25vh 0 rgba(0,0,0,0.1);
 }
-#searchBar:hover {
+#searchBar:hover{
   background-color: rgb(255, 255, 255, 0.15);
 }
 /* ---------- 3. Blog List ---------- */
-.blogList {
+.blogList{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 2vw;
@@ -318,39 +318,39 @@ footer {
   padding-top: 3.8vh;
 }
 /* ---------- 4. Blog Card ---------- */
-.blogCard {
+.blogCard{
   display: flex;
   flex-direction: column;
   margin-bottom: 7vh;
 }
-.blogCard-link {
+.blogCard-link{
   color: inherit;
   text-decoration: none;
 }
-.blogCard-link:hover {
+.blogCard-link:hover{
   color: inherit;
   text-decoration: underline;
 }
-.blogCard-link img {
+.blogCard-link img{
   width: 100%;
   height: 32.5vh;
   object-fit: cover;
   border-radius: 8px;
 }
-.blogCard-link h3 {
+.blogCard-link h3{
   font-size: 1.5vw;
   margin: .3rem 0 .2rem 0;
   flex: 1;
 }
-.blogCard p {
+.blogCard p{
   font-size: 1.15vw;
   line-height: 1.6;
 }
-.blogCard-category {
+.blogCard-category{
   display: flex;
   justify-content: inline;
 }
-.blogCard-category label {
+.blogCard-category label{
   font-size: 1.08vw;
   text-transform: capitalize;
   color: hsl(30, 30%, 100%);
@@ -360,37 +360,37 @@ footer {
   width: fit-content;
   margin: -.8rem .4rem 1.5rem 0;
 }
-.blogCard-preview {
+.blogCard-preview{
   color: hsl(0, 0%, 78%);
   margin-top: -.5rem;
   overflow: auto;
 }
 /* ---------- 5. Empty ---------- */
-.empty {
+.empty{
   height: 98vh;
   margin: 0 10vw;
 }
-.empty img {
+.empty img{
   width: auto;
   height: 48vh;
   margin-top: 5.5vh;
 }
 /* --------------- Blog (3)  --------------- */
 /* ---------- 1. Icons ---------- */
-#goBack-icon {
+#goBack-icon{
   margin: .6vh 0 0 91vw;
   font-size: 1.45rem;
 }
-#goBack-icon:hover {
+#goBack-icon:hover{
   transform: translateX(-10px);
   text-indent: .1rem;
   transition: .5s ease-out;
 }
-#readTime-icon {
+#readTime-icon{
   font-size: 1rem;
   margin: 0 .2rem 0 2vw;
 }
-.progress-bar {
+.progress-bar{
   position: fixed;
   left: 0;
   right: 0;
@@ -402,62 +402,62 @@ footer {
 }
 /* ---------- 2. Main Content ---------- */
 /* -------- 2.1 universal -------- */
-.blog img {
+.blog img{
   width: 100%;
   vertical-align: middle;
   object-fit: cover;
 }
 /* -------- 2.2 header -------- */
-.blog header {
+.blog header{
   position: relative;
   margin-bottom: 1.5rem;
 }
-.blog-header {
+.blog-header{
   position: absolute;
   bottom: 0;
   width: 100%;
   color: hsl(195, 53%, 85%);
   background: rgba(0, 0, 0, .45); 
 }
-.blog header h1 {
+.blog header h1{
   font-size: 4.5vw;
   letter-spacing: 5px;
   margin: 5vh 0;
 }
-.blog header p {
+.blog header p{
   font-size: 1.2vw;
   text-align: center;
   margin-top: -.8rem;
   padding-bottom: .8rem;
 }
-.blog-row {
+.blog-row{
   font-size: 1.3vw;
   padding: 0 15vw;
   margin: -.8rem 0 .8rem 1vw;
   display: grid;
   grid-template-columns: auto auto auto;
 }
-.blog-row li {
+.blog-row li{
   list-style: square;
 }
 /* -------- 2.3 body -------- */
-.blog-desc {
+.blog-desc{
   font-size: 1.3vw;
   text-align: justify;
   margin: 0 18%;
   padding-bottom: 1.3rem;
 }
-.blog-desc p {
+.blog-desc p{
   margin-bottom: 1.3rem;
   line-height: 32px;
 }
 /* ---------- 3. Img Slider ---------- */
-.img-slider {
+.img-slider{
   padding: 0 18vw;
   margin-bottom: .5rem;
   position: relative;
 }
-.img-slider figcaption {
+.img-slider figcaption{
   font-size: 1.1vw;
   padding: 2px 5px;
   position: absolute;
@@ -466,26 +466,26 @@ footer {
   color: #fff;
   background: rgba(0, 0, 0, .6);
 }
-.img-arrow {
+.img-arrow{
    position: absolute;
    cursor: pointer;
    z-index: 10;
    top: 50%;
  }
- .img-arrow svg {
+ .img-arrow svg{
    font-size: 2rem;
    color: var(--lightblue);
  }
- .img-arrow svg:hover {
+ .img-arrow svg:hover{
   color: hsl(195, 53%, 59%);
  }
- .img-arrow-next {
+ .img-arrow-next{
    right: 13.5%;
  }
- .img-arrow-prev {
+ .img-arrow-prev{
    left: 13.5%;
  }
- .img-dots {
+ .img-dots{
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -493,33 +493,33 @@ footer {
   margin: auto;
   margin-bottom: 1.3rem;
 }
-.img-dots li {
+.img-dots li{
   list-style: none;
   display: inline-block;
   margin: 0 1rem;
 }
-.img-dots li button {
+.img-dots li button{
   background: var(--lightblue);
   color: transparent;
   height: .6rem;
   width: .6rem;
   border-radius: 7.5px;
 }
-.img-dots li.slick-active button {
+.img-dots li.slick-active button{
   background-color: hsl(195, 53%, 59%);
 }
 .img-dots li button:hover,
-.img-dots li button:focus {
+.img-dots li button:focus{
   background: hsl(300, 76%, 72%);
 }
 /* ---------- LogIn ---------- */
 .login-content,
 .login-content input,
 .pwd-recovery,
-.sign-up {
+.sign-up{
   color: #fff;
 }
-.login {
+.login{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -527,27 +527,27 @@ footer {
   justify-content: center;
   margin-top: -8.2vh;
 }
-.login img {
+.login img{
   width: 100%;
   height: auto;
   object-fit: cover;
   opacity: .3;
 }
-.login-content {
+.login-content{
   position: absolute;
   width: 30vw;
   height: 66.8vh;
   padding: 6vh 3vw;
   background: rgba(0, 0, 0, .5);
 }
-.login-content h1 {
+.login-content h1{
   position: relative;
   font-size: 1.8vw;
   padding-bottom: 1vh;
   margin-bottom: 4.5vh;
   color: lightskyblue;
 }
-.login-content h1:after {
+.login-content h1:after{
   position: absolute;
   background: lightskyblue;
   content: '';
@@ -557,82 +557,82 @@ footer {
   bottom: -5px;
   transform: translateX(-50%);
 }
-.login-content h2 {
+.login-content h2{
   font-size: 3vw;
   margin-bottom: 4.5vh;
 }
 .login-content input,
-.login-content input::placeholder {
+.login-content input::placeholder{
   font-size: 1.2vw;
   margin-bottom: 5vh;
 }
-.login-content input::placeholder {
+.login-content input::placeholder{
   color: rgba(255, 255, 255, 0.5);
 }
 .login-content input[type="email"],
 .login-content input[type="password"],
 .login-content input[type="text"],
-.login-content input[type="username"] {
+.login-content input[type="username"]{
   width: 100%;
   height: 5.5vh;
   background: transparent;
   border-bottom: 1px solid #fff;
 }
-.login-content button {
+.login-content button{
   padding: .7vh 9.8vw;
   border-radius: 30px;
   color: #eee;
   background-color: var(--dark-mode);
   margin-bottom: 5vh;
 }
-.login-content button:hover {
+.login-content button:hover{
   background-color: hsl(209, 34%, 36%);
 }
-.submit-btn {
+.submit-btn{
   color: inherit;
   font-size: 1.2vw;
   font-family: 'Merriweather', serif;
   text-align: center;
 }
-.submit-btn:hover {
+.submit-btn:hover{
   color: inherit;
 }
-.submit-btn:disabled {
+.submit-btn:disabled{
   cursor: not-allowed;
   color: inherit;
 }
-#visibility-switch {
+#visibility-switch{
   position: relative;
   float: right;
   margin-top: -9.5vh;
   cursor: pointer;
 }
-#visibility-icon {
+#visibility-icon{
   font-size: 1.8vw;
   color: #eee;
 }
 .pwd-recovery, 
-.sign-up {
+.sign-up{
   font-size: 1vw;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
 }
 .pwd-recovery:hover,
-.sign-up:hover {
+.sign-up:hover{
   color: lightskyblue;
 }
-.pwd-recovery {
+.pwd-recovery{
   margin-right: 11vw;
 }
 /* ---------- SignUp ---------- */
-.signup-content {
+.signup-content{
   height: 69.5vh;
 }
-.signup-content button {
+.signup-content button{
   padding: .7vh 9.6vw;
 }
-.signup-error {
+.signup-error{
   font-size: 1vw;
   font-family: 'Merriweather', serif;
   color: hsl(0, 100%, 90%);
@@ -640,42 +640,42 @@ footer {
   margin-bottom: 2.5vh;
 }
 /* ---------- Settings ---------- */
-.settings-content {
+.settings-content{
   width: 30vw;
   height: 60vh;
   padding: 6vh 3vw;
 }
-.settings-content ul {
+.settings-content ul{
   margin-left: .5vw;
   list-style-type: none;
 }
-.settings-content li {
+.settings-content li{
   margin-bottom: 4vh;
   font-size: 1.28vw;
   color: lightskyblue;
 }
-.settings-content li span.active {
+.settings-content li span.active{
   font-weight: bold;
 }
-.settings-content li span.active::before {
+.settings-content li span.active::before{
   content: '>';
   position: relative;
   margin-right: .5vw;
   transform: scale(.8, 1);
   display: inline-block;
 }
-.settings-content button {
+.settings-content button{
   padding: .7vh 8vw;
 }
-.next-btn {
+.next-btn{
   font-size: 1.2vw;
   font-family: 'Merriweather', serif;
   text-align: center;
 }
-#delete-account {
+#delete-account{
   margin-bottom: 17.55vh;
 }
-#setting-switch-l, #setting-switch-r  {
+#setting-switch-l, #setting-switch-r {
   position: absolute;
   background: none;
   padding: 0;
@@ -683,26 +683,26 @@ footer {
   margin-top: -30vh;
   font-size: 2.5vw;
   transition: transform 0.3s;
-  &:hover {
+  &:hover{
     transform: scale(1.3);
   }
 }
-#setting-switch-r {
+#setting-switch-r{
   margin-left: 31.5vw;
 }
-.delete-next-btn {
+.delete-next-btn{
   margin-left: -3.1vw;
   padding: 0;
 }
 /* ----- UpdateUsername, ~Email, ~Password ----- */
-.update-content {
+.update-content{
   height: 28vh;
 }
-.update-content button {
+.update-content button{
   margin-bottom: 3vh;
 }
 /*  ---------- Modal ---------- */
-.backdrop {
+.backdrop{
   position: fixed;
   top: 0;
   left: 0;
@@ -711,7 +711,7 @@ footer {
   background: rgba(0,0,0,.5);
   z-index: 1;
 }
-.modal { 
+.modal{ 
   max-height: 30vh;
   max-width: 50vw;
   margin: 10vh 25vw;
@@ -721,36 +721,39 @@ footer {
   text-align: center;
   z-index: 1;
 }
-.modal p {
+.modal p{
   color: whitesmoke;
   font-weight: bold;
   text-align: center;
   font-size: 1.45vw;
 }
-.modal button {
+.modal button{
   font-weight: bold;
   margin-top: 3vh;
   padding: .8% 2%;
   border-radius: 25px;
 }
 /*  ---------- ModalDelete ---------- */
-#modal-delete-btn {
+#modal-delete-btn{
   margin-right: 8vw;
+}
+.next-btn-l{
+  margin-left: 8vw;
 }
 /* --------------- Under Development --------------- */
 /* ---------- Comment ---------- */
-.write {
+.write{
   padding-top: 50px;
 }
-.writeForm {
+.writeForm{
   position: relative;
 }
-.writeFormGroup {
+.writeFormGroup{
   margin-left: 150px;
   display: flex;
   align-items: center;
 }
-.writeIcon {
+.writeIcon{
   width: 25px;
   height: 25px;
   font-size: 20px;
@@ -762,26 +765,26 @@ footer {
   justify-content: center;
   cursor: pointer;
 }
-.writeInput {
+.writeInput{
   font-size: 30px;
   border: none;
   padding: 20px;
   width: 70vw;
 }
-.writeInput::placeholder {
+.writeInput::placeholder{
   color: rgb(189, 185, 185);
   font-weight: 400;
 }
-.writeInput:focus {
+.writeInput:focus{
   outline-style: none;
 }
-.writeText {
+.writeText{
   width: 70vw;
   height: 40vh;
   font-family: inherit;
   font-size: 20px;
 }
-.writeSubmit {
+.writeSubmit{
   position: absolute;
   top: 20px;
   right: 50px;
